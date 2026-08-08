@@ -50,9 +50,14 @@ Run from the repo root (scripts read `scripts/*.json` relatively).
   extrusion; `startOffset` moves the start along the plane normal (+),
   independent of extrusion direction — use `startOffsetOppositeDirection`
   to move it the other way.
-- Tail of the feature tree (~indices 98–119) is the captain's mid-refactor
-  work, in ERROR on deleted references — see `MANUAL_COMPLETION.md` before
-  touching anything there.
+- Tail of the feature tree: indices 100–119 (20 features) are the captain's
+  mid-refactor work, in ERROR on deleted references; indices 98–99 (`right
+  rake wall` sketch + Frame 63) are live and build the right rake plate —
+  see `MANUAL_COMPLETION.md` before touching anything there.
+- Per-feature status lives in the feature-list GET response's `featureStates`
+  map (featureId → `featureStatus`); `evFeatureStatus` is not callable from
+  eval scripts. Eval-API `queries` values must be arrays of query
+  expressions.
 - `fetch_oriented_dims.py` reports length as the longest linear edge; for
   plumb-cut (parallelogram) members a cSys box extent along the grain
   over-states the board length, so don't switch back to box-extent length.
