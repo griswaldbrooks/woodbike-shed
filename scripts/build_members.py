@@ -298,9 +298,9 @@ def run_stage(stage_name):
             ("back fascia profile", BACK_FASCIA, "back fascia", "216 in",
              True, "12 in", False),
             ("left rake board profile", RAKE_BOARD, "left rake board", "1.5 in",
-             True, "192 in", True),
+             True, "202.5 in", True),
             ("right rake board profile", RAKE_BOARD, "right rake board", "1.5 in",
-             False, None, False),
+             False, "10.5 in", False),
         ]
         for skname, quad, exname, depth, opp, off, offopp in jobs:
             sk = make_sketch("Ftmp1", skname,
