@@ -3,6 +3,13 @@
 Tooling to pull a BOM / cut list from the Onshape model of the bike shed and
 prep lumber-yard RFQs.
 
+## Model as code
+
+[`cad/`](cad/README.md) re-derives the whole shed model as build123d code
+from this repo's audit data (no Onshape API calls) and exports per-part STEP
+plus one named `blender/scene.glb` for renders. Build: `.venv/bin/python -m
+cad.build` — verify (run after every change): `.venv/bin/python -m cad.verify`.
+
 ## Onshape document
 
 - Name: *wood bike shed*
@@ -28,6 +35,8 @@ Never commit these. The `.gitignore` blocks common credential filenames anyway.
   stock length, qty.
 - [`OUTSTANDING_ISSUES.md`](OUTSTANDING_ISSUES.md) — open items before
   sending quotes (stock availability, species, pre-cuts, waste factor, etc.).
+- [`cad/`](cad/README.md) — model-as-code rebuild (build123d), per-part STEP
+  exports in `step/`, Blender scene in `blender/scene.glb`.
 
 ## Scripts
 
