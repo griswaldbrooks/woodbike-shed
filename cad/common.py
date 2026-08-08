@@ -25,15 +25,11 @@ IN = 25.4        # mm per inch (build123d world is mm)
 M_PER_IN = 0.0254  # bboxes.json values are meters despite the "_m" key names
 REPO = Path(__file__).resolve().parent.parent
 
-# Groups whose parts are tilted in the Y-Z plane (roof pitch) or rolled about
-# their long X axis (fascia). Detected by world-AABB != oriented dims.
-SLOPE_Y_GROUPS = {"roof rafters", "roof rake board",
+# Groups whose parts are tilted in the Y-Z plane at the roof pitch
+# (world-AABB != oriented dims). Fascia are axis-aligned since the 2026-08
+# roof-trim rework ("Fix fascia to symmetric 12 inch overhangs" on main).
+SLOPE_Y_GROUPS = {"rafter", "left rake board", "right rake board",
                   "left rake wall top plate", "right rake wall top plate"}
-ROLL_X_GROUPS = {"roof fascia"}
-
-# Audit names that differ from cut-list labels (see scripts/build_cut_list.py).
-CRIPPLE_LONG = ("front wall cripples normal door", 31.0)   # 2x 31"
-CRIPPLE_SHORT = ("front wall cripples wide door", 29.0)    # 4x 29"
 
 
 @dataclass
@@ -73,14 +69,10 @@ def _center_in(b: dict) -> tuple:
             (b["lowZ"] + b["highZ"]) / 2 / M_PER_IN)
 
 
-def _cutlist_label(name: str, dims: tuple) -> str:
+def _cutlist_label(name: str, dims: tuple = ()) -> str:
     """Map audit names to exact CUT_LIST.md labels."""
     if name == "":
         return "skid"  # unnamed composite-skid boards, per OUTSTANDING_ISSUES.md
-    if name == "front wall cripples":
-        # bboxes.json merges both cripple groups; split by length as the cut
-        # list does (31" = normal door, 29" = wide door).
-        return CRIPPLE_LONG[0] if abs(max(dims) - CRIPPLE_LONG[1]) < 0.6 else CRIPPLE_SHORT[0]
     return name
 
 
@@ -99,9 +91,7 @@ def load_audit() -> Audit:
     # bboxes.json -> candidates keyed the same way
     bb_by_label: dict[str, list] = {}
     for p in bb:
-        label = _cutlist_label(p["name"], (p["dx_m"] / M_PER_IN,
-                                                    p["dy_m"] / M_PER_IN,
-                                                    p["dz_m"] / M_PER_IN))
+        label = _cutlist_label(p["name"], ())
         bb_by_label.setdefault(label, []).append(p)
 
     # Match specs to bboxes.
@@ -118,7 +108,7 @@ def load_audit() -> Audit:
                 f"vs {len(cands)} in bboxes")
         cands = sorted(cands, key=lambda p: tuple(
             round(v, 3) for v in _center_in(p["bbox_m"])))
-        if label in SLOPE_Y_GROUPS | ROLL_X_GROUPS:
+        if label in SLOPE_Y_GROUPS:
             for s, p in zip(specs, cands):
                 s.aabb = p["bbox_m"]
         else:
@@ -141,11 +131,17 @@ def load_audit() -> Audit:
     return audit
 
 
+DOCUMENTED_PITCH = math.degrees(math.atan(24 / 65))  # ~20.26 deg
+
+
 def solve_pitch(audit: Audit) -> float:
-    """Roof pitch from a rafter: dz = L sin(t) + D cos(t). Cross-checks the
-    documented 24/65 slope (MANUAL_COMPLETION.md on fm/woodbike-shed-finish-rework).
+    """Roof pitch. The documented slope is 24/65 (MANUAL_COMPLETION.md and
+    OUTSTANDING_ISSUES.md on main); sanity-check it against the rafter AABB
+    (dz = L sin(t) + D cos(t) for a full tilted box). The upstream rafters
+    now carry birdsmouth/end cuts, so the AABB-derived value drifts a few
+    tenths of a degree - the documented slope is authoritative.
     """
-    r = audit.specs["roof rafters"][0]
+    r = audit.specs["rafter"][0]
     L = max(r.dims)
     D = sorted(r.dims)[1]
     dz = (r.aabb["highZ"] - r.aabb["lowZ"]) / M_PER_IN
@@ -157,9 +153,9 @@ def solve_pitch(audit: Audit) -> float:
         else:
             hi = mid
     deg = math.degrees((lo + hi) / 2)
-    assert abs(deg - math.degrees(math.atan(24 / 65))) < 0.05, \
-        f"solved pitch {deg:.3f} deg disagrees with documented 24/65 slope"
-    return deg
+    assert abs(deg - DOCUMENTED_PITCH) < 0.5, \
+        f"AABB-derived pitch {deg:.3f} deg vs documented 24/65 slope"
+    return DOCUMENTED_PITCH
 
 
 CENTER3 = (Align.CENTER, Align.CENTER, Align.CENTER)
@@ -183,11 +179,4 @@ def place_slope_y(spec: Spec, x_dim: float, z_dim: float, pitch_deg: float):
             * Box(x_dim * IN, L * IN, z_dim * IN, align=CENTER3))
 
 
-def place_roll_x(spec: Spec, pitch_deg: float):
-    """Board along X, rolled about its long axis so its wide face lies in the
-    roof plane (fascia). Local cross-section: 1.5 in Y, 5.5 in Z."""
-    cx, cy, cz = (v * IN for v in _center_in(spec.aabb))
-    L = spec.length
-    t, d = sorted(spec.dims)[:2]
-    return (Location((cx, cy, cz), (-pitch_deg, 0, 0))
-            * Box(L * IN, t * IN, d * IN, align=CENTER3))
+

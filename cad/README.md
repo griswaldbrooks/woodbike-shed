@@ -56,13 +56,16 @@ uniqueness — group names repeat, e.g. 14 × "back wall studs").
 
 ## Pending captain decisions (TODO seams, do not decide unilaterally)
 
-- **Birdsmouth acceptance** — `roof.py`: the audited model has front/back
-  seat cuts on rafters; modeled as full stock until accepted.
+- **Birdsmouth/trim cuts in code** — `roof.py`: the upstream model's rafter
+  seat cuts and end trims are RESOLVED in OUTSTANDING_ISSUES.md, but the cut
+  list describes full 2x6 stock, so rafters are rectangular here (AABB
+  deltas carried as documented verify tolerances). Implementing the cuts in
+  code is a follow-up only if render fidelity needs it.
 - **Doors/siding/trim** — `walls_front.py` (and right wall opening): framing
   only, as cut-listed.
 - **Skid composites** — `skids.py`: physical boards modeled; Onshape
   composite bodies / "Composite part 3" remain as documented in
   OUTSTANDING_ISSUES.md.
-- **Rake-plate end cuts** — `walls_rake.py`: rectangular stock; the audit
-  AABB shows the real part's z-extent is the bare 24" rise (verify.py
-  tolerates the difference).
+- **Rake-plate end/nose cuts** — `walls_rake.py`: rectangular stock; the
+  audit AABB shows the real part's extents are the bare 65"/24" run/rise
+  (verify.py tolerates the difference).

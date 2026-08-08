@@ -11,8 +11,7 @@ tolerance for these two plates; modeled as rectangular stock per CUT_LIST.md.
 """
 from cad.common import Audit, place_box, place_slope_y
 
-STUD_GROUPS = ("left rake wall studs (different heights)",
-               "right rake wall studs (different heights)")
+STUD_GROUPS = ("left rake wall studs", "right rake wall studs")
 PLATE_GROUPS = ("left rake wall top plate", "right rake wall top plate")
 
 
