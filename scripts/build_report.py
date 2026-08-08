@@ -13,6 +13,8 @@ import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
+import audit_overlaps as ao
+
 HERE = Path(__file__).parent
 M = 39.3700787
 DEFAULT_OUT = ("/media/griswald/wd-black-2tb/personal/firstmate/data/"
@@ -89,33 +91,46 @@ def svg_plan(parts, title, width=749, height=355):
     return _svg(parts, title, lo, hi, 0, 1, width, height)
 
 
-def svg_elev(parts, title, axes, width=663, height=395):
-    """axes: (i,j) world-axis indices for (horizontal, vertical)."""
+def svg_elev(parts, title, axes, width=663, height=395, profiles=None):
+    """axes: (i,j) world-axis indices for (horizontal, vertical).
+    profiles: optional partId -> [(u,v)] true profile in those axes, for
+    sloped members whose world bbox would draw as a misleading rectangle."""
     lo = [min(corners(r)[0][axes[0]] for r in parts),
           min(corners(r)[0][axes[1]] for r in parts)]
     hi = [max(corners(r)[1][axes[0]] for r in parts),
           max(corners(r)[1][axes[1]] for r in parts)]
-    return _svg(parts, title, lo, hi, axes[0], axes[1], width, height, flip_v=True)
+    return _svg(parts, title, lo, hi, axes[0], axes[1], width, height,
+                flip_v=True, profiles=profiles)
 
 
-def _svg(parts, title, lo, hi, ai, aj, width, height, flip_v=False):
+def _svg(parts, title, lo, hi, ai, aj, width, height, flip_v=False, profiles=None):
     pad = 12
     sx = (width - 2 * pad) / (hi[0] - lo[0])
     sy = (height - 2 * pad) / (hi[1] - lo[1])
     out = [f'<svg viewBox="0 0 {width} {height}" style="max-width:100%;height:auto" '
            f'role="img" font-family="system-ui,sans-serif"><title>{title}</title>']
-    for r in parts:
-        a, b = corners(r)
-        x0 = pad + (a[ai] - lo[0]) * sx
-        x1 = pad + (b[ai] - lo[0]) * sx
-        y0 = pad + (a[aj] - lo[1]) * sy
-        y1 = pad + (b[aj] - lo[1]) * sy
+
+    def tx(u, v):
+        x = pad + (u - lo[0]) * sx
+        y = pad + (v - lo[1]) * sy
         if flip_v:
-            y0, y1 = height - pad - (b[aj] - lo[1]) * sy, height - pad - (a[aj] - lo[1]) * sy
+            y = height - pad - (v - lo[1]) * sy
+        return x, y
+
+    for r in parts:
         col = COLOR.get(section_for(r["name"]), "#999999")
-        out.append(f'<rect x="{x0:.1f}" y="{y0:.1f}" width="{max(x1-x0,1):.1f}" '
-                   f'height="{max(y1-y0,1):.1f}" fill="{col}" stroke="#453c22" '
-                   f'stroke-width="0.8" opacity="0.7"/>')
+        poly = profiles.get(r["partId"]) if profiles else None
+        if poly:
+            pts = " ".join(f"{tx(u, v)[0]:.1f},{tx(u, v)[1]:.1f}" for u, v in poly)
+            out.append(f'<polygon points="{pts}" fill="{col}" stroke="#453c22" '
+                       f'stroke-width="0.8" opacity="0.85"/>')
+            continue
+        a, b = corners(r)
+        x0, y0 = tx(a[ai], a[aj])
+        x1, y1 = tx(b[ai], b[aj])
+        out.append(f'<rect x="{min(x0,x1):.1f}" y="{min(y0,y1):.1f}" '
+                   f'width="{max(abs(x1-x0),1):.1f}" height="{max(abs(y1-y0),1):.1f}" '
+                   f'fill="{col}" stroke="#453c22" stroke-width="0.8" opacity="0.7"/>')
     out.append("</svg>")
     return "".join(out)
 
@@ -134,6 +149,24 @@ def main():
     bysec = defaultdict(list)
     for r in bb:
         bysec[section_for(r["name"])].append(r)
+
+    # true YZ profiles for sloped members so elevations don't draw bboxes
+    prof_by_name = {
+        "rafter": ao.RAFTER,
+        "left rake board": ao.RAKE_BOARD, "right rake board": ao.RAKE_BOARD,
+        "left rake wall top plate": ao.LEFT_RAKE_PLATE,
+        "right rake wall top plate": ao.RIGHT_RAKE_PLATE,
+        "front fascia": ao.FASCIA_FRONT, "back fascia": ao.FASCIA_BACK,
+    }
+    stud_profiles = {round(yc, 2): q for yc, q in
+                     zip((0.75, 16.25, 32.25, 48.25), ao.RAKE_STUDS)}
+    PROF = {}
+    for r in bb:
+        if r["name"] in prof_by_name:
+            PROF[r["partId"]] = prof_by_name[r["name"]]
+        elif r["name"] in ("left rake wall studs", "right rake wall studs"):
+            b = r["bbox_m"]
+            PROF[r["partId"]] = stud_profiles[round((b["lowY"] + b["highY"]) / 2 * M, 2)]
 
     named = [r for r in bb if r["name"]]
     ndefault = sum(1 for r in bb if r["name"].startswith("Part"))
@@ -212,9 +245,9 @@ def main():
              '<figcaption>Back wall elevation.</figcaption></figure>')
     P.append('<figure>' + svg_elev(bysec["Front wall"], "Front wall elevation", (0, 2)) +
              '<figcaption>Front wall elevation (two rough openings).</figcaption></figure>')
-    P.append('<figure>' + svg_elev(bysec["Left wall"] + bysec["Left rake wall"], "Left wall elevation", (1, 2)) +
+    P.append('<figure>' + svg_elev(bysec["Left wall"] + bysec["Left rake wall"], "Left wall elevation", (1, 2), profiles=PROF) +
              '<figcaption>Left wall + rake elevation.</figcaption></figure>')
-    P.append('<figure>' + svg_elev(bysec["Right wall"] + bysec["Right rake wall"], "Right wall elevation", (1, 2)) +
+    P.append('<figure>' + svg_elev(bysec["Right wall"] + bysec["Right rake wall"], "Right wall elevation", (1, 2), profiles=PROF) +
              '<figcaption>Right wall + rake elevation (door opening).</figcaption></figure>')
     P.append('<figure>' + svg_plan(bysec["Roof"], "Roof plan") +
              '<figcaption>Roof plan (rafters, fascia, rake boards).</figcaption></figure>')
