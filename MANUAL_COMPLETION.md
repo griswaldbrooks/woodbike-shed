@@ -14,7 +14,7 @@ in the model**, rebuilt additively from current geometry (features added by
 | left rake wall top plate | 1 | 2x4 × 69.29", sloped 24/65, mirror of right |
 | rafter | 13 | 2x6 × 115.13", 15.875" o.c., x = -2.75…187.75 |
 | front / back fascia | 2 | 2x6 × 216" (12" past each side wall), tops flush with rafter tails |
-| left / right rake board | 2 | 2x6 × 115.13", along the slope, outside the end rafters |
+| left / right rake board | 2 | 2x6 × 118.32", along the slope outside the end rafters, end-to-end flush with the fascia outer faces |
 
 The captain's own tail features (indices ~98–119) were left untouched. They
 remain in **ERROR**, generate no geometry, and conflict with the new parts
@@ -61,7 +61,8 @@ references) + Transform 5 + the 12" Move face 13 were the **roof trim
 package** — the April fascia/rake-board construction with the roof extended
 12" past each side wall. That intent is now superseded by the new
 `front/back fascia` (2x6 × 216" = 192" shed + 2 × 12") and
-`left/right rake board` (2x6 × 115.13") parts.
+`left/right rake board` (2x6 × 118.32", running end-to-end flush with the
+fascia outer faces) parts.
 
 ## Recommended cleanup in the Onshape UI
 
@@ -97,7 +98,9 @@ package** — the April fascia/rake-board construction with the roof extended
   cuts, length 115.13".
 - Rafter X positions: 13 uniformly spaced centers −2.75 … 187.75 (the live
   stud-grid endpoints), spacing 15.875".
-- Fascia: 2x6, x = −13.5 … 202.5 (216"), front at y = −29 … −27.5 with top
-  flush at the front rafter-tail top (z = 137.52), back at y = 80.5 … 82
-  flush at z = 97.64. Rake boards: rafter profile, 1.5" thick, just outside
-  the end rafters (x = −5 … −3.5 and 188.5 … 190).
+- Fascia: 2x6, x = −15.5 … 200.5 (216", 12" past each side wall), front at
+  y = −29 … −27.5 with top flush at the front rafter-tail top (z = 137.52),
+  back at y = 80.5 … 82 flush at z = 97.64. Rake boards: rafter profile
+  extended end-to-end (y = −29 … 82, flush with the fascia outer faces),
+  1.5" thick, just outside the end rafters (x = −5 … −3.5 and 188.5 … 190),
+  length 118.32".

@@ -243,10 +243,12 @@ LEFT_RAKE_PLATE = [(65.0, 97.5), (0.0, 121.5), (-0.268, 120.0), (60.669, 97.5)]
 RAFTER = [(-27.5, 131.65385), (80.5, 91.77692), (80.5, 97.63975), (-27.5, 137.51668)]
 
 # Roof trim (per the April roof: 2 fascia 2x6 x 216" = shed + 12" past each
-# side wall, 2 rake boards 2x6 x 115.13" along the slope outside the end
-# rafters). Fascia tops flush with the rafter tail tops.
+# side wall, 2 rake boards along the slope outside the end rafters, running
+# end-to-end flush with the fascia outer faces). Fascia tops flush with the
+# rafter tail tops.
 FRONT_FASCIA = [(-29.0, 132.01668), (-27.5, 132.01668), (-27.5, 137.51668), (-29.0, 137.51668)]
 BACK_FASCIA = [(80.5, 92.13975), (82.0, 92.13975), (82.0, 97.63975), (80.5, 97.63975)]
+RAKE_BOARD = [(-29.0, 132.20769), (82.0, 91.22308), (82.0, 97.08591), (-29.0, 138.07052)]
 
 
 def run_stage(stage_name):
@@ -292,12 +294,12 @@ def run_stage(stage_name):
     elif stage_name == "trim":
         jobs = [
             ("front fascia profile", FRONT_FASCIA, "front fascia", "216 in",
-             True, "14 in", False),
+             True, "12 in", False),
             ("back fascia profile", BACK_FASCIA, "back fascia", "216 in",
-             True, "14 in", False),
-            ("left rake board profile", RAFTER, "left rake board", "1.5 in",
+             True, "12 in", False),
+            ("left rake board profile", RAKE_BOARD, "left rake board", "1.5 in",
              True, "192 in", True),
-            ("right rake board profile", RAFTER, "right rake board", "1.5 in",
+            ("right rake board profile", RAKE_BOARD, "right rake board", "1.5 in",
              False, None, False),
         ]
         for skname, quad, exname, depth, opp, off, offopp in jobs:
