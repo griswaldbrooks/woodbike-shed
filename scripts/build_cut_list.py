@@ -56,7 +56,7 @@ def section_for(name):
         if "left" in n:
             return "Left rake wall"
         return "Right rake wall"
-    if "roof" in n:
+    if "roof" in n or "rafter" in n:
         return "Roof"
     if n.startswith("back wall"):
         return "Back wall"

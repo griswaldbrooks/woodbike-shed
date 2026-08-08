@@ -25,28 +25,25 @@ Source: Onshape "wood bike shed" Part Studio 1. Actual dimensions.
 
 | Qty | Lumber | Treatment | Length | Name |
 |---:|:---|:---:|---:|:---|
-| 2 | 2x4 | KD | 8′ 0.00″ (96.00″) | back wall bottom plate |
-| 1 | 2x4 | KD | 8′ 0.00″ (96.00″) | back wall double top plate long |
-| 2 | 2x4 | KD | 8′ 0.00″ (96.00″) | back wall top plate |
-| 14 | 2x4 | KD | 7′ 9.00″ (93.00″) | back wall studs |
-| 2 | 2x4 | KD | 3′ 8.50″ (44.50″) | back wall double top plate short |
+| 1 | 2x4 | KD | 16′ 0.00″ (192.00″) | back wall bottom plate |
+| 1 | 2x4 | KD | 16′ 0.00″ (192.00″) | back wall top plate |
+| 1 | 2x4 | KD | 15′ 5.00″ (185.00″) | back wall double top plate short |
+| 13 | 2x4 | KD | 7′ 9.00″ (93.00″) | back wall studs |
 
 ## Front wall
 
 | Qty | Lumber | Treatment | Length | Name |
 |---:|:---|:---:|---:|:---|
-| 10 | 2x4 | KD | 9′ 10.50″ (118.50″) | front wall studs |
-| 1 | 2x4 | KD | 8′ 0.00″ (96.00″) | front wall double top plate long |
-| 2 | 2x4 | KD | 8′ 0.00″ (96.00″) | front wall top plate |
-| 4 | 2x4 | KD | 6′ 10.50″ (82.50″) | front wall jack studs |
-| 1 | 2x4 | KD | 6′ 3.00″ (75.00″) | front wall header long cap |
-| 1 | 2x4 | KD | 4′ 0.00″ (48.00″) | front wall bottom plate long |
-| 2 | 2x4 | KD | 4′ 0.00″ (48.00″) | front wall double top plate short |
-| 3 | 2x4 | KD | 3′ 3.00″ (39.00″) | front wall header short |
-| 2 | 2x4 | KD | 2′ 7.00″ (31.00″) | front wall cripples normal door |
-| 4 | 2x4 | KD | 2′ 5.00″ (29.00″) | front wall cripples wide door |
-| 3 | 2x4 | KD | 1′ 0.00″ (12.00″) | front wall bottom plate short |
-| 2 | 2x6 | KD | 6′ 3.00″ (75.00″) | front wall header long |
+| 1 | 2x4 | KD | 16′ 0.00″ (192.00″) | front wall bottom plate |
+| 1 | 2x4 | KD | 16′ 0.00″ (192.00″) | front wall double top plate |
+| 1 | 2x4 | KD | 16′ 0.00″ (192.00″) | front wall top plate |
+| 1 | 2x4 | KD | 10′ 0.00″ (120.00″) | front wall king studs |
+| 8 | 2x4 | KD | 9′ 10.50″ (118.50″) | front wall king studs |
+| 2 | 2x4 | KD | 7′ 0.00″ (84.00″) | front wall jack studs |
+| 2 | 2x4 | KD | 6′ 10.50″ (82.50″) | front wall jack studs |
+| 3 | 2x4 | KD | 6′ 3.00″ (75.00″) | front wall headers |
+| 3 | 2x4 | KD | 3′ 3.00″ (39.00″) | front wall headers |
+| 6 | 2x4 | KD | 2′ 7.00″ (31.00″) | front wall cripple studs |
 
 ## Left wall
 
@@ -75,101 +72,82 @@ Source: Onshape "wood bike shed" Part Studio 1. Actual dimensions.
 | Qty | Lumber | Treatment | Length | Name |
 |---:|:---|:---:|---:|:---|
 | 1 | 2x4 | KD | 5′ 9.29″ (69.29″) | left rake wall top plate |
-| 1 | 2x4 | KD | 1′ 10.40″ (22.40″) | left rake wall studs (different heights) |
-| 1 | 2x4 | KD | 1′ 4.49″ (16.49″) | left rake wall studs (different heights) |
-| 1 | 2x4 | KD | 0′ 10.59″ (10.59″) | left rake wall studs (different heights) |
-| 1 | 2x4 | KD | 0′ 4.68″ (4.68″) | left rake wall studs (different heights) |
+| 1 | 2x4 | KD | 1′ 10.40″ (22.40″) | left rake wall studs |
+| 1 | 2x4 | KD | 1′ 4.68″ (16.68″) | left rake wall studs |
+| 1 | 2x4 | KD | 0′ 10.77″ (10.77″) | left rake wall studs |
+| 1 | 2x4 | KD | 0′ 4.86″ (4.86″) | left rake wall studs |
 
 ## Right rake wall
 
 | Qty | Lumber | Treatment | Length | Name |
 |---:|:---|:---:|---:|:---|
 | 1 | 2x4 | KD | 5′ 9.29″ (69.29″) | right rake wall top plate |
-| 1 | 2x4 | KD | 1′ 10.40″ (22.40″) | right rake wall studs (different heights) |
-| 1 | 2x4 | KD | 1′ 4.49″ (16.49″) | right rake wall studs (different heights) |
-| 1 | 2x4 | KD | 0′ 10.59″ (10.59″) | right rake wall studs (different heights) |
-| 1 | 2x4 | KD | 0′ 4.68″ (4.68″) | right rake wall studs (different heights) |
-| 2 | 2x6 | KD | 9′ 7.13″ (115.13″) | roof rake board |
+| 1 | 2x4 | KD | 1′ 10.40″ (22.40″) | right rake wall studs |
+| 1 | 2x4 | KD | 1′ 4.68″ (16.68″) | right rake wall studs |
+| 1 | 2x4 | KD | 0′ 10.77″ (10.77″) | right rake wall studs |
+| 1 | 2x4 | KD | 0′ 4.86″ (4.86″) | right rake wall studs |
 
 ## Roof
 
 | Qty | Lumber | Treatment | Length | Name |
 |---:|:---|:---:|---:|:---|
-| 2 | 2x6 | KD | 18′ 0.00″ (216.00″) | roof fascia |
-| 13 | 2x6 | KD | 9′ 7.13″ (115.13″) | roof rafters |
+| 13 | 2x6 | KD | 9′ 7.13″ (115.13″) | rafter |
 
 ## Stock-length order list
 
 First-fit-decreasing bin packing, one pass per (lumber, treatment). For each group, the stock length shown minimizes total linear feet purchased. Kerf: 1/8" per cut.
 
-### 2x4 KD — order **20 × 8′, 1 × 10′, 25 × 14′** (520.0 LF purchased, 504.6 LF cuts, 3.0% waste)
+### 2x4 KD — order **1 × 8′, 32 × 16′** (520.0 LF purchased, 509.6 LF cuts, 2.0% waste)
 
-- Board 1 (14′): 118.50″ front wall studs (Front wall); 48.00″ front wall bottom plate long (Front wall)  — waste: 1.38″
-- Board 2 (14′): 118.50″ front wall studs (Front wall); 48.00″ front wall double top plate short (Front wall)  — waste: 1.38″
-- Board 3 (14′): 118.50″ front wall studs (Front wall); 48.00″ front wall double top plate short (Front wall)  — waste: 1.38″
-- Board 4 (14′): 118.50″ front wall studs (Front wall); 44.50″ back wall double top plate short (Back wall); 4.68″ right rake wall studs (different heights) (Right rake wall)  — waste: 0.07″
-- Board 5 (14′): 118.50″ front wall studs (Front wall); 44.50″ back wall double top plate short (Back wall); 4.68″ left rake wall studs (different heights) (Left rake wall)  — waste: 0.07″
-- Board 6 (14′): 118.50″ front wall studs (Front wall); 39.00″ front wall header short (Front wall); 8.50″ right wall bottom plate short (Right wall)  — waste: 1.75″
-- Board 7 (14′): 118.50″ front wall studs (Front wall); 39.00″ front wall header short (Front wall); 5.50″ right wall cripple studs (Right wall)  — waste: 4.75″
-- Board 8 (14′): 118.50″ front wall studs (Front wall); 39.00″ front wall header short (Front wall); 5.50″ right wall cripple studs (Right wall)  — waste: 4.75″
-- Board 9 (14′): 118.50″ front wall studs (Front wall); 39.00″ right wall headers (Right wall)  — waste: 10.38″
-- Board 10 (14′): 118.50″ front wall studs (Front wall); 39.00″ right wall headers (Right wall)  — waste: 10.38″
-- Board 11 (14′): 96.00″ back wall top plate (Back wall); 69.29″ right rake wall top plate (Right rake wall)  — waste: 2.58″
-- Board 12 (14′): 96.00″ back wall top plate (Back wall); 69.29″ left rake wall top plate (Left rake wall)  — waste: 2.58″
-- Board 13 (14′): 96.00″ back wall bottom plate (Back wall); 68.50″ right wall double top plate (Right wall)  — waste: 3.38″
-- Board 14 (14′): 96.00″ back wall bottom plate (Back wall); 68.50″ left wall double top plate (Left wall)  — waste: 3.38″
-- Board 15 (14′): 96.00″ front wall top plate (Front wall); 65.00″ left wall top plate (Left wall)  — waste: 6.88″
-- Board 16 (14′): 96.00″ front wall top plate (Front wall); 65.00″ left side wall bottom plate (Left wall)  — waste: 6.88″
-- Board 17 (14′): 96.00″ back wall double top plate long (Back wall); 65.00″ right wall top plate (Right wall)  — waste: 6.88″
-- Board 18 (14′): 96.00″ front wall double top plate long (Front wall); 39.00″ right wall headers (Right wall); 31.00″ front wall cripples normal door (Front wall)  — waste: 1.75″
-- Board 19 (14′): 93.00″ back wall studs (Back wall); 31.00″ front wall cripples normal door (Front wall); 29.00″ front wall cripples wide door (Front wall); 12.00″ front wall bottom plate short (Front wall)  — waste: 2.62″
-- Board 20 (14′): 93.00″ back wall studs (Back wall); 29.00″ front wall cripples wide door (Front wall); 29.00″ front wall cripples wide door (Front wall); 16.49″ right rake wall studs (different heights) (Right rake wall)  — waste: 0.13″
-- Board 21 (14′): 93.00″ back wall studs (Back wall); 29.00″ front wall cripples wide door (Front wall); 22.40″ right rake wall studs (different heights) (Right rake wall); 22.40″ left rake wall studs (different heights) (Left rake wall)  — waste: 0.82″
-- Board 22 (14′): 93.00″ back wall studs (Back wall); 20.50″ right wall bottom plate long (Right wall); 16.49″ left rake wall studs (different heights) (Left rake wall); 12.00″ front wall bottom plate short (Front wall); 12.00″ front wall bottom plate short (Front wall); 10.59″ right rake wall studs (different heights) (Right rake wall)  — waste: 2.79″
-- Board 23 (10′): 93.00″ back wall studs (Back wall); 10.59″ left rake wall studs (different heights) (Left rake wall)  — waste: 16.28″
-- Board 24 (8′): 93.00″ back wall studs (Back wall)  — waste: 3.00″
-- Board 25 (8′): 93.00″ back wall studs (Back wall)  — waste: 3.00″
-- Board 26 (8′): 93.00″ back wall studs (Back wall)  — waste: 3.00″
-- Board 27 (8′): 93.00″ back wall studs (Back wall)  — waste: 3.00″
-- Board 28 (8′): 93.00″ back wall studs (Back wall)  — waste: 3.00″
-- Board 29 (8′): 93.00″ back wall studs (Back wall)  — waste: 3.00″
-- Board 30 (8′): 93.00″ back wall studs (Back wall)  — waste: 3.00″
-- Board 31 (8′): 93.00″ back wall studs (Back wall)  — waste: 3.00″
-- Board 32 (8′): 93.00″ back wall studs (Back wall)  — waste: 3.00″
-- Board 33 (8′): 93.00″ left side wall studs (Left wall)  — waste: 3.00″
-- Board 34 (8′): 93.00″ left side wall studs (Left wall)  — waste: 3.00″
-- Board 35 (8′): 93.00″ left side wall studs (Left wall)  — waste: 3.00″
-- Board 36 (8′): 93.00″ left side wall studs (Left wall)  — waste: 3.00″
-- Board 37 (8′): 93.00″ left side wall studs (Left wall)  — waste: 3.00″
-- Board 38 (8′): 93.00″ right wall studs (Right wall)  — waste: 3.00″
-- Board 39 (8′): 93.00″ right wall studs (Right wall)  — waste: 3.00″
-- Board 40 (8′): 93.00″ right wall studs (Right wall)  — waste: 3.00″
-- Board 41 (8′): 93.00″ right wall studs (Right wall)  — waste: 3.00″
-- Board 42 (8′): 93.00″ right wall studs (Right wall)  — waste: 3.00″
-- Board 43 (14′): 82.50″ front wall jack studs (Front wall); 82.50″ front wall jack studs (Front wall)  — waste: 2.88″
-- Board 44 (14′): 82.50″ front wall jack studs (Front wall); 82.50″ front wall jack studs (Front wall)  — waste: 2.88″
-- Board 45 (14′): 82.50″ right wall jack studs (Right wall); 82.50″ right wall jack studs (Right wall)  — waste: 2.88″
-- Board 46 (8′): 75.00″ front wall header long cap (Front wall)  — waste: 21.00″
+- Board 1 (16′): 192.00″ back wall top plate (Back wall)  — waste: 0.00″
+- Board 2 (16′): 192.00″ back wall bottom plate (Back wall)  — waste: 0.00″
+- Board 3 (16′): 192.00″ front wall top plate (Front wall)  — waste: 0.00″
+- Board 4 (16′): 192.00″ front wall bottom plate (Front wall)  — waste: 0.00″
+- Board 5 (16′): 192.00″ front wall double top plate (Front wall)  — waste: 0.00″
+- Board 6 (16′): 185.00″ back wall double top plate short (Back wall); 5.50″ right wall cripple studs (Right wall)  — waste: 1.38″
+- Board 7 (16′): 120.00″ front wall king studs (Front wall); 69.29″ right rake wall top plate (Right rake wall)  — waste: 2.58″
+- Board 8 (16′): 118.50″ front wall king studs (Front wall); 69.29″ left rake wall top plate (Left rake wall)  — waste: 4.08″
+- Board 9 (16′): 118.50″ front wall king studs (Front wall); 68.50″ right wall double top plate (Right wall)  — waste: 4.88″
+- Board 10 (16′): 118.50″ front wall king studs (Front wall); 68.50″ left wall double top plate (Left wall)  — waste: 4.88″
+- Board 11 (16′): 118.50″ front wall king studs (Front wall); 65.00″ left wall top plate (Left wall); 5.50″ right wall cripple studs (Right wall)  — waste: 2.75″
+- Board 12 (16′): 118.50″ front wall king studs (Front wall); 65.00″ left side wall bottom plate (Left wall); 4.86″ right rake wall studs (Right rake wall)  — waste: 3.39″
+- Board 13 (16′): 118.50″ front wall king studs (Front wall); 65.00″ right wall top plate (Right wall); 4.86″ left rake wall studs (Left rake wall)  — waste: 3.39″
+- Board 14 (16′): 118.50″ front wall king studs (Front wall); 39.00″ front wall headers (Front wall); 31.00″ front wall cripple studs (Front wall)  — waste: 3.25″
+- Board 15 (16′): 118.50″ front wall king studs (Front wall); 39.00″ front wall headers (Front wall); 31.00″ front wall cripple studs (Front wall)  — waste: 3.25″
+- Board 16 (16′): 93.00″ back wall studs (Back wall); 93.00″ back wall studs (Back wall)  — waste: 5.88″
+- Board 17 (16′): 93.00″ back wall studs (Back wall); 93.00″ back wall studs (Back wall)  — waste: 5.88″
+- Board 18 (16′): 93.00″ back wall studs (Back wall); 93.00″ back wall studs (Back wall)  — waste: 5.88″
+- Board 19 (16′): 93.00″ back wall studs (Back wall); 93.00″ back wall studs (Back wall)  — waste: 5.88″
+- Board 20 (16′): 93.00″ back wall studs (Back wall); 93.00″ back wall studs (Back wall)  — waste: 5.88″
+- Board 21 (16′): 93.00″ back wall studs (Back wall); 93.00″ back wall studs (Back wall)  — waste: 5.88″
+- Board 22 (16′): 93.00″ back wall studs (Back wall); 93.00″ left side wall studs (Left wall)  — waste: 5.88″
+- Board 23 (16′): 93.00″ left side wall studs (Left wall); 93.00″ left side wall studs (Left wall)  — waste: 5.88″
+- Board 24 (16′): 93.00″ left side wall studs (Left wall); 93.00″ left side wall studs (Left wall)  — waste: 5.88″
+- Board 25 (16′): 93.00″ right wall studs (Right wall); 93.00″ right wall studs (Right wall)  — waste: 5.88″
+- Board 26 (16′): 93.00″ right wall studs (Right wall); 93.00″ right wall studs (Right wall)  — waste: 5.88″
+- Board 27 (16′): 93.00″ right wall studs (Right wall); 84.00″ front wall jack studs (Front wall); 10.77″ right rake wall studs (Right rake wall)  — waste: 3.98″
+- Board 28 (16′): 84.00″ front wall jack studs (Front wall); 82.50″ front wall jack studs (Front wall); 22.40″ right rake wall studs (Right rake wall)  — waste: 2.85″
+- Board 29 (16′): 82.50″ front wall jack studs (Front wall); 82.50″ right wall jack studs (Right wall); 22.40″ left rake wall studs (Left rake wall)  — waste: 4.35″
+- Board 30 (16′): 82.50″ right wall jack studs (Right wall); 75.00″ front wall headers (Front wall); 31.00″ front wall cripple studs (Front wall)  — waste: 3.25″
+- Board 31 (16′): 75.00″ front wall headers (Front wall); 75.00″ front wall headers (Front wall); 39.00″ front wall headers (Front wall)  — waste: 2.75″
+- Board 32 (16′): 39.00″ right wall headers (Right wall); 39.00″ right wall headers (Right wall); 39.00″ right wall headers (Right wall); 31.00″ front wall cripple studs (Front wall); 31.00″ front wall cripple studs (Front wall); 10.77″ left rake wall studs (Left rake wall)  — waste: 1.60″
+- Board 33 (8′): 31.00″ front wall cripple studs (Front wall); 20.50″ right wall bottom plate long (Right wall); 16.68″ right rake wall studs (Right rake wall); 16.68″ left rake wall studs (Left rake wall); 8.50″ right wall bottom plate short (Right wall)  — waste: 2.14″
 
-### 2x6 KD — order **13 × 10′, 2 × 16′, 2 × 20′** (202.0 LF purchased, 192.4 LF cuts, 4.7% waste)
+### 2x6 KD — order **13 × 10′** (130.0 LF purchased, 124.7 LF cuts, 4.1% waste)
 
-- Board 1 (20′): 216.00″ roof fascia (Roof) — TOO LONG FOR 192"  — waste: 24.00″
-- Board 2 (20′): 216.00″ roof fascia (Roof) — TOO LONG FOR 192"  — waste: 24.00″
-- Board 3 (16′): 115.13″ roof rafters (Roof); 75.00″ front wall header long (Front wall)  — waste: 1.75″
-- Board 4 (16′): 115.13″ roof rafters (Roof); 75.00″ front wall header long (Front wall)  — waste: 1.75″
-- Board 5 (10′): 115.13″ roof rafters (Roof)  — waste: 4.87″
-- Board 6 (10′): 115.13″ roof rafters (Roof)  — waste: 4.87″
-- Board 7 (10′): 115.13″ roof rafters (Roof)  — waste: 4.87″
-- Board 8 (10′): 115.13″ roof rafters (Roof)  — waste: 4.87″
-- Board 9 (10′): 115.13″ roof rafters (Roof)  — waste: 4.87″
-- Board 10 (10′): 115.13″ roof rafters (Roof)  — waste: 4.87″
-- Board 11 (10′): 115.13″ roof rafters (Roof)  — waste: 4.87″
-- Board 12 (10′): 115.13″ roof rafters (Roof)  — waste: 4.87″
-- Board 13 (10′): 115.13″ roof rafters (Roof)  — waste: 4.87″
-- Board 14 (10′): 115.13″ roof rafters (Roof)  — waste: 4.87″
-- Board 15 (10′): 115.13″ roof rafters (Roof)  — waste: 4.87″
-- Board 16 (10′): 115.13″ roof rake board (Right rake wall)  — waste: 4.87″
-- Board 17 (10′): 115.13″ roof rake board (Right rake wall)  — waste: 4.87″
+- Board 1 (10′): 115.13″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.87″
+- Board 2 (10′): 115.13″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.87″
+- Board 3 (10′): 115.13″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.87″
+- Board 4 (10′): 115.13″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.87″
+- Board 5 (10′): 115.13″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.87″
+- Board 6 (10′): 115.13″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.87″
+- Board 7 (10′): 115.13″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.87″
+- Board 8 (10′): 115.13″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.87″
+- Board 9 (10′): 115.13″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.87″
+- Board 10 (10′): 115.13″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.87″
+- Board 11 (10′): 115.13″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.87″
+- Board 12 (10′): 115.13″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.87″
+- Board 13 (10′): 115.13″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.87″
 
 ### 2x6 PT — order **7 × 12′, 2 × 16′** (116.0 LF purchased, 112.5 LF cuts, 3.0% waste)
 
@@ -199,4 +177,4 @@ First-fit-decreasing bin packing, one pass per (lumber, treatment). For each gro
 
 ---
 
-**Total dimensional lumber LF purchased: 880.0**
+**Total dimensional lumber LF purchased: 808.0**

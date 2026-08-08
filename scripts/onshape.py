@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
-"""Onshape API helper: signed GET requests using personal API keys.
+"""Onshape API helper: signed requests using personal API keys.
 
 Loads credentials from ~/.config/onshape/credentials (KEY=VALUE lines).
 Usage:
     ./onshape.py GET /api/v6/documents/{did}
     ./onshape.py GET '/api/v6/documents/d/{did}/w/{wid}/elements'
+    ./onshape.py POST /api/v6/... '{"json": "body"}'      # inline JSON body
+    ./onshape.py POST /api/v6/... @body.json              # JSON body from file
 """
 import base64
 import datetime
@@ -84,6 +86,14 @@ if __name__ == "__main__":
         print(__doc__, file=sys.stderr)
         sys.exit(2)
     method, path = sys.argv[1], sys.argv[2]
-    status, body = signed_request(method, path)
+    body = b""
+    if len(sys.argv) > 3:
+        arg = sys.argv[3]
+        if arg.startswith("@"):
+            with open(arg[1:], "rb") as f:
+                body = f.read()
+        else:
+            body = arg.encode("utf-8")
+    status, body_text = signed_request(method, path, body=body)
     print(f"HTTP {status}")
-    print(body)
+    print(body_text)

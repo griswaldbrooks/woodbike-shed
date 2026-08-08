@@ -8,7 +8,10 @@ runs a FeatureScript on the server that, for each solid body:
   1. Finds the largest planar face (the "broad" face of a board).
   2. Builds a coordinate system from that face's normal + in-plane axis.
   3. Computes a tight bounding box in that coordinate system.
-  4. Returns name, partId, and three dimensions in inches.
+  4. Returns name and three dimensions in inches. Length is the longest
+     linear edge (true along-grain length — for plumb-cut members the box
+     extent along the grain over-states it), width/thickness are the box's
+     other two extents.
 
 Composite bodies are skipped (they're roll-ups, not physical lumber).
 
@@ -87,7 +90,7 @@ function(context is Context, queries is map)
             var xAxis = normalize(bestDir - dot(bestDir, nrm) * nrm);
             var cs = coordSystem(bestPlane.origin, xAxis, nrm);
             var bb = evBox3d(context, { topology: body, tight: true, cSys: cs });
-            dx = (bb.maxCorner[0] - bb.minCorner[0]) / inch;
+            dx = maxLen / inch;  // true along-grain length (longest linear edge)
             dy = (bb.maxCorner[1] - bb.minCorner[1]) / inch;
             dz = (bb.maxCorner[2] - bb.minCorner[2]) / inch;
         }
