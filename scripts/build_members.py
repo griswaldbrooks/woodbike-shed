@@ -242,6 +242,12 @@ LEFT_RAKE_PLATE = [(65.0, 97.5), (0.0, 121.5), (-0.268, 120.0), (60.669, 97.5)]
 
 RAFTER = [(-27.5, 131.65385), (80.5, 91.77692), (80.5, 97.63975), (-27.5, 137.51668)]
 
+# Roof trim (per the April roof: 2 fascia 2x6 x 216" = shed + 12" past each
+# side wall, 2 rake boards 2x6 x 115.13" along the slope outside the end
+# rafters). Fascia tops flush with the rafter tail tops.
+FRONT_FASCIA = [(-29.0, 132.01668), (-27.5, 132.01668), (-27.5, 137.51668), (-29.0, 137.51668)]
+BACK_FASCIA = [(80.5, 92.13975), (82.0, 92.13975), (82.0, 97.63975), (80.5, 97.63975)]
+
 
 def run_stage(stage_name):
     if stage_name in ("right-studs", "left-studs"):
@@ -283,6 +289,27 @@ def run_stage(stage_name):
         pat = make_pattern("Ftmp3", "rafter pattern", exid, "15.875 in", "13")
         print(f"--- adding pattern {pat['name']!r}")
         add_and_resolve(pat)
+    elif stage_name == "trim":
+        jobs = [
+            ("front fascia profile", FRONT_FASCIA, "front fascia", "216 in",
+             True, "14 in", False),
+            ("back fascia profile", BACK_FASCIA, "back fascia", "216 in",
+             True, "14 in", False),
+            ("left rake board profile", RAFTER, "left rake board", "1.5 in",
+             True, "192 in", True),
+            ("right rake board profile", RAFTER, "right rake board", "1.5 in",
+             False, None, False),
+        ]
+        for skname, quad, exname, depth, opp, off, offopp in jobs:
+            sk = make_sketch("Ftmp1", skname,
+                             quad_entity(quad, exname.replace(" ", "")[:4]))
+            print(f"--- adding sketch {sk['name']!r}")
+            sid = add_and_resolve(sk)
+            ex = make_extrude("Ftmp2", exname, sid, depth,
+                              opposite_direction=opp, start_offset_expr=off,
+                              start_offset_opposite=offopp)
+            print(f"--- adding extrude {ex['name']!r}")
+            add_and_resolve(ex)
     else:
         raise SystemExit(f"unknown stage {stage_name}")
 

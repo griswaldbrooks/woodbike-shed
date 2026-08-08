@@ -13,6 +13,8 @@ in the model**, rebuilt additively from current geometry (features added by
 | left rake wall studs | 4 | same heights (mirrored wall) |
 | left rake wall top plate | 1 | 2x4 × 69.29", sloped 24/65, mirror of right |
 | rafter | 13 | 2x6 × 115.13", 15.875" o.c., x = -2.75…187.75 |
+| front / back fascia | 2 | 2x6 × 216" (12" past each side wall), tops flush with rafter tails |
+| left / right rake board | 2 | 2x6 × 115.13", along the slope, outside the end rafters |
 
 The captain's own tail features (indices ~98–119) were left untouched. They
 remain in **ERROR**, generate no geometry, and conflict with the new parts
@@ -54,10 +56,12 @@ the rake studs): superseded by the new `right rake wall studs` (4 parts).
 **Rafter Right** (sketch plane ERROR → Frame 67 rafter + Linear pattern 12
 (12 instances × 16") + Delete face 1 + Transform 5 + Frames 68–71 + Move
 face 13): Frame 67 + pattern 12 → the rafters, superseded by the new 13
-`rafter` parts. **Not superseded:** Frames 68–71 (four 2x12-profile frames
-off mate-connector angle references = the April fascia/rake boards) and the
-Delete face / Move face trims (0.25" offset — see the rafter-bearing note in
-`OUTSTANDING_ISSUES.md`).
+`rafter` parts. Frames 68–71 (four frames on mate-connector angle
+references) + Transform 5 + the 12" Move face 13 were the **roof trim
+package** — the April fascia/rake-board construction with the roof extended
+12" past each side wall. That intent is now superseded by the new
+`front/back fascia` (2x6 × 216" = 192" shed + 2 × 12") and
+`left/right rake board` (2x6 × 115.13") parts.
 
 ## Recommended cleanup in the Onshape UI
 
@@ -74,8 +78,8 @@ Delete face / Move face trims (0.25" offset — see the rafter-bearing note in
      front-wall geometry,
    - the `Rafter Right` sketch plane onto a plane normal to X (e.g. the
      shed mid plane), and rebuild the four fascia mate connectors.
-3. Model the fascia + rake boards (2 × 2x6 × 216" fascia, 2 rake boards per
-   the April plan) — the only roof members still absent.
+3. The fascia and rake boards are modeled now (see table above); nothing
+   else is missing from the roof framing.
 
 ## Geometry reference used for the rebuild (all in inches, Z up)
 
@@ -93,3 +97,7 @@ Delete face / Move face trims (0.25" offset — see the rafter-bearing note in
   cuts, length 115.13".
 - Rafter X positions: 13 uniformly spaced centers −2.75 … 187.75 (the live
   stud-grid endpoints), spacing 15.875".
+- Fascia: 2x6, x = −13.5 … 202.5 (216"), front at y = −29 … −27.5 with top
+  flush at the front rafter-tail top (z = 137.52), back at y = 80.5 … 82
+  flush at z = 97.64. Rake boards: rafter profile, 1.5" thick, just outside
+  the end rafters (x = −5 … −3.5 and 188.5 … 190).

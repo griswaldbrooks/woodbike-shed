@@ -91,7 +91,11 @@ Source: Onshape "wood bike shed" Part Studio 1. Actual dimensions.
 
 | Qty | Lumber | Treatment | Length | Name |
 |---:|:---|:---:|---:|:---|
+| 1 | 2x6 | KD | 18′ 0.00″ (216.00″) | back fascia |
+| 1 | 2x6 | KD | 18′ 0.00″ (216.00″) | front fascia |
+| 1 | 2x6 | KD | 9′ 7.13″ (115.13″) | left rake board |
 | 13 | 2x6 | KD | 9′ 7.13″ (115.13″) | rafter |
+| 1 | 2x6 | KD | 9′ 7.13″ (115.13″) | right rake board |
 
 ## Stock-length order list
 
@@ -133,10 +137,10 @@ First-fit-decreasing bin packing, one pass per (lumber, treatment). For each gro
 - Board 32 (16′): 39.00″ right wall headers (Right wall); 39.00″ right wall headers (Right wall); 39.00″ right wall headers (Right wall); 31.00″ front wall cripple studs (Front wall); 31.00″ front wall cripple studs (Front wall); 10.77″ left rake wall studs (Left rake wall)  — waste: 1.60″
 - Board 33 (8′): 31.00″ front wall cripple studs (Front wall); 20.50″ right wall bottom plate long (Right wall); 16.68″ right rake wall studs (Right rake wall); 16.68″ left rake wall studs (Left rake wall); 8.50″ right wall bottom plate short (Right wall)  — waste: 2.14″
 
-### 2x6 KD — order **13 × 10′** (130.0 LF purchased, 124.7 LF cuts, 4.1% waste)
+### 2x6 KD — order **15 × 10′, 2 × 20′** (190.0 LF purchased, 179.9 LF cuts, 5.3% waste)
 
-- Board 1 (10′): 115.13″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.87″
-- Board 2 (10′): 115.13″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.87″
+- Board 1 (20′): 216.00″ front fascia (Roof) — TOO LONG FOR 96"  — waste: 24.00″
+- Board 2 (20′): 216.00″ back fascia (Roof) — TOO LONG FOR 96"  — waste: 24.00″
 - Board 3 (10′): 115.13″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.87″
 - Board 4 (10′): 115.13″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.87″
 - Board 5 (10′): 115.13″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.87″
@@ -148,6 +152,10 @@ First-fit-decreasing bin packing, one pass per (lumber, treatment). For each gro
 - Board 11 (10′): 115.13″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.87″
 - Board 12 (10′): 115.13″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.87″
 - Board 13 (10′): 115.13″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.87″
+- Board 14 (10′): 115.13″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.87″
+- Board 15 (10′): 115.13″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.87″
+- Board 16 (10′): 115.13″ left rake board (Roof) — TOO LONG FOR 96"  — waste: 4.87″
+- Board 17 (10′): 115.13″ right rake board (Roof) — TOO LONG FOR 96"  — waste: 4.87″
 
 ### 2x6 PT — order **7 × 12′, 2 × 16′** (116.0 LF purchased, 112.5 LF cuts, 3.0% waste)
 
@@ -177,4 +185,4 @@ First-fit-decreasing bin packing, one pass per (lumber, treatment). For each gro
 
 ---
 
-**Total dimensional lumber LF purchased: 808.0**
+**Total dimensional lumber LF purchased: 868.0**

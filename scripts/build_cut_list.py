@@ -52,6 +52,8 @@ def section_for(name):
         return "Skids"
     if "floor joist" in n or "rim joist" in n or "sub floor" in n or "subfloor" in n:
         return "Floor"
+    if "fascia" in n or "rake board" in n:
+        return "Roof"
     if "rake" in n:
         if "left" in n:
             return "Left rake wall"

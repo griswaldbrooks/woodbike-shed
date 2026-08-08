@@ -1,8 +1,8 @@
 # Outstanding issues
 
 Open items for the bike shed BOM / cut list before submitting quotes.
-Regenerated 2026-08-07 against the completed model (116 parts; rake walls and
-rafters finished, all parts named).
+Regenerated 2026-08-07 against the completed model (120 parts; rake walls,
+rafters and roof trim finished, all parts named).
 
 ## Stock availability
 
@@ -12,10 +12,12 @@ rafters finished, all parts named).
   with your target yard. If unavailable, re-run `scripts/build_cut_list.py`
   with 192 removed from `STOCK_LENGTHS["2x4"]` to see the 14'/12' fallback.
 
-- **Fascia / rake boards**: not in the model yet (the captain's roof
-  accessory features are among the broken tail features — see
-  `MANUAL_COMPLETION.md`). The old 20' 2x6 fascia question is moot until
-  fascia are modeled; expect two 16'+ 2x6 KD boards per the April plan.
+- **20' 2x6 stock (fascia)**: The two 216" (18') front/back fascia need
+  20-foot 2x6 KD boards — a special-order item at most retail yards.
+  Alternatives:
+  - Two 10' pieces per fascia with a scarf joint at midspan
+  - Finger-jointed primed 20' boards (if painting)
+  - Ask the yard if they stock 20' #2 SPF or Doug fir
 
 ## Waste / overage factor
 

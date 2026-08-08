@@ -41,6 +41,10 @@ for n in range(97, 101):
 RENAMES["Part 101"] = "left rake wall top plate"
 for n in range(102, 115):
     RENAMES[f"Part {n}"] = "rafter"
+RENAMES["Part 115"] = "front fascia"
+RENAMES["Part 116"] = "back fascia"
+RENAMES["Part 117"] = "left rake board"
+RENAMES["Part 118"] = "right rake board"
 
 
 def main():
