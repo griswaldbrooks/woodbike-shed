@@ -91,7 +91,7 @@ def svg_plan(parts, title, width=749, height=355, maxw=720):
     return _svg(parts, title, lo, hi, 0, 1, width, height, maxw=maxw)
 
 
-def svg_elev(parts, title, axes, width=663, height=395, profiles=None, maxw=380):
+def svg_elev(parts, title, axes, width=663, height=395, profiles=None, maxw=300):
     """axes: (i,j) world-axis indices for (horizontal, vertical).
     profiles: optional partId -> [(u,v)] true profile in those axes, for
     sloped members whose world bbox would draw as a misleading rectangle."""
@@ -109,8 +109,8 @@ def _svg(parts, title, lo, hi, ai, aj, width, height, flip_v=False, profiles=Non
     s = min((width - 2 * pad) / (hi[0] - lo[0]), (height - 2 * pad) / (hi[1] - lo[1]))
     vw = (hi[0] - lo[0]) * s + 2 * pad
     vh = (hi[1] - lo[1]) * s + 2 * pad
-    mw = f"{maxw}px" if maxw else "100%"
-    out = [f'<svg viewBox="0 0 {vw:.0f} {vh:.0f}" style="max-width:{mw};height:auto" '
+    mw = f"width:{maxw}px;" if maxw else ""
+    out = [f'<svg viewBox="0 0 {vw:.0f} {vh:.0f}" style="{mw}max-width:100%;height:auto" '
            f'role="img" font-family="system-ui,sans-serif"><title>{title}</title>']
 
     def tx(u, v):
