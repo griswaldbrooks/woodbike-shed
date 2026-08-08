@@ -51,17 +51,24 @@ Species/grade is not yet specified. Common choices for the PNW:
 Confirm species preference with the yard and update `order_list.csv`
 accordingly before quoting.
 
-## Rafter bearing vs front-wall double top plate
+## Rafter bearing vs front-wall double top plate — RESOLVED
 
-The rafters bear on the front wall at z=121.5" (top plate top, per the
-captain's `Rafter Right` sketch line), but the front-wall **double** top
-plate tops out at z=123". Each rafter therefore intersects the double top
-plate's outer corner by up to 0.21" over the y=-3.5..0" strip. The captain's
-unfinished rafter chain contained a `Move face` (0.25" offset) and a
-`Delete face` feature that appear aimed at this. Resolution options:
-- Notch each rafter's front bearing seat 1.5" down (birdsmouth-style), or
-- Drop the double top plate's front segment, or
-- Accept it (the interference is cosmetic at the hidden plate corner).
+The rafters' bearing line (captain's `Rafter Right` sketch) sits at z=121.5"
+on the front wall while the double top plate tops out at z=123". Fixed with
+**birdsmouths** on every rafter: front seat cut flat at z=123" over the
+plate width (heel at y=−4.06"), and a matching back seat at z=97.5" over the
+back wall plate (plumb kick at y=68.5") where the tails dipped below the
+plate top. Rafters now bear flush on both double top plates; verified by
+`scripts/audit_overlaps.py` (zero lumber-on-lumber overlap).
+
+## Known intentional overlaps (left as modeled)
+
+- Opening-A jacks (84") and one king stud (120") run from z=0 through the
+  front bottom plate (7.9 in³ each) — the captain's modeling quirk noted in
+  the scout report, not corrected.
+- The `inner volume` reference envelope pre-dates the roof; the rafters
+  pass through its upper zone. Reference body only — excluded from the cut
+  list, no action.
 
 ## Rake studs
 

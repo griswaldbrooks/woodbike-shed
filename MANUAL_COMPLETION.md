@@ -12,9 +12,9 @@ in the model**, rebuilt additively from current geometry (features added by
 | right rake wall studs | 4 | 2x4, heights 22.40 / 16.68 / 10.77 / 4.86" |
 | left rake wall studs | 4 | same heights (mirrored wall) |
 | left rake wall top plate | 1 | 2x4 × 69.29", sloped 24/65, mirror of right |
-| rafter | 13 | 2x6 × 115.13", 15.875" o.c., x = -2.75…187.75 |
+| rafter | 13 | 2x6 × 115.13", 15.875" o.c., x = -2.75…187.75, birdsmouthed front (seat z=123) and back (seat z=97.5) |
 | front / back fascia | 2 | 2x6 × 216" (12" past each side wall), tops flush with rafter tails |
-| left / right rake board | 2 | 2x6 × 118.32", along the slope at the roof overhang edges (flush with the fascia ends), end-to-end flush with the fascia outer faces |
+| left / right rake board | 2 | 2x6 × 115.13", along the slope at the roof overhang edges (flush with the fascia ends), butting the fascia inner faces |
 
 The captain's own tail features (indices ~98–119) were left untouched. They
 remain in **ERROR**, generate no geometry, and conflict with the new parts
@@ -95,12 +95,19 @@ fascia outer faces) parts.
   (y=−27.5, z=131.654) to (y=80.5, z=91.777) = 24" front / 12" back overhang
   from the wall outer faces, bearing on the front plate at (y=0, z=121.5)
   and back plate at (y=65, z=97.5); 2x6 (5.5" depth ⊥ slope), plumb end
-  cuts, length 115.13".
+  cuts, length 115.13". Birdsmouths: front seat flat at z=123 (heel at
+  y=−4.0625, plumb kick at the front wall inner face y=0); back seat flat
+  at z=97.5 over y=65…68.5 with plumb kick at the back outer face.
 - Rafter X positions: 13 uniformly spaced centers −2.75 … 187.75 (the live
   stud-grid endpoints), spacing 15.875".
 - Fascia: 2x6, x = −15.5 … 200.5 (216", 12" past each side wall), front at
   y = −29 … −27.5 with top flush at the front rafter-tail top (z = 137.52),
-  back at y = 80.5 … 82 flush at z = 97.64. Rake boards: rafter profile
-  extended end-to-end (y = −29 … 82, flush with the fascia outer faces),
-  1.5" thick, flush with the fascia ends at the roof overhang edges
-  (x = −15.5 … −14 and 199 … 200.5), length 118.32".
+  back at y = 80.5 … 82 flush at z = 97.64. Rake boards: full rafter
+  profile (115.13"), 1.5" thick, flush with the fascia ends at the roof
+  overhang edges (x = −15.5 … −14 and 199 … 200.5), butting the fascia
+  inner faces (y = −27.5 … 80.5) so the fascia stays unbroken.
+- Rake-plate noses (0.27" slivers that poked into the front wall plates):
+  left plate trimmed in its sketch (front end now a vertical face at y=0);
+  right (captain's) plate trimmed by the scoped REMOVE feature
+  "right rake plate nose trim" (wedge under the plate-top line, boolean
+  scope limited to the plate body).

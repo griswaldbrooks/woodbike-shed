@@ -1,0 +1,157 @@
+#!/usr/bin/env python3
+"""Full pairwise overlap audit of the woodbike-shed model.
+
+Every part is represented as an X-interval plus a YZ profile polygon:
+axis-aligned parts use their world bbox rectangle; sloped members (rafters,
+rake boards, rake plates, rake studs, fascia) use their exact construction
+profiles. Intersection volume = X-overlap * clipped-polygon area, so touching
+(0-volume) contacts are not flagged.
+
+Usage: python3 audit_overlaps.py   (reads scripts/bboxes.json)
+"""
+import json
+from pathlib import Path
+
+HERE = Path(__file__).parent
+M = 39.3700787
+EPS_A = 1e-4   # in^2 profile-area noise floor
+EPS_V = 0.01   # in^3 report threshold
+
+SLOPE = 24.0 / 65.0
+
+
+def zbot(y):
+    return 121.5 - SLOPE * y
+
+
+OFF = 5.86283
+RAFTER = [(-27.5, zbot(-27.5)), (-4.0625, 123.0), (0.0, 123.0), (0.0, 121.5),
+          (65.0, 97.5), (68.5, 97.5), (68.5, zbot(68.5)), (80.5, zbot(80.5)),
+          (80.5, zbot(80.5) + OFF), (-27.5, zbot(-27.5) + OFF)]
+RAKE_BOARD = [(-27.5, zbot(-27.5)), (80.5, zbot(80.5)),
+              (80.5, zbot(80.5) + OFF), (-27.5, zbot(-27.5) + OFF)]
+RIGHT_RAKE_PLATE = [(65.0, 97.5), (0.0, 121.5), (0.0, 119.901), (60.669, 97.5)]
+LEFT_RAKE_PLATE = RIGHT_RAKE_PLATE
+
+
+def zu(y):
+    return 97.5 + SLOPE * (60.669 - y)
+
+
+RAKE_STUDS = []
+for yc in (0.75, 16.25, 32.25, 48.25):
+    y0, y1 = yc - 0.75, yc + 0.75
+    RAKE_STUDS.append([(y0, 97.5), (y1, 97.5), (y1, zu(y1)), (y0, zu(y0))])
+
+FASCIA_FRONT = [(-29.0, 132.01668), (-27.5, 132.01668),
+                (-27.5, 137.51668), (-29.0, 137.51668)]
+FASCIA_BACK = [(80.5, 92.13975), (82.0, 92.13975), (82.0, 97.63975), (80.5, 97.63975)]
+
+
+def zspan(poly, y):
+    """(zlo, zhi) of a vertically-convex polygon at ordinate y."""
+    zs = []
+    n = len(poly)
+    for i in range(n):
+        y1, z1 = poly[i]
+        y2, z2 = poly[(i + 1) % n]
+        if (y1 <= y <= y2) or (y2 <= y <= y1):
+            if y2 == y1:
+                continue
+            t = (y - y1) / (y2 - y1)
+            zs.append(z1 + t * (z2 - z1))
+    if not zs:
+        return None
+    return (min(zs), max(zs))
+
+
+def overlap_area(a, b):
+    """Area of intersection of two vertically-convex polygons.
+    Midpoint sampling on the vertex-ordinate breakpoints; exact for
+    piecewise-linear integrands up to crossing kinks (dense K keeps any
+    error far below the report threshold)."""
+    ys = sorted({p[0] for p in a} | {p[0] for p in b})
+    if len(ys) < 2:
+        return 0.0
+    total = 0.0
+    for i in range(len(ys) - 1):
+        y0, y1 = ys[i], ys[i + 1]
+        dy = y1 - y0
+        if dy < 1e-9:
+            continue
+        K = 16
+        for k in range(K):
+            y = y0 + dy * (k + 0.5) / K
+            sa, sb = zspan(a, y), zspan(b, y)
+            if sa is None or sb is None:
+                continue
+            f = max(0.0, min(sa[1], sb[1]) - max(sa[0], sb[0]))
+            total += f * dy / K
+    return total
+
+
+def main():
+    bboxes = json.loads((HERE / "bboxes.json").read_text())
+    parts = []
+    for r in bboxes:
+        name = r["name"]
+        bb = r["bbox_m"]
+        x0, x1 = bb["lowX"] * M, bb["highX"] * M
+        y0, y1 = bb["lowY"] * M, bb["highY"] * M
+        z0, z1 = bb["lowZ"] * M, bb["highZ"] * M
+        parts.append({"name": name, "x": (x0, x1),
+                      "poly": ([(y0, z0), (y1, z0), (y1, z1), (y0, z1)])})
+
+    # exact profiles override the bbox rectangle (keyed by name; rake studs
+    # are four distinct parts sharing four profiles matched by y-position)
+    prof = {
+        "rafter": RAFTER,
+        "left rake board": RAKE_BOARD,
+        "right rake board": RAKE_BOARD,
+        "left rake wall top plate": LEFT_RAKE_PLATE,
+        "right rake wall top plate": RIGHT_RAKE_PLATE,
+        "front fascia": FASCIA_FRONT,
+        "back fascia": FASCIA_BACK,
+    }
+    stud_profiles = {round(yc, 2): q for yc, q in
+                     zip((0.75, 16.25, 32.25, 48.25), RAKE_STUDS)}
+    for p in parts:
+        if p["name"] in prof:
+            p["poly"] = prof[p["name"]]
+        elif p["name"] in ("left rake wall studs", "right rake wall studs"):
+            yc = round(sum(q[0] for q in p["poly"]) / 4, 2)
+            p["poly"] = stud_profiles[yc]
+
+    hits = []
+    n = len(parts)
+    for i in range(n):
+        for j in range(i + 1, n):
+            a, b = parts[i], parts[j]
+            xo = min(a["x"][1], b["x"][1]) - max(a["x"][0], b["x"][0])
+            if xo <= 1e-6:
+                continue
+            # quick bbox y/z reject
+            ay = [q[0] for q in a["poly"]]
+            by = [q[0] for q in b["poly"]]
+            az = [q[1] for q in a["poly"]]
+            bz = [q[1] for q in b["poly"]]
+            if max(ay) < min(by) or max(by) < min(ay):
+                continue
+            if max(az) < min(bz) or max(bz) < min(az):
+                continue
+            ar = overlap_area(a["poly"], b["poly"])
+            if ar > EPS_A:
+                vol = ar * xo
+                if vol > EPS_V:
+                    hits.append((vol, a["name"], b["name"]))
+
+    hits.sort(reverse=True)
+    print(f"{len(hits)} overlapping pairs (vol > {EPS_V} in^3):")
+    for vol, an, bn in hits:
+        print(f"  {vol:9.3f} in^3  {an}  x  {bn}")
+    if not hits:
+        print("  none")
+
+
+if __name__ == "__main__":
+    main()

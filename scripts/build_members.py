@@ -240,7 +240,23 @@ def rake_stud_quads():
 
 LEFT_RAKE_PLATE = [(65.0, 97.5), (0.0, 121.5), (-0.268, 120.0), (60.669, 97.5)]
 
-RAFTER = [(-27.5, 131.65385), (80.5, 91.77692), (80.5, 97.63975), (-27.5, 137.51668)]
+RAFTER_PLAIN = [(-27.5, 131.65385), (80.5, 91.77692), (80.5, 97.63975), (-27.5, 137.51668)]
+
+# Rafter with birdsmouths: front seat at z=123 (front double top plate top,
+# heel at y=-4.0625) and back seat at z=97.5 over the back wall plate
+# (y=65..68.5), plumb kick at the back outer face.
+RAFTER = [(-27.5, 131.65385), (-4.0625, 123.0), (0.0, 123.0), (0.0, 121.5),
+          (65.0, 97.5), (68.5, 97.5), (68.5, 96.20769), (80.5, 91.77692),
+          (80.5, 97.63975), (-27.5, 137.51668)]
+
+# Rake boards butt against the fascia inner faces (full rafter length).
+RAKE_BOARD = RAFTER_PLAIN
+
+# Left rake plate with the nose trimmed flush at the front wall inner face.
+LEFT_RAKE_PLATE_TRIMMED = [(65.0, 97.5), (0.0, 121.5), (0.0, 119.901), (60.669, 97.5)]
+
+# Wedge that trims the captain's right rake plate nose (scoped SUBTRACT).
+RIGHT_PLATE_TRIM_WEDGE = [(0.0, 121.5), (-1.0, 121.5 + 24.0/65.0), (-1.0, 118.0), (0.0, 118.0)]
 
 # Roof trim (per the April roof: 2 fascia 2x6 x 216" = shed + 12" past each
 # side wall, 2 rake boards along the slope outside the end rafters, running
@@ -271,7 +287,7 @@ def run_stage(stage_name):
         add_and_resolve(ex)
     elif stage_name == "left-plate":
         sk = make_sketch("Ftmp1", "left rake wall top plate profile",
-                         quad_entity(LEFT_RAKE_PLATE, "lp"))
+                         quad_entity(LEFT_RAKE_PLATE_TRIMMED, "lp"))
         print(f"--- adding sketch {sk['name']!r}")
         sid = add_and_resolve(sk)
         ex = make_extrude("Ftmp2", "left rake wall top plate", sid, "3.5 in",
@@ -312,6 +328,29 @@ def run_stage(stage_name):
                               start_offset_opposite=offopp)
             print(f"--- adding extrude {ex['name']!r}")
             add_and_resolve(ex)
+    elif stage_name == "right-plate-trim":
+        # Scoped SUBTRACT that trims the captain's right rake plate nose
+        # (0.27" sliver that poked into the front wall plates). The wedge top
+        # edge lies on the plate-top line so only the nose is removed.
+        sk = make_sketch("Ftmp1", "right rake plate trim profile",
+                         quad_entity(RIGHT_PLATE_TRIM_WEDGE, "wedge"))
+        print(f"--- adding sketch {sk['name']!r}")
+        sid = add_and_resolve(sk)
+        ex = make_extrude("Ftmp2", "right rake plate nose trim", sid, "5.5 in",
+                          opposite_direction=True, start_offset_expr="1 in",
+                          start_offset_opposite=True)
+        for p in ex["parameters"]:
+            if p["parameterId"] == "operationType":
+                p["value"] = "REMOVE"
+            if p["parameterId"] == "defaultScope":
+                p["value"] = False
+            if p["parameterId"] == "booleanScope":
+                p["queries"] = [{
+                    "btType": "BTMIndividualQuery-138", "queryStatement": None,
+                    "queryString": 'query = qCreatedBy(id + "FCunzhmF7oX1gd2_76", EntityType.BODY);',
+                    "nodeId": uid(), "deterministicIds": []}]
+        print(f"--- adding extrude {ex['name']!r}")
+        add_and_resolve(ex)
     else:
         raise SystemExit(f"unknown stage {stage_name}")
 

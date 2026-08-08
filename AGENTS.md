@@ -56,6 +56,13 @@ Run from the repo root (scripts read `scripts/*.json` relatively).
 - `fetch_oriented_dims.py` reports length as the longest linear edge; for
   plumb-cut (parallelogram) members a cSys box extent along the grain
   over-states the board length, so don't switch back to box-extent length.
+- Editing a part's source sketch/extrude REGENERATES the body and resets
+  part-name overrides to `Part NN` — re-run `scripts/rename_parts.py`
+  (or rename by bbox) after any geometry edit.
+- `scripts/audit_overlaps.py` is the overlap checker: every member is an
+  X-prism with a YZ profile, so pair volumes = X-overlap × clipped-profile
+  area (vertically-convex profiles, midpoint integration). Touching parts
+  read 0; only real interference is reported.
 
 ## Naming conventions
 
