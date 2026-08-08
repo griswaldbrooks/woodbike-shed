@@ -244,14 +244,18 @@ def main():
                      f"<td>{dimstr}</td><td class='small'>{name or '(unnamed sub-bodies)'}</td></tr>")
         P.append("</table>")
 
-    P.append('<figure>' + svg_elev(bysec["Back wall"], "Back wall elevation", (0, 2)) +
+    P.append('<figure>' + svg_elev(bysec["Back wall"], "Back wall elevation", (0, 2), maxw=720) +
              '<figcaption>Back wall elevation.</figcaption></figure>')
-    P.append('<figure>' + svg_elev(bysec["Front wall"], "Front wall elevation", (0, 2)) +
+    P.append('<figure>' + svg_elev(bysec["Front wall"], "Front wall elevation", (0, 2), maxw=720) +
              '<figcaption>Front wall elevation (two rough openings).</figcaption></figure>')
-    P.append('<figure>' + svg_elev(bysec["Left wall"] + bysec["Left rake wall"], "Left wall elevation", (1, 2), profiles=PROF) +
+    P.append('<div style="display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap">')
+    P.append('<figure style="margin:10px 0">' +
+             svg_elev(bysec["Left wall"] + bysec["Left rake wall"], "Left wall elevation", (1, 2), profiles=PROF) +
              '<figcaption>Left wall + rake elevation.</figcaption></figure>')
-    P.append('<figure>' + svg_elev(bysec["Right wall"] + bysec["Right rake wall"], "Right wall elevation", (1, 2), profiles=PROF) +
+    P.append('<figure style="margin:10px 0">' +
+             svg_elev(bysec["Right wall"] + bysec["Right rake wall"], "Right wall elevation", (1, 2), profiles=PROF) +
              '<figcaption>Right wall + rake elevation (door opening).</figcaption></figure>')
+    P.append('</div>')
     P.append('<figure>' + svg_plan(bysec["Roof"], "Roof plan") +
              '<figcaption>Roof plan (rafters, fascia, rake boards).</figcaption></figure>')
 
