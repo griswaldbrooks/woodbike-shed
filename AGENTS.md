@@ -69,7 +69,10 @@ Run from the repo root (scripts read `scripts/*.json` relatively).
   over-states the board length, so don't switch back to box-extent length.
 - Editing a part's source sketch/extrude REGENERATES the body and resets
   part-name overrides to `Part NN` — re-run `scripts/rename_parts.py`
-  (or rename by bbox) after any geometry edit.
+  (or rename by bbox) after any geometry edit. Caveat: rename_parts.py's
+  name map assumes ALL expected `Part NN` slots are present; after a
+  partial regen rename the few bodies directly with its metadata-API
+  pattern instead.
 - `scripts/audit_overlaps.py` is the overlap checker: every member is an
   X-prism with a YZ profile, so pair volumes = X-overlap × clipped-profile
   area (vertically-convex profiles, midpoint integration). Touching parts
@@ -81,7 +84,9 @@ The captain wants members constrained to existing geometry (absolutes only
 at critical anchors), not absolute-coordinate sketches. Proven workable
 2026-08-08; pilot conversion of the right rake studs lives in
 `scripts/constraint_pilot/` (final feature JSON + update/restore harness +
-ground truth). Sharp edges:
+ground truth). Delegate the heavy trial-and-error of each conversion to a
+subagent briefed from this section + that directory (captain's preference —
+protect context). Sharp edges:
 
 - Reference solid faces with
   `qContainsPoint(qEverything(EntityType.FACE), vector(x,y,z) * meter)` —
