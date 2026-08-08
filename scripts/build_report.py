@@ -105,16 +105,18 @@ def svg_elev(parts, title, axes, width=663, height=395, profiles=None):
 
 def _svg(parts, title, lo, hi, ai, aj, width, height, flip_v=False, profiles=None):
     pad = 12
-    sx = (width - 2 * pad) / (hi[0] - lo[0])
-    sy = (height - 2 * pad) / (hi[1] - lo[1])
-    out = [f'<svg viewBox="0 0 {width} {height}" style="max-width:100%;height:auto" '
+    # uniform scale + content-sized viewBox so proportions are true
+    s = min((width - 2 * pad) / (hi[0] - lo[0]), (height - 2 * pad) / (hi[1] - lo[1]))
+    vw = (hi[0] - lo[0]) * s + 2 * pad
+    vh = (hi[1] - lo[1]) * s + 2 * pad
+    out = [f'<svg viewBox="0 0 {vw:.0f} {vh:.0f}" style="max-width:100%;height:auto" '
            f'role="img" font-family="system-ui,sans-serif"><title>{title}</title>']
 
     def tx(u, v):
-        x = pad + (u - lo[0]) * sx
-        y = pad + (v - lo[1]) * sy
+        x = pad + (u - lo[0]) * s
+        y = pad + (v - lo[1]) * s
         if flip_v:
-            y = height - pad - (v - lo[1]) * sy
+            y = vh - pad - (v - lo[1]) * s
         return x, y
 
     for r in parts:
