@@ -75,6 +75,32 @@ Run from the repo root (scripts read `scripts/*.json` relatively).
   area (vertically-convex profiles, midpoint integration). Touching parts
   read 0; only real interference is reported.
 
+## Relationship (constraint) builds via API — the preferred method
+
+The captain wants members constrained to existing geometry (absolutes only
+at critical anchors), not absolute-coordinate sketches. Proven workable
+2026-08-08; pilot conversion of the right rake studs lives in
+`scripts/constraint_pilot/` (final feature JSON + update/restore harness +
+ground truth). Sharp edges:
+
+- Reference solid faces with
+  `qContainsPoint(qEverything(EntityType.FACE), vector(x,y,z) * meter)` —
+  sample point interior to the face, clear of other bodies (tolerance is
+  sub-mm). `qPlanarFace` doesn't exist; faces of custom-`frame`-feature
+  bodies are NOT attributable via `qCreatedBy(fid, EntityType.FACE)`; the
+  rake plate's underside face/edges can't be probed at all — use a
+  DISTANCE constraint from its TOP face instead (1.5 in = plate thickness;
+  check the halfSpace sign by measurement).
+- Constraint queries resolve against the rolled-back state at the sketch's
+  tree index — later features (e.g. the nose-trim face) are invisible.
+- Dangling reference = stored `deterministicIds: [""]` + sketch WARNING;
+  resolved queries get rewritten with real det ids.
+- In-place feature update (POST `.../features/featureid/{fid}`) works;
+  downstream deterministic-id consumers keep resolving; regenerated bodies
+  keep partIds but names reset → re-run the rename pass.
+- Verify solved geometry via downstream bodies (extrude + boundingboxes);
+  the feature list stores DRAWN coordinates only.
+
 ## Naming conventions
 
 Parts are named by section-role, one shared name per role group ("back wall

@@ -95,6 +95,30 @@ fascia outer faces) parts.
 3. The fascia and rake boards are modeled now (see table above); nothing
    else is missing from the roof framing.
 
+## Relationship-based rebuild (in progress, started 2026-08-08)
+
+Captain's direction: members should be constraint-driven from existing
+geometry (absolutes only at critical anchors) so design changes propagate,
+not absolute-coordinate sketches. The API mechanism is proven (a sketch
+line constrained COINCIDENT to a solid face solved to the face exactly;
+control run confirmed), and the first member group is converted:
+
+- **right rake wall studs** (sketch `FqDfLcBqgGzsYjO_103`, in-place
+  update): 4 quads, 44 constraints — bottom edges coincident to the right
+  wall double top plate top face, top edges driven 1.5" below the rake
+  plate top face (its underside is unprobeable), sides vertical, widths
+  1.5", stud 1 anchored to the y=0 plane, spacings 15.5/16/16 in (left
+  edges 0/15.5/31.5/47.5 in — first stud hard in the front corner).
+  Solved geometry matches the previous absolute build within 4µm
+  (uniform +3.96µm: the studs now track the plate's real faces, not the
+  build formula). Seeds were perturbed before solving, so the positions
+  genuinely came from the constraints.
+
+Still absolute (conversion pending, same recipe): left rake wall studs,
+left rake wall top plate, rafters, fascia, rake boards. Recipe, harness
+and rollback definition: `scripts/constraint_pilot/`. API mechanics:
+AGENTS.md "Relationship (constraint) builds via API".
+
 ## Geometry reference used for the rebuild (all in inches, Z up)
 
 - Roof slope: **24/65** (rise 24" over the 65" front-to-back wall bearing
