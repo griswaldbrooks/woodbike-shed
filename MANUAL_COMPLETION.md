@@ -1,7 +1,17 @@
 # Manual completion guide — the captain's broken tail features
 
-Status as of 2026-08-07 (restore version `aa73830b88f34f965190a7c6`
+Status as of 2026-08-08 (restore version `aa73830b88f34f965190a7c6`
 "pre-fleet-completion 2026-08-05" taken before any change).
+
+**Resolved 2026-08-08**: the captain approved deletion of his 20 broken
+tail features (indices 100–119); they were deleted via the API and the tree
+is now fully green (119 features, zero errors). Indices 98–99 (`right rake
+wall` sketch + Frame 63) were kept — they are live and build the right rake
+plate. Post-deletion re-pull verified: 120 parts, names intact, bboxes
+identical, overlap audit unchanged. This document is kept as the diagnosis
+record. Pre-deletion microversion: `75ed0337831d755732fa8042` (Onshape
+retains full history; restore versions `aa73830b` and "V1 4/12/26" still
+exist if the captain's original construction is ever wanted back).
 
 The rake-wall and rafter geometry the mid-refactor was building **now exists
 in the model**, rebuilt additively from current geometry (features added by
@@ -16,10 +26,10 @@ in the model**, rebuilt additively from current geometry (features added by
 | front / back fascia | 2 | 2x6 × 216" (12" past each side wall), tops flush with rafter tails |
 | left / right rake board | 2 | 2x6 × 115.13", along the slope at the roof overhang edges (flush with the fascia ends), butting the fascia inner faces |
 
-The captain's own tail features (indices ~98–119) were left untouched. They
-remain in **ERROR**, generate no geometry, and conflict with the new parts
-only if re-activated. This guide explains why they broke and how to
-reconcile them.
+The captain's own tail features (indices 100–119) were deleted 2026-08-08
+with his explicit go-ahead; indices 98–99 were kept (live, build the right
+rake plate). The sections below explain why the deleted chains broke —
+kept as the diagnosis record.
 
 ## Why the tail features fail
 
@@ -64,15 +74,18 @@ package** — the April fascia/rake-board construction with the roof extended
 `left/right rake board` (2x6 × 118.32", running end-to-end flush with the
 fascia outer faces) parts.
 
-## Recommended cleanup in the Onshape UI
+## Cleanup — done 2026-08-08
 
-1. Suppress or delete the 20 tail features in ERROR (Frame 64 … Frame 71 and
-   their sketches/patterns/splits/deletes/transforms — everything from
+1. **Done**: the 20 tail features in ERROR (Frame 64 … Frame 71 and their
+   sketches/patterns/splits/deletes/transforms — everything from the
    `right rake wall` sketch's Frame 64 onward, plus the `left rake wall`
-   and `Rafter Right` sketches). The new parts already deliver their
-   rake/rafter output; keeping them only leaves red features.
-2. If you want the captain's original construction instead of the rebuild:
-   restore version `aa73830b88f34f965190a7c6`, then in the UI re-point
+   and `Rafter Right` sketches) were deleted via the API
+   (`DELETE .../features/featureid/{fid}`, reverse tree order) with the
+   captain's go-ahead. Verified after: 119 features all OK, 120 parts with
+   names intact, bboxes/oriented dims unchanged, overlap audit unchanged.
+2. If the captain's original construction is ever wanted instead of the
+   rebuild: restore version `aa73830b88f34f965190a7c6`, then in the UI
+   re-point
    - the `left rake wall` sketch plane onto the left wall plane (same plane
      as `left wall sketch`),
    - Frame 64's second selection and Split 3's targets onto current

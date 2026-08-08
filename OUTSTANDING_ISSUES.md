@@ -85,6 +85,6 @@ from scrap / off-cuts if managed on-site.
   remain unnamed (they are sub-bodies, not parts — nothing to rename).
 - `"inner volume"` remains excluded from the cut list; confirmed reference
   only (interior clearance envelope).
-- The captain's 20 broken tail features (rake-wall/rafter chains) are still
-  in the feature tree in ERROR state, generating nothing. See
-  `MANUAL_COMPLETION.md` for how to reconcile them with the new geometry.
+- The captain's 20 broken tail features (rake-wall/rafter chains) were
+  **deleted 2026-08-08** with his go-ahead; the feature tree is fully green
+  (119 features, zero errors). Diagnosis record: `MANUAL_COMPLETION.md`.

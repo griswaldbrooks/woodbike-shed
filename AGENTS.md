@@ -41,7 +41,13 @@ Run from the repo root (scripts read `scripts/*.json` relatively).
   `{"serializationVersion","sourceMicroversion","feature"}` — the server
   assigns its own featureId (re-fetch the feature list to learn it before a
   dependent feature references it). Update: POST to
-  `.../features/featureid/{fid}`; delete: DELETE on the same path.
+  `.../features/featureid/{fid}`; delete: DELETE on the same path (deleting
+  ERROR features that create nothing does not regenerate surviving bodies or
+  reset part names — verified 2026-08-08).
+- Create-version API (POST `/api/v6/documents/{did}/versions`) rejected
+  every body shape with a generic 400 as of 2026-08-08; create named
+  restore versions in the UI instead and record the workspace microversion
+  id in the commit as the fallback anchor (Onshape keeps full history).
 - Sketch coordinates are in meters; plain-FS `queryString`s (e.g.
   `qSketchRegion(id + "…")`) work fine in place of qCompressed blobs.
   Clone an existing same-plane sketch's `sketchPlane` query verbatim to reuse
@@ -50,10 +56,10 @@ Run from the repo root (scripts read `scripts/*.json` relatively).
   extrusion; `startOffset` moves the start along the plane normal (+),
   independent of extrusion direction — use `startOffsetOppositeDirection`
   to move it the other way.
-- Tail of the feature tree: indices 100–119 (20 features) are the captain's
-  mid-refactor work, in ERROR on deleted references; indices 98–99 (`right
-  rake wall` sketch + Frame 63) are live and build the right rake plate —
-  see `MANUAL_COMPLETION.md` before touching anything there.
+- The captain's broken tail features (20, in ERROR) were deleted via API
+  2026-08-08 with his go-ahead; indices 98–99 (`right rake wall` sketch +
+  Frame 63) are live and build the right rake plate — never delete those.
+  Diagnosis record: `MANUAL_COMPLETION.md`.
 - Per-feature status lives in the feature-list GET response's `featureStates`
   map (featureId → `featureStatus`); `evFeatureStatus` is not callable from
   eval scripts. Eval-API `queries` values must be arrays of query
