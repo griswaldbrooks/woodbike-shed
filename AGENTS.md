@@ -25,6 +25,9 @@ rework: `aa73830b88f34f965190a7c6` ("pre-fleet-completion 2026-08-05").
 `order_list.csv`. `verify_groups.py` checks dim consistency per part name.
 Run from the repo root (scripts read `scripts/*.json` relatively).
 `scripts/fs_probe.py '<FS code>'` is the eval REPL for model queries.
+`blender/build_scene.py` turns `blender/scene.glb` into `blender/shed_scene.blend`
+plus Cycles renders in `blender/renders/`; usage and the material-by-name
+mapping live in `blender/README.md`.
 
 ## Onshape API sharp edges (learned the hard way)
 
