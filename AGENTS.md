@@ -27,7 +27,10 @@ Run from the repo root (scripts read `scripts/*.json` relatively).
 `scripts/fs_probe.py '<FS code>'` is the eval REPL for model queries.
 `blender/build_scene.py` turns `blender/scene.glb` into `blender/shed_scene.blend`
 plus Cycles renders in `blender/renders/`; usage and the material-by-name
-mapping live in `blender/README.md`.
+mapping live in `blender/README.md`. Headless Blender: `download.blender.org`
+is Cloudflare-challenged (curl gets an HTML block page) — fetch the tarball
+from a mirror (e.g. `mirrors.ocf.berkeley.edu/blender/release`) into the
+gitignored `.scratch/`.
 
 ## Onshape API sharp edges (learned the hard way)
 
