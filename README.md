@@ -10,6 +10,17 @@ from this repo's audit data (no Onshape API calls) and exports per-part STEP
 plus one named `blender/scene.glb` for renders. Build: `.venv/bin/python -m
 cad.build` — verify (run after every change): `.venv/bin/python -m cad.verify`.
 
+## Viewing (OCP CAD Viewer)
+
+`view.py` sends the assembled model to the OCP CAD Viewer with a part tree
+that mirrors `CUT_LIST.md` (one group per section, real cut-list labels):
+
+    ~/.venvs/woodbike-shed/bin/python view.py   # from the repo root
+
+Run it inside VS Code with the *OCP CAD Viewer* extension. `ocp_vscode` is a
+viewer-side extra, deliberately not in `requirements.txt` — it lives in the
+captain's `~/.venvs/woodbike-shed` venv (any venv with `ocp_vscode` works).
+
 ## Onshape document
 
 - Name: *wood bike shed*
