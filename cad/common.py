@@ -131,15 +131,21 @@ def load_audit() -> Audit:
     return audit
 
 
-DOCUMENTED_PITCH = math.degrees(math.atan(24 / 65))  # ~20.26 deg
+# Roof pitch = rise over the 65" front-to-back bearing spacing: front
+# bearing 121.5" (front double top plate 123" - 1.5") minus the back/left/
+# right wall plate tops. 24/65 until the 2026-08-10 restud to 92-5/8"
+# pre-cut studs dropped those plates 3/8" -> 24.375/65. Derivation record:
+# scripts/restud_92_5_8.py.
+DOCUMENTED_PITCH = math.degrees(math.atan(24.375 / 65))  # ~20.56 deg
 
 
 def solve_pitch(audit: Audit) -> float:
-    """Roof pitch. The documented slope is 24/65 (MANUAL_COMPLETION.md and
-    OUTSTANDING_ISSUES.md on main); sanity-check it against the rafter AABB
-    (dz = L sin(t) + D cos(t) for a full tilted box). The upstream rafters
-    now carry birdsmouth/end cuts, so the AABB-derived value drifts a few
-    tenths of a degree - the documented slope is authoritative.
+    """Roof pitch. The documented slope is 24.375/65 (see DOCUMENTED_PITCH;
+    pre-restud history in MANUAL_COMPLETION.md); sanity-check it against the
+    rafter AABB (dz = L sin(t) + D cos(t) for a full tilted box). The
+    rafters carry birdsmouth/end cuts in the audited geometry, so the
+    AABB-derived value drifts a few tenths of a degree - the documented
+    slope is authoritative.
     """
     r = audit.specs["rafter"][0]
     L = max(r.dims)

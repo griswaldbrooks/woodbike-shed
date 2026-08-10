@@ -2,39 +2,34 @@
 
 Open items for the bike shed BOM / cut list before submitting quotes.
 Regenerated 2026-08-07 against the completed model (120 parts; rake walls,
-rafters and roof trim finished, all parts named).
+rafters and roof trim finished, all parts named). 2026-08-10: captain's
+ordering decisions applied locally (this branch); the Onshape model still
+carries the pre-decision geometry (zero API calls).
 
-## Stock availability
+## Stock availability — RESOLVED (2026-08-10, Hingham Lumber)
 
-- **16' 2x4 stock**: The optimizer selects 32 × 16' 2x4 KD boards (five 192"
-  plates + one 185" plate force 16' stock; the long front-wall studs pair
-  best with plates at that length). Not every yard stocks 16' 2x4 — confirm
-  with your target yard. If unavailable, re-run `scripts/build_cut_list.py`
+- **16' 2x4 stock**: Hingham Lumber stocks it — KEEP. The optimizer selects
+  32 × 16' 2x4 KD boards (five 192" plates + one 185" plate force 16'
+  stock). If a future yard lacks it, re-run `scripts/build_cut_list.py`
   with 192 removed from `STOCK_LENGTHS["2x4"]` to see the 14'/12' fallback.
 
-- **20' 2x6 stock (fascia)**: The two 216" (18') front/back fascia need
-  20-foot 2x6 KD boards — a special-order item at most retail yards.
-  Alternatives:
-  - Two 10' pieces per fascia with a scarf joint at midspan
-  - Finger-jointed primed 20' boards (if painting)
-  - Ask the yard if they stock 20' #2 SPF or Doug fir
+- **20' 2x6 stock (fascia)**: Hingham Lumber stocks true 20' 2x6 — ORDER
+  TRUE 20'. The two 216" (18') front/back fascia take one 20' board each.
 
-## Waste / overage factor
+## Waste / overage factor — RESOLVED (2026-08-10)
 
-The cut list reflects the model dimensions exactly (0% overage). Standard
-practice is 10% extra for framing jobs to cover mistakes, damaged boards, and
-on-site scrap. Decide whether to:
-- Bake 10% into the quote quantities before sending
-- Or order exact and plan a follow-up run for shortages
+ORDER EXACT quantities (0% overage); the captain plans a follow-up order
+for shortages. order_list.csv carries no waste factor by design.
 
-## Stud pre-cuts
+## Stud pre-cuts — RESOLVED (2026-08-10)
 
-Back wall, left wall, and right wall studs are all 93". Standard pre-cut
-studs (sold as "92-⅝" studs" at big-box stores) are 92.625". The model's
-93" studs are 3/8" longer, which matters. Options:
-- Use 93" as modeled (cut from stock) — no issue
-- Switch to 92-⅝" pre-cut studs — cheaper and saves saw time, but requires
-  adjusting the wall height in the Onshape model by 3/8"
+SWITCHED to standard 92-5/8" pre-cut studs for the back, left, and right
+walls; wall height dropped 3/8" (97.5" -> 97-1/8"). Applied locally by
+`scripts/restud_92_5_8.py`, which re-derives every dependent value from the
+constraint chain (roof plane pivots about the unchanged front wall; rake
+studs, rafters, fascia and cripples follow — see the script docstring and
+the 2026-08-10 commit for before/after dims). The Onshape model still has
+the 93" studs; sync it (or not) is a future captain call.
 
 ## Treatment & species
 
@@ -44,12 +39,16 @@ Currently tagged:
 - **KD (kiln-dried, framing grade)**: all wall and roof lumber
 - **OSB**: 3/4" structural, subfloor-rated
 
-Species/grade is not yet specified. Common choices for the PNW:
-- KD framing: SPF #2, Hem-fir #2, or Doug fir #2
-- PT ground contact: Hem-fir or SYP with UC4A rating
+Species decisions (2026-08-10):
+- KD framing: **SPF #2** — decided; recorded in order_list.csv notes.
+- PT ground contact: no captain decision yet (common PNW choices: Hem-fir
+  or SYP with UC4A rating). Confirm with Hingham Lumber before ordering.
 
-Confirm species preference with the yard and update `order_list.csv`
-accordingly before quoting.
+## Doors / siding / trim — separate order list (2026-08-10 decision)
+
+Captain's call: model doors/siding/trim for real, but order them on a
+COMPLETELY SEPARATE order list — never mixed into this framing lumber list.
+That modeling is an upcoming task; nothing here covers it.
 
 ## Rafter bearing vs front-wall double top plate — RESOLVED
 
@@ -73,9 +72,10 @@ plate top. Rafters now bear flush on both double top plates; verified by
 ## Rake studs
 
 Left and right rake-wall studs are now real parts, one unique length each:
-22.40", 16.68", 10.77", 4.86" (re-derived from the live 24/65 slope; the
-April 22.40/16.49/10.59/4.68 lengths are superseded). Short enough to cut
-from scrap / off-cuts if managed on-site.
+22.77", 16.96", 10.96", 4.96" (re-derived 2026-08-10 from the 24.375/65
+restud slope; the 93-stud 22.40/16.68/10.77/4.86 lengths and the April
+22.40/16.49/10.59/4.68 lengths are superseded). Short enough to cut from
+scrap / off-cuts if managed on-site.
 
 ## Onshape model cleanup
 

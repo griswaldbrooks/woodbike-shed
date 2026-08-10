@@ -2,12 +2,13 @@
 
 Stepped studs (4 unique heights per side) + the sloped top plate that
 carries the rake board. Plate is tilted at the roof pitch (solved from the
-rafters' audit AABBs; equals the documented 24/65 slope).
+rafters' audit AABBs; equals the documented 24.375/65 slope).
 
-Note: the plate's audited world AABB has z-extent = exactly the 24" rise,
-which a plain rectangular box at pitch over-states by ~1.4" (the real part's
-end cuts are not captured in the audit data). verify.py allows a wider
-tolerance for these two plates; modeled as rectangular stock per CUT_LIST.md.
+Note: the plate's audited world AABB has z-extent = exactly the 24-3/8"
+rise, which a plain rectangular box at pitch over-states by ~1.4" (the real
+part's end cuts are not captured in the audit data). verify.py allows a
+wider tolerance for these two plates; modeled as rectangular stock per
+CUT_LIST.md.
 """
 from cad.common import Audit, place_box, place_slope_y
 

@@ -10,6 +10,7 @@ profiles. Intersection volume = X-overlap * clipped-polygon area, so touching
 Usage: python3 audit_overlaps.py   (reads scripts/bboxes.json)
 """
 import json
+import math
 from pathlib import Path
 
 HERE = Path(__file__).parent
@@ -17,35 +18,50 @@ M = 39.3700787
 EPS_A = 1e-4   # in^2 profile-area noise floor
 EPS_V = 0.01   # in^3 report threshold
 
-SLOPE = 24.0 / 65.0
+# Roof re-derived 2026-08-10 for the 92-5/8" pre-cut stud decision
+# (scripts/restud_92_5_8.py): the back/left/right wall plate tops dropped
+# 97.5 -> 97.125 while every front reference stayed. Same construction as
+# the audit data: bearing line = rafter bottom edge = rake plate top edge,
+# seats flat at the plate heights.
+Z_B = 97.125                        # back wall double top plate top
+FRONT_BEAR = 121.5                  # bearing at y=0 (front plate 123 - 1.5)
+SLOPE = (FRONT_BEAR - Z_B) / 65.0   # 24.375/65 (was 24/65)
+SEC = math.hypot(1.0, SLOPE)        # 1/cos
+OFF = 5.5 * SEC                     # rafter AABB top offset (was 5.86283)
+HEEL = -1.5 / SLOPE                 # front seat heel (was -4.0625)
 
 
 def zbot(y):
-    return 121.5 - SLOPE * y
+    return FRONT_BEAR - SLOPE * y
 
 
-OFF = 5.86283
-RAFTER = [(-27.5, zbot(-27.5)), (-4.0625, 123.0), (0.0, 123.0), (0.0, 121.5),
-          (65.0, 97.5), (68.5, 97.5), (68.5, zbot(68.5)), (80.5, zbot(80.5)),
+RAFTER = [(-27.5, zbot(-27.5)), (HEEL, 123.0), (0.0, 123.0), (0.0, FRONT_BEAR),
+          (65.0, Z_B), (68.5, Z_B), (68.5, zbot(68.5)), (80.5, zbot(80.5)),
           (80.5, zbot(80.5) + OFF), (-27.5, zbot(-27.5) + OFF)]
 RAKE_BOARD = [(-27.5, zbot(-27.5)), (80.5, zbot(80.5)),
               (80.5, zbot(80.5) + OFF), (-27.5, zbot(-27.5) + OFF)]
-RIGHT_RAKE_PLATE = [(65.0, 97.5), (0.0, 121.5), (0.0, 119.901), (60.669, 97.5)]
+# Rake plate underside = the rake stud top line: stud top edges are driven
+# 1.5" below the plate top edge, measured perpendicular to it -> vertical
+# gap 1.5*SEC; the line crosses the back plate top at y = (z_us(0)-Z_B)/SLOPE.
+Z_US0 = FRONT_BEAR - 1.5 * SEC
+RIGHT_RAKE_PLATE = [(65.0, Z_B), (0.0, FRONT_BEAR), (0.0, Z_US0),
+                    ((Z_US0 - Z_B) / SLOPE, Z_B)]
 LEFT_RAKE_PLATE = RIGHT_RAKE_PLATE
 
 
 def zu(y):
-    return 97.5 + SLOPE * (60.669 - y)
+    return Z_US0 - SLOPE * y
 
 
 RAKE_STUDS = []
 for yc in (0.75, 16.25, 32.25, 48.25):
     y0, y1 = yc - 0.75, yc + 0.75
-    RAKE_STUDS.append([(y0, 97.5), (y1, 97.5), (y1, zu(y1)), (y0, zu(y0))])
+    RAKE_STUDS.append([(y0, Z_B), (y1, Z_B), (y1, zu(y1)), (y0, zu(y0))])
 
-FASCIA_FRONT = [(-29.0, 132.01668), (-27.5, 132.01668),
-                (-27.5, 137.51668), (-29.0, 137.51668)]
-FASCIA_BACK = [(80.5, 92.13975), (82.0, 92.13975), (82.0, 97.63975), (80.5, 97.63975)]
+FASCIA_FRONT = [(-29.0, zbot(-27.5) + OFF - 5.5), (-27.5, zbot(-27.5) + OFF - 5.5),
+                (-27.5, zbot(-27.5) + OFF), (-29.0, zbot(-27.5) + OFF)]
+FASCIA_BACK = [(80.5, zbot(80.5) + OFF - 5.5), (82.0, zbot(80.5) + OFF - 5.5),
+               (82.0, zbot(80.5) + OFF), (80.5, zbot(80.5) + OFF)]
 
 
 def zspan(poly, y):

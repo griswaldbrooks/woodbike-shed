@@ -160,6 +160,23 @@ def pack_and_rightsize(cuts, allowed_stock):
 
 # ----- main ----------------------------------------------------------------
 
+YARD = "Hingham Lumber"  # captain's yard, 2026-08-10 (stocks 16' 2x4 + true 20' 2x6)
+
+
+def fmt_in(v):
+    """Inches, trailing zeros stripped (92.625 stays 92.625, 192.0 -> 192)."""
+    return f"{v:.3f}".rstrip("0").rstrip(".")
+
+
+def order_notes(lumber, treatment, sl_in):
+    notes = ["SPF #2"] if treatment == "KD" else []  # captain's KD species
+    notes.append(YARD)
+    if (lumber, sl_in) == ("2x4", 192):
+        notes.append("stocks 16'")
+    if (lumber, sl_in) == ("2x6", 240):
+        notes.append("stocks true 20'")
+    return "; ".join(notes)
+
 
 def main():
     data = json.loads(Path("scripts/oriented_dims.json").read_text())
@@ -179,20 +196,28 @@ def main():
 
         if name == "sub floor osb":
             # sheet good: group as is
-            agg[(sec, "OSB 3/4\" 4x8 (half sheets used)", round(length, 2), "—", name)] += 1
+            agg[(sec, "OSB 3/4\" 4x8 (half sheets used)", round(length, 3), "—", name)] += 1
             continue
 
         lumber = classify(thick, width)
         treatment = "PT" if sec in PT_SECTIONS else "KD"
-        agg[(sec, lumber, round(length, 2), treatment, name)] += 1
+        agg[(sec, lumber, round(length, 3), treatment, name)] += 1
 
     # Build markdown cut list grouped by section
     out_md = Path("CUT_LIST.md")
     with out_md.open("w") as f:
         f.write("# Bike shed cut list\n\n")
-        f.write("Source: Onshape \"wood bike shed\" Part Studio 1. Actual dimensions.\n\n")
+        f.write("Source: Onshape \"wood bike shed\" Part Studio 1 audit data, as re-derived\n")
+        f.write("locally 2026-08-10 for the 92-5/8\" pre-cut stud decision\n")
+        f.write("(scripts/restud_92_5_8.py; the Onshape model itself still carries the\n")
+        f.write("93\" studs). Actual dimensions.\n\n")
+        f.write(f"- **Yard: {YARD}** — KD framing species **SPF #2**; stocks 16' 2x4 and\n")
+        f.write("  true 20' 2x6. Quantities are EXACT (0% overage) per the captain —\n")
+        f.write("  plan a follow-up run for shortages.\n")
         f.write("- **PT** = pressure-treated, ground-contact rated (skids + floor system)\n")
-        f.write("- **KD** = kiln-dried dimensional lumber, framing grade (SPF #2 or equivalent)\n")
+        f.write("- **KD** = kiln-dried dimensional lumber, framing grade, SPF #2\n")
+        f.write("- Back/left/right wall studs: standard **92-5/8\" pre-cut** studs (wall\n")
+        f.write("  height 97-1/8\"; roof re-derived about the unchanged front wall)\n")
         f.write("- Saw kerf allowance: 1/8\" per cut (used in stock-length optimization)\n\n")
 
         for section in SECTION_ORDER:
@@ -212,7 +237,7 @@ def main():
                 if "OSB" in lumber:
                     f.write(f"| {qty} | {lumber} | — | {length:.0f}\u2033 × 48\u2033 | {name} |\n")
                 else:
-                    f.write(f"| {qty} | {lumber} | {treatment} | {ft}\u2032 {inch:.2f}\u2033 ({length:.2f}\u2033) | {name} |\n")
+                    f.write(f"| {qty} | {lumber} | {treatment} | {ft}\u2032 {fmt_in(inch)}\u2033 ({fmt_in(length)}\u2033) | {name} |\n")
             f.write("\n")
 
         # ----- stock optimization -----
@@ -259,7 +284,7 @@ def main():
             f.write(f"### {lumber} {treatment} — order **{order_summary}** "
                     f"({total_in/12:.1f} LF purchased, {actual_in/12:.1f} LF cuts, {waste_pct:.1f}% waste)\n\n")
             for i, (sl, used, items) in enumerate(bins, 1):
-                items_desc = "; ".join(f"{l:.2f}\u2033 {lbl}" for l, lbl in items)
+                items_desc = "; ".join(f"{fmt_in(l)}\u2033 {lbl}" for l, lbl in items)
                 remaining = sl - used
                 f.write(f"- Board {i} ({sl/12:g}\u2032): {items_desc}  — waste: {remaining:.2f}\u2033\n")
             f.write("\n")
@@ -282,9 +307,11 @@ def main():
         w.writerow(["lumber", "treatment", "stock_length_ft", "qty", "notes"])
         for (lumber, treatment), sl_counts in sorted(group_order_summary.items()):
             for sl, n in sorted(sl_counts.items()):
-                w.writerow([lumber, treatment, f"{sl/12:g}", n, ""])
+                w.writerow([lumber, treatment, f"{sl/12:g}", n,
+                            order_notes(lumber, treatment, sl)])
         if osb_pieces:
-            w.writerow(["OSB 3/4\"", "—", "4x8 sheet", (osb_pieces + 1) // 2, "subfloor; rip to 72\"+24\""])
+            w.writerow(["OSB 3/4\"", "—", "4x8 sheet", (osb_pieces + 1) // 2,
+                        f"subfloor; rip to 72\"+24\"; {YARD}"])
 
     print(f"Wrote {out_md} and {out_csv}")
 

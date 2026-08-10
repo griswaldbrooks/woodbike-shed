@@ -1,7 +1,7 @@
 """Back wall (low, 8') - runs along X at the high-Y edge.
 
-13 studs at 93", single 192" plates + the 185" double-top short.
-Axis-aligned.
+13 studs at 92-5/8" pre-cut (2026-08-10 restud, was 93"), single 192"
+plates + the 185" double-top short. Axis-aligned.
 """
 from cad.common import Audit, place_box
 

@@ -24,8 +24,10 @@ the repo's audit files are the only model source.
 - `scripts/bboxes.json` — world bounding boxes (placement)
 - `CUT_LIST.md` / `OUTSTANDING_ISSUES.md` — cross-checks and open items
 - Roof pitch is *solved from the rafter audit data* (`cad.common.solve_pitch`),
-  cross-checked against the documented 24/65 slope (~20.26°) recorded in
-  MANUAL_COMPLETION.md on branch `fm/woodbike-shed-finish-rework`.
+  cross-checked against the documented 24.375/65 slope (~20.56°). The audit
+  data reflects the 2026-08-10 restud to 92-5/8" pre-cut studs
+  (`scripts/restud_92_5_8.py` — full derivation record); the pre-restud
+  slope was 24/65 (~20.26°, see MANUAL_COMPLETION.md).
 
 ## Layout
 
@@ -62,7 +64,8 @@ uniqueness — group names repeat, e.g. 14 × "back wall studs").
   deltas carried as documented verify tolerances). Implementing the cuts in
   code is a follow-up only if render fidelity needs it.
 - **Doors/siding/trim** — `walls_front.py` (and right wall opening): framing
-  only, as cut-listed.
+  only, as cut-listed. 2026-08-10 captain's decision: model them for real,
+  but on a COMPLETELY SEPARATE order list — upcoming task, not this one.
 - **Skid composites** — `skids.py`: physical boards modeled; Onshape
   composite bodies / "Composite part 3" remain as documented in
   OUTSTANDING_ISSUES.md.

@@ -17,6 +17,8 @@ workspace (Main) `4c0f1b0cf9df2e322f841b94`, Part Studio
 Model state history and geometry rationale: `MANUAL_COMPLETION.md` and the
 scout report referenced there. Restore version taken before the 2026-08-07
 rework: `aa73830b88f34f965190a7c6` ("pre-fleet-completion 2026-08-05").
+Since 2026-08-10 the local audit JSON + `cad/` run AHEAD of Onshape: the
+92-5/8" pre-cut restud was applied locally only (see Script pipeline).
 
 ## Script pipeline
 
@@ -33,6 +35,14 @@ mapping live in `blender/README.md`. Headless Blender: `download.blender.org`
 is Cloudflare-challenged (curl gets an HTML block page) — fetch the tarball
 from a mirror (e.g. `mirrors.ocf.berkeley.edu/blender/release`) into the
 gitignored `.scratch/`.
+2026-08-10 restud: `scripts/restud_92_5_8.py` applied the captain's 92-5/8"
+pre-cut stud decision to the audit JSON locally (back/left/right wall height
+97.5→97-1/8", roof re-derived about the unchanged front wall: pitch
+24/65→24.375/65). It self-checks its formulas against the old data before
+writing — that docstring is the derivation record for every dependent value
+(rake studs/plates, rafters, fascia, right-wall cripples). Cad harness:
+`.venv/bin/python -m cad.build && .venv/bin/python -m cad.verify` (venv per
+`cad/README.md`).
 
 ## Onshape API sharp edges (learned the hard way)
 
