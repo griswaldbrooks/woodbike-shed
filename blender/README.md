@@ -64,7 +64,8 @@ subtle Wave-texture grain in object space, and per-object brightness jitter
 ### Group color legend
 
 Approximate on-screen tints (base colors from `MATERIALS` in
-`build_scene.py`; renders here are the ground truth):
+`group_colors.py`, shared with `view.py` so the OCP CAD Viewer shows the
+same hues; renders here are the ground truth):
 
 | Group | Tint | Parts |
 |---|---|---|

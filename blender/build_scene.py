@@ -17,7 +17,7 @@ With --render: Cycles 1920x1080 per camera into blender/renders/.
 to the framed openings read off the part bboxes) and saves shed_skin.blend;
 renders go to blender/renders/skin/. See blender/README.md.
 
-Material mapping is by part-name substring, checked in GROUPS order below
+Material mapping is by part-name substring via group_colors.group_for
 (names are CUT_LIST.md labels prefixed "NNN "). No hand-placed anything:
 cameras and lights derive from the imported bounding box, so the script
 survives model geometry changes.
@@ -38,39 +38,11 @@ SKIN_RENDER_DIR = RENDER_DIR / "skin"
 
 MM_TO_M = 0.001
 
-# group key -> (base color, roughness, per-board brightness jitter,
-#               grain stripe scale, grain mix strength)
-# Annotated-product-shot palette: one distinct hue per structural group,
-# all muted wood tones (legend in blender/README.md).
-MATERIALS = {
-    "skid":         ((0.27, 0.26, 0.14), 0.74, 0.22, 8.0, 0.08),   # dark olive (PT)
-    "floor_frame":  ((0.36, 0.22, 0.10), 0.80, 0.24, 8.0, 0.10),   # dark amber (PT)
-    "deck":         ((0.60, 0.50, 0.22), 0.88, 0.12, 16.0, 0.18),  # golden OSB
-    "studs":        ((0.66, 0.50, 0.42), 0.78, 0.30, 9.0, 0.14),   # pale blond SPF
-    "plates":       ((0.60, 0.36, 0.12), 0.76, 0.24, 9.0, 0.12),   # honey orange
-    "rafter":       ((0.54, 0.28, 0.19), 0.78, 0.30, 7.0, 0.14),   # cedar red
-    "fascia":       ((0.36, 0.37, 0.40), 0.70, 0.16, 6.0, 0.10),   # driftwood gray
-    "rake":         ((0.40, 0.22, 0.30), 0.72, 0.18, 6.0, 0.12),   # rosewood plum
-}
-
-
-def group_for(label: str) -> str:
-    """Cut-list label -> material group; order matters."""
-    if "sub floor osb" in label:
-        return "deck"
-    if "skid" in label:                       # continuous 16' skid lines
-        return "skid"
-    if "joist" in label:                      # rim joist, floor joist (PT)
-        return "floor_frame"
-    if label == "rafter":
-        return "rafter"
-    if "fascia" in label:
-        return "fascia"
-    if "rake board" in label:
-        return "rake"
-    if "plate" in label or "header" in label:  # incl. rake wall top plates
-        return "plates"
-    return "studs"                            # studs, jacks, kings, cripples
+# Annotated-product-shot palette + label->group map live in group_colors.py,
+# shared with view.py so the CAD viewer and the renders show the same group
+# hues (legend in blender/README.md).
+sys.path.insert(0, str(HERE))  # script dir, for plain `blender --python` runs
+from group_colors import MATERIALS, group_for
 
 
 def make_material(key: str):
