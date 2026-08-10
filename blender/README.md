@@ -1,6 +1,6 @@
 # blender/ — headless render pipeline for the shed
 
-`scene.glb` (121 named parts, from `cad/build.py`, names = CUT_LIST.md labels
+`scene.glb` (117 named parts, from `cad/build.py`, names = CUT_LIST.md labels
 with an `NNN ` instance prefix) + `build_scene.py`, which turns it into a lit,
 materialled scene and renders it. Nothing hand-placed: cameras, ground and
 sun derive from the imported bounding box, so re-running survives model
@@ -68,7 +68,7 @@ Approximate on-screen tints (base colors from `MATERIALS` in
 
 | Group | Tint | Parts |
 |---|---|---|
-| skid | dark olive `#8E8B69` | skid, skid sister |
+| skid | dark olive `#8E8B69` | skid (two continuous 16' 4x4) |
 | floor_frame | dark amber `#A28159` | rim joist, floor joist |
 | deck | golden `#CBBC81` | sub floor osb |
 | studs | pale blond `#D4BCAD` | studs, king/jack/cripple studs |
@@ -81,5 +81,3 @@ Approximate on-screen tints (base colors from `MATERIALS` in
 
 - Framing-only model: no siding, sheathing or roof boards beyond the OSB
   floor deck (matches CUT_LIST.md scope).
-- Rafters/trim are rectangular stock; no birdsmouth or end cuts (see
-  `cad/README.md` pending items).

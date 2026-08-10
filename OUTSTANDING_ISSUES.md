@@ -31,11 +31,21 @@ studs, rafters, fascia and cripples follow — see the script docstring and
 the 2026-08-10 commit for before/after dims). The Onshape model still has
 the 93" studs; sync it (or not) is a future captain call.
 
+## Skid redesign — continuous 16' lines (2026-08-10 captain's decision)
+
+The sistered skid arrangement is DROPPED: each skid line is now ONE
+continuous 16' (192") 4x4 (two total, full shed length x = -3.5..188.5), on
+the audited composite-skid lines under the front/back wall bearing lines
+(y -3.5..0 and 65..68.5, z -9.75..-6.25). Hingham stocks 16' 4x4; PT
+ground-contact tagging unchanged. **Deliberate divergence from Onshape**,
+whose model keeps the sistered composite skids (4x 96" boards + 2x 48"
+sisters); the local model, cut list and order list carry the redesign.
+
 ## Treatment & species
 
 Currently tagged:
 - **PT (pressure-treated, ground-contact)**: all 2x6 floor system (rim
-  joists + floor joists) and all 4x4 skids/sisters
+  joists + floor joists) and all 4x4 skids
 - **KD (kiln-dried, framing grade)**: all wall and roof lumber
 - **OSB**: 3/4" structural, subfloor-rated
 
@@ -58,7 +68,12 @@ on the front wall while the double top plate tops out at z=123". Fixed with
 plate width (heel at y=−4.06"), and a matching back seat at z=97.5" over the
 back wall plate (plumb kick at y=68.5") where the tails dipped below the
 plate top. Rafters now bear flush on both double top plates; verified by
-`scripts/audit_overlaps.py` (zero lumber-on-lumber overlap).
+`scripts/audit_overlaps.py` (zero lumber-on-lumber overlap). The local
+build123d model carries the same birdsmouths as exact profile prisms
+(2026-08-10; seats/kicks derived from the plate solids, re-derived for the
+92-5/8 restud: front seat z=123" heel y=-4.0", back seat z=97.125" plumb
+kick y=68.5"), guarded by the `cad.verify` seating + zero-interference
+checks.
 
 ## Known intentional overlaps (left as modeled)
 

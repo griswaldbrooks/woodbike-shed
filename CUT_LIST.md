@@ -2,12 +2,13 @@
 
 Source: Onshape "wood bike shed" Part Studio 1 audit data, as re-derived
 locally 2026-08-10 for the 92-5/8" pre-cut stud decision
-(scripts/restud_92_5_8.py; the Onshape model itself still carries the
-93" studs). Actual dimensions.
+(scripts/restud_92_5_8.py) and the captain's skid redesign (two
+continuous 16' 4x4 lines, sisters dropped). The Onshape model itself
+still carries the 93" studs and the sistered skids. Actual dimensions.
 
-- **Yard: Hingham Lumber** — KD framing species **SPF #2**; stocks 16' 2x4 and
-  true 20' 2x6. Quantities are EXACT (0% overage) per the captain —
-  plan a follow-up run for shortages.
+- **Yard: Hingham Lumber** — KD framing species **SPF #2**; stocks 16' 2x4,
+  16' 4x4 and true 20' 2x6. Quantities are EXACT (0% overage) per the
+  captain — plan a follow-up run for shortages.
 - **PT** = pressure-treated, ground-contact rated (skids + floor system)
 - **KD** = kiln-dried dimensional lumber, framing grade, SPF #2
 - Back/left/right wall studs: standard **92-5/8" pre-cut** studs (wall
@@ -18,8 +19,7 @@ locally 2026-08-10 for the 92-5/8" pre-cut stud decision
 
 | Qty | Lumber | Treatment | Length | Name |
 |---:|:---|:---:|---:|:---|
-| 4 | 4x4 | PT | 8′ 0″ (96″) | skid |
-| 2 | 4x4 | PT | 4′ 0″ (48″) | skid sister |
+| 2 | 4x4 | PT | 16′ 0″ (192″) | skid |
 
 ## Floor
 
@@ -177,13 +177,10 @@ First-fit-decreasing bin packing, one pass per (lumber, treatment). For each gro
 - Board 8 (12′): 69″ floor joist (Floor); 69″ floor joist (Floor)  — waste: 5.88″
 - Board 9 (12′): 69″ floor joist (Floor); 69″ floor joist (Floor)  — waste: 5.88″
 
-### 4x4 PT — order **4 × 8′, 1 × 10′** (42.0 LF purchased, 40.0 LF cuts, 4.8% waste)
+### 4x4 PT — order **2 × 16′** (32.0 LF purchased, 32.0 LF cuts, 0.0% waste)
 
-- Board 1 (8′): 96″ skid (Skids)  — waste: 0.00″
-- Board 2 (8′): 96″ skid (Skids)  — waste: 0.00″
-- Board 3 (8′): 96″ skid (Skids)  — waste: 0.00″
-- Board 4 (8′): 96″ skid (Skids)  — waste: 0.00″
-- Board 5 (10′): 48″ skid sister (Skids); 48″ skid sister (Skids)  — waste: 23.88″
+- Board 1 (16′): 192″ skid (Skids) — TOO LONG FOR 96"  — waste: 0.00″
+- Board 2 (16′): 192″ skid (Skids) — TOO LONG FOR 96"  — waste: 0.00″
 
 ### OSB 3/4" 4×8 sheets
 
@@ -193,4 +190,4 @@ First-fit-decreasing bin packing, one pass per (lumber, treatment). For each gro
 
 ---
 
-**Total dimensional lumber LF purchased: 868.0**
+**Total dimensional lumber LF purchased: 858.0**

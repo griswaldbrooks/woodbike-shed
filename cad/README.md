@@ -23,16 +23,23 @@ the repo's audit files are the only model source.
 - `scripts/oriented_dims.json` — part names (== CUT_LIST.md labels) + edge dims
 - `scripts/bboxes.json` — world bounding boxes (placement)
 - `CUT_LIST.md` / `OUTSTANDING_ISSUES.md` — cross-checks and open items
-- Roof pitch is *solved from the rafter audit data* (`cad.common.solve_pitch`),
-  cross-checked against the documented 24.375/65 slope (~20.56°). The audit
-  data reflects the 2026-08-10 restud to 92-5/8" pre-cut studs
-  (`scripts/restud_92_5_8.py` — full derivation record); the pre-restud
-  slope was 24/65 (~20.26°, see MANUAL_COMPLETION.md).
+- Roof pitch is *derived from the plate solids* (`cad.common.roof_ref`:
+  front double top plate bottom at the front wall inner face -> back double
+  top plate top at the back wall inner face), sanity-checked against the
+  documented 24.375/65 slope (~20.56°). The audit data reflects the
+  2026-08-10 restud to 92-5/8" pre-cut studs (`scripts/restud_92_5_8.py` —
+  full derivation record); the pre-restud slope was 24/65 (~20.26°, see
+  MANUAL_COMPLETION.md). Wall-height edits propagate: seats, kicks, mitres
+  and the pitch all re-derive from the plates.
 
 ## Layout
 
 One module per shed section; `cad/common.py` loads the audit data and places
-parts (center = AABB center; tilted parts rotate about X by the solved pitch):
+parts. Axis-aligned parts are AABB boxes (`place_box`); the roof/rake
+members (rafters, rake boards, rake plates, rake studs) are exact YZ-profile
+prisms (`prism_yz`, `roof_ref`) carrying the audited birdsmouth/seat/kick/
+mitre/end cuts, anchored on their own world coordinates (never re-centered
+on an AABB):
 
 `skids.py` `floor.py` `walls_front.py` `walls_back.py` `walls_side.py`
 `walls_rake.py` `roof.py` → orchestrated by `build.py`, checked by `verify.py`.
@@ -55,20 +62,23 @@ uniqueness — group names repeat, e.g. 14 × "back wall studs").
    `binary=True` — this repo exports meshes via trimesh instead (always
    binary GLB, names verified in Blender 4.5 LTS: one selectable object per
    part).
+4. **build123d builds in mm**: `prism_yz` takes inch profiles and scales
+   them at the boundary. Feeding raw inch points to `Polygon` builds a part
+   25.4x too small without any error.
 
 ## Pending captain decisions (TODO seams, do not decide unilaterally)
 
-- **Birdsmouth/trim cuts in code** — `roof.py`: the upstream model's rafter
-  seat cuts and end trims are RESOLVED in OUTSTANDING_ISSUES.md, but the cut
-  list describes full 2x6 stock, so rafters are rectangular here (AABB
-  deltas carried as documented verify tolerances). Implementing the cuts in
-  code is a follow-up only if render fidelity needs it.
 - **Doors/siding/trim** — `walls_front.py` (and right wall opening): framing
   only, as cut-listed. 2026-08-10 captain's decision: model them for real,
   but on a COMPLETELY SEPARATE order list — upcoming task, not this one.
-- **Skid composites** — `skids.py`: physical boards modeled; Onshape
-  composite bodies / "Composite part 3" remain as documented in
-  OUTSTANDING_ISSUES.md.
-- **Rake-plate end/nose cuts** — `walls_rake.py`: rectangular stock; the
-  audit AABB shows the real part's extents are the bare 65"/24" run/rise
-  (verify.py tolerates the difference).
+
+Resolved seams (kept for the record):
+- **Birdsmouth/trim cuts in code** — implemented 2026-08-10
+  (`roof.py`/`walls_rake.py` prisms, `verify.py` seating gate). The old
+  rectangular-stock approximation silently interpenetrated both double top
+  plates by up to 1.5"; diagnosis record: firstmate report
+  `woodbike-shed-birdsmouth-scout/report.md`.
+- **Rake-plate end/nose cuts** — implemented with the plate prisms.
+- **Skid composites** — superseded by the captain's 2026-08-10 skid
+  redesign (two continuous 16' 4x4 lines; OUTSTANDING_ISSUES.md "Skid
+  redesign").

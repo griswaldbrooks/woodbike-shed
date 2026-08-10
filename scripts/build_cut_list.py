@@ -175,6 +175,8 @@ def order_notes(lumber, treatment, sl_in):
         notes.append("stocks 16'")
     if (lumber, sl_in) == ("2x6", 240):
         notes.append("stocks true 20'")
+    if (lumber, sl_in) == ("4x4", 192):
+        notes.append("stocks 16'")  # captain 2026-08-10: continuous skids
     return "; ".join(notes)
 
 
@@ -209,11 +211,12 @@ def main():
         f.write("# Bike shed cut list\n\n")
         f.write("Source: Onshape \"wood bike shed\" Part Studio 1 audit data, as re-derived\n")
         f.write("locally 2026-08-10 for the 92-5/8\" pre-cut stud decision\n")
-        f.write("(scripts/restud_92_5_8.py; the Onshape model itself still carries the\n")
-        f.write("93\" studs). Actual dimensions.\n\n")
-        f.write(f"- **Yard: {YARD}** — KD framing species **SPF #2**; stocks 16' 2x4 and\n")
-        f.write("  true 20' 2x6. Quantities are EXACT (0% overage) per the captain —\n")
-        f.write("  plan a follow-up run for shortages.\n")
+        f.write("(scripts/restud_92_5_8.py) and the captain's skid redesign (two\n")
+        f.write("continuous 16' 4x4 lines, sisters dropped). The Onshape model itself\n")
+        f.write("still carries the 93\" studs and the sistered skids. Actual dimensions.\n\n")
+        f.write(f"- **Yard: {YARD}** — KD framing species **SPF #2**; stocks 16' 2x4,\n")
+        f.write("  16' 4x4 and true 20' 2x6. Quantities are EXACT (0% overage) per the\n")
+        f.write("  captain — plan a follow-up run for shortages.\n")
         f.write("- **PT** = pressure-treated, ground-contact rated (skids + floor system)\n")
         f.write("- **KD** = kiln-dried dimensional lumber, framing grade, SPF #2\n")
         f.write("- Back/left/right wall studs: standard **92-5/8\" pre-cut** studs (wall\n")

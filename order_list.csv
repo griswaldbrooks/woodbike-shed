@@ -5,6 +5,5 @@ lumber,treatment,stock_length_ft,qty,notes
 2x6,KD,20,2,SPF #2; Hingham Lumber; stocks true 20'
 2x6,PT,12,7,Hingham Lumber
 2x6,PT,16,2,Hingham Lumber
-4x4,PT,8,4,Hingham Lumber
-4x4,PT,10,1,Hingham Lumber
+4x4,PT,16,2,Hingham Lumber; stocks 16'
 "OSB 3/4""",—,4x8 sheet,2,"subfloor; rip to 72""+24""; Hingham Lumber"

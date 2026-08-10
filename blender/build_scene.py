@@ -8,7 +8,7 @@ Headless usage (from the repo root):
     blender --background --python blender/build_scene.py -- --skin
     blender --background --python blender/build_scene.py -- --skin --render
 
-Pipeline: import blender/scene.glb (121 named parts from cad/build.py, mm
+Pipeline: import blender/scene.glb (117 named parts from cad/build.py, mm
 units) -> scale to meters -> one PBR wood material per cut-list name group ->
 ground plane, Nishita sky + sun -> four cameras -> save shed_scene.blend.
 With --render: Cycles 1920x1080 per camera into blender/renders/.
@@ -58,7 +58,7 @@ def group_for(label: str) -> str:
     """Cut-list label -> material group; order matters."""
     if "sub floor osb" in label:
         return "deck"
-    if "skid" in label:                       # skid, skid sister
+    if "skid" in label:                       # continuous 16' skid lines
         return "skid"
     if "joist" in label:                      # rim joist, floor joist (PT)
         return "floor_frame"
@@ -600,7 +600,7 @@ def main():
 
     bpy.ops.import_scene.gltf(filepath=str(GLB))
     parts = [ob for ob in bpy.data.objects if ob.type == "MESH"]
-    assert len(parts) == 121, f"expected 121 parts in scene.glb, got {len(parts)}"
+    assert len(parts) == 117, f"expected 117 parts in scene.glb, got {len(parts)}"
     # glTF import assumes Y-up and hands our Z-up data over rolled onto its
     # side; bake the undo rotation + mm->m scale straight into mesh data
     # (object transforms in --background mode proved unreliable)

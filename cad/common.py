@@ -19,7 +19,7 @@ import math
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from build123d import Align, Box, Location
+from build123d import Align, Box, Location, Plane, Polygon, Pos, extrude
 
 IN = 25.4        # mm per inch (build123d world is mm)
 M_PER_IN = 0.0254  # bboxes.json values are meters despite the "_m" key names
@@ -30,6 +30,11 @@ REPO = Path(__file__).resolve().parent.parent
 # roof-trim rework ("Fix fascia to symmetric 12 inch overhangs" on main).
 SLOPE_Y_GROUPS = {"rafter", "left rake board", "right rake board",
                   "left rake wall top plate", "right rake wall top plate"}
+
+# Groups built as exact YZ-profile prisms (birdsmouth/mitre/end cuts), so
+# their volume is profile-area x width, not the oriented-dims product.
+PROFILE_GROUPS = SLOPE_Y_GROUPS | {"left rake wall studs",
+                                   "right rake wall studs"}
 
 
 @dataclass
@@ -94,14 +99,11 @@ def load_audit() -> Audit:
         label = _cutlist_label(p["name"], ())
         bb_by_label.setdefault(label, []).append(p)
 
-    # Match specs to bboxes.
+    # Match specs to bboxes. The two "skid" specs pair with the two audited
+    # composite-skid lines (their full 192" AABBs) since the 2026-08-10 skid
+    # redesign: one continuous 16' 4x4 per line, no sisters.
     for label, specs in by_label.items():
         cands = bb_by_label.get(label, [])
-        if label == "skid":
-            # The four physical skid boards are unnamed in bboxes.json (they
-            # live inside the composite skids); placement is inferred in
-            # skids.py from the skid sisters + floor extents.
-            continue
         if len(cands) != len(specs):
             raise SystemExit(
                 f"audit mismatch for '{label}': {len(specs)} in oriented_dims "
@@ -131,37 +133,89 @@ def load_audit() -> Audit:
     return audit
 
 
-# Roof pitch = rise over the 65" front-to-back bearing spacing: front
-# bearing 121.5" (front double top plate 123" - 1.5") minus the back/left/
-# right wall plate tops. 24/65 until the 2026-08-10 restud to 92-5/8"
-# pre-cut studs dropped those plates 3/8" -> 24.375/65. Derivation record:
-# scripts/restud_92_5_8.py.
+# Roof pitch history, for the sanity check only: 24/65 until the 2026-08-10
+# restud to 92-5/8" pre-cut studs dropped the back/left/right plate tops
+# 3/8" -> 24.375/65 (record: scripts/restud_92_5_8.py). The pitch used by
+# the build is always DERIVED from the plate solids (roof_ref), so future
+# wall-height edits propagate; this constant just fences gross errors.
 DOCUMENTED_PITCH = math.degrees(math.atan(24.375 / 65))  # ~20.56 deg
 
 
-def solve_pitch(audit: Audit) -> float:
-    """Roof pitch. The documented slope is 24.375/65 (see DOCUMENTED_PITCH;
-    pre-restud history in MANUAL_COMPLETION.md); sanity-check it against the
-    rafter AABB (dz = L sin(t) + D cos(t) for a full tilted box). The
-    rafters carry birdsmouth/end cuts in the audited geometry, so the
-    AABB-derived value drifts a few tenths of a degree - the documented
-    slope is authoritative.
+@dataclass
+class RoofRef:
+    """Roof bearing geometry derived parametrically from the plate solids.
+
+    The plates are placed exactly on their audited AABBs (place_box), so a
+    plate spec's AABB faces ARE the plate solid's faces: seat planes come
+    from plate tops, the bearing line from the front double top plate bottom
+    at the front wall inner face to the back double top plate top at the
+    back wall inner face, kicks from the plate inner/outer faces. No
+    hardcoded roof numbers anywhere downstream - wall-height edits propagate.
     """
-    r = audit.specs["rafter"][0]
-    L = max(r.dims)
-    D = sorted(r.dims)[1]
-    dz = (r.aabb["highZ"] - r.aabb["lowZ"]) / M_PER_IN
-    lo, hi = 0.0, math.radians(45)
-    for _ in range(60):
-        mid = (lo + hi) / 2
-        if L * math.sin(mid) + D * math.cos(mid) < dz:
-            lo = mid
-        else:
-            hi = mid
-    deg = math.degrees((lo + hi) / 2)
+    slope: float            # tan(pitch), drop per +y
+    sec: float              # 1/cos(pitch)
+    front_bear_y: float     # front wall inner face (front DTP highY)
+    front_bear_z: float     # bearing at front_bear_y (front DTP lowZ)
+    front_seat_z: float     # front DTP top
+    heel_y: float           # bottom edge x front seat plane
+    back_seat_z: float      # back DTP short top
+    back_seat_start_y: float  # back wall inner face (back DTP lowY)
+    back_kick_y: float      # back wall outer face (back DTP highY)
+    tail_f_y: float         # rafter front plumb end (rafter AABB lowY)
+    tail_b_y: float         # rafter back plumb end (rafter AABB highY)
+    rafter_depth: float     # 2x6 depth, perpendicular to the slope
+    plate_thick: float      # rake plate 2x4 thickness
+
+    def zbot(self, y: float) -> float:
+        """Rafter bottom edge = rake plate top edge (the bearing line)."""
+        return self.front_bear_z - self.slope * (y - self.front_bear_y)
+
+    @property
+    def rafter_off(self) -> float:
+        """Vertical offset bottom edge -> top edge (vertical-sided profile,
+        the audited construction: AABB highZ = bottom edge + off)."""
+        return self.rafter_depth * self.sec
+
+    def zu(self, y: float) -> float:
+        """Rake plate underside: plate_thick perpendicular below the top
+        edge -> vertical gap plate_thick * sec (the constraint_pilot
+        DISTANCE constraint)."""
+        return self.zbot(y) - self.plate_thick * self.sec
+
+
+def roof_ref(audit: Audit) -> RoofRef:
+    fd = audit.specs["front wall double top plate"][0].aabb
+    bd = audit.specs["back wall double top plate short"][0].aabb
+    front_seat_z = fd["highZ"] / M_PER_IN
+    front_bear_z = fd["lowZ"] / M_PER_IN
+    front_bear_y = fd["highY"] / M_PER_IN
+    back_seat_z = bd["highZ"] / M_PER_IN
+    back_seat_start_y = bd["lowY"] / M_PER_IN
+    back_kick_y = bd["highY"] / M_PER_IN
+    slope = (front_bear_z - back_seat_z) / (back_seat_start_y - front_bear_y)
+    sec = math.hypot(1.0, slope)
+    rafts = audit.group("rafter")
+    tail_f_y = min(r.aabb["lowY"] for r in rafts) / M_PER_IN
+    tail_b_y = max(r.aabb["highY"] for r in rafts) / M_PER_IN
+    return RoofRef(
+        slope=slope, sec=sec,
+        front_bear_y=front_bear_y, front_bear_z=front_bear_z,
+        front_seat_z=front_seat_z,
+        heel_y=front_bear_y + (front_bear_z - front_seat_z) / slope,
+        back_seat_z=back_seat_z,
+        back_seat_start_y=back_seat_start_y, back_kick_y=back_kick_y,
+        tail_f_y=tail_f_y, tail_b_y=tail_b_y,
+        rafter_depth=sorted(rafts[0].dims)[1],
+        plate_thick=min(audit.specs["left rake wall top plate"][0].dims))
+
+
+def solve_pitch(audit: Audit) -> float:
+    """Roof pitch derived from the plate solids (roof_ref), sanity-checked
+    against the documented slope above."""
+    deg = math.degrees(math.atan(roof_ref(audit).slope))
     assert abs(deg - DOCUMENTED_PITCH) < 0.5, \
-        f"AABB-derived pitch {deg:.3f} deg vs documented 24/65 slope"
-    return DOCUMENTED_PITCH
+        f"plate-derived pitch {deg:.3f} deg vs documented {DOCUMENTED_PITCH:.3f}"
+    return deg
 
 
 CENTER3 = (Align.CENTER, Align.CENTER, Align.CENTER)
@@ -176,13 +230,33 @@ def place_box(spec: Spec):
     return Location((cx, cy, cz), (0, 0, 0)) * Box(sx, sy, sz, align=CENTER3)
 
 
-def place_slope_y(spec: Spec, x_dim: float, z_dim: float, pitch_deg: float):
-    """Board with length along Y, falling in +Y at the roof pitch (rafters,
-    rake boards, rake wall plates). Cross-section: x_dim in X, z_dim thick."""
-    cx, cy, cz = (v * IN for v in _center_in(spec.aabb))
-    L = spec.length
-    return (Location((cx, cy, cz), (-pitch_deg, 0, 0))
-            * Box(x_dim * IN, L * IN, z_dim * IN, align=CENTER3))
+def _polygon_area(pts: list) -> float:
+    """Shoelace area of a 2D polygon (signed)."""
+    a = 0.0
+    for i in range(len(pts)):
+        y1, z1 = pts[i]
+        y2, z2 = pts[(i + 1) % len(pts)]
+        a += y1 * z2 - y2 * z1
+    return a / 2.0
+
+
+def prism_yz(profile_in: list, x0_in: float, x1_in: float):
+    """Exact YZ-profile prism: polygon (inches, in the world Y-Z plane)
+    extruded in +X from x0 to x1. The profile polygon IS the part's
+    construction record (birdsmouths, mitres, plumb ends), so placement is
+    anchored on the profile's own world coordinates - never re-centered on
+    an AABB. Carries .expected_volume_in3 for the verify harness."""
+    area = _polygon_area(profile_in)
+    if area < 0:  # CCW in (y,z) -> +X extrusion normal
+        profile_in = list(reversed(profile_in))
+        area = -area
+    plane = Plane(origin=(0, 0, 0), x_dir=(0, 1, 0), z_dir=(1, 0, 0))
+    # trap: build123d works in mm - scale the inch profile at the boundary
+    sk = plane * Polygon(*[(y * IN, z * IN) for y, z in profile_in])
+    width = x1_in - x0_in
+    part = Pos(x0_in * IN, 0, 0) * extrude(sk, amount=width * IN)
+    part.expected_volume_in3 = area * width
+    return part
 
 
 
