@@ -26,7 +26,9 @@ rework: `aa73830b88f34f965190a7c6` ("pre-fleet-completion 2026-08-05").
 Run from the repo root (scripts read `scripts/*.json` relatively).
 `scripts/fs_probe.py '<FS code>'` is the eval REPL for model queries.
 `blender/build_scene.py` turns `blender/scene.glb` into `blender/shed_scene.blend`
-plus Cycles renders in `blender/renders/`; usage and the material-by-name
+plus Cycles renders in `blender/renders/`; `--skin` builds the dressed
+presentation variant (`shed_skin.blend`, `blender/renders/skin/`) — render
+dressing only, framing model untouched. Usage and the material-by-name
 mapping live in `blender/README.md`. Headless Blender: `download.blender.org`
 is Cloudflare-challenged (curl gets an HTML block page) — fetch the tarball
 from a mirror (e.g. `mirrors.ocf.berkeley.edu/blender/release`) into the

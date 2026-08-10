@@ -14,10 +14,28 @@ in the task worktree scratch:
 ```
 ./.scratch/blender-4.5.12-linux-x64/blender --background --python blender/build_scene.py            # -> shed_scene.blend
 ./.scratch/blender-4.5.12-linux-x64/blender --background --python blender/build_scene.py -- --render  # + renders/ (Cycles 1920x1080)
+./.scratch/blender-4.5.12-linux-x64/blender --background --python blender/build_scene.py -- --skin --render  # dressed variant -> shed_skin.blend + renders/skin/
 ```
 
 `--render` renders all four saved cameras into `blender/renders/`.
 GPU (OptiX/CUDA) is used when present, CPU otherwise.
+
+## Skin mode (`--skin`) — render dressing, NOT modeled lumber
+
+`--skin` layers a "finished shed" look over the framing for presentation
+renders, matching the captain's reference photo: blue-gray horizontal lap
+siding, white corner boards / door casings / frieze / skirt, barn-red plank
+doors with black strap hinges and latches, and a natural-wood roof deck with
+exposed rafter tails. Doors follow the model's actual framed openings (front
+single + front double + right single), not the photo's door count.
+
+Everything is procedural boxes/prisms aligned to wall planes and openings
+read off the imported parts' world bboxes (`skin_layout()`), so like the
+cameras it re-derives from `scene.glb`. `scene.glb` and the framing-only /
+colorized modes are untouched; the framing model stays the source of truth.
+Saves `shed_skin.blend` and renders four views (front-left 3/4 at the
+reference angle, back-right, straight-on front, double-door close-up) into
+`blender/renders/skin/`.
 
 ## Material-by-name-group
 
