@@ -54,11 +54,15 @@ Species decisions (2026-08-10):
 - PT ground contact: no captain decision yet (common PNW choices: Hem-fir
   or SYP with UC4A rating). Confirm with Hingham Lumber before ordering.
 
-## Doors / siding / trim — separate order list (2026-08-10 decision)
+## Doors / siding / trim — separate order list — RESOLVED (2026-08-10)
 
 Captain's call: model doors/siding/trim for real, but order them on a
 COMPLETELY SEPARATE order list — never mixed into this framing lumber list.
-That modeling is an upcoming task; nothing here covers it.
+Implemented on branch fm/woodbike-shed-siding-model: `cad/siding.py`,
+`cad/trim.py`, `cad/doors.py` (real dimensioned parts in scene.glb + per-part
+STEP + view.py sections), ordered via `order_list_finish.csv` and the FINISH
+sections of CUT_LIST.md (`scripts/build_finish_cut_list.py`). Hardware
+(strap hinges, latches) stays line items only.
 
 ## Rafter bearing vs front-wall double top plate — RESOLVED
 

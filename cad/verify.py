@@ -25,8 +25,12 @@ import sys
 
 from build123d import Plane
 
-from cad.build import build_all
-from cad.common import (IN, PROFILE_GROUPS, _bbox_dims_in, _center_in)
+from cad.build import build_all, build_finish
+from cad.common import (IN, PROFILE_GROUPS, _bbox_dims_in, _center_in,
+                        finish_layout)
+from cad.doors import GAP
+from cad.siding import SIDING_T
+from cad.trim import TRIM_T
 
 TIGHT = 0.02                      # inches, placement + flushness tolerances
 SEAT_AREA_MIN = (6.0, 5.0)        # in^2, front/back rafter seat faces
@@ -76,6 +80,7 @@ def z_on_plane(pt, n, y):
 
 def main():
     audit, parts = build_all()
+    finish = build_finish(audit)
     by_label: dict[str, list] = {}
     for p in parts:
         by_label.setdefault(p.label, []).append(p)
@@ -241,11 +246,65 @@ def main():
                       f"'{side} rake wall studs' y{spt[1]:.2f}: top face not "
                       f"on plate underside (gap/offset)")
 
+    # --- 3b. finish layers: volumes + layer planes ------------------------------
+    # Every finish part carries .expected_volume_in3 (profile area x length
+    # for prisms, dim product for boxes) - the silent-boolean-no-op gate for
+    # the new geometry. Layers: siding backs ON the wall planes, trim one
+    # siding thickness proud, doors one more layer out on the casing face.
+    fby: dict[str, list] = {}
+    for p in finish:
+        fby.setdefault(p.label, []).append(p)
+    for p in finish:
+        evol = p.volume / IN ** 3
+        check(abs(evol - p.expected_volume_in3) < 1e-3 * p.expected_volume_in3,
+              f"'{p.label}': volume {evol:.1f} != expected "
+              f"{p.expected_volume_in3:.1f} in^3 (silent boolean no-op?)")
+    L = finish_layout(audit)
+    head_z = min(h for *_o, h in L["front_open"] + L["right_open"])
+    # envelope: nothing lands outside the shed + its finish layers
+    for p in finish:
+        b = bbox_in(p)
+        check(L["l"] - 6 < b[0] and b[1] < L["r"] + 6 and
+              L["f"] - 6 < b[2] and b[3] < L["b"] + 6 and
+              -10 < b[4] and b[5] < 135,
+              f"'{p.label}': outside shed envelope "
+              f"{tuple(round(v, 1) for v in b)}")
+    plane_checks = [
+        ("finish siding front", lambda b: abs(b[3] - L["f"])),
+        ("finish siding back", lambda b: abs(b[2] - L["b"])),
+        ("finish siding left", lambda b: abs(b[1] - L["l"])),
+        ("finish siding right", lambda b: abs(b[0] - L["r"])),
+    ]
+    for label, dev in plane_checks:
+        for p in fby.get(label, []):
+            check(dev(bbox_in(p)) < TIGHT,
+                  f"'{label}': back face not on the wall plane")
+    trim_out = SIDING_T
+    for label in ("finish skirt", "finish corner boards", "finish frieze",
+                  "finish door casings"):
+        for p in fby.get(label, []):
+            b = bbox_in(p)
+            ok = min(abs(b[3] - (L["f"] - trim_out)),   # front layer back
+                     abs(b[2] - (L["b"] + trim_out)),   # back
+                     abs(b[1] - (L["l"] - trim_out)),   # left
+                     abs(b[0] - (L["r"] + trim_out))) < TIGHT
+            check(ok, f"'{label}': not in the trim layer")
+    door_out = trim_out + TRIM_T
+    for label, off in (("finish door planks", door_out),
+                       ("finish door rails", door_out + TRIM_T)):
+        for p in fby.get(label, []):
+            b = bbox_in(p)
+            ok = min(abs(b[3] - (L["f"] - off)),
+                     abs(b[0] - (L["r"] + off))) < TIGHT
+            check(ok, f"'{label}': not in its door layer")
+            check(b[5] < head_z, f"'{label}': leaf above the header line")
+
     # --- 4. zero-interference sweep ---------------------------------------------
+    all_parts = parts + finish
     n_exact = 0
-    for i in range(len(parts)):
-        for j in range(i + 1, len(parts)):
-            a, b = parts[i], parts[j]
+    for i in range(len(all_parts)):
+        for j in range(i + 1, len(all_parts)):
+            a, b = all_parts[i], all_parts[j]
             ab, bb2 = bbox_in(a), bbox_in(b)
             if not (min(ab[1], bb2[1]) - max(ab[0], bb2[0]) > 1e-9 and
                     min(ab[3], bb2[3]) - max(ab[2], bb2[2]) > 1e-9 and
@@ -260,16 +319,17 @@ def main():
                 continue
             check(False, f"interference {v:.3f} in^3: {a.label} x {b.label}")
 
-    n = len(parts)
+    n = len(all_parts)
     if failures:
         print(f"FAIL: {len(failures)} problem(s) in {n} parts "
               f"({n_exact} exact pair intersections evaluated)")
         for f in failures:
             print(" -", f)
         sys.exit(1)
-    print(f"OK: {n} parts, {len(audit.specs)} cut-list names; dims/volumes/"
-          f"placements match audit data; seats/kicks/ends flush; "
-          f"0 unallowed interference ({n_exact} pairs swept)")
+    print(f"OK: {n} parts ({len(parts)} framing, {len(finish)} finish), "
+          f"{len(audit.specs)} framing cut-list names; dims/volumes/"
+          f"placements match audit data; seats/kicks/ends flush; finish "
+          f"layers seated; 0 unallowed interference ({n_exact} pairs swept)")
 
 
 if __name__ == "__main__":

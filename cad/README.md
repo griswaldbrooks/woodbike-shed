@@ -44,6 +44,16 @@ on an AABB):
 `skids.py` `floor.py` `walls_front.py` `walls_back.py` `walls_side.py`
 `walls_rake.py` `roof.py` → orchestrated by `build.py`, checked by `verify.py`.
 
+Finish lumber (captain 2026-08-10: modeled for real, SEPARATE order list) is
+`siding.py` (1x8 lap courses, rabbet-nested, rake-cut tops), `trim.py`
+(skirt/corners/frieze/casings), `doors.py` (board-and-batten leaves over the
+framed openings) → `build.py build_finish()`, checked by the same
+`verify.py` run (volumes, layer planes, envelope, zero interference against
+the framing too). Their heights derive from `common.finish_layout` (audit
+bboxes + roof_ref); only product dims are constants. Labels use a `finish `
+prefix so `scripts/build_cut_list.section_for` files them under the Finish
+sections and `scripts/build_finish_cut_list.py` orders them separately.
+
 Naming scheme: every part's `.label` matches CUT_LIST.md exactly. STEP
 filenames and glTF node names are `NNN <label>` (instance number prefix for
 uniqueness — group names repeat, e.g. 14 × "back wall studs").
@@ -68,11 +78,13 @@ uniqueness — group names repeat, e.g. 14 × "back wall studs").
 
 ## Pending captain decisions (TODO seams, do not decide unilaterally)
 
-- **Doors/siding/trim** — `walls_front.py` (and right wall opening): framing
-  only, as cut-listed. 2026-08-10 captain's decision: model them for real,
-  but on a COMPLETELY SEPARATE order list — upcoming task, not this one.
+(none open)
 
 Resolved seams (kept for the record):
+- **Doors/siding/trim** — implemented 2026-08-10 as real parts
+  (`siding.py`/`trim.py`/`doors.py`) on a separate order list
+  (`order_list_finish.csv`), per the captain's decision; hardware stays line
+  items only.
 - **Birdsmouth/trim cuts in code** — implemented 2026-08-10
   (`roof.py`/`walls_rake.py` prisms, `verify.py` seating gate). The old
   rectangular-stock approximation silently interpenetrated both double top

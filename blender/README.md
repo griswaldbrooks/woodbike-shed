@@ -1,10 +1,13 @@
 # blender/ — headless render pipeline for the shed
 
-`scene.glb` (117 named parts, from `cad/build.py`, names = CUT_LIST.md labels
-with an `NNN ` instance prefix) + `build_scene.py`, which turns it into a lit,
-materialled scene and renders it. Nothing hand-placed: cameras, ground and
-sun derive from the imported bounding box, so re-running survives model
-changes.
+`scene.glb` (293 named parts — 117 framing + 176 finish — from `cad/build.py`,
+names = CUT_LIST.md labels with an `NNN ` instance prefix) +
+`build_scene.py`, which turns it into a lit, materialled scene and renders
+it. Nothing hand-placed: cameras, ground and sun derive from the imported
+bounding box, so re-running survives model changes. `build_scene.py` drops
+the `finish ` parts after import (both modes): the Blender scenes stay
+framing-only presentations; the modeled finish lumber is viewed via
+`view.py` (siding/trim/doors tints below).
 
 ## Regenerate (headless)
 
@@ -77,8 +80,14 @@ same hues; renders here are the ground truth):
 | rafter | cedar red `#C29079` | rafter |
 | fascia | driftwood gray `#A2A4AA` | back/front fascia |
 | rake | rosewood plum `#AA8195` | rake boards |
+| siding | blue-gray `#6C7C90` | finish siding (view.py only) |
+| trim | white `#E7E6E0` | finish corner/frieze/skirt/casings |
+| doors | barn red `#906054` | finish door planks/rails |
 
 ## Known limits
 
-- Framing-only model: no siding, sheathing or roof boards beyond the OSB
-  floor deck (matches CUT_LIST.md scope).
+- The Blender scenes render the framing only: `scene.glb` carries the modeled
+  finish parts (siding/trim/doors, see `cad/README.md`) but `build_scene.py`
+  drops them; `--skin` layers its own procedural dressing for the finished
+  look. No roof sheathing beyond the OSB floor deck (matches CUT_LIST.md
+  framing scope).

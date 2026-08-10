@@ -10,11 +10,14 @@ from pathlib import Path
 import trimesh
 from build123d.exporters3d import export_step
 
-from cad import (common, floor, roof, skids, walls_back, walls_front,
-                 walls_rake, walls_side)
+from cad import (common, doors, floor, roof, siding, skids, trim, walls_back,
+                 walls_front, walls_rake, walls_side)
 from cad.common import REPO
 
 MODULES = (skids, floor, walls_front, walls_back, walls_side, walls_rake, roof)
+# captain 2026-08-10: doors/siding/trim are real parts but a SEPARATE order
+# list (scripts/build_finish_cut_list.py) - never mixed into the framing one.
+FINISH_MODULES = (siding, trim, doors)
 
 
 def build_all():
@@ -23,6 +26,13 @@ def build_all():
     for m in MODULES:
         parts.extend(m.build(audit))
     return audit, parts
+
+
+def build_finish(audit):
+    parts = []
+    for m in FINISH_MODULES:
+        parts.extend(m.build(audit))
+    return parts
 
 
 def export(parts):
@@ -49,10 +59,12 @@ def export(parts):
 
 def main():
     audit, parts = build_all()
+    n_framing = len(parts)
+    parts += build_finish(audit)
     n = export(parts)
     labels = {p.label for p in parts}
-    print(f"built {n} parts, {len(labels)} cut-list names, "
-          f"roof pitch {audit.pitch_deg:.3f} deg")
+    print(f"built {n} parts ({n_framing} framing, {n - n_framing} finish), "
+          f"{len(labels)} cut-list names, roof pitch {audit.pitch_deg:.3f} deg")
 
 
 if __name__ == "__main__":

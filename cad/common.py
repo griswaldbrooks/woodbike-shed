@@ -25,6 +25,8 @@ IN = 25.4        # mm per inch (build123d world is mm)
 M_PER_IN = 0.0254  # bboxes.json values are meters despite the "_m" key names
 REPO = Path(__file__).resolve().parent.parent
 
+TRIM_T = 0.75    # finish trim stock thickness (trim.py, doors.py, siding.py)
+
 # Groups whose parts are tilted in the Y-Z plane at the roof pitch
 # (world-AABB != oriented dims). Fascia are axis-aligned since the 2026-08
 # roof-trim rework ("Fix fascia to symmetric 12 inch overhangs" on main).
@@ -216,6 +218,93 @@ def solve_pitch(audit: Audit) -> float:
     assert abs(deg - DOCUMENTED_PITCH) < 0.5, \
         f"plate-derived pitch {deg:.3f} deg vs documented {DOCUMENTED_PITCH:.3f}"
     return deg
+
+
+def prism_xz(profile_in: list, y0_in: float, y1_in: float):
+    """Same as prism_yz but the profile polygon lives in the world X-Z plane
+    (points (x, z) in inches) and extrudes in +Y from y0 to y1. Used for
+    finish boards that run along Y with their lap profile in the thickness
+    (X) direction. Carries .expected_volume_in3 like prism_yz."""
+    area = _polygon_area_xz(profile_in)
+    if area < 0:
+        profile_in = list(reversed(profile_in))
+        area = -area
+    # plane normal is -Y: extruding +amount from y1 runs back to y0
+    plane = Plane(origin=(0, 0, 0), x_dir=(1, 0, 0), z_dir=(0, -1, 0))
+    sk = plane * Polygon(*[(x * IN, z * IN) for x, z in profile_in])
+    width = y1_in - y0_in
+    part = Pos(0, y1_in * IN, 0) * extrude(sk, amount=width * IN)
+    part.expected_volume_in3 = area * width
+    return part
+
+
+def _polygon_area_xz(pts: list) -> float:
+    a = 0.0
+    for i in range(len(pts)):
+        x1, z1 = pts[i]
+        x2, z2 = pts[(i + 1) % len(pts)]
+        a += x1 * z2 - x2 * z1
+    return a / 2.0
+
+
+def box_at(label: str, x0: float, x1: float, y0: float, y1: float,
+           z0: float, z1: float):
+    """Axis-aligned finish part from explicit inch bounds (world axes), with
+    .label and .expected_volume_in3 for the verify harness."""
+    p = Location(((x0 + x1) / 2 * IN, (y0 + y1) / 2 * IN, (z0 + z1) / 2 * IN),
+                 (0, 0, 0)) * Box((x1 - x0) * IN, (y1 - y0) * IN,
+                                  (z1 - z0) * IN, align=CENTER3)
+    p.label = label
+    p.expected_volume_in3 = (x1 - x0) * (y1 - y0) * (z1 - z0)
+    return p
+
+
+def finish_layout(audit: Audit) -> dict:
+    """Wall planes, finish heights and clear door openings, all derived from
+    the audited framing solids (inches) - the finish modules hardcode only
+    product dims (board widths/exposures), never wall geometry. Mirrors what
+    blender/build_scene.py skin_layout reads off the GLB, but from audit
+    bboxes so cad/ stays the source of truth."""
+    g = lambda n: audit.specs[n][0].aabb  # noqa: E731
+    f = g("front wall bottom plate")["lowY"] / M_PER_IN    # front outer face
+    b = g("back wall bottom plate")["highY"] / M_PER_IN    # back outer face
+    l = g("left wall top plate")["lowX"] / M_PER_IN        # left outer face
+    r = g("right wall top plate")["highX"] / M_PER_IN      # right outer face
+    front_top = g("front wall double top plate")["highZ"] / M_PER_IN
+    back_top = g("back wall double top plate short")["highZ"] / M_PER_IN
+    rim_low = min(s.aabb["lowZ"] for s in audit.group("rim joist")) / M_PER_IN
+    ref = roof_ref(audit)
+
+    def openings(key, axis):
+        """header bboxes -> clear openings [(lo, hi, head_z)]; the two plies
+        share a span. Clear = header span minus one jack width per side."""
+        jack = min(s.dims[2] for s in audit.specs[key.replace("headers",
+                                                             "jack studs")])
+        spans = {}
+        for s in audit.specs[key]:
+            a = s.aabb
+            k = round(a["lowX" if axis == 0 else "lowY"], 3)
+            lo = a["lowX" if axis == 0 else "lowY"] / M_PER_IN
+            hi = a["highX" if axis == 0 else "highY"] / M_PER_IN
+            hz = a["lowZ"] / M_PER_IN
+            t = spans.setdefault(k, [lo, hi, hz])
+            t[1] = max(t[1], hi)
+            t[2] = min(t[2], hz)
+        return [(t[0] + jack, t[1] - jack, t[2])
+                for t in sorted(spans.values())]
+
+    return {
+        "f": f, "b": b, "l": l, "r": r,
+        "front_top": front_top, "back_top": back_top,
+        "rim_low": rim_low, "ref": ref,
+        # side-wall siding/frieze top line: rafter bottom edge + 1" tuck
+        "side_top": lambda y: ref.zbot(y) + 1.0,
+        # back wall: rafter tails overhang the siding, so tops there tuck
+        # under the rafter bottom edge at the part's own outer face
+        "back_top_at": lambda off: ref.zbot(b + off),
+        "front_open": openings("front wall headers", 0),
+        "right_open": openings("right wall headers", 1),
+    }
 
 
 CENTER3 = (Align.CENTER, Align.CENTER, Align.CENTER)

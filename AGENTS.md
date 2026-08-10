@@ -25,6 +25,10 @@ Since 2026-08-10 the local audit JSON + `cad/` run AHEAD of Onshape: the
 `fetch_bboxes.py` + `fetch_oriented_dims.py` (FeatureScript eval) →
 `bboxes.json` / `oriented_dims.json` → `build_cut_list.py` → `CUT_LIST.md` +
 `order_list.csv`. `verify_groups.py` checks dim consistency per part name.
+Finish lumber (siding/trim/doors, `cad/siding|trim|doors.py`, captain's
+separate-order decision) rides along: `build_cut_list.py` (run in `.venv`)
+also writes `order_list_finish.csv` + the CUT_LIST.md FINISH sections via
+`scripts/build_finish_cut_list.py`; framing `order_list.csv` stays clean.
 Run from the repo root (scripts read `scripts/*.json` relatively).
 `scripts/fs_probe.py '<FS code>'` is the eval REPL for model queries.
 `blender/build_scene.py` turns `blender/scene.glb` into `blender/shed_scene.blend`

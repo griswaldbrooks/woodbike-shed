@@ -14,7 +14,7 @@ Zero Onshape API calls — geometry comes from cad/ + the audit JSON files.
 import sys
 import warnings
 
-from cad.build import build_all
+from cad.build import build_all, build_finish
 from blender.group_colors import MATERIALS, group_for
 from scripts.build_cut_list import SECTION_ORDER, section_for
 
@@ -31,7 +31,8 @@ except ImportError:
 
 
 def main():
-    _, parts = build_all()
+    audit, parts = build_all()
+    parts += build_finish(audit)
 
     # group tints shared with the Blender renders (blender/group_colors.py)
     for p in parts:

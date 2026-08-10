@@ -3,9 +3,9 @@
 King studs (1x 120" + 8x 118.5"), single 192" plates, door
 headers/jacks/cripples. All axis-aligned; placements from bboxes.json.
 
-TODO(captain): door/siding/trim decisions stay pending (ship orders) - the
-framing below is what exists in the cut list today; no openings are modeled
-beyond the cripple/jack/header members already present.
+Framing only here (the cut-list scope); the doors/siding/trim that close
+these openings live in cad/doors.py / cad/siding.py / cad/trim.py on their
+own order list (resolved captain decision 2026-08-10).
 """
 from cad.common import Audit, place_box
 

@@ -16,8 +16,13 @@ Stock-length optimization:
 """
 import csv
 import json
+import sys
 from collections import defaultdict
 from pathlib import Path
+
+# runnable both as `python scripts/build_cut_list.py` and as a module:
+# the finish writer (and cad/) import from the repo root
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 # ----- lumber classification ----------------------------------------------
 
@@ -48,6 +53,14 @@ PT_SECTIONS = {"Skids", "Floor"}
 
 def section_for(name):
     n = name.lower()
+    if n.startswith("finish siding"):
+        return "Finish siding"
+    if n.startswith("finish door casing"):
+        return "Finish trim"
+    if n.startswith("finish door"):
+        return "Finish doors"
+    if n.startswith("finish"):
+        return "Finish trim"
     if n == "" or "skid" in n:
         return "Skids"
     if "floor joist" in n or "rim joist" in n or "sub floor" in n or "subfloor" in n:
@@ -84,6 +97,11 @@ SECTION_ORDER = [
     "Right rake wall",
     "Roof",
     "Other",
+    # finish sections are filed by the separate-order-list writer
+    # (build_finish_cut_list.py); framing rows never land here
+    "Finish siding",
+    "Finish trim",
+    "Finish doors",
 ]
 
 EXCLUDE_FROM_CUTLIST = {"inner volume"}
@@ -315,6 +333,14 @@ def main():
         if osb_pieces:
             w.writerow(["OSB 3/4\"", "—", "4x8 sheet", (osb_pieces + 1) // 2,
                         f"subfloor; rip to 72\"+24\"; {YARD}"])
+
+    # finish (siding/trim/doors) rows: separate order list, appended section
+    # (needs the cad venv - build_cut_list now runs in .venv like cad.build)
+    try:
+        from scripts.build_finish_cut_list import write_finish_outputs
+    except ImportError:  # run directly from scripts/
+        from build_finish_cut_list import write_finish_outputs
+    write_finish_outputs()
 
     print(f"Wrote {out_md} and {out_csv}")
 

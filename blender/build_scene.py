@@ -8,9 +8,11 @@ Headless usage (from the repo root):
     blender --background --python blender/build_scene.py -- --skin
     blender --background --python blender/build_scene.py -- --skin --render
 
-Pipeline: import blender/scene.glb (117 named parts from cad/build.py, mm
-units) -> scale to meters -> one PBR wood material per cut-list name group ->
-ground plane, Nishita sky + sun -> four cameras -> save shed_scene.blend.
+Pipeline: import blender/scene.glb (293 named parts from cad/build.py -
+117 framing + 176 finish, mm units; the finish parts are dropped again,
+see main()) -> scale to meters -> one PBR wood material per cut-list name
+group -> ground plane, Nishita sky + sun -> four cameras -> save
+shed_scene.blend.
 With --render: Cycles 1920x1080 per camera into blender/renders/.
 
 --skin layers siding / trim / doors / a roof deck over the framing (aligned
@@ -571,6 +573,14 @@ def main():
     bpy.ops.wm.read_factory_settings(use_empty=True)
 
     bpy.ops.import_scene.gltf(filepath=str(GLB))
+    mesh_obs = [ob for ob in bpy.data.objects if ob.type == "MESH"]
+    # scene.glb also carries the modeled finish parts (cad/siding.py etc.);
+    # the Blender scenes stay framing-only presentations (the --skin dressing
+    # or the group tints), so drop them here - view.py shows them in the CAD
+    # viewer. Keep the framing count assertion as the pipeline contract.
+    for ob in [o for o in mesh_obs
+               if o.name.split(" ", 1)[1].startswith("finish")]:
+        bpy.data.objects.remove(ob, do_unlink=True)
     parts = [ob for ob in bpy.data.objects if ob.type == "MESH"]
     assert len(parts) == 117, f"expected 117 parts in scene.glb, got {len(parts)}"
     # glTF import assumes Y-up and hands our Z-up data over rolled onto its
