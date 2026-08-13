@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- model trace: section in the Y-Z plane through one rafter; horizontal = y (front wall
+     inner face y 0, back wall y 65..68.5), vertical = z above deck. Rafter profile per
+     cad.roof.rafter_profile: tails y -27.5/80.5 (bottom z 131.8125/91.3125, top z
+     137.6865/97.1865); front seat z 123 over y -4..0 with 1.5 kick at y 0; back seat
+     z 97.125 over y 65..68.5 with 1.3125 kick at y 68.5. Walls grey = already built. -->
+<svg viewBox="0 0 840 490" width="210mm" xmlns="http://www.w3.org/2000/svg"
+     font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="dimA" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8" fill="#555"/>
+    </marker>
+    <marker id="dimAs" markerWidth="10" markerHeight="8" refX="1" refY="4" orient="auto">
+      <path d="M10,0 L0,4 L10,8" fill="#555"/>
+    </marker>
+    <marker id="attA" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8" fill="#1a6fb0"/>
+    </marker>
+    <marker id="grvA" markerWidth="10" markerHeight="8" refX="5" refY="8" orient="auto">
+      <path d="M0,0 L10,0 L5,8" fill="#222"/>
+    </marker>
+    <pattern id="h11" patternUnits="userSpaceOnUse" width="7" height="7">
+      <path d="M0,7 L7,0" stroke="#8a6d3b" stroke-width="0.9"/>
+    </pattern>
+    <style>
+      text { fill:#222; }
+      .halo { paint-order: stroke; stroke:#ffffff; stroke-width:4; stroke-linejoin:round; }
+      .lbl { font-size:13px; }
+      .lblb { font-size:13px; font-weight:bold; }
+      .small { font-size:12px; }
+    </style>
+  </defs>
+
+  <!-- view badge -->
+  <rect x="470" y="10" width="358" height="62" fill="#ffffff" stroke="#444" stroke-width="1.5"/>
+  <text x="482" y="30" class="lblb">SECTION B–B · through one rafter</text>
+  <text x="482" y="47" class="lbl">viewed from the left gable end</text>
+  <text x="482" y="64" class="small">frame anchor: gravity ↓ · cut plane shown in Fig 11.1</text>
+
+  <!-- deck line + datum + gravity -->
+  <rect x="40" y="436" width="760" height="9" fill="#c9b98f" stroke="#8a744a" stroke-width="1.2"/>
+  <line x1="40" y1="436" x2="800" y2="436" stroke="#5c4d2c" stroke-width="2"/>
+  <text x="330" y="460" class="lbl halo">deck top — the guide's height datum</text>
+  <line x1="795" y1="452" x2="795" y2="478" stroke="#222" stroke-width="2" marker-end="url(#grvA)"/>
+  <text x="776" y="487" class="small">DOWN</text>
+  <text x="110" y="487" class="small halo">◀ FRONT — street side (high)</text>
+  <text x="590" y="487" class="small halo">BACK (low) ▶</text>
+
+  <!-- already-built walls (grey) -->
+  <g fill="#e9e9e9" stroke="#8c8c8c" stroke-width="1.2">
+    <rect x="195.6" y="85.45" width="18.6" height="350.55"/>
+    <rect x="567" y="159.19" width="18.9" height="276.81"/>
+  </g>
+  <g fill="#dcdcdc" stroke="#8c8c8c" stroke-width="1.2">
+    <rect x="195.6" y="85.45" width="18.6" height="4.28"/>
+    <rect x="567" y="159.19" width="18.9" height="4.28"/>
+  </g>
+  <text x="205" y="330" class="small halo" transform="rotate(-90 205 330)">front wall — plate top 123″ above deck</text>
+  <text x="576" y="320" class="small halo" transform="rotate(-90 576 320)">back wall — plate top 97⅛″ above deck</text>
+
+  <!-- the rafter, cut by the section plane (hatched) -->
+  <polygon points="66,60.33 192.6,85.45 214.2,85.45 214.2,89.73 567,159.19 585.9,159.19
+                   585.9,162.93 650.7,175.76 650.7,159.01 66,43.6"
+           fill="#e8d3a8" stroke="#6b4f16" stroke-width="2"/>
+  <polygon points="66,60.33 192.6,85.45 214.2,85.45 214.2,89.73 567,159.19 585.9,159.19
+                   585.9,162.93 650.7,175.76 650.7,159.01 66,43.6"
+           fill="url(#h11)" stroke="none"/>
+  <text x="250" y="140" class="lbl halo">rafter · 2×6 · 9' 7⅜″ (hatched — cut by the section plane)</text>
+  <line x1="300" y1="130" x2="330" y2="104" stroke="#555" stroke-width="1"/>
+  <text x="330" y="88" class="lbl halo" transform="rotate(11.2 330 88)">roof pitch 4½ in 12 (20.6°)</text>
+
+  <!-- seat highlights -->
+  <line x1="192.6" y1="85.45" x2="214.2" y2="85.45" stroke="#c0392b" stroke-width="3"/>
+  <line x1="567" y1="159.19" x2="585.9" y2="159.19" stroke="#c0392b" stroke-width="3"/>
+
+  <!-- front birdsmouth labels -->
+  <text x="24" y="150" class="lblb halo">front birdsmouth</text>
+  <text x="24" y="168" class="lbl halo">level seat 4″ long on the front</text>
+  <text x="24" y="184" class="lbl halo">plate top — 123″ above deck</text>
+  <text x="24" y="200" class="lbl halo">plumb kick 1½″ at the wall's inner face</text>
+  <line x1="150" y1="142" x2="198" y2="87" stroke="#555" stroke-width="1"/>
+  <text x="232" y="118" class="lbl halo">heel — 4″ outboard of the wall face</text>
+  <line x1="230" y1="114" x2="195" y2="86" stroke="#555" stroke-width="1"/>
+
+  <!-- back birdsmouth labels -->
+  <text x="600" y="238" class="lblb halo">back birdsmouth</text>
+  <text x="600" y="256" class="lbl halo">level seat 3½″ long (full plate</text>
+  <text x="600" y="272" class="lbl halo">width) on the back plate top —</text>
+  <text x="600" y="288" class="lbl halo">97⅛″ above deck · plumb kick</text>
+  <text x="600" y="304" class="lbl halo">1-5/16″ at the outer face</text>
+  <line x1="616" y1="230" x2="583" y2="162" stroke="#555" stroke-width="1"/>
+
+  <!-- overhang dimensions -->
+  <line x1="66" y1="52" x2="195.6" y2="52" stroke="#555" stroke-width="1"
+        marker-start="url(#dimAs)" marker-end="url(#dimA)"/>
+  <line x1="66" y1="46" x2="66" y2="64" stroke="#555" stroke-width="1"/>
+  <line x1="195.6" y1="46" x2="195.6" y2="82" stroke="#555" stroke-width="1"/>
+  <text x="130" y="42" class="lbl halo" text-anchor="middle">24″ overhang</text>
+  <line x1="585.9" y1="196" x2="650.7" y2="196" stroke="#555" stroke-width="1"
+        marker-start="url(#dimAs)" marker-end="url(#dimA)"/>
+  <line x1="585.9" y1="166" x2="585.9" y2="202" stroke="#555" stroke-width="1"/>
+  <line x1="650.7" y1="179" x2="650.7" y2="202" stroke="#555" stroke-width="1"/>
+  <text x="618" y="214" class="lbl halo" text-anchor="middle">12″ overhang</text>
+
+  <!-- tail tops -->
+  <text x="68" y="30" class="lbl halo">tail top 137-11/16″ above deck</text>
+  <text x="68" y="16" class="small halo">flush with the fascia top — checked at Stage 9</text>
+  <line x1="120" y1="34" x2="70" y2="46" stroke="#555" stroke-width="1"/>
+  <text x="662" y="140" class="lbl halo">tail top 97-3/16″</text>
+  <text x="662" y="156" class="small halo">above deck</text>
+  <line x1="660" y1="150" x2="652" y2="159" stroke="#555" stroke-width="1"/>
+
+  <!-- attachment -->
+  <text x="290" y="360" class="lblb halo" fill="#1a6fb0">seat every rafter on BOTH plates —</text>
+  <text x="290" y="378" class="lbl halo" fill="#1a6fb0">toe-nail or screw through the plate into the rafter</text>
+  <line x1="310" y1="348" x2="206" y2="90" stroke="#1a6fb0" stroke-width="1.8" marker-end="url(#attA)"/>
+  <line x1="520" y1="348" x2="574" y2="164" stroke="#1a6fb0" stroke-width="1.8" marker-end="url(#attA)"/>
+</svg>
