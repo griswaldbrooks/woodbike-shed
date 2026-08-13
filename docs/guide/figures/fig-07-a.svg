@@ -1,0 +1,114 @@
+<svg viewBox="0 0 920 640" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+<!-- model trace: back wall elevation as seen from behind the shed, so the wall's LEFT end (tape
+zero, model x −3.5) is drawn on the RIGHT. px(t)=770-3.5*t; y(z)=560-3.5*z. Studs z 1.5..94.125;
+top plate z 94.125..95.625; DTP short z 95.625..97.125 spanning tape 3.5..188.5 (model x 0..185) -->
+<defs>
+  <marker id="dim" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+    <path d="M0,0 L7,3.5 L0,7 z" fill="#444"/>
+  </marker>
+</defs>
+
+<rect x="0" y="0" width="920" height="640" fill="#ffffff"/>
+
+<!-- view badge -->
+<g>
+  <rect x="14" y="12" width="306" height="76" fill="#ffffff" stroke="#222" stroke-width="2.5" rx="6"/>
+  <text x="26" y="36" font-size="17" font-weight="bold" fill="#111">ELEVATION · BACK WALL</text>
+  <text x="26" y="57" font-size="15" fill="#111">viewed from behind the shed</text>
+  <text x="26" y="78" font-size="15" fill="#111">frame anchor: gravity</text>
+  <line x1="294" y1="46" x2="294" y2="70" stroke="#111" stroke-width="3"/>
+  <path d="M287,66 L294,78 L301,66 z" fill="#111"/>
+</g>
+
+<!-- deck line + ground hatch -->
+<line x1="60" y1="560" x2="880" y2="560" stroke="#222" stroke-width="3"/>
+<g stroke="#666" stroke-width="1.6">
+  <line x1="80" y1="560" x2="68" y2="574"/><line x1="140" y1="560" x2="128" y2="574"/>
+  <line x1="200" y1="560" x2="188" y2="574"/><line x1="260" y1="560" x2="248" y2="574"/>
+  <line x1="320" y1="560" x2="308" y2="574"/><line x1="380" y1="560" x2="368" y2="574"/>
+  <line x1="440" y1="560" x2="428" y2="574"/><line x1="500" y1="560" x2="488" y2="574"/>
+  <line x1="560" y1="560" x2="548" y2="574"/><line x1="620" y1="560" x2="608" y2="574"/>
+  <line x1="680" y1="560" x2="668" y2="574"/><line x1="740" y1="560" x2="728" y2="574"/>
+  <line x1="800" y1="560" x2="788" y2="574"/><line x1="860" y1="560" x2="848" y2="574"/>
+</g>
+<text x="64" y="592" font-size="15" fill="#333">deck top (Stage 2) — wall stands on the back edge</text>
+
+<!-- plates -->
+<rect x="98" y="554.75" width="672" height="5.25" fill="#c99a56" stroke="#6b4a1f" stroke-width="2.2"/>
+<rect x="98" y="225.35" width="672" height="5.25" fill="#c99a56" stroke="#6b4a1f" stroke-width="2.2"/>
+<!-- double top plate short: tape 3.5..188.5 -->
+<rect x="110.25" y="220.1" width="647.5" height="5.25" fill="#c99a56" stroke="#6b4a1f" stroke-width="2.2"/>
+
+<!-- 13 studs z 1.5..94.125 -> y 554.75..230.6; drawn left end on the right -->
+<g fill="#d9a763" stroke="#6b4a1f" stroke-width="2.2">
+  <rect x="764.75" y="230.6" width="5.25" height="324.15"/>
+  <rect x="714" y="230.6" width="5.25" height="324.15"/>
+  <rect x="658" y="230.6" width="5.25" height="324.15"/>
+  <rect x="602" y="230.6" width="5.25" height="324.15"/>
+  <rect x="546" y="230.6" width="5.25" height="324.15"/>
+  <rect x="490" y="230.6" width="5.25" height="324.15"/>
+  <rect x="434" y="230.6" width="5.25" height="324.15"/>
+  <rect x="378" y="230.6" width="5.25" height="324.15"/>
+  <rect x="322" y="230.6" width="5.25" height="324.15"/>
+  <rect x="266" y="230.6" width="5.25" height="324.15"/>
+  <rect x="210" y="230.6" width="5.25" height="324.15"/>
+  <rect x="154" y="230.6" width="5.25" height="324.15"/>
+  <rect x="98" y="230.6" width="5.25" height="324.15"/>
+</g>
+
+<!-- corner zones reserved for side-wall double plates (future work = dashed) -->
+<g fill="none" stroke="#4a7ab5" stroke-width="2.2" stroke-dasharray="8 5">
+  <rect x="757.75" y="220.1" width="12.25" height="5.25"/>
+  <rect x="98" y="220.1" width="12.25" height="5.25"/>
+</g>
+
+<!-- nailed joints (representative) -->
+<g stroke="#7a2e12" stroke-width="2">
+  <line x1="711" y1="551" x2="719" y2="559"/><line x1="719" y1="551" x2="711" y2="559"/>
+  <line x1="431" y1="551" x2="439" y2="559"/><line x1="439" y1="551" x2="431" y2="559"/>
+  <line x1="151" y1="551" x2="159" y2="559"/><line x1="159" y1="551" x2="151" y2="559"/>
+  <line x1="711" y1="221" x2="719" y2="229"/><line x1="719" y1="221" x2="711" y2="229"/>
+  <line x1="431" y1="221" x2="439" y2="229"/><line x1="439" y1="221" x2="431" y2="229"/>
+  <line x1="151" y1="221" x2="159" y2="229"/><line x1="159" y1="221" x2="151" y2="229"/>
+</g>
+
+<!-- end markers -->
+<g font-size="15" fill="#222">
+  <text x="770" y="120" text-anchor="end">LEFT end — tape zero</text>
+  <text x="770" y="139" text-anchor="end" font-size="13.5" fill="#666">(left as you face the shed from the street)</text>
+  <line x1="768" y1="146" x2="768" y2="212" stroke="#444" stroke-width="1.4"/>
+  <text x="98" y="120">right end</text>
+  <line x1="100" y1="146" x2="100" y2="212" stroke="#444" stroke-width="1.4"/>
+</g>
+
+<!-- labels -->
+<g font-size="16" fill="#111">
+  <line x1="430" y1="222" x2="470" y2="184" stroke="#444" stroke-width="1.4"/>
+  <text x="474" y="180">double top plate · 2×4 · 15' 5"</text>
+  <line x1="300" y1="228" x2="250" y2="180" stroke="#444" stroke-width="1.4"/>
+  <text x="34" y="176">top plate · 2×4 · 16' 0"</text>
+  <line x1="549" y1="400" x2="600" y2="400" stroke="#444" stroke-width="1.4"/>
+  <text x="604" y="396">stud · 2×4 · 7' 8⅝" pre-cut</text>
+  <text x="604" y="415" font-size="13.5" fill="#666">× 13, all identical</text>
+  <line x1="500" y1="557" x2="560" y2="532" stroke="#444" stroke-width="1.4"/>
+  <text x="564" y="530">bottom plate · 2×4 · 16' 0"</text>
+</g>
+
+<!-- corner lap note -->
+<g font-size="15" fill="#2f5a8f">
+  <line x1="764" y1="222" x2="846" y2="266" stroke="#4a7ab5" stroke-width="1.4"/>
+  <text x="905" y="288" text-anchor="end">3½" corner left open —</text>
+  <text x="905" y="307" text-anchor="end">the side wall's double</text>
+  <text x="905" y="326" text-anchor="end">plate laps over it (Stage 5)</text>
+</g>
+
+<!-- dimensions -->
+<g stroke="#444" stroke-width="1.4" font-size="15" fill="#222">
+  <line x1="98" y1="612" x2="770" y2="612" marker-start="url(#dim)" marker-end="url(#dim)"/>
+  <line x1="98" y1="604" x2="98" y2="620"/><line x1="770" y1="604" x2="770" y2="620"/>
+  <text x="434" y="636" text-anchor="middle">16' 0" overall</text>
+  <line x1="60" y1="560" x2="60" y2="220.1" marker-start="url(#dim)" marker-end="url(#dim)"/>
+  <line x1="52" y1="560" x2="68" y2="560"/><line x1="52" y1="220.1" x2="68" y2="220.1"/>
+  <text x="42" y="396" transform="rotate(-90,42,396)" text-anchor="middle">97⅛" deck to plate top</text>
+</g>
+</svg>

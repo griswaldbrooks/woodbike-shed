@@ -1,0 +1,101 @@
+<svg viewBox="0 0 680 700" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+<!-- model trace: right jamb of opening A, tape t = x+3.5; px(t)=100+7*(t-19); y(z)=620-7*(z-55).
+jack t 55..56.5 z 0..84; tall king t 56.5..58 z 0..120; header boards z 84..87.5 (face pair) and
+87.5..89 (cap), spanning the 39" opening; cripple t 48..49.5 z 89..120; top plate z 120..121.5;
+DTP z 121.5..123 -->
+<defs>
+  <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+    <path d="M0,0 L8,4 L0,8 z" fill="#b03a2e"/>
+  </marker>
+  <marker id="dim" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+    <path d="M0,0 L7,3.5 L0,7 z" fill="#444"/>
+  </marker>
+</defs>
+
+<rect x="0" y="0" width="680" height="700" fill="#ffffff"/>
+
+<!-- view badge -->
+<g>
+  <rect x="14" y="12" width="330" height="76" fill="#ffffff" stroke="#222" stroke-width="2.5" rx="6"/>
+  <text x="26" y="36" font-size="16" font-weight="bold" fill="#111">ELEVATION · FRONT WALL</text>
+  <text x="26" y="56" font-size="14.5" fill="#111">opening A right jamb, viewed from the street</text>
+  <text x="26" y="78" font-size="14.5" fill="#111">frame anchor: gravity</text>
+  <line x1="318" y1="46" x2="318" y2="70" stroke="#111" stroke-width="3"/>
+  <path d="M311,66 L318,78 L325,66 z" fill="#111"/>
+</g>
+
+<!-- break line at bottom (members continue to the deck, 84" below the head) -->
+<g stroke="#444" stroke-width="2" fill="none">
+  <polyline points="40,600 340,600 348,592 356,608 364,592 372,608 380,600 640,600"/>
+</g>
+<text x="340" y="628" font-size="14" fill="#555" text-anchor="middle">jack and king continue down to the deck (break)</text>
+
+<!-- top plate + double top plate (continue both ways, cropped at figure edge) -->
+<rect x="40" y="154.5" width="600" height="10.5" fill="#c99a56" stroke="#6b4a1f" stroke-width="2.2"/>
+<rect x="40" y="144" width="600" height="10.5" fill="#c99a56" stroke="#6b4a1f" stroke-width="2.2"/>
+
+<!-- cripple over the opening -->
+<rect x="303" y="165" width="10.5" height="217" fill="#d9a763" stroke="#6b4a1f" stroke-width="2.2"/>
+
+<!-- jack (runs to deck) -->
+<rect x="352" y="417" width="10.5" height="183" fill="#e0b06a" stroke="#6b4a1f" stroke-width="2.2"/>
+<!-- tall king (runs to deck), tight against the jack -->
+<rect x="362.5" y="165" width="10.5" height="435" fill="#e0b06a" stroke="#6b4a1f" stroke-width="2.2"/>
+
+<!-- header: face board pair z 84..87.5, cap z 87.5..89; continues left across the opening -->
+<rect x="40" y="392.5" width="322.5" height="24.5" fill="#b98a45" stroke="#6b4a1f" stroke-width="2.2"/>
+<rect x="40" y="382" width="322.5" height="10.5" fill="#a87c3d" stroke="#6b4a1f" stroke-width="2.2"/>
+<!-- left-edge break marks (header spans the 3' 0" opening to the far jack) -->
+<g stroke="#444" stroke-width="2" fill="none">
+  <polyline points="40,392.5 48,400 40,407 48,414"/>
+  <polyline points="40,382 48,387 40,392"/>
+</g>
+
+<!-- attachment arrows -->
+<g stroke="#b03a2e" stroke-width="2.4" fill="none">
+  <line x1="240" y1="330" x2="240" y2="374" marker-end="url(#arr)"/>
+  <line x1="330" y1="440" x2="300" y2="420" marker-end="url(#arr)"/>
+  <line x1="308" y1="250" x2="308" y2="374" marker-end="url(#arr)"/>
+</g>
+<!-- nailed joints: header to jack -->
+<g stroke="#7a2e12" stroke-width="2">
+  <line x1="349" y1="420" x2="359" y2="430"/><line x1="359" y1="420" x2="349" y2="430"/>
+</g>
+
+<!-- head line -->
+<line x1="40" y1="417" x2="300" y2="417" stroke="#444" stroke-width="1.2" stroke-dasharray="7 5"/>
+<text x="44" y="440" font-size="15" fill="#222">head line: 7' 0" above the deck</text>
+
+<!-- labels -->
+<g font-size="15.5" fill="#111">
+  <line x1="150" y1="387" x2="150" y2="340" stroke="#444" stroke-width="1.4"/>
+  <text x="60" y="330">cap · 2×4 lying flat · 3' 3"</text>
+  <line x1="110" y1="405" x2="70" y2="480" stroke="#444" stroke-width="1.4"/>
+  <text x="42" y="500">2 × 2×4 on edge,</text>
+  <text x="42" y="519">one at each face · 3' 3"</text>
+  <line x1="357" y1="520" x2="280" y2="540" stroke="#444" stroke-width="1.4"/>
+  <text x="92" y="558">jack · 2×4 · 7' 0" · runs to deck</text>
+  <line x1="368" y1="300" x2="420" y2="300" stroke="#444" stroke-width="1.4"/>
+  <text x="426" y="296">tall king · 2×4 · 10' 0"</text>
+  <text x="426" y="315" font-size="13.5" fill="#666">runs to deck, tight</text>
+  <text x="426" y="332" font-size="13.5" fill="#666">against the jack</text>
+  <line x1="313.5" y1="200" x2="420" y2="200" stroke="#444" stroke-width="1.4"/>
+  <text x="426" y="196">cripple · 2×4 · 2' 7"</text>
+  <text x="426" y="215" font-size="13.5" fill="#666">16" o.c. over the header</text>
+  <line x1="500" y1="149" x2="540" y2="124" stroke="#444" stroke-width="1.4"/>
+  <text x="544" y="122">double top plate</text>
+  <line x1="500" y1="160" x2="540" y2="176" stroke="#444" stroke-width="1.4"/>
+  <text x="544" y="182">top plate</text>
+</g>
+
+<!-- header depth dimension -->
+<g stroke="#444" stroke-width="1.4" font-size="15" fill="#222">
+  <line x1="395" y1="417" x2="395" y2="382" marker-start="url(#dim)" marker-end="url(#dim)"/>
+  <line x1="388" y1="417" x2="402" y2="417"/><line x1="388" y1="382" x2="402" y2="382"/>
+  <text x="408" y="404">5" deep</text>
+</g>
+
+<!-- takeaway -->
+<text x="40" y="660" font-size="15" fill="#222">Header = 3 boards of equal length. Bottom edge sits on the two jacks,</text>
+<text x="40" y="680" font-size="15" fill="#222">flush with the wall faces.</text>
+</svg>
