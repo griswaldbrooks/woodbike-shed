@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Fig 1.1 - Whole-shed cross-section, orientation figure.
+  Plane: vertical section cut ACROSS the 6 ft width (constant X), read in the
+         model Y-Z plane. Front (street/door, low model Y) drawn at LEFT,
+         back (high model Y) at RIGHT, as seen from the right gable end.
+  Scale: 5 px per inch, equal both axes (not vertically exaggerated).
+  Model anchors (traceability, non-rendering):
+    deck top = z 0 (build datum). skid bottoms z -9.75.
+    front wall outer face y -3.5, plate top z 123. back wall outer face
+    y 68.5, plate top z 97.125. rafter top at front tail z 137.687 (peak),
+    at back tail z 97.187. front overhang 24" (tail y -27.5), back 12"
+    (tail y 80.5). Foundation (blocks/gravel) schematic - not modeled.
+  Drawing transform: X(y) = 70 + 5*(y + 32);  Y(z) = 950 - 5*(z + 20).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 990"
+     font-family="Helvetica, Arial, sans-serif" role="img"
+     aria-label="Cross-section of the whole shed, front tall wall at left, back low wall at right, single-slope roof, on skids and blocks over a gravel ground line.">
+
+  <defs>
+    <!-- diagonal hatch = material cut by the section plane -->
+    <pattern id="cut" width="11" height="11" patternUnits="userSpaceOnUse">
+      <path d="M -2 13 L 13 -2" stroke="#00000055" stroke-width="2" fill="none"/>
+    </pattern>
+    <pattern id="ground" width="14" height="14" patternUnits="userSpaceOnUse">
+      <path d="M 0 14 L 14 0" stroke="#7a5b3a" stroke-width="2" fill="none"/>
+      <path d="M -4 10 L 10 -4" stroke="#7a5b3a" stroke-width="1.2" fill="none"/>
+    </pattern>
+  </defs>
+
+  <!-- ======================= VIEW BADGE (top-left) ======================= -->
+  <g>
+    <rect x="14" y="14" width="330" height="118" fill="#ffffff" stroke="#000" stroke-width="3"/>
+    <text x="26" y="42" font-size="24" font-weight="bold" fill="#000">SECTION</text>
+    <text x="26" y="68" font-size="17" fill="#000">cut across the 6 ft width, whole shed</text>
+    <text x="26" y="90" font-size="17" fill="#000">viewed from the right gable end</text>
+    <text x="26" y="112" font-size="17" fill="#000">front (street) wall at LEFT</text>
+    <!-- gravity anchor inside the badge -->
+    <g stroke="#000" stroke-width="3" fill="#000">
+      <line x1="310" y1="34" x2="310" y2="86"/>
+      <path d="M 310 98 L 300 82 L 320 82 Z"/>
+    </g>
+    <text x="310" y="118" font-size="14" fill="#000" text-anchor="middle">DOWN</text>
+  </g>
+
+  <!-- ======================= GROUND ======================= -->
+  <rect x="30" y="930" width="700" height="42" fill="#e8dcc8"/>
+  <rect x="30" y="930" width="700" height="42" fill="url(#ground)"/>
+  <line x1="30" y1="930" x2="730" y2="930" stroke="#3d2b17" stroke-width="3.5"/>
+  <text x="700" y="958" font-size="17" fill="#3d2b17" text-anchor="end">ground (gravel pockets below blocks)</text>
+
+  <!-- ======================= FOUNDATION: blocks + skids ======================= -->
+  <!-- Tuff blocks (schematic, not modeled) -->
+  <rect x="203" y="898.75" width="36" height="31.25" fill="#b9b9b9" stroke="#444" stroke-width="2.5"/>
+  <rect x="546" y="898.75" width="36" height="31.25" fill="#b9b9b9" stroke="#444" stroke-width="2.5"/>
+  <!-- PT 4x4 skids (cut by section) -->
+  <rect x="212.5" y="881.25" width="17.5" height="17.5" fill="#9caf88" stroke="#2f4020" stroke-width="2.5"/>
+  <rect x="212.5" y="881.25" width="17.5" height="17.5" fill="url(#cut)"/>
+  <rect x="555" y="881.25" width="17.5" height="17.5" fill="#9caf88" stroke="#2f4020" stroke-width="2.5"/>
+  <rect x="555" y="881.25" width="17.5" height="17.5" fill="url(#cut)"/>
+  <text x="205" y="897" font-size="15" fill="#2f4020" text-anchor="end">4×4 skid (PT)</text>
+  <text x="580" y="897" font-size="15" fill="#2f4020">4×4 skid (PT)</text>
+
+  <!-- ======================= FLOOR PLATFORM ======================= -->
+  <!-- rim + joist band (z -6.25 .. -0.75), OSB deck (z -0.75 .. 0) -->
+  <rect x="212.5" y="853.75" width="360" height="27.5" fill="#c89a5e" stroke="#4a3010" stroke-width="2.5"/>
+  <rect x="212.5" y="853.75" width="360" height="27.5" fill="url(#cut)"/>
+  <!-- front / back rim joist ends -->
+  <rect x="212.5" y="853.75" width="7.5" height="27.5" fill="#a97a3e" stroke="#4a3010" stroke-width="2.5"/>
+  <rect x="565" y="853.75" width="7.5" height="27.5" fill="#a97a3e" stroke="#4a3010" stroke-width="2.5"/>
+  <!-- OSB deck sheet -->
+  <rect x="212.5" y="850" width="360" height="3.75" fill="#e6c088" stroke="#4a3010" stroke-width="2"/>
+  <text x="392" y="844" font-size="15" fill="#4a3010" text-anchor="middle">deck top — height zero for the whole guide</text>
+
+  <!-- ======================= WALLS (cut by section) ======================= -->
+  <!-- front wall, tall: z 0 .. 123 -->
+  <rect x="212.5" y="235" width="17.5" height="615" fill="#d9a86c" stroke="#4a3010" stroke-width="3"/>
+  <rect x="212.5" y="235" width="17.5" height="615" fill="url(#cut)"/>
+  <!-- back wall, low: z 0 .. 97.125 -->
+  <rect x="555" y="364.4" width="17.5" height="485.6" fill="#d9a86c" stroke="#4a3010" stroke-width="3"/>
+  <rect x="555" y="364.4" width="17.5" height="485.6" fill="url(#cut)"/>
+
+  <!-- ======================= ROOF: rafter band + fascia ======================= -->
+  <!-- rafter band: front tail (92.5,161.6 top) to back tail (632.5,364.1 top) -->
+  <polygon points="92.5,161.6 632.5,364.1 632.5,393.4 92.5,190.9"
+           fill="#c08a4e" stroke="#4a3010" stroke-width="3"/>
+  <polygon points="92.5,161.6 632.5,364.1 632.5,393.4 92.5,190.9" fill="url(#cut)"/>
+  <!-- front fascia cap -->
+  <rect x="85" y="161.6" width="7.5" height="27.5" fill="#efe6d6" stroke="#4a3010" stroke-width="2.5"/>
+  <!-- back fascia cap -->
+  <rect x="632.5" y="364.1" width="7.5" height="27.5" fill="#efe6d6" stroke="#4a3010" stroke-width="2.5"/>
+
+  <!-- roof pitch label along the slope -->
+  <text x="330" y="225" font-size="19" font-weight="bold" fill="#4a3010"
+        transform="rotate(20.6 330 225)">roof pitch 4.5 : 12</text>
+
+  <!-- ======================= DIMENSIONS / LABELS ======================= -->
+  <!-- left height chain: deck -> peak -->
+  <g stroke="#000" stroke-width="1.6" fill="none">
+    <line x1="150" y1="850" x2="150" y2="161.6"/>
+    <line x1="142" y1="850" x2="212" y2="850"/>
+    <line x1="142" y1="161.6" x2="92" y2="161.6"/>
+    <line x1="142" y1="235" x2="212" y2="235"/>
+  </g>
+  <g fill="#000" stroke="#000" stroke-width="1.6">
+    <path d="M 150 161.6 L 145 172 L 155 172 Z"/>
+    <path d="M 150 850 L 145 839 L 155 839 Z"/>
+  </g>
+  <text x="140" y="500" font-size="18" fill="#000" text-anchor="middle"
+        transform="rotate(-90 140 500)">peak 11′ 5-11/16″ above deck</text>
+
+  <!-- front plate top tick -->
+  <text x="6" y="252" font-size="15" fill="#000">front wall plate top</text>
+  <text x="6" y="271" font-size="15" fill="#000">10′ 3″ above deck</text>
+  <!-- back plate top -->
+  <g stroke="#000" stroke-width="1.6"><line x1="572.5" y1="364.4" x2="600" y2="410"/></g>
+  <text x="604" y="404" font-size="15" fill="#000">back wall plate top</text>
+  <text x="604" y="423" font-size="15" fill="#000">8′ 1⅛″ above deck</text>
+
+  <!-- overhangs -->
+  <g stroke="#000" stroke-width="1.6" fill="none">
+    <line x1="92.5" y1="140" x2="212.5" y2="140"/>
+    <line x1="92.5" y1="134" x2="92.5" y2="158"/>
+    <line x1="212.5" y1="134" x2="212.5" y2="204"/>
+  </g>
+  <text x="152" y="157" font-size="16" fill="#000" text-anchor="middle">24″ overhang</text>
+  <g stroke="#000" stroke-width="1.6" fill="none">
+    <line x1="572.5" y1="300" x2="632.5" y2="300"/>
+    <line x1="572.5" y1="294" x2="572.5" y2="338"/>
+    <line x1="632.5" y1="294" x2="632.5" y2="360"/>
+  </g>
+  <text x="602" y="288" font-size="16" fill="#000" text-anchor="middle">12″ overhang</text>
+
+  <!-- width of this section (front face to back face = 6 ft) -->
+  <g stroke="#000" stroke-width="1.6" fill="none">
+    <line x1="212.5" y1="905" x2="572.5" y2="905"/>
+    <line x1="212.5" y1="898" x2="212.5" y2="855"/>
+    <line x1="572.5" y1="898" x2="572.5" y2="855"/>
+  </g>
+  <text x="392" y="760" font-size="16" fill="#000" text-anchor="middle">this section reads the 6 ft width —</text>
+  <text x="392" y="780" font-size="16" fill="#000" text-anchor="middle">the shed runs 16 ft into the page</text>
+
+  <!-- wall captions, leaders into the open interior -->
+  <g stroke="#000" stroke-width="1.6"><line x1="230" y1="430" x2="252" y2="430"/></g>
+  <text x="256" y="424" font-size="17" font-weight="bold" fill="#4a3010">FRONT wall</text>
+  <text x="256" y="444" font-size="15" fill="#4a3010">(street, door side)</text>
+  <g stroke="#000" stroke-width="1.6"><line x1="555" y1="500" x2="533" y2="500"/></g>
+  <text x="529" y="494" font-size="17" font-weight="bold" fill="#4a3010" text-anchor="end">BACK wall</text>
+  <text x="529" y="514" font-size="15" fill="#4a3010" text-anchor="end">(yard side)</text>
+
+  <!-- big free-standing gravity arrow -->
+  <g stroke="#000" stroke-width="4" fill="#000">
+    <line x1="700" y1="470" x2="700" y2="560"/>
+    <path d="M 700 580 L 686 554 L 714 554 Z"/>
+  </g>
+  <text x="700" y="602" font-size="17" font-weight="bold" fill="#000" text-anchor="middle">DOWN</text>
+  <text x="700" y="622" font-size="14" fill="#000" text-anchor="middle">(gravity)</text>
+</svg>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Fig 16.3 - Error frame: a side-wall siding course left square instead of
+  ripped to the rake, poking past the rake line. ELEVATION of the left side
+  wall viewed from outside (front / high side at RIGHT). Scale 5 px per inch.
+  Protrusion exaggerated (course drawn 2" past the rake at the back corner).
+  Model anchors (traceability, non-rendering): left wall face x -3.5; siding
+  7" exposure starting at the skirt top (z 0.5); rake cut line = rafter
+  bottom + 1" tuck, z 96.8 at the back rising 4.5:12 to z 123.8 at the front;
+  skirt z -6.75...0.5; deck top z 0.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 800"
+     font-family="Helvetica, Arial, sans-serif" role="img"
+     aria-label="Elevation of the left side wall from outside, horizontal siding courses climbing the rake, with the top course left square and poking past the rake line, crossed out with a prohibition ring.">
+
+  <!-- ground -->
+  <line x1="120" y1="760" x2="700" y2="760" stroke="#3d2b17" stroke-width="3.5"/>
+  <g stroke="#7a5b3a" stroke-width="1.5">
+    <path d="M 130 760 L 118 776 M 180 760 L 168 776 M 230 760 L 218 776 M 280 760 L 268 776 M 330 760 L 318 776 M 380 760 L 368 776 M 430 760 L 418 776 M 480 760 L 468 776 M 530 760 L 518 776 M 580 760 L 568 776 M 630 760 L 618 776 M 680 760 L 668 776"/>
+  </g>
+
+  <!-- wall face with siding, correct top = rake line -->
+  <polygon points="200,680 560,680 560,61 200,196" fill="#efe6d6" stroke="#4a3010" stroke-width="3"/>
+  <!-- siding course lines, 7" exposure from the skirt top -->
+  <g stroke="#4a3010" stroke-width="1.6">
+    <line x1="200" y1="642.5" x2="560" y2="642.5"/>
+    <line x1="200" y1="607.5" x2="560" y2="607.5"/>
+    <line x1="200" y1="572.5" x2="560" y2="572.5"/>
+    <line x1="200" y1="537.5" x2="560" y2="537.5"/>
+    <line x1="200" y1="502.5" x2="560" y2="502.5"/>
+    <line x1="200" y1="467.5" x2="560" y2="467.5"/>
+    <line x1="200" y1="432.5" x2="560" y2="432.5"/>
+    <line x1="200" y1="397.5" x2="560" y2="397.5"/>
+    <line x1="200" y1="362.5" x2="560" y2="362.5"/>
+    <line x1="200" y1="327.5" x2="560" y2="327.5"/>
+    <line x1="200" y1="292.5" x2="560" y2="292.5"/>
+    <line x1="200" y1="257.5" x2="560" y2="257.5"/>
+    <line x1="200" y1="222.5" x2="560" y2="222.5"/>
+  </g>
+
+  <!-- rake board + rafter edge above the rake line: already built, grey -->
+  <polygon points="200,196 560,61 560,32 200,167" fill="#d0d0d0" stroke="#666" stroke-width="2.5"/>
+
+  <!-- skirt -->
+  <rect x="200" y="677.5" width="360" height="36.25" fill="#e0d3b8" stroke="#4a3010" stroke-width="2.5"/>
+
+  <!-- ERROR: top course left square, poking past the rake -->
+  <polygon points="200,162.5 289,162.5 200,196" fill="#efe6d6" stroke="#d8232a" stroke-width="3"/>
+
+  <!-- dashed correct cut: rip here -->
+  <line x1="200" y1="196" x2="289" y2="162.5" stroke="#000" stroke-width="3" stroke-dasharray="10 6"/>
+
+  <!-- prohibition ring -->
+  <g stroke="#d8232a" stroke-width="10" fill="none">
+    <circle cx="245" cy="180" r="62"/>
+    <line x1="201" y1="136" x2="289" y2="224"/>
+  </g>
+
+  <!-- labels -->
+  <g stroke="#000" stroke-width="1.6">
+    <line x1="560" y1="46" x2="600" y2="46"/>
+    <line x1="560" y1="430" x2="600" y2="430"/>
+    <line x1="380" y1="695" x2="600" y2="640"/>
+    <line x1="170" y1="244" x2="212" y2="182"/>
+  </g>
+  <text x="606" y="40" font-size="16" fill="#666">rake board + rafter edge</text>
+  <text x="606" y="60" font-size="16" fill="#666">(already built)</text>
+  <text x="606" y="424" font-size="16" fill="#000">courses · 7″ exposure ·</text>
+  <text x="606" y="444" font-size="16" fill="#000">started at the skirt top</text>
+  <text x="606" y="634" font-size="16" fill="#000">skirt — the first course</text>
+  <text x="606" y="654" font-size="16" fill="#000">tucks in behind its top</text>
+
+  <text x="30" y="250" font-size="17" font-weight="bold" fill="#d8232a">course left square —</text>
+  <text x="30" y="270" font-size="17" font-weight="bold" fill="#d8232a">not ripped to the rake</text>
+  <text x="310" y="246" font-size="16" fill="#000">rip here, tight to the rake board</text>
+  <text x="30" y="300" font-size="15" fill="#000">protrusion exaggerated to show it</text>
+
+  <text x="200" y="740" font-size="17" font-weight="bold" fill="#4a3010">BACK</text>
+  <text x="560" y="740" font-size="17" font-weight="bold" fill="#4a3010" text-anchor="end">FRONT (high side)</text>
+
+  <!-- gravity arrow -->
+  <g stroke="#000" stroke-width="4" fill="#000">
+    <line x1="800" y1="330" x2="800" y2="420"/>
+    <path d="M 800 440 L 786 414 L 814 414 Z"/>
+  </g>
+  <text x="800" y="462" font-size="17" font-weight="bold" text-anchor="middle">DOWN</text>
+  <text x="800" y="482" font-size="14" text-anchor="middle">(gravity)</text>
+
+  <!-- view badge, drawn last so it stays on top -->
+  <g>
+    <rect x="14" y="14" width="470" height="104" fill="#fff" stroke="#000" stroke-width="3"/>
+    <text x="26" y="42" font-size="24" font-weight="bold">ELEVATION — left side wall</text>
+    <text x="26" y="68" font-size="17">viewed from outside, left of the shed</text>
+    <text x="26" y="92" font-size="17">front (high side) at RIGHT</text>
+    <g stroke="#000" stroke-width="3" fill="#000">
+      <line x1="448" y1="30" x2="448" y2="76"/>
+      <path d="M 448 88 L 438 72 L 458 72 Z"/>
+    </g>
+    <text x="448" y="108" font-size="14" text-anchor="middle">DOWN</text>
+  </g>
+</svg>

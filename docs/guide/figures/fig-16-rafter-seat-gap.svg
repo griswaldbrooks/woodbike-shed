@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Fig 16.1 - Error frame: rafter birdsmouth bearing on one edge only at the
+  back wall. SECTION, same camera as Fig 1.1 (viewed from the right gable
+  end). Scale 8 px per inch; wall shaft broken (double zigzag) between the
+  seat zone and the deck. Error drawn with the seat tilted 1" open at the
+  kick - EXAGGERATED for legibility.
+  Model anchors (traceability, non-rendering): back DTP top z 97.125 at
+  y 65...68.5; correct seat horizontal at z 97.125 with a plumb kick at
+  y 68.5 down to z 95.8125; rafter bottom edge slope 4.5:12; deck top z 0.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620"
+     font-family="Helvetica, Arial, sans-serif" role="img"
+     aria-label="Section through a rafter seat on the back wall showing the seat gapping off the plate and bearing on one edge only, crossed out with a prohibition ring.">
+
+  <defs>
+    <pattern id="cut" width="11" height="11" patternUnits="userSpaceOnUse">
+      <path d="M -2 13 L 13 -2" stroke="#00000055" stroke-width="2" fill="none"/>
+    </pattern>
+  </defs>
+
+  <!-- view badge -->
+  <g>
+    <rect x="14" y="14" width="470" height="104" fill="#fff" stroke="#000" stroke-width="3"/>
+    <text x="26" y="42" font-size="24" font-weight="bold">SECTION — rafter seat, back wall</text>
+    <text x="26" y="68" font-size="17">vertical cut at mid-length · viewed from the right gable end</text>
+    <text x="26" y="92" font-size="17">wall shaft broken · front of shed at LEFT</text>
+    <g stroke="#000" stroke-width="3" fill="#000">
+      <line x1="448" y1="30" x2="448" y2="76"/>
+      <path d="M 448 88 L 438 72 L 458 72 Z"/>
+    </g>
+    <text x="448" y="108" font-size="14" text-anchor="middle">DOWN</text>
+  </g>
+
+  <!-- back wall: DTP + top plate + stud shaft (broken) + bottom plate + deck -->
+  <rect x="260" y="215" width="28" height="12" fill="#d9a86c" stroke="#4a3010" stroke-width="2.5"/>
+  <rect x="260" y="215" width="28" height="12" fill="url(#cut)"/>
+  <rect x="260" y="227" width="28" height="12" fill="#d9a86c" stroke="#4a3010" stroke-width="2.5"/>
+  <rect x="260" y="227" width="28" height="12" fill="url(#cut)"/>
+  <rect x="260" y="239" width="28" height="101" fill="#d9a86c" stroke="#4a3010" stroke-width="2.5"/>
+  <rect x="260" y="239" width="28" height="101" fill="url(#cut)"/>
+  <!-- break -->
+  <path d="M 256 340 L 292 348 L 256 356 L 292 364" fill="none" stroke="#000" stroke-width="2.5"/>
+  <rect x="260" y="364" width="28" height="114" fill="#d9a86c" stroke="#4a3010" stroke-width="2.5"/>
+  <rect x="260" y="364" width="28" height="114" fill="url(#cut)"/>
+  <rect x="260" y="478" width="28" height="12" fill="#d9a86c" stroke="#4a3010" stroke-width="2.5"/>
+  <rect x="260" y="478" width="28" height="12" fill="url(#cut)"/>
+  <!-- deck -->
+  <line x1="120" y1="490" x2="470" y2="490" stroke="#4a3010" stroke-width="3"/>
+  <rect x="120" y="490" width="350" height="14" fill="#c89a5e"/>
+  <rect x="120" y="490" width="350" height="14" fill="url(#cut)"/>
+  <text x="120" y="524" font-size="16" fill="#4a3010">deck top (height zero)</text>
+
+  <!-- rafter, ERROR state: seat tilted, bearing on inner edge only -->
+  <polygon points="180,138 260,168 288,160 384,206.3 384,253.3 288,219.5 288,207 260,215 180,185"
+           fill="#c08a4e" stroke="#4a3010" stroke-width="3"/>
+  <polygon points="180,138 260,168 288,160 384,206.3 384,253.3 288,219.5 288,207 260,215 180,185"
+           fill="url(#cut)"/>
+
+  <!-- the gap wedge between tilted seat and plate top -->
+  <polygon points="260,215 288,215 288,207" fill="#d8232a33" stroke="#d8232a" stroke-width="2"/>
+
+  <!-- prohibition ring over the error -->
+  <g stroke="#d8232a" stroke-width="10" fill="none">
+    <circle cx="274" cy="211" r="52"/>
+    <line x1="237" y1="174" x2="311" y2="248"/>
+  </g>
+
+  <!-- labels -->
+  <g stroke="#000" stroke-width="1.6">
+    <line x1="330" y1="150" x2="300" y2="172"/>
+    <line x1="470" y1="221" x2="290" y2="221"/>
+    <line x1="470" y1="262" x2="292" y2="212"/>
+    <line x1="470" y1="352" x2="294" y2="352"/>
+  </g>
+  <text x="334" y="146" font-size="17" font-weight="bold" fill="#4a3010">rafter · 2×6</text>
+  <text x="476" y="216" font-size="16">back wall double top plate · 2×4</text>
+  <text x="476" y="256" font-size="17" font-weight="bold" fill="#d8232a">gap under the seat —</text>
+  <text x="476" y="276" font-size="17" font-weight="bold" fill="#d8232a">bears on one edge only</text>
+  <text x="476" y="357" font-size="15">wall continues to the deck</text>
+  <text x="252" y="240" font-size="15" fill="#000" text-anchor="end">only this</text>
+  <text x="252" y="258" font-size="15" fill="#000" text-anchor="end">edge bears</text>
+  <g stroke="#000" stroke-width="1.6"><line x1="254" y1="228" x2="259" y2="216"/></g>
+  <text x="476" y="300" font-size="15" fill="#000">gap exaggerated to show it —</text>
+  <text x="476" y="320" font-size="15" fill="#000">feel for anything over 1/16″</text>
+
+  <!-- gravity arrow -->
+  <g stroke="#000" stroke-width="4" fill="#000">
+    <line x1="790" y1="300" x2="790" y2="390"/>
+    <path d="M 790 410 L 776 384 L 804 384 Z"/>
+  </g>
+  <text x="790" y="432" font-size="17" font-weight="bold" text-anchor="middle">DOWN</text>
+  <text x="790" y="452" font-size="14" text-anchor="middle">(gravity)</text>
+</svg>
