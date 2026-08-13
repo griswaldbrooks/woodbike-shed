@@ -3,6 +3,12 @@
 Tooling to pull a BOM / cut list from the Onshape model of the bike shed and
 prep lumber-yard RFQs.
 
+## Build guide
+
+The self-contained HTML build guide is at
+[`docs/build-guide.html`](docs/build-guide.html). GitHub shows HTML as
+source, so download the file and open it in a browser to read it.
+
 ## Model as code
 
 [`cad/`](cad/README.md) re-derives the whole shed model as build123d code
