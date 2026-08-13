@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Fig 16.2 - Error frame: skid rectangle out of square, diagonals not equal.
+  PLAN, horizontal cut at skid-top height, looking DOWN. Scale 3.8 px per
+  inch. Error drawn with the front skid line shifted 4" along its length -
+  EXAGGERATED. Blocks (below the cut plane) dashed grey.
+  Model anchors (traceability, non-rendering): skid lines y -3.5...0 (front)
+  and y 65...68.5 (back), x -3.5...188.5; block centres 6" in from each skid
+  end at 5' o.c. (x 2.5 / 62.5 / 122.5 / 182.5).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560"
+     font-family="Helvetica, Arial, sans-serif" role="img"
+     aria-label="Plan of the skid rectangle looking down, skewed out of square, with the two diagonals reading different lengths and a prohibition ring.">
+
+  <defs>
+    <pattern id="cut" width="11" height="11" patternUnits="userSpaceOnUse">
+      <path d="M -2 13 L 13 -2" stroke="#00000055" stroke-width="2" fill="none"/>
+    </pattern>
+  </defs>
+
+  <!-- view badge -->
+  <g>
+    <rect x="14" y="14" width="470" height="104" fill="#fff" stroke="#000" stroke-width="3"/>
+    <text x="26" y="42" font-size="24" font-weight="bold">PLAN — skid rectangle</text>
+    <text x="26" y="68" font-size="17">horizontal cut at skid-top height · looking DOWN</text>
+    <text x="26" y="92" font-size="17">front (street) skid line at TOP of this plan</text>
+    <g stroke="#000" stroke-width="3" fill="#000">
+      <line x1="448" y1="30" x2="448" y2="76"/>
+      <path d="M 448 88 L 438 72 L 458 72 Z"/>
+    </g>
+    <text x="448" y="108" font-size="14" text-anchor="middle">DOWN</text>
+  </g>
+
+  <text x="250" y="124" font-size="17" font-weight="bold" fill="#4a3010" text-anchor="middle">FRONT (street)</text>
+  <text x="480" y="428" font-size="17" font-weight="bold" fill="#4a3010" text-anchor="middle">BACK</text>
+
+  <!-- blocks, below the cut plane: dashed grey -->
+  <g fill="none" stroke="#888" stroke-width="2" stroke-dasharray="6 4">
+    <rect x="117.8" y="372" width="30" height="30"/>
+    <rect x="345.8" y="372" width="30" height="30"/>
+    <rect x="573.8" y="372" width="30" height="30"/>
+    <rect x="801.8" y="372" width="30" height="30"/>
+    <rect x="133" y="125" width="30" height="30"/>
+    <rect x="361" y="125" width="30" height="30"/>
+    <rect x="589" y="125" width="30" height="30"/>
+    <rect x="817" y="125" width="30" height="30"/>
+  </g>
+
+  <!-- back skid, correct -->
+  <rect x="110" y="377" width="730.8" height="13.3" fill="#9caf88" stroke="#2f4020" stroke-width="2.5"/>
+  <rect x="110" y="377" width="730.8" height="13.3" fill="url(#cut)"/>
+  <!-- front skid, ERROR: shifted 4" along its length (exaggerated) -->
+  <rect x="125.2" y="130" width="730.8" height="13.3" fill="#9caf88" stroke="#2f4020" stroke-width="2.5"/>
+  <rect x="125.2" y="130" width="730.8" height="13.3" fill="url(#cut)"/>
+
+  <!-- diagonals, as two tape readings -->
+  <g stroke="#000" stroke-width="2" stroke-dasharray="10 6">
+    <line x1="125.2" y1="130" x2="840.8" y2="390.3"/>
+    <line x1="856" y1="143.3" x2="110" y2="377"/>
+  </g>
+  <text x="280" y="178" font-size="17" fill="#000" transform="rotate(20 280 178)">tape 1 — reads SHORT</text>
+  <text x="640" y="240" font-size="17" fill="#000" transform="rotate(-18 640 240)">tape 2 — reads LONG</text>
+
+  <!-- prohibition ring over the skewed rectangle -->
+  <g stroke="#d8232a" stroke-width="10" fill="none">
+    <circle cx="485" cy="262" r="150"/>
+    <line x1="379" y1="156" x2="591" y2="368"/>
+  </g>
+
+  <!-- correction arrow at the long corner -->
+  <g stroke="#000" stroke-width="5" fill="#000">
+    <line x1="856" y1="112" x2="800" y2="112"/>
+    <path d="M 788 112 L 806 102 L 806 122 Z"/>
+  </g>
+  <text x="700" y="76" font-size="16" fill="#000" text-anchor="middle">ease the long corner over until</text>
+  <text x="700" y="96" font-size="16" fill="#000" text-anchor="middle">both tapes agree within ½″</text>
+
+  <text x="110" y="470" font-size="16" fill="#000">skid · 4×4 PT · continuous 16′ (cut material at the cut plane)</text>
+  <text x="110" y="494" font-size="16" fill="#000">error exaggerated: the front skid line is drawn 4″ out of place</text>
+  <text x="110" y="518" font-size="16" fill="#000">dashed squares = Tuff Blocks below the cut plane</text>
+</svg>
