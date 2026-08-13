@@ -75,7 +75,7 @@ from the exact number, not this table.
 | 1 | right wall double top plate | 2×4 KD | 5′ 8½″ |
 | 1 | right wall top plate | 2×4 KD | 5′ 5″ |
 | 3 | right wall headers | 2×4 KD | 3′ 3″ |
-| 1 | right wall bottom plate long | 2×4 KD | 1′ 2½″ |
+| 1 | right wall bottom plate long | 2×4 KD | 1′ 8½″ |
 | 1 | right wall bottom plate short | 2×4 KD | 8½″ |
 | 2 | right wall cripple studs | 2×4 KD | 5⅛″ |
 

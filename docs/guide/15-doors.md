@@ -120,11 +120,9 @@ its 1½″ laps, and latch without lifting.
 
 ## Before you move on
 
-- [ ] every leaf's bottom edge 1″ above the deck, top edge ¼″ below the head — tape
-- [ ] every leaf laps its jamb casings 1½″ on both sides — tape
-- [ ] the double leaves meet with a ¼″ centre gap — tape
-- [ ] all hinges fixed at rail heights, straps on the leaf, screws in the casing face — look and try the swing
-- [ ] each opening's jamb reads four ¾″ layers out to 3″ proud — sighted across the jamb against Fig 15.3
-- [ ] every door swings freely and latches without lifting — by hand
-
-If a leaf binds, sags, or won't land on its laps, see [P16 troubleshooting](16-troubleshooting.md).
+- [ ] Every leaf's bottom edge 1″ above the deck, top edge ¼″ below the head — tape
+- [ ] Every leaf laps its jamb casings 1½″ on both sides — tape
+- [ ] The double leaves meet with a ¼″ centre gap — tape
+- [ ] All hinges fixed at rail heights, straps on the leaf, screws in the casing face — look and try the swing
+- [ ] Each opening's jamb reads four ¾″ layers out to 3″ proud — sighted across the jamb against Fig 15.3
+- [ ] Every door swings freely and latches without lifting — by hand

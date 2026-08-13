@@ -98,13 +98,10 @@ side. Nail.
 
 ## Before you move on
 
-- [ ] corner boards plumb, bottom edges tight on the skirt top — 4′ level and tape
-- [ ] front frieze top edge flush with the plate top; back frieze tight under the rafter tails — sighted along the wall
-- [ ] side frieze top edges straight on the rake line — sighted from a distance
-- [ ] jamb casings plumb, inner edges exactly on the clear opening edges — 4′ level
-- [ ] each opening still measures its clear width: 36″, 72″, 36″ — tape
-- [ ] head casings level and seated tight on the jamb casings — level, then look for daylight
-- [ ] all trim backs on the siding face — no trim sunk into the siding plane, no proud gaps — sight across each face
-
-If a corner pair won't land plumb or a frieze won't sit on its line, see
-[P16 troubleshooting](16-troubleshooting.md).
+- [ ] Corner boards plumb, bottom edges tight on the skirt top — 4′ level and tape
+- [ ] Front frieze top edge flush with the plate top; back frieze tight under the rafter tails — sighted along the wall
+- [ ] Side frieze top edges straight on the rake line — sighted from a distance
+- [ ] Jamb casings plumb, inner edges exactly on the clear opening edges — 4′ level
+- [ ] Each opening still measures its clear width: 36″, 72″, 36″ — tape
+- [ ] Head casings level and seated tight on the jamb casings — level, then look for daylight
+- [ ] All trim backs on the siding face — no trim sunk into the siding plane, no proud gaps — sight across each face

@@ -147,6 +147,3 @@ them holds the row in line.
 - [ ] Front tails stand 24" past the front wall face, back tails 12" past the back wall
       face — checked with a tape.
 - [ ] Rafter faces stand plumb — checked with a 4' level.
-
-Cut list: [R01](r01-cut-list.md) · Something not fitting: [P16](16-troubleshooting.md) ·
-Next: [Stage 9 — Fascia, rake boards and the roofing note](12-fascia-and-roof.md)

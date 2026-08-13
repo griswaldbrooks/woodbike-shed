@@ -52,7 +52,7 @@ floor telegraphs into every wall and the roof, and no later stage fixes it. If t
 still disagree after the frame is eased, pull the corner nails and check the joist and rim
 cuts against the list; a board cut more than ½″ off its length gets recut, not shimmed.
 
-![Fig 16.2 — Plan of the skid rectangle, looking down from above, drawn out of square: the
+![Fig 16.1 — Plan of the skid rectangle, looking down from above, drawn out of square: the
 two tape diagonals disagree. Ease the long corner over until both readings match within ½″;
 checked at Stage 1, before any wall goes up.](figures/fig-16-floor-diagonals.svg)
 
@@ -97,7 +97,7 @@ thicker than 1/16″ under either seat, checked rafter by rafter at Stage 8. The
 on this model checks every seat face flat on its plate — the built shed gets the same
 check, with a feeler.
 
-![Fig 16.1 — Section through one rafter at the back wall, viewed from the right gable end:
+![Fig 16.2 — Section through one rafter at the back wall, viewed from the right gable end:
 the birdsmouth bears on its inner edge only and the seat gaps off the plate. Every seat
 bears full-width; checked with a feeler at Stage 8.](figures/fig-16-rafter-seat-gap.svg)
 

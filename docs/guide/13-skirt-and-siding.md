@@ -150,13 +150,10 @@ below.](figures/fig-13-c.svg)
 
 ## Before you move on
 
-- [ ] skirt top is ½″ above the deck all the way around — checked with tape and level
-- [ ] first course level with its bottom edge on the deck top — 4′ level
-- [ ] every course bottom lands on its 7″ line — tape against the story pole
-- [ ] the top courses on front and back sit tight against their tuck lines, behind the future frieze — sighted from the ground
-- [ ] rake boards tight to the rake line, top edges parallel to it — tape and bevel gauge
-- [ ] every course fastened into the studs along its length — walk each wall and look for misses
-- [ ] no splits at the pier ends and rake tips — look, then fix now while the boards are few
-
-If a course won't sit on its line or a rake board gaps the rake line, see
-[P16 troubleshooting](16-troubleshooting.md).
+- [ ] Skirt top is ½″ above the deck all the way around — checked with tape and level
+- [ ] First course level with its bottom edge on the deck top — 4′ level
+- [ ] Every course bottom lands on its 7″ line — tape against the story pole
+- [ ] The top courses on front and back sit tight against their tuck lines, behind the future frieze — sighted from the ground
+- [ ] Rake boards tight to the rake line, top edges parallel to it — tape and bevel gauge
+- [ ] Every course fastened into the studs along its length — walk each wall and look for misses
+- [ ] No splits at the pier ends and rake tips — look, then fix now while the boards are few

@@ -12,7 +12,7 @@ on two 16 ft skids on eight blocks — no concrete. Twelve stages take you from 
 to hung doors. One page per stage, in build order. Read this page once, then work the
 pages in order.
 
-![Fig. 0.1 — The finished wood bike shed. ISO view from the street, right corner toward you: 16 ft × 6 ft, single-slope roof falling to the back, three board-and-batten doors. This is what exists when Stage 12 is done — every page in this guide builds toward this one picture.](figures/fig-00-finished-shed.svg)
+![Fig 0.1 — The finished wood bike shed. ISO view from the street, right corner toward you: 16 ft × 6 ft, single-slope roof falling to the back, three board-and-batten doors. This is what exists when Stage 12 is done — every page in this guide builds toward this one picture.](figures/fig-00-finished-shed.svg)
 
 ## The datum — read this before any page
 
@@ -35,9 +35,9 @@ pages in order.
 
 - [Stage 1 — Blocks and skids](04-blocks-and-skids.md): a level pair of skids on eight blocks, square.
 - [Stage 2 — Floor](05-floor.md): rims, joists, deck; the deck top becomes your datum.
-- [Stage 3 — Front wall](06-front-wall.md): the tall wall with both door openings, stood and braced.
-- [Stage 4 — Back wall](07-back-wall.md): stood and tied into the front wall.
-- [Stage 5 — Side walls](08-side-walls.md): the two rake walls, stood; the box is complete.
+- [Stage 3 — Front wall](06-front-wall.md): the tall wall with both door openings, framed flat on the deck.
+- [Stage 4 — Back wall](07-back-wall.md): framed flat along the back edge, corners left open for the side-wall laps.
+- [Stage 5 — Side walls](08-side-walls.md): the two rake walls, framed flat; all four walls now lie complete on the deck.
 - [Stage 6 — Raise and brace](09-raise-and-brace.md): all four walls plumb, corners tied, braced.
 - [Stage 7 — Rake plates](10-rake-plates.md): the sloped plates and stepped studs carry the roof line.
 - [Stage 8 — Rafters](11-rafters.md): thirteen birdmouthed rafters seated on both plates.
@@ -97,4 +97,4 @@ neighbours and a datum edge, and an **arrow to its seat** with a symbol saying h
 (nails, screw, hinge, seat cut). A **red crossed frame** shows a mistake to avoid; a **warning
 triangle** marks a safety message.
 
-![Fig. 0.2 — The symbol key. Reference chart, not a view of the building: the view badge, the three colour states, the attachment arrow, the attachment-mode symbols, the prohibition frame and the warning triangle. Learn these six marks once; every figure in the guide uses only these.](figures/fig-00-symbol-key.svg)
+![Fig 0.2 — The symbol key. Reference chart, not a view of the building: the view badge, the three colour states, the attachment arrow, the attachment-mode symbols, the prohibition frame and the warning triangle. Learn these six marks once; every figure in the guide uses only these.](figures/fig-00-symbol-key.svg)

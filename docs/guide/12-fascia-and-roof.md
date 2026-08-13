@@ -96,6 +96,3 @@ modeled work.
       checked by sighting along each gable edge.
 - [ ] Roofing shopping list written: sheathing, underlayment, roofing, drip edge,
       fasteners — checked off this page's callout.
-
-Cut list: [R01](r01-cut-list.md) · Something not fitting: [P16](16-troubleshooting.md) ·
-Next: [Stage 10 — Skirt and siding](13-skirt-and-siding.md)

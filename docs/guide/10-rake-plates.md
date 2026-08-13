@@ -110,6 +110,3 @@ zone on top of its double top plate is identical to the left.
       sighting and feel.
 - [ ] All four stepped studs per side stand plumb, tops tight to the plate underside with no
       daylight — checked with a 4' level and by sighting along the underside.
-
-Cut list: [R01](r01-cut-list.md) · Something not fitting: [P16](16-troubleshooting.md) ·
-Next: [Stage 8 — Rafters](11-rafters.md)

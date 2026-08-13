@@ -80,11 +80,11 @@ the model builds.
 ## One known quirk, on purpose
 
 Three front-wall members stand on the deck and run **through** the bottom plate instead of
-sitting on top of it: the two 7′ jack studs at the 3-foot door opening, and the 10′ corner
-king stud at the left end. That is how the model is built (those three are exempt from its
-interference checks). In the field: set them full-length from the deck, and cut the plate
-sill out from between the two jacks after the wall stands — the sill segment in a doorway
-comes out anyway.
+sitting on top of it: the two 7′ jack studs at the 3-foot door opening, and the 10′ king
+stud that stands on the deck right beside that opening's right jack. That is how the model
+is built (those three are exempt from its interference checks). In the field: set them
+full-length from the deck, and cut the plate sill out from between the two jacks after the
+wall stands — the sill segment in a doorway comes out anyway.
 
 ## Before you move on
 
