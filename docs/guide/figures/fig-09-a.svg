@@ -1,0 +1,96 @@
+<svg viewBox="0 0 770 800" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+<!-- model trace: isometric projection sx=(x-y)*1.732+215, sy=(x+y)*1.0-z*2.0+435 (inches).
+Walls: front y −3.5 z 0..123; back y 68.5 z 0..97.125; left x −3.5, right x 188.5, z 0..97.125;
+deck z 0 x −3.5..188.5 y −3.5..68.5. Cut band B-B at z 96.4 (double top plates). crew symbol =
+two-person symbol per the P00 key -->
+<defs>
+  <g id="crew" stroke="#111" stroke-width="2.6" fill="none">
+    <circle cx="0" cy="-27" r="4.6" fill="#111" stroke="none"/>
+    <line x1="0" y1="-22" x2="0" y2="-9"/>
+    <line x1="-7" y1="-16" x2="7" y2="-16"/>
+    <line x1="0" y1="-9" x2="-5.5" y2="0"/>
+    <line x1="0" y1="-9" x2="5.5" y2="0"/>
+    <circle cx="16" cy="-27" r="4.6" fill="#111" stroke="none"/>
+    <line x1="16" y1="-22" x2="16" y2="-9"/>
+    <line x1="9" y1="-16" x2="23" y2="-16"/>
+    <line x1="16" y1="-9" x2="10.5" y2="0"/>
+    <line x1="16" y1="-9" x2="21.5" y2="0"/>
+  </g>
+</defs>
+
+<rect x="0" y="0" width="770" height="800" fill="#ffffff"/>
+
+<!-- view badge -->
+<g>
+  <rect x="14" y="12" width="330" height="76" fill="#ffffff" stroke="#222" stroke-width="2.5" rx="6"/>
+  <text x="26" y="36" font-size="16.5" font-weight="bold" fill="#111">ISO · WHOLE SHED</text>
+  <text x="26" y="57" font-size="14.5" fill="#111">viewed from above the street-front corner</text>
+  <text x="26" y="78" font-size="14.5" fill="#111">frame anchor: axis tripod, bottom left</text>
+</g>
+
+<!-- deck (already built = grey) -->
+<polygon points="215.0,428.0 547.5,620.0 422.8,692.0 90.3,500.0" fill="#e6e6e6" stroke="#555" stroke-width="2.5"/>
+
+<!-- back wall (2) -->
+<polygon points="90.3,500.0 422.8,692.0 422.8,497.8 90.3,305.8" fill="#d9a763" stroke="#6b4a1f" stroke-width="2.5"/>
+<!-- right wall (4) -->
+<polygon points="547.5,620.0 422.8,692.0 422.8,497.8 547.5,425.8" fill="#d9a763" stroke="#6b4a1f" stroke-width="2.5"/>
+<!-- left wall (3), translucent -->
+<polygon points="215.0,428.0 90.3,500.0 90.3,305.8 215.0,233.8" fill="#d9a763" fill-opacity="0.55" stroke="#6b4a1f" stroke-width="2.5"/>
+<!-- front wall (1), translucent -->
+<polygon points="215.0,428.0 547.5,620.0 547.5,374.0 215.0,182.0" fill="#d9a763" fill-opacity="0.55" stroke="#6b4a1f" stroke-width="2.5"/>
+
+<!-- plan B-B cut band on the front face (double top plate height) -->
+<line x1="215" y1="235.2" x2="547.5" y2="427.2" stroke="#2f5a8f" stroke-width="2.5" stroke-dasharray="10 6"/>
+<text x="228" y="216" font-size="14.5" fill="#2f5a8f">PLAN B–B (fig 9.4) cuts the</text>
+<text x="228" y="234" font-size="14.5" fill="#2f5a8f">double top plates</text>
+
+<!-- order labels + crew -->
+<g font-size="16" fill="#111" font-weight="bold">
+  <circle cx="612" cy="300" r="16" fill="#ffffff" stroke="#222" stroke-width="2.5"/>
+  <text x="612" y="306" text-anchor="middle">1</text>
+  <text x="636" y="296">FRONT</text>
+  <text x="636" y="315" font-size="13" font-weight="normal" fill="#555">tall — goes first</text>
+  <line x1="596" y1="306" x2="520" y2="380" stroke="#444" stroke-width="1.6"/>
+
+  <circle cx="60" cy="240" r="16" fill="#ffffff" stroke="#222" stroke-width="2.5"/>
+  <text x="60" y="246" text-anchor="middle">2</text>
+  <text x="24" y="212">BACK</text>
+  <line x1="74" y1="250" x2="140" y2="330" stroke="#444" stroke-width="1.6"/>
+
+  <circle cx="40" cy="470" r="16" fill="#ffffff" stroke="#222" stroke-width="2.5"/>
+  <text x="40" y="476" text-anchor="middle">3</text>
+  <text x="20" y="442">LEFT</text>
+  <line x1="56" y1="464" x2="120" y2="410" stroke="#444" stroke-width="1.6"/>
+
+  <circle cx="612" cy="560" r="16" fill="#ffffff" stroke="#222" stroke-width="2.5"/>
+  <text x="612" y="566" text-anchor="middle">4</text>
+  <text x="636" y="556">RIGHT</text>
+  <line x1="596" y1="566" x2="520" y2="560" stroke="#444" stroke-width="1.6"/>
+</g>
+
+<!-- crew symbols (two-person key symbol) at each wall -->
+<use href="#crew" x="600" y="352"/>
+<use href="#crew" x="30" y="300"/>
+<use href="#crew" x="60" y="530"/>
+<use href="#crew" x="600" y="620"/>
+
+<!-- axis tripod -->
+<g stroke="#222" stroke-width="2.6">
+  <line x1="70" y1="740" x2="118.5" y2="768"/>
+  <line x1="70" y1="740" x2="21.5" y2="768"/>
+  <line x1="70" y1="740" x2="70" y2="695"/>
+</g>
+<g font-size="14.5" fill="#222">
+  <text x="124" y="776">16 ft (shed length)</text>
+  <text x="14" y="790">6 ft (depth)</text>
+  <text x="80" y="700">up</text>
+</g>
+
+<!-- legend -->
+<g>
+  <use href="#crew" x="250" y="762"/>
+  <text x="286" y="756" font-size="14.5" fill="#222">two-person symbol (key): minimum crew per wall.</text>
+  <text x="286" y="774" font-size="14.5" fill="#222">A third helper on wall 1 makes it safer.</text>
+</g>
+</svg>

@@ -1,0 +1,79 @@
+<svg viewBox="0 0 940 600" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+<!-- model trace: front wall end view; wall 123" tall x 3.5" deep, pivot at deck front edge.
+Scale 3.23 px/in; pivot (320,500). Shown mid-raise at ~42 deg; dashed ghosts = flat start and
+vertical landing. Lifters stand along the wall's length (symbolic placement in this end view) -->
+<defs>
+  <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+    <path d="M0,0 L8,4 L0,8 z" fill="#b03a2e"/>
+  </marker>
+</defs>
+
+<rect x="0" y="0" width="940" height="600" fill="#ffffff"/>
+
+<!-- view badge -->
+<g>
+  <rect x="14" y="12" width="316" height="76" fill="#ffffff" stroke="#222" stroke-width="2.5" rx="6"/>
+  <text x="26" y="36" font-size="16.5" font-weight="bold" fill="#111">ELEVATION · FRONT WALL END</text>
+  <text x="26" y="57" font-size="14.5" fill="#111">viewed from the wall's left end</text>
+  <text x="26" y="78" font-size="14.5" fill="#111">frame anchor: gravity</text>
+  <line x1="304" y1="46" x2="304" y2="70" stroke="#111" stroke-width="3"/>
+  <path d="M297,66 L304,78 L311,66 z" fill="#111"/>
+</g>
+
+<!-- deck line + hatch -->
+<line x1="60" y1="500" x2="900" y2="500" stroke="#222" stroke-width="3"/>
+<g stroke="#666" stroke-width="1.6">
+  <line x1="80" y1="500" x2="68" y2="514"/><line x1="140" y1="500" x2="128" y2="514"/>
+  <line x1="200" y1="500" x2="188" y2="514"/><line x1="260" y1="500" x2="248" y2="514"/>
+  <line x1="320" y1="500" x2="308" y2="514"/><line x1="380" y1="500" x2="368" y2="514"/>
+  <line x1="440" y1="500" x2="428" y2="514"/><line x1="500" y1="500" x2="488" y2="514"/>
+  <line x1="560" y1="500" x2="548" y2="514"/><line x1="620" y1="500" x2="608" y2="514"/>
+  <line x1="680" y1="500" x2="668" y2="514"/><line x1="740" y1="500" x2="728" y2="514"/>
+  <line x1="800" y1="500" x2="788" y2="514"/><line x1="860" y1="500" x2="848" y2="514"/>
+</g>
+<text x="64" y="532" font-size="15" fill="#333">deck top — the bottom plate pivots on the deck's front edge</text>
+
+<!-- dashed ghost: wall lying flat -->
+<rect x="320" y="488.8" width="400" height="11.2" fill="none" stroke="#888" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="730" y="498" font-size="14.5" fill="#666">starts flat on the deck</text>
+
+<!-- dashed ghost: wall standing vertical -->
+<rect x="320" y="100" width="11.2" height="400" fill="none" stroke="#888" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="340" y="112" font-size="14.5" fill="#666">lands vertical, outer face</text>
+<text x="340" y="130" font-size="14.5" fill="#666">flush with the deck edge</text>
+
+<!-- the wall mid-raise (~42 deg) -->
+<polygon points="320,500 617,232 624.5,240.3 327.5,508.3" fill="#d9a763" stroke="#6b4a1f" stroke-width="2.5"/>
+
+<!-- raise arc -->
+<path d="M 640 460 A 320 320 0 0 0 560 250" fill="none" stroke="#b03a2e" stroke-width="2.6" stroke-dasharray="10 6" marker-end="url(#arr)"/>
+<text x="660" y="380" font-size="16" fill="#b03a2e" font-weight="bold">raise</text>
+
+<!-- lifters (symbolic: they stand spaced along the wall's length) -->
+<g stroke="#111" stroke-width="3.2" fill="none">
+  <!-- lifter 1 -->
+  <circle cx="425" cy="290" r="10" fill="#111" stroke="none"/>
+  <line x1="425" y1="300" x2="425" y2="380"/>
+  <line x1="425" y1="315" x2="448" y2="388"/>
+  <line x1="425" y1="315" x2="404" y2="372"/>
+  <line x1="425" y1="380" x2="408" y2="500"/>
+  <line x1="425" y1="380" x2="444" y2="500"/>
+  <!-- lifter 2 -->
+  <circle cx="548" cy="290" r="10" fill="#111" stroke="none"/>
+  <line x1="548" y1="300" x2="548" y2="380"/>
+  <line x1="548" y1="315" x2="572" y2="296"/>
+  <line x1="548" y1="315" x2="524" y2="290"/>
+  <line x1="548" y1="380" x2="530" y2="500"/>
+  <line x1="548" y1="380" x2="566" y2="500"/>
+</g>
+<line x1="452" y1="392" x2="470" y2="376" stroke="#b03a2e" stroke-width="2.4" marker-end="url(#arr)"/>
+<line x1="576" y1="292" x2="596" y2="272" stroke="#b03a2e" stroke-width="2.4" marker-end="url(#arr)"/>
+<text x="430" y="556" font-size="14.5" fill="#222">lift with your legs, walk hand over hand</text>
+<text x="430" y="575" font-size="13.5" fill="#666">lifters stand spaced along the wall's length —</text>
+<text x="430" y="592" font-size="13.5" fill="#666">shown symbolically in this end view</text>
+
+<!-- pivot mark -->
+<circle cx="320" cy="500" r="6" fill="#b03a2e"/>
+<line x1="320" y1="508" x2="320" y2="540" stroke="#b03a2e" stroke-width="2"/>
+<text x="180" y="560" font-size="15" fill="#b03a2e" font-weight="bold">pivot — bottom edge stays put</text>
+</svg>

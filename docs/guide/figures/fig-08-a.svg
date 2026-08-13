@@ -1,0 +1,105 @@
+<svg viewBox="0 0 720 680" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+<!-- model trace: left wall, interior view (facing -x): front/street end (y 0) drawn LEFT, back
+end (y 65) right. px(t)=320+4*t, t = inches from the front end; y(z)=600-4*z. Studs
+z 1.5..94.125; top plate z 94.125..95.625; DTP z 95.625..97.125 spanning t 0..68.5. Dashed rake
+zone above is Stage 7 future work (rake plate top edge drawn front z 123 to back ~z 98.6,
+schematic) -->
+<rect x="0" y="0" width="720" height="680" fill="#ffffff"/>
+
+<!-- view badge -->
+<g>
+  <rect x="14" y="12" width="286" height="76" fill="#ffffff" stroke="#222" stroke-width="2.5" rx="6"/>
+  <text x="26" y="36" font-size="16.5" font-weight="bold" fill="#111">ELEVATION · LEFT WALL</text>
+  <text x="26" y="57" font-size="14.5" fill="#111">viewed from inside the shed</text>
+  <text x="26" y="78" font-size="14.5" fill="#111">frame anchor: gravity</text>
+  <line x1="274" y1="46" x2="274" y2="70" stroke="#111" stroke-width="3"/>
+  <path d="M267,66 L274,78 L281,66 z" fill="#111"/>
+</g>
+
+<!-- deck line + hatch -->
+<line x1="280" y1="600" x2="650" y2="600" stroke="#222" stroke-width="3"/>
+<g stroke="#666" stroke-width="1.6">
+  <line x1="292" y1="600" x2="280" y2="614"/><line x1="332" y1="600" x2="320" y2="614"/>
+  <line x1="372" y1="600" x2="360" y2="614"/><line x1="412" y1="600" x2="400" y2="614"/>
+  <line x1="452" y1="600" x2="440" y2="614"/><line x1="492" y1="600" x2="480" y2="614"/>
+  <line x1="532" y1="600" x2="520" y2="614"/><line x1="572" y1="600" x2="560" y2="614"/>
+  <line x1="612" y1="600" x2="600" y2="614"/><line x1="644" y1="600" x2="632" y2="614"/>
+</g>
+<text x="284" y="634" font-size="15" fill="#222" font-weight="bold">FRONT end (street)</text>
+<text x="646" y="634" font-size="15" fill="#222" text-anchor="end">BACK end</text>
+
+<!-- dashed future rake zone (Stage 7): plate band + four stepped studs -->
+<g fill="none" stroke="#4a7ab5" stroke-width="2.2" stroke-dasharray="8 5">
+  <polygon points="320,108 580,205.5 580,211.5 320,114"/>
+  <rect x="357" y="129" width="6" height="82.5"/>
+  <rect x="421" y="153" width="6" height="58.5"/>
+  <rect x="485" y="177" width="6" height="34.5"/>
+  <rect x="549" y="201" width="6" height="10.5"/>
+</g>
+<line x1="450" y1="150" x2="640" y2="120" stroke="#4a7ab5" stroke-width="1.4"/>
+<g font-size="14.5" fill="#2f5a8f">
+  <text x="640" y="108" text-anchor="end">sloped rake plate +</text>
+  <text x="640" y="126" text-anchor="end">4 stepped studs —</text>
+  <text x="640" y="144" text-anchor="end">Stage 7 (page 10).</text>
+  <text x="640" y="162" text-anchor="end">Dashed = not built now.</text>
+</g>
+
+<!-- bottom plate -->
+<rect x="320" y="594" width="260" height="6" fill="#c99a56" stroke="#6b4a1f" stroke-width="2.2"/>
+<!-- 5 studs z 1.5..94.125 -> y 594..223.5 -->
+<g fill="#d9a763" stroke="#6b4a1f" stroke-width="2.2">
+  <rect x="320" y="223.5" width="6" height="370.5"/>
+  <rect x="382" y="223.5" width="6" height="370.5"/>
+  <rect x="446" y="223.5" width="6" height="370.5"/>
+  <rect x="510" y="223.5" width="6" height="370.5"/>
+  <rect x="574" y="223.5" width="6" height="370.5"/>
+</g>
+<!-- top plate -->
+<rect x="320" y="217.5" width="260" height="6" fill="#c99a56" stroke="#6b4a1f" stroke-width="2.2"/>
+<!-- double top plate, overhangs back end t 65..68.5 -> x 580..594 -->
+<rect x="320" y="211.5" width="274" height="6" fill="#c99a56" stroke="#6b4a1f" stroke-width="2.2"/>
+<rect x="580" y="211.5" width="14" height="6" fill="#e8c07a" stroke="#6b4a1f" stroke-width="2.2"/>
+
+<!-- nailed joints (representative) -->
+<g stroke="#7a2e12" stroke-width="2">
+  <line x1="379" y1="590" x2="387" y2="598"/><line x1="387" y1="590" x2="379" y2="598"/>
+  <line x1="507" y1="590" x2="515" y2="598"/><line x1="515" y1="590" x2="507" y2="598"/>
+  <line x1="379" y1="212" x2="387" y2="220"/><line x1="387" y1="212" x2="379" y2="220"/>
+  <line x1="507" y1="212" x2="515" y2="220"/><line x1="515" y1="212" x2="507" y2="220"/>
+</g>
+
+<!-- labels -->
+<g font-size="15.5" fill="#111">
+  <line x1="325" y1="214" x2="262" y2="186" stroke="#444" stroke-width="1.4"/>
+  <text x="10" y="182">double top plate · 2×4 · 5' 8½"</text>
+  <line x1="325" y1="220" x2="262" y2="246" stroke="#444" stroke-width="1.4"/>
+  <text x="60" y="250">top plate · 2×4 · 5' 5"</text>
+  <line x1="513" y1="420" x2="594" y2="420" stroke="#444" stroke-width="1.4"/>
+  <text x="598" y="416">stud · 2×4 ·</text>
+  <text x="598" y="435">7' 8⅝" pre-cut</text>
+  <line x1="450" y1="597" x2="480" y2="565" stroke="#444" stroke-width="1.4"/>
+  <text x="404" y="560">bottom plate · 2×4 · 5' 5"</text>
+</g>
+<!-- lap note -->
+<line x1="590" y1="216" x2="640" y2="300" stroke="#6b4a1f" stroke-width="1.4"/>
+<g font-size="14.5" fill="#222" text-anchor="end">
+  <text x="714" y="316">3½" overhang laps</text>
+  <text x="714" y="334">the back wall corner</text>
+  <text x="714" y="352">— ties it (Stage 6)</text>
+</g>
+
+<!-- dimensions -->
+<g stroke="#444" stroke-width="1.4" font-size="15" fill="#222">
+  <line x1="320" y1="656" x2="580" y2="656" marker-start="url(#dimA)" marker-end="url(#dimA)"/>
+  <line x1="320" y1="648" x2="320" y2="664"/><line x1="580" y1="648" x2="580" y2="664"/>
+  <text x="450" y="676" text-anchor="middle">5' 5" between front and back walls</text>
+  <line x1="296" y1="600" x2="296" y2="211.5" marker-start="url(#dimA)" marker-end="url(#dimA)"/>
+  <line x1="288" y1="600" x2="304" y2="600"/><line x1="288" y1="211.5" x2="304" y2="211.5"/>
+  <text x="278" y="430" transform="rotate(-90,278,430)" text-anchor="middle">97⅛" deck to plate top</text>
+</g>
+<defs>
+  <marker id="dimA" markerWidth="9" markerHeight="9" refX="7" refY="3.5" orient="auto">
+    <path d="M0,0 L7,3.5 L0,7 z" fill="#444"/>
+  </marker>
+</defs>
+</svg>

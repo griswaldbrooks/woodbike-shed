@@ -1,0 +1,78 @@
+<svg viewBox="0 0 860 560" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+<!-- model trace: front wall interior elevation, scale 2.6 px/in; px(x)=170+2.6x, deck y=490,
+y(z)=490-2.6z. Wall framing grey = already raised; brace is new temporary work (scrap 2x4, not
+on the order). Plates z 0..1.5 / 120..123; studs to z 120 -->
+<defs>
+  <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+    <path d="M0,0 L8,4 L0,8 z" fill="#b03a2e"/>
+  </marker>
+</defs>
+
+<rect x="0" y="0" width="860" height="560" fill="#ffffff"/>
+
+<!-- view badge -->
+<g>
+  <rect x="14" y="12" width="330" height="76" fill="#ffffff" stroke="#222" stroke-width="2.5" rx="6"/>
+  <text x="26" y="36" font-size="16" font-weight="bold" fill="#111">ELEVATION · FRONT WALL, BRACED</text>
+  <text x="26" y="57" font-size="14" fill="#111">viewed from INSIDE the shed (view changed)</text>
+  <text x="26" y="78" font-size="14" fill="#111">frame anchor: gravity</text>
+  <line x1="318" y1="46" x2="318" y2="70" stroke="#111" stroke-width="3"/>
+  <path d="M311,66 L318,78 L325,66 z" fill="#111"/>
+</g>
+
+<!-- deck line + hatch -->
+<line x1="60" y1="490" x2="820" y2="490" stroke="#222" stroke-width="3"/>
+<g stroke="#666" stroke-width="1.6">
+  <line x1="80" y1="490" x2="68" y2="504"/><line x1="140" y1="490" x2="128" y2="504"/>
+  <line x1="200" y1="490" x2="188" y2="504"/><line x1="260" y1="490" x2="248" y2="504"/>
+  <line x1="320" y1="490" x2="308" y2="504"/><line x1="380" y1="490" x2="368" y2="504"/>
+  <line x1="440" y1="490" x2="428" y2="504"/><line x1="500" y1="490" x2="488" y2="504"/>
+  <line x1="560" y1="490" x2="548" y2="504"/><line x1="620" y1="490" x2="608" y2="504"/>
+  <line x1="680" y1="490" x2="668" y2="504"/><line x1="740" y1="490" x2="728" y2="504"/>
+  <line x1="800" y1="490" x2="788" y2="504"/>
+</g>
+
+<!-- wall framing, grey outline = already raised -->
+<g fill="none" stroke="#777" stroke-width="2.2">
+  <rect x="170" y="486.1" width="499.2" height="3.9"/>
+  <rect x="170" y="174.1" width="499.2" height="3.9"/>
+  <rect x="170" y="170.2" width="499.2" height="3.9"/>
+  <rect x="170" y="178" width="3.9" height="308.1"/>
+  <rect x="294.8" y="178" width="3.9" height="308.1"/>
+  <rect x="419.6" y="178" width="3.9" height="308.1"/>
+  <rect x="544.4" y="178" width="3.9" height="308.1"/>
+  <rect x="669.2" y="178" width="3.9" height="308.1"/>
+</g>
+
+<!-- brace (new work, full colour) -->
+<line x1="205" y1="484" x2="424" y2="192" stroke="#c9822e" stroke-width="9" stroke-linecap="round"/>
+<!-- second brace, dashed ghost -->
+<line x1="636" y1="484" x2="428" y2="192" stroke="#c9822e" stroke-width="9" stroke-linecap="round" stroke-dasharray="14 9" opacity="0.55"/>
+
+<!-- attachment arrows + nailed joints -->
+<g stroke="#b03a2e" stroke-width="2.4" fill="none">
+  <line x1="300" y1="260" x2="322" y2="300" marker-end="url(#arr)"/>
+  <line x1="250" y1="430" x2="228" y2="462" marker-end="url(#arr)"/>
+</g>
+<g stroke="#7a2e12" stroke-width="2.4">
+  <line x1="417" y1="186" x2="431" y2="200"/><line x1="431" y1="186" x2="417" y2="200"/>
+  <line x1="198" y1="477" x2="212" y2="491"/><line x1="212" y1="477" x2="198" y2="491"/>
+</g>
+
+<!-- labels -->
+<g font-size="15.5" fill="#111">
+  <line x1="330" y1="316" x2="470" y2="330" stroke="#444" stroke-width="1.4"/>
+  <text x="476" y="326">scrap 2×4 brace, about 45°,</text>
+  <text x="476" y="345">on the inside of the wall</text>
+  <line x1="430" y1="190" x2="530" y2="150" stroke="#444" stroke-width="1.4"/>
+  <text x="536" y="146">nail to a stud near the top plate</text>
+  <line x1="205" y1="486" x2="150" y2="440" stroke="#444" stroke-width="1.4"/>
+  <text x="24" y="428">nail the foot to the deck</text>
+  <line x1="560" y1="360" x2="640" y2="392" stroke="#444" stroke-width="1.4"/>
+  <text x="500" y="416" fill="#8a5a20">second brace at the other end</text>
+  <text x="500" y="435" fill="#8a5a20">(dashed) if the wall sways</text>
+</g>
+
+<!-- takeaway -->
+<text x="170" y="122" font-size="16" fill="#222" font-weight="bold">Braces stay until the siding goes on (Stage 10).</text>
+</svg>
