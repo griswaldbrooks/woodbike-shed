@@ -75,6 +75,21 @@ $brand-color: #1a5296;
   color: $grey-color;
 }
 
+/* ---- header on narrow screens ------------------------------------------- */
+
+/* Minima absolutely positions the hamburger over the floated site title,
+   which clips long titles mid-word. Unfloat the title so it wraps, and
+   keep it clear of the menu control. */
+@include media-query($on-palm) {
+  .site-title {
+    float: none;
+    display: block;
+    padding-right: 3.5rem;
+    font-size: 1.375rem;
+    line-height: 1.3;
+  }
+}
+
 /* ---- content fit on narrow screens -------------------------------------- */
 
 /* Tables keep their layout but scroll within themselves, never the page. */
