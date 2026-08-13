@@ -47,6 +47,11 @@ writing — that docstring is the derivation record for every dependent value
 (rake studs/plates, rafters, fascia, right-wall cripples). Cad harness:
 `.venv/bin/python -m cad.build && .venv/bin/python -m cad.verify` (venv per
 `cad/README.md`).
+Multi-page Markdown rewrite of the build guide (worker branches, 2026-08-13;
+old single page at `docs/build-guide.html`, tag `guide-v1-single-page`): pages
++ figures live in `docs/guide/`; the shared conventions (page list, front
+matter, figure and number rules) are the human-facing `docs/guide/conventions.md`;
+`docs/guide/build-pdf.sh` assembles the canonical-order PDF via WeasyPrint.
 
 ## Onshape API sharp edges (learned the hard way)
 
