@@ -98,10 +98,31 @@ def inline(s):
     return s
 
 
+def join_wrapped_images(lines):
+    """A figure ref may be wrapped over source lines; rejoin it to one line so
+    the standalone-figure rule below sees it (Markdown wraps inline freely)."""
+    merged, buf = [], ''
+    for line in lines:
+        s = line.strip()
+        if buf:
+            buf += ' ' + s
+            if re.search(r'\]\([^)]+\)$', buf):
+                merged.append(buf)
+                buf = ''
+            continue
+        if s.startswith('![') and not re.search(r'\]\([^)]+\)$', s):
+            buf = s
+            continue
+        merged.append(line)
+    if buf:
+        merged.append(buf)
+    return merged
+
+
 def convert(md_text):
     """Convert the Markdown subset the contract's page format uses."""
     out = []
-    lines = md_text.splitlines()
+    lines = join_wrapped_images(md_text.splitlines())
     i = 0
     para = []
 
@@ -136,8 +157,15 @@ def convert(md_text):
         m = re.match(r'^!\[([^\]]*)\]\(([^)]+)\)$', stripped)
         if m:
             flush_para()
-            out.append(f'<figure><img src="{m.group(2)}" alt="{html.escape(m.group(1), quote=False)}"/>'
-                       f'<figcaption>{inline(m.group(1))}</figcaption></figure>')
+            if 'birdsmouth-template' in m.group(2):
+                # true-size sheet: the figure takes its own margin-free page,
+                # so the caption rides along as a paragraph on the next page
+                out.append(f'<figure class="truesize"><img src="{m.group(2)}" '
+                           f'alt="{html.escape(m.group(1), quote=False)}"/></figure>')
+                out.append(f'<p class="truesize-cap">{inline(m.group(1))}</p>')
+            else:
+                out.append(f'<figure><img src="{m.group(2)}" alt="{html.escape(m.group(1), quote=False)}"/>'
+                           f'<figcaption>{inline(m.group(1))}</figcaption></figure>')
             i += 1
             continue
 

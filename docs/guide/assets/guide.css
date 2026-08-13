@@ -109,6 +109,19 @@ hr { border: 0; border-top: 2px solid var(--rule); margin: 1.6em 0; }
   .page-nav .next { text-align: left; }
 }
 
+/* true-size template (birdsmouth, Fig 11.3) ------------------------------------
+   The template SVG is drawn in millimetres (210 x 279 = one A4 sheet) and must
+   print at 100%: it gets its own named page with no margins, outside the text
+   column. On screen it renders like any other figure. */
+
+@page truesize { margin: 0; }
+
+@media print {
+  figure.truesize { page: truesize; margin: 0; }
+  figure.truesize img { max-width: none; width: 210mm; height: 279mm; }
+  p.truesize-cap { font-size: 0.88rem; color: var(--muted); }
+}
+
 /* print (A4 / Letter) ---------------------------------------------------------- */
 
 @page {
