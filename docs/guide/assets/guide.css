@@ -1,0 +1,133 @@
+/* Wood bike shed build guide — shared stylesheet.
+   Dependency-free: system fonts only, no frameworks.
+   Two targets: a phone screen outdoors, and A4/Letter paper on the job site.
+   The PDF assembler (build-pdf.sh) inlines this file into the HTML it feeds WeasyPrint. */
+
+:root {
+  --ink: #1a1a1a;
+  --paper: #ffffff;
+  --rule: #3a3a3a;
+  --muted: #555555;
+  --new: #c89f6b;      /* matches the symbol key: new work */
+  --warn: #b3261e;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 17px; }
+
+body {
+  margin: 0 auto;
+  max-width: 46em;
+  padding: 1rem 1.1rem 3rem;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+}
+
+h1, h2, h3, h4 { line-height: 1.2; }
+h1 { font-size: 1.65rem; margin: 0.4em 0 0.5em; }
+h2 { font-size: 1.3rem; margin: 1.4em 0 0.5em; border-bottom: 2px solid var(--rule); padding-bottom: 0.15em; }
+h3 { font-size: 1.1rem; margin: 1.2em 0 0.4em; }
+
+p, li { margin: 0.45em 0; }
+a { color: #144a74; }
+
+/* page chrome ---------------------------------------------------------- */
+
+.page-head { border-bottom: 3px solid var(--rule); margin-bottom: 1em; padding-bottom: 0.4em; }
+.page-head .page-id {
+  display: inline-block;
+  border: 2px solid var(--rule);
+  padding: 0.05em 0.5em;
+  font-weight: bold;
+  margin-right: 0.5em;
+}
+.page-head .page-stage { color: var(--muted); font-weight: bold; }
+
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8em;
+  border-top: 2px solid var(--rule);
+  margin-top: 2em;
+  padding-top: 0.7em;
+  font-weight: bold;
+}
+.page-nav a {
+  display: inline-block;
+  min-height: 44px;          /* touch target */
+  padding: 0.5em 0.2em;
+  text-decoration: none;
+}
+.page-nav .next { text-align: right; }
+
+/* figures --------------------------------------------------------------- */
+
+figure {
+  margin: 1.2em 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+figure img { max-width: 100%; height: auto; display: block; margin: 0 auto; }
+figcaption { font-size: 0.88rem; color: var(--muted); margin-top: 0.4em; }
+
+/* quotes and warnings ---------------------------------------------------- */
+
+blockquote {
+  margin: 0.9em 0;
+  padding: 0.5em 0.9em;
+  border-left: 4px solid var(--rule);
+  background: #f4f2ee;
+}
+blockquote.warn { border-left-color: var(--warn); background: #fbeeec; }
+
+/* tables ------------------------------------------------------------------ */
+
+table { border-collapse: collapse; width: 100%; margin: 1em 0; font-size: 0.92rem; }
+th, td { border: 1px solid var(--rule); padding: 0.35em 0.5em; text-align: left; vertical-align: top; }
+th { background: #efede8; }
+
+/* checklists ---------------------------------------------------------------- */
+
+ul.checks { list-style: none; padding-left: 0.2em; }
+ul.checks li { padding-left: 1.6em; position: relative; }
+ul.checks li::before { content: "\2610"; position: absolute; left: 0; font-size: 1.15em; }
+
+code { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.9em; }
+
+hr { border: 0; border-top: 2px solid var(--rule); margin: 1.6em 0; }
+
+/* phone ---------------------------------------------------------------------- */
+
+@media (max-width: 600px) {
+  html { font-size: 16px; }
+  body { padding: 0.7rem 0.8rem 2rem; }
+  table { font-size: 0.85rem; }
+  .page-nav { flex-direction: column; }
+  .page-nav .next { text-align: left; }
+}
+
+/* print (A4 / Letter) ---------------------------------------------------------- */
+
+@page {
+  margin: 16mm 14mm 18mm;
+  @bottom-center {
+    content: counter(page) " of " counter(pages);
+    font-size: 9pt;
+    color: #555555;
+  }
+}
+
+@media print {
+  html { font-size: 11.5pt; }
+  body { max-width: none; margin: 0; padding: 0; color: #000; background: #fff; }
+  a { color: #000; text-decoration: none; }
+  .guide-page { break-before: page; page-break-before: always; }
+  figure, table, blockquote, .page-head { break-inside: avoid; page-break-inside: avoid; }
+  h1, h2, h3 { break-after: avoid; page-break-after: avoid; }
+  blockquote, th { background: #fff; }
+  /* figure colour states carry meaning — keep them on paper */
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
