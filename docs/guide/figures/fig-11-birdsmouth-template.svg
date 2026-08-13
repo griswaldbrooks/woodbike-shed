@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TRUE SIZE: viewBox units are millimetres; print at 100% on A4 or Letter portrait.
+     model trace: pitch 24.375/65 = 0.375 = 20.556 deg; front seat 4.0 in (101.6 mm) level
+     on the front DTP top (123 above deck), plumb kick 1.5 in (38.1 mm) at the front wall
+     inner face, heel 0.5 in outboard of the plate outer face; back seat 3.5 in (88.9 mm)
+     level on the back DTP top (97.125 above deck), plumb kick 1.3125 in (33.34 mm) at the
+     back wall outer face; plate height 1.5 in = 38.1 mm. Check line = 101.6 mm = 4.000 in. -->
+<svg viewBox="0 0 210 279" width="210mm" height="279mm" xmlns="http://www.w3.org/2000/svg"
+     font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="tDim" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#555"/>
+    </marker>
+    <marker id="tDims" markerWidth="8" markerHeight="6" refX="1" refY="3" orient="auto">
+      <path d="M8,0 L0,3 L8,6" fill="#555"/>
+    </marker>
+    <pattern id="waste" patternUnits="userSpaceOnUse" width="4" height="4">
+      <path d="M0,4 L4,0" stroke="#c0392b" stroke-width="0.3"/>
+    </pattern>
+    <style>
+      text { fill:#222; }
+      .t { font-size:5px; font-weight:bold; }
+      .h { font-size:4px; font-weight:bold; }
+      .n { font-size:3.5px; }
+      .s { font-size:3px; }
+    </style>
+  </defs>
+
+  <text x="12" y="10" class="t">BIRDSMOUTH TEMPLATE — full size (1:1)</text>
+  <text x="12" y="17" class="n">Print at 100% (actual size). Do not scale to fit. A4 or Letter, portrait.</text>
+
+  <!-- printed scale check -->
+  <line x1="20" y1="28" x2="121.6" y2="28" stroke="#222" stroke-width="0.7"/>
+  <line x1="20" y1="24" x2="20" y2="32" stroke="#222" stroke-width="0.7"/>
+  <line x1="121.6" y1="24" x2="121.6" y2="32" stroke="#222" stroke-width="0.7"/>
+  <text x="20" y="38" class="n" font-weight="bold">This line is exactly 4 inches — measure it before trusting this template.</text>
+
+  <!-- FRONT BIRDSMOUTH -->
+  <text x="12" y="48" class="h">FRONT BIRDSMOUTH — near the front (high) end of the rafter</text>
+
+  <!-- plate below the seat (grey, already built) -->
+  <rect x="42.7" y="60" width="88.9" height="38.1" fill="#e9e9e9" stroke="#8c8c8c" stroke-width="0.35"/>
+  <text x="46" y="82" class="s">front double top plate · 2×4</text>
+  <text x="46" y="87" class="s">(3½″ wide, already built)</text>
+
+  <!-- waste wedge -->
+  <polygon points="30,60 131.6,60 131.6,98.1" fill="url(#waste)" stroke="none"/>
+  <!-- underside line = rafter bottom edge (bold) -->
+  <path d="M 12,53.25 L 30,60 L 131.6,98.1 L 178,115.5" fill="none" stroke="#222" stroke-width="0.7"/>
+  <!-- cut lines: seat (level) + kick (plumb) -->
+  <line x1="30" y1="60" x2="131.6" y2="60" stroke="#c0392b" stroke-width="0.7"/>
+  <line x1="131.6" y1="60" x2="131.6" y2="98.1" stroke="#c0392b" stroke-width="0.7"/>
+  <!-- heel marker -->
+  <circle cx="30" cy="60" r="1" fill="#c0392b"/>
+  <text x="12" y="72" class="n">heel</text>
+  <line x1="18" y1="68" x2="28" y2="61" stroke="#555" stroke-width="0.3"/>
+  <!-- pitch arc at the heel -->
+  <path d="M 44,60 A 14,14 0 0 1 43.11,64.92" fill="none" stroke="#555" stroke-width="0.35"/>
+  <text x="50" y="72" class="n">roof pitch 4½ in 12 (20.6°)</text>
+  <!-- dimensions -->
+  <line x1="30" y1="54" x2="131.6" y2="54" stroke="#555" stroke-width="0.35"
+        marker-start="url(#tDims)" marker-end="url(#tDim)"/>
+  <text x="60" y="52" class="n">seat — 4″ level</text>
+  <line x1="137" y1="60" x2="137" y2="98.1" stroke="#555" stroke-width="0.35"
+        marker-start="url(#tDims)" marker-end="url(#tDim)"/>
+  <text x="140" y="82" class="n" transform="rotate(-90 140 82)">kick — 1½″ plumb</text>
+  <text x="143" y="94" class="s">kick line = front wall</text>
+  <text x="143" y="98" class="s">inner face</text>
+  <text x="12" y="108" class="s">heel stands ½″ proud of the plate's outer face — as designed</text>
+
+  <text x="12" y="118" class="n">The slope of the underside line = the roof pitch = the rake plate's top-edge slope</text>
+  <text x="12" y="124" class="n">= the mitre on the stepped-stud tops (Stage 7).</text>
+
+  <!-- BACK BIRDSMOUTH -->
+  <text x="12" y="128" class="h">BACK BIRDSMOUTH — near the back (low) end of the rafter</text>
+
+  <!-- plate below the seat (grey, already built) -->
+  <rect x="30" y="142" width="88.9" height="38.1" fill="#e9e9e9" stroke="#8c8c8c" stroke-width="0.35"/>
+  <text x="33" y="164" class="s">back double top plate · 2×4</text>
+  <text x="33" y="169" class="s">(seat covers its full width)</text>
+
+  <!-- waste wedge -->
+  <polygon points="30,142 118.9,142 118.9,175.3" fill="url(#waste)" stroke="none"/>
+  <!-- underside line -->
+  <path d="M 12,135.25 L 30,142 L 118.9,175.3 L 168,193.7" fill="none" stroke="#222" stroke-width="0.7"/>
+  <!-- cut lines -->
+  <line x1="30" y1="142" x2="118.9" y2="142" stroke="#c0392b" stroke-width="0.7"/>
+  <line x1="118.9" y1="142" x2="118.9" y2="175.3" stroke="#c0392b" stroke-width="0.7"/>
+  <!-- heel marker -->
+  <circle cx="30" cy="142" r="1" fill="#c0392b"/>
+  <text x="12" y="156" class="n">heel</text>
+  <line x1="18" y1="152" x2="28" y2="143" stroke="#555" stroke-width="0.3"/>
+  <!-- dimensions -->
+  <line x1="30" y1="136" x2="118.9" y2="136" stroke="#555" stroke-width="0.35"
+        marker-start="url(#tDims)" marker-end="url(#tDim)"/>
+  <text x="48" y="134" class="n">seat — 3½″ level</text>
+  <line x1="124" y1="142" x2="124" y2="175.3" stroke="#555" stroke-width="0.35"
+        marker-start="url(#tDims)" marker-end="url(#tDim)"/>
+  <text x="127" y="162" class="n" transform="rotate(-90 127 162)">kick — 1-5/16″ plumb</text>
+  <text x="130" y="172" class="s">kick line = back wall</text>
+  <text x="130" y="176" class="s">outer face</text>
+  <text x="14" y="190" class="s">heel = back wall inner face</text>
+
+  <!-- HOW TO USE -->
+  <text x="12" y="208" class="h">HOW TO USE</text>
+  <text x="12" y="216" class="n">1. Mark the heels on the rafter's bottom edge (drop the Page 11 tape readings down).</text>
+  <text x="12" y="223" class="n">2. Hold this template on the rafter face: underside line on the bottom edge, heel to heel.</text>
+  <text x="12" y="230" class="n">3. Trace the seat and kick lines. Saw the seat first, then the kick; kerf on the waste side.</text>
+  <text x="12" y="237" class="n">4. Check the finished notch against this template — no daylight at the seat, kick plumb.</text>
+  <text x="12" y="249" class="n">Both notches read the same way on the board: seat level, kick plumb, kick to the right</text>
+  <text x="12" y="255" class="n">of the seat. Store this sheet with the pattern rafter.</text>
+  <text x="12" y="270" class="s">Traceability: seat planes at 123″ and 97⅛″ above the deck · pitch 4½ in 12.</text>
+</svg>

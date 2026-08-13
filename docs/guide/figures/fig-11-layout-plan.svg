@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- model trace: plan at plate level; horizontal = x (-15.5..200.5, fascia-to-fascia),
+     vertical = y (front -3.5..0 wall band at top, back 65..68.5 at bottom). Rafter centres
+     x -2.75..187.75 at 15.875; first/last over the rake walls; back DTP x 0..185, side DTPs
+     y 0..68.5 catch the end rafters' back seats. Colour = new layout marks/rafters;
+     hatched = plate material cut by the plane; dashed = future (fascia, Stage 9). -->
+<svg viewBox="0 0 840 500" width="210mm" xmlns="http://www.w3.org/2000/svg"
+     font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="dimA" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8" fill="#555"/>
+    </marker>
+    <marker id="dimAs" markerWidth="10" markerHeight="8" refX="1" refY="4" orient="auto">
+      <path d="M10,0 L0,4 L10,8" fill="#555"/>
+    </marker>
+    <marker id="attA" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8" fill="#1a6fb0"/>
+    </marker>
+    <marker id="secA" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8" fill="#222"/>
+    </marker>
+    <pattern id="h11p" patternUnits="userSpaceOnUse" width="7" height="7">
+      <path d="M0,7 L7,0" stroke="#777" stroke-width="0.9"/>
+    </pattern>
+    <style>
+      text { fill:#222; }
+      .halo { paint-order: stroke; stroke:#ffffff; stroke-width:4; stroke-linejoin:round; }
+      .lbl { font-size:13px; }
+      .lblb { font-size:13px; font-weight:bold; }
+      .small { font-size:12px; }
+    </style>
+  </defs>
+
+  <!-- view badge -->
+  <rect x="12" y="10" width="346" height="62" fill="#ffffff" stroke="#444" stroke-width="1.5"/>
+  <text x="24" y="30" class="lblb">PLAN · wall-plate level — looking down</text>
+  <text x="24" y="47" class="lbl">horizontal cut just below the plate tops</text>
+  <text x="24" y="64" class="small">cut line B–B: the section is shown in Fig 11.2</text>
+
+  <!-- orientation -->
+  <text x="440" y="84" class="lblb halo" text-anchor="middle">FRONT — street side (high side of the roof)</text>
+  <text x="440" y="432" class="lblb halo" text-anchor="middle">BACK (low side)</text>
+
+  <!-- wall footprint below the cut (dashed) -->
+  <rect x="110.8" y="177" width="652.8" height="182" fill="none" stroke="#8c8c8c"
+        stroke-width="1.2" stroke-dasharray="8,5"/>
+
+  <!-- double top plates, cut by the plane (hatched) -->
+  <g stroke="#666" stroke-width="1.2">
+    <rect x="110.8" y="167.2" width="652.8" height="9.8" fill="#e9e9e9"/>
+    <rect x="122.8" y="359" width="628.9" height="9.8" fill="#e9e9e9"/>
+    <rect x="110.8" y="177" width="12" height="191.8" fill="#e9e9e9"/>
+    <rect x="751.7" y="177" width="11.9" height="191.8" fill="#e9e9e9"/>
+  </g>
+  <g fill="url(#h11p)" stroke="none">
+    <rect x="110.8" y="167.2" width="652.8" height="9.8"/>
+    <rect x="122.8" y="359" width="628.9" height="9.8"/>
+    <rect x="110.8" y="177" width="12" height="191.8"/>
+    <rect x="751.7" y="177" width="11.9" height="191.8"/>
+  </g>
+  <text x="117" y="330" class="small halo" transform="rotate(-90 117 330)">side-wall double top plates</text>
+
+  <!-- future fascia (dashed, Stage 9) -->
+  <g fill="none" stroke="#8c8c8c" stroke-width="1.2" stroke-dasharray="8,5">
+    <rect x="70" y="95.6" width="734.4" height="4.2"/>
+    <rect x="70" y="402.4" width="734.4" height="4.2"/>
+  </g>
+  <text x="74" y="93" class="small halo">front fascia — Stage 9 (future work, dashed)</text>
+  <text x="74" y="420" class="small halo">back fascia — Stage 9 (future work, dashed)</text>
+
+  <!-- NEW WORK: 13 rafters on their marks -->
+  <g fill="#d9a441" stroke="#6b4f16" stroke-width="1.2">
+    <rect x="110.8" y="99.8" width="5.1" height="302.6"/>
+    <rect x="164.78" y="99.8" width="5.1" height="302.6"/>
+    <rect x="218.75" y="99.8" width="5.1" height="302.6"/>
+    <rect x="272.73" y="99.8" width="5.1" height="302.6"/>
+    <rect x="326.7" y="99.8" width="5.1" height="302.6"/>
+    <rect x="380.68" y="99.8" width="5.1" height="302.6"/>
+    <rect x="434.65" y="99.8" width="5.1" height="302.6"/>
+    <rect x="488.63" y="99.8" width="5.1" height="302.6"/>
+    <rect x="542.6" y="99.8" width="5.1" height="302.6"/>
+    <rect x="596.58" y="99.8" width="5.1" height="302.6"/>
+    <rect x="650.55" y="99.8" width="5.1" height="302.6"/>
+    <rect x="704.53" y="99.8" width="5.1" height="302.6"/>
+    <rect x="758.5" y="99.8" width="5.1" height="302.6"/>
+  </g>
+
+  <!-- spacing dimension -->
+  <line x1="113.35" y1="192" x2="167.33" y2="192" stroke="#555" stroke-width="1"
+        marker-start="url(#dimAs)" marker-end="url(#dimA)"/>
+  <text x="140" y="210" class="lbl halo" text-anchor="middle">15⅞″ o.c.</text>
+  <text x="212" y="130" class="lbl halo">first rafter over the left rake wall —</text>
+  <text x="212" y="146" class="lbl halo">its centre is ¾″ from the plate's left end</text>
+  <line x1="210" y1="134" x2="116" y2="108" stroke="#555" stroke-width="1"/>
+
+  <!-- member label + attachment arrow -->
+  <text x="270" y="270" class="lblb halo">13 × rafter · 2×6 · 9' 7⅜″</text>
+  <text x="270" y="288" class="lbl halo">centres marked on BOTH plates</text>
+  <line x1="380" y1="258" x2="384" y2="182" stroke="#1a6fb0" stroke-width="1.8"
+        marker-end="url(#attA)"/>
+  <text x="396" y="240" class="small halo" fill="#1a6fb0">each rafter seats on both plates</text>
+
+  <!-- cut line B-B -->
+  <line x1="491.15" y1="76" x2="491.15" y2="424" stroke="#222" stroke-width="1.6"
+        stroke-dasharray="14,5,3,5"/>
+  <line x1="505" y1="70" x2="479" y2="70" stroke="#222" stroke-width="1.6" marker-end="url(#secA)"/>
+  <text x="509" y="74" class="lblb">B</text>
+  <line x1="505" y1="430" x2="479" y2="430" stroke="#222" stroke-width="1.6" marker-end="url(#secA)"/>
+  <text x="509" y="434" class="lblb">B</text>
+
+  <!-- layout marks text -->
+  <text x="70" y="452" class="lbl halo">mark rafter centres on BOTH plates, measured from the left end of the front double top plate:</text>
+  <text x="70" y="470" class="lbl halo">¾″, 16⅝″, 32½″, 48⅜″ and so on — every 15⅞″ out to 191¼″. The back plate starts 3½″ inboard — subtract 3½″ from each reading.</text>
+  <text x="70" y="488" class="small halo">first and last rafters sit over the rake walls; their back seats land on the side walls' double top plates.</text>
+</svg>
