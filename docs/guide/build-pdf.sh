@@ -88,6 +88,10 @@ def parse_front_matter(text):
 
 
 def inline(s):
+    # markdown backslash escapes (\" etc.) must not reach the paper; the
+    # guide's quoted-inch idiom "…\"" renders as a single closing quote
+    s = s.replace('\\""', '"')
+    s = re.sub(r'\\(["`*\\])', r'\1', s)
     s = html.escape(s, quote=False)
     s = re.sub(r'`([^`]+)`', r'<code>\1</code>', s)
     s = re.sub(r'\*\*([^*]+)\*\*', r'<strong>\1</strong>', s)
@@ -128,7 +132,9 @@ def convert(md_text):
 
     def flush_para():
         if para:
-            out.append("<p>" + " ".join(inline(p) for p in para) + "</p>")
+            # join wrapped source lines first, then mark up: emphasis spans
+            # that wrap across a line break must survive as one span
+            out.append("<p>" + inline(" ".join(para)) + "</p>")
             para.clear()
 
     while i < len(lines):
@@ -201,10 +207,19 @@ def convert(md_text):
             items = []
             while i < len(lines):
                 mm = re.match(r'^(\s*)([-*]|\d+\.)\s+(.*)$', lines[i])
-                if not mm:
-                    break
-                items.append((len(mm.group(1)), mm.group(3)))
-                i += 1
+                if mm:
+                    items.append([len(mm.group(1)), mm.group(3)])
+                    i += 1
+                    continue
+                # hard-wrapped continuation of the previous item: indented,
+                # not a new bullet, not another block start
+                s = lines[i].strip()
+                if (s and lines[i][:1] in (' ', '\t') and items
+                        and not re.match(r'^(#{1,4}\s|>|!\[|\||---)', s)):
+                    items[-1][1] += ' ' + s
+                    i += 1
+                    continue
+                break
             tag = "ol" if ordered else "ul"
             buf = [f"<{tag}>"]
             depth = 0
