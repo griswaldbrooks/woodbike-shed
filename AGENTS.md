@@ -64,6 +64,21 @@ Integrated 2026-08-13 on `fm/woodbike-shed-guide-integration`; the
 integration report (figure verdicts, PDF true-size proof) lives in
 firstmate's `data/woodbike-shed-guide-integration/report.md`.
 
+## GitHub Pages site (docs/)
+
+`docs/` is the Pages source: native Jekyll build, `theme: minima`,
+`jekyll-relative-links` rewrites the guide's `.md` links and figure refs to
+baseurl-absolute URLs; the landing page `docs/index.md` reuses the body of
+`guide/index.md`, and guide pages get the `_layouts/guide.html` prev/next
+pager via config `defaults` (their front matter is untouched). Not yet
+enabled — publishing is the captain's call: Settings → Pages → Deploy from a
+branch → `main` / `/docs`, URL https://griswaldbrooks.github.io/woodbike-shed/.
+Local verification build (user-space Ruby, nothing installed system-wide):
+`.scratch/rbenv` (3.3.7) + `GEM_HOME=.scratch/gems` (github-pages 232),
+`cd docs && $GEM_HOME/bin/jekyll build`. Browser checks:
+`.scratch/sitecheck/` (`serve.mjs` + `verify.mjs`, playwright-core against
+the cached chromium).
+
 ## Onshape API sharp edges (learned the hard way)
 
 - `onshape.py` does signed GET/POST/PATCH/DELETE; pass a JSON body as 3rd

@@ -1,0 +1,44 @@
+---
+layout: default
+---
+{%- comment -%}
+Layout for one guide page. The guide pages carry their own H1 and content;
+this layout adds the stage bar on top and the prev/next pager below.
+
+page.prev / page.next are .md filenames of sibling guide pages (see each
+page's front matter). URLs are derived directly from those filenames so the
+pager keeps working exactly as the PDF build's canonical reading order does.
+{%- endcomment -%}
+
+{%- if page.prev == "index.md" -%}
+  {%- assign prev_url = "/guide/" -%}
+{%- elsif page.prev -%}
+  {%- assign prev_url = page.prev | replace: ".md", ".html" | prepend: "/guide/" -%}
+{%- endif -%}
+{%- if page.next == "index.md" -%}
+  {%- assign next_url = "/guide/" -%}
+{%- elsif page.next -%}
+  {%- assign next_url = page.next | replace: ".md", ".html" | prepend: "/guide/" -%}
+{%- endif -%}
+{%- if prev_url -%}
+  {%- assign prev_page = site.pages | where: "url", prev_url | first -%}
+{%- endif -%}
+{%- if next_url -%}
+  {%- assign next_page = site.pages | where: "url", next_url | first -%}
+{%- endif -%}
+
+<div class="guide-stage-bar">
+  <a class="guide-crumb" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a>
+  {%- if page.stage %}<span class="guide-stage">{{ page.stage | escape }}</span>{% endif -%}
+</div>
+
+{{ content }}
+
+<nav class="guide-pager" aria-label="Guide navigation">
+  {%- if prev_page %}
+  <a class="guide-pager-link guide-pager-prev" href="{{ prev_url | relative_url }}" rel="prev"><span class="guide-pager-dir">Previous</span> &larr; {{ prev_page.title | default: prev_page.name | escape }}</a>
+  {%- else %}<span></span>{% endif -%}
+  {%- if next_page %}
+  <a class="guide-pager-link guide-pager-next" href="{{ next_url | relative_url }}" rel="next"><span class="guide-pager-dir">Next</span> {{ next_page.title | default: next_page.name | escape }} &rarr;</a>
+  {%- endif %}
+</nav>

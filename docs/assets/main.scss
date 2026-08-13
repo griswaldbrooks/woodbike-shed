@@ -1,0 +1,98 @@
+---
+# The front matter dashes make Jekyll run this through the Sass pipeline.
+---
+
+// Minima variable overrides: this guide is read on a phone, outdoors.
+// Larger base text and a darker link blue than minima's default.
+$base-font-size: 18px;
+$brand-color: #1a5296;
+
+@import "minima";
+
+/* ---- guide chrome ------------------------------------------------------ */
+
+/* Stage bar above each page: where you are in the build. */
+.guide-stage-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid $grey-color-light;
+}
+
+.guide-crumb {
+  font-weight: 700;
+  color: $text-color;
+
+  &:visited {
+    color: $text-color;
+  }
+}
+
+.guide-stage {
+  flex-shrink: 0;
+  font-size: 0.78em;
+  font-weight: 600;
+  color: #fff;
+  background-color: $brand-color;
+  padding: 0.25em 0.8em;
+  border-radius: 1em;
+  white-space: nowrap;
+}
+
+/* Prev/next pager at the foot of every page: big tap targets. */
+.guide-pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 1.25rem;
+  border-top: 2px solid $grey-color-light;
+}
+
+.guide-pager-link {
+  flex: 1 1 0;
+  padding: 0.8em 1em;
+  border: 1px solid $grey-color-light;
+  border-radius: 8px;
+  background-color: #f7f9fc;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.guide-pager-next {
+  text-align: right;
+}
+
+.guide-pager-dir {
+  display: block;
+  font-size: 0.72em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $grey-color;
+}
+
+/* ---- content fit on narrow screens -------------------------------------- */
+
+/* Tables keep their layout but scroll within themselves, never the page. */
+.page-content table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* Figures scale down to the viewport; SVGs keep their aspect. */
+.page-content img,
+.page-content svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Footnote-sized footer text. */
+.footer-col-small {
+  font-size: 0.85em;
+  color: $grey-color-dark;
+}

@@ -1,0 +1,6 @@
+source "https://rubygems.org"
+
+# Local reproduction of the GitHub Pages build only - GitHub builds the site
+# itself with its own pinned versions of exactly this gem. Nothing else is
+# needed; the theme (minima) and plugins ride along with github-pages.
+gem "github-pages", group: :jekyll_plugins

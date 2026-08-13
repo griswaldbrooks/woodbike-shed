@@ -1,0 +1,26 @@
+---
+layout: default
+---
+{%- comment -%}
+Site-root landing page: renders the guide's Start Here page (guide/index.md)
+so the URL lands on real content instead of a file listing. Its links and
+figures are rewritten to baseurl-absolute URLs by jekyll-relative-links, so
+the body works unchanged at the site root.
+{%- endcomment -%}
+
+{%- assign start = site.pages | where: "url", "/guide/" | first -%}
+{%- if start.next == "index.md" -%}
+  {%- assign next_url = "/guide/" -%}
+{%- elsif start.next -%}
+  {%- assign next_url = start.next | replace: ".md", ".html" | prepend: "/guide/" -%}
+{%- endif -%}
+{%- assign next_page = site.pages | where: "url", next_url | first -%}
+
+{{ start.content }}
+
+<nav class="guide-pager" aria-label="Guide navigation">
+  <span></span>
+  {%- if next_page %}
+  <a class="guide-pager-link guide-pager-next" href="{{ next_url | relative_url }}" rel="next"><span class="guide-pager-dir">Next</span> {{ next_page.title | escape }} &rarr;</a>
+  {%- endif %}
+</nav>

@@ -1,0 +1,50 @@
+# Jekyll configuration for the GitHub Pages site served from this folder.
+# GitHub Pages builds this folder with its own pinned toolchain (the
+# `github-pages` gem); everything configured here is natively supported there.
+# Local build: cd docs && bundle install && bundle exec jekyll serve
+# (see AGENTS.md at the repo root).
+
+title: Woodbike Shed Build Guide
+description: >-
+  Build a 16 ft × 6 ft wood bike shed stage by stage, from bare ground to
+  hung doors. One page per stage, with a drawn figure at every step.
+
+# Project pages are served under /woodbike-shed/ on github.io; keep both
+# explicit so local builds match production exactly.
+url: "https://griswaldbrooks.github.io"
+baseurl: "/woodbike-shed"
+
+theme: minima
+
+plugins:
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: false
+
+# Only the landing page belongs in the site header; the guide's pages are
+# reached through its own prev/next pager.
+header_pages:
+  - index.md
+
+defaults:
+  - scope:
+      path: "guide"
+    values:
+      layout: "guide"
+
+# Internal build machinery that has no place on the website. (Setting
+# `exclude` replaces Jekyll's defaults, so the standard entries stay listed.)
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .sass-cache
+  - .jekyll-cache
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - guide/build-pdf.sh
+  - guide/assets
