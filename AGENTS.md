@@ -51,7 +51,13 @@ Multi-page Markdown rewrite of the build guide (worker branches, 2026-08-13;
 old single page at `docs/build-guide.html`, tag `guide-v1-single-page`): pages
 + figures live in `docs/guide/`; the shared conventions (page list, front
 matter, figure and number rules) are the human-facing `docs/guide/conventions.md`;
-`docs/guide/build-pdf.sh` assembles the canonical-order PDF via WeasyPrint.
+`docs/guide/build-pdf.sh` assembles the canonical-order PDF via WeasyPrint;
+it joins figure refs wrapped over source lines, and the birdsmouth template
+(Fig 11.3) prints 1:1 on its own zero-margin named page (`figure.truesize`
+in `assets/guide.css`) — keep any new full-size template on that mechanism.
+Integrated 2026-08-13 on `fm/woodbike-shed-guide-integration`; the
+integration report (figure verdicts, PDF true-size proof) lives in
+firstmate's `data/woodbike-shed-guide-integration/report.md`.
 
 ## Onshape API sharp edges (learned the hard way)
 
