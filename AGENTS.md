@@ -55,6 +55,11 @@ matter, figure and number rules) are the human-facing `docs/guide/conventions.md
 it joins figure refs wrapped over source lines, and the birdsmouth template
 (Fig 11.3) prints 1:1 on its own zero-margin named page (`figure.truesize`
 in `assets/guide.css`) — keep any new full-size template on that mechanism.
+The authoring method behind `docs/guide/` (page template, number rules,
+figure spec incl. the anti-ambiguity test, sourced principles, worked
+example) is the agent skill `.agents/skills/shed-build-guide/SKILL.md` —
+every change to the guide follows it; `.claude/skills` symlinks
+`.agents/skills`.
 Integrated 2026-08-13 on `fm/woodbike-shed-guide-integration`; the
 integration report (figure verdicts, PDF true-size proof) lives in
 firstmate's `data/woodbike-shed-guide-integration/report.md`.
