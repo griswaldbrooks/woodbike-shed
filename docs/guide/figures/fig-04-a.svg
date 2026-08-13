@@ -1,0 +1,138 @@
+<svg viewBox="0 0 780 620" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <!-- Fig 4.1 — foundation layout, plan.
+       model trace: footprint x -3.5..188.5, y -3.5..68.5 (192" x 72"); skid lines y -3.5..0 and 65..68.5;
+       block centers x 2.5/62.5/122.5/182.5 on y -1.75 and 66.75 (tape 6" / 5'-6" / 10'-6" / 15'-6" from left end,
+       rows 5' 8½" c/c); mapping X(x)=100+(x+3.5)*3.2, Y(y)=200+(y+3.5)*3.2 -->
+  <rect width="780" height="620" fill="#ffffff"/>
+  <defs>
+    <marker id="dim04a" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#444"/></marker>
+    <marker id="dim04as" markerWidth="10" markerHeight="8" refX="1" refY="4" orient="auto"><path d="M10,0 L0,4 L10,8 Z" fill="#444"/></marker>
+    <pattern id="pit04a" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="9" height="9" fill="#efe9db"/>
+      <line x1="0" y1="0" x2="0" y2="9" stroke="#b3a888" stroke-width="1.4"/>
+    </pattern>
+  </defs>
+
+  <!-- view badge -->
+  <g>
+    <rect x="16" y="14" width="350" height="92" fill="#faf8f2" stroke="#2b2b2b" stroke-width="2" rx="6"/>
+    <text x="30" y="40" font-size="19" font-weight="bold" fill="#2b2b2b">PLAN</text>
+    <text x="30" y="64" font-size="14" fill="#2b2b2b">looking straight DOWN from above</text>
+    <text x="30" y="86" font-size="14" fill="#2b2b2b">FRONT (street) at top · cut at grade</text>
+  </g>
+
+  <text x="407" y="150" text-anchor="middle" font-size="15" font-weight="bold" fill="#2b2b2b">FRONT — street side (tall wall, doors)</text>
+
+  <!-- footprint outline: future walls, dashed -->
+  <rect x="100" y="200" width="614.4" height="230.4" fill="none" stroke="#8a8a8a" stroke-width="2" stroke-dasharray="10,6"/>
+  <text x="407" y="330" text-anchor="middle" font-size="13" fill="#8a8a8a">16 ft × 6 ft footprint — the walls will sit on the deck above (dashed = future)</text>
+
+  <!-- gravel pockets, hatched = material removed -->
+  <g fill="url(#pit04a)" stroke="#8a7c55" stroke-width="2">
+    <rect x="80.8" y="167.2" width="76.8" height="76.8"/>
+    <rect x="272.8" y="167.2" width="76.8" height="76.8"/>
+    <rect x="464.8" y="167.2" width="76.8" height="76.8"/>
+    <rect x="656.8" y="167.2" width="76.8" height="76.8"/>
+    <rect x="80.8" y="386.4" width="76.8" height="76.8"/>
+    <rect x="272.8" y="386.4" width="76.8" height="76.8"/>
+    <rect x="464.8" y="386.4" width="76.8" height="76.8"/>
+    <rect x="656.8" y="386.4" width="76.8" height="76.8"/>
+  </g>
+
+  <!-- pavers -->
+  <g fill="#c9c9c1" stroke="#77776c" stroke-width="1.6">
+    <rect x="92" y="178.4" width="54.4" height="54.4"/>
+    <rect x="284" y="178.4" width="54.4" height="54.4"/>
+    <rect x="476" y="178.4" width="54.4" height="54.4"/>
+    <rect x="668" y="178.4" width="54.4" height="54.4"/>
+    <rect x="92" y="397.6" width="54.4" height="54.4"/>
+    <rect x="284" y="397.6" width="54.4" height="54.4"/>
+    <rect x="476" y="397.6" width="54.4" height="54.4"/>
+    <rect x="668" y="397.6" width="54.4" height="54.4"/>
+  </g>
+
+  <!-- tuff blocks -->
+  <g fill="#4a4a4a" stroke="#2b2b2b" stroke-width="1.6">
+    <rect x="103.2" y="189.6" width="32" height="32" rx="2"/>
+    <rect x="295.2" y="189.6" width="32" height="32" rx="2"/>
+    <rect x="487.2" y="189.6" width="32" height="32" rx="2"/>
+    <rect x="679.2" y="189.6" width="32" height="32" rx="2"/>
+    <rect x="103.2" y="408.8" width="32" height="32" rx="2"/>
+    <rect x="295.2" y="408.8" width="32" height="32" rx="2"/>
+    <rect x="487.2" y="408.8" width="32" height="32" rx="2"/>
+    <rect x="679.2" y="408.8" width="32" height="32" rx="2"/>
+  </g>
+
+  <!-- skid lines: future this page, dashed -->
+  <g fill="none" stroke="#8B6914" stroke-width="2.2" stroke-dasharray="9,5">
+    <rect x="100" y="200" width="614.4" height="11.2"/>
+    <rect x="100" y="419.2" width="614.4" height="11.2"/>
+  </g>
+  <text x="430" y="228" font-size="13" fill="#8B6914">front skid line — 4×4 · 16 ft, no splice</text>
+  <text x="430" y="414" font-size="13" fill="#8B6914">back skid line</text>
+
+  <!-- drop symbols: parts land by gravity -->
+  <g stroke="#c0392b" stroke-width="2" fill="none">
+    <circle cx="349" cy="205.6" r="7"/><line x1="344" y1="200.6" x2="354" y2="210.6"/><line x1="354" y1="200.6" x2="344" y2="210.6"/>
+    <circle cx="349" cy="424.8" r="7"/><line x1="344" y1="419.8" x2="354" y2="429.8"/><line x1="354" y1="419.8" x2="344" y2="429.8"/>
+  </g>
+  <text x="362" y="243" font-size="13" fill="#c0392b">each skid drops DOWN onto its four blocks</text>
+
+  <!-- cut line B-B, viewed toward the right end -->
+  <line x1="119.2" y1="130" x2="119.2" y2="478" stroke="#333" stroke-width="2.6" stroke-dasharray="14,5,3,5"/>
+  <path d="M138,126 L126,120 L126,132 Z" fill="#333"/>
+  <path d="M138,482 L126,476 L126,488 Z" fill="#333"/>
+  <text x="146" y="131" font-size="15" font-weight="bold" fill="#333">B</text>
+  <text x="146" y="487" font-size="15" font-weight="bold" fill="#333">B</text>
+  <text x="164" y="131" font-size="13" fill="#333">B–B → section of one pocket, Fig 4.2</text>
+
+  <!-- block-spacing dimension chain, tape from the left-end corner -->
+  <g stroke="#999" stroke-width="1">
+    <line x1="100" y1="434" x2="100" y2="502"/>
+    <line x1="119.2" y1="466" x2="119.2" y2="502"/>
+    <line x1="311.2" y1="466" x2="311.2" y2="502"/>
+    <line x1="503.2" y1="466" x2="503.2" y2="502"/>
+    <line x1="695.2" y1="466" x2="695.2" y2="502"/>
+    <line x1="714.4" y1="434" x2="714.4" y2="502"/>
+  </g>
+  <line x1="100" y1="502" x2="714.4" y2="502" stroke="#444" stroke-width="1.4" marker-start="url(#dim04as)" marker-end="url(#dim04a)"/>
+  <g font-size="13" fill="#444" text-anchor="middle">
+    <text x="109.6" y="496">6 in</text>
+    <text x="215.2" y="522">5 ft</text>
+    <text x="407.2" y="522">5 ft</text>
+    <text x="599.2" y="522">5 ft</text>
+    <text x="704.8" y="496">6 in</text>
+  </g>
+  <g font-size="13" fill="#2b2b2b" text-anchor="middle" font-weight="bold">
+    <text x="132" y="460">6 in</text>
+    <text x="311.2" y="460">5 ft 6 in</text>
+    <text x="503.2" y="460">10 ft 6 in</text>
+    <text x="695.2" y="460">15 ft 6 in</text>
+  </g>
+  <text x="407" y="545" text-anchor="middle" font-size="13" fill="#555">pocket centers, read on the tape from the LEFT-end corner</text>
+
+  <!-- skid row spacing -->
+  <line x1="735" y1="205.6" x2="735" y2="424.8" stroke="#444" stroke-width="1.4" marker-start="url(#dim04as)" marker-end="url(#dim04a)"/>
+  <line x1="716" y1="205.6" x2="742" y2="205.6" stroke="#999" stroke-width="1"/>
+  <line x1="716" y1="424.8" x2="742" y2="424.8" stroke="#999" stroke-width="1"/>
+  <text x="752" y="315" font-size="13" fill="#444" transform="rotate(90,752,315)" text-anchor="middle">skid rows 5 ft 8½ in apart, centre to centre</text>
+
+  <!-- end markers -->
+  <text x="70" y="430" font-size="13" fill="#2b2b2b" transform="rotate(-90,70,430)">LEFT END — tape zero</text>
+  <text x="770" y="430" font-size="13" fill="#2b2b2b" transform="rotate(-90,770,430)">RIGHT END</text>
+
+  <!-- legend -->
+  <g font-size="13" fill="#444">
+    <rect x="130" y="576" width="520" height="34" fill="#fafaf8" stroke="#ddd" rx="5"/>
+    <rect x="142" y="586" width="18" height="14" fill="url(#pit04a)" stroke="#8a7c55" stroke-width="1.4"/>
+    <text x="166" y="597">gravel pocket (hatched = dug out)</text>
+    <rect x="404" y="586" width="18" height="14" fill="#c9c9c1" stroke="#77776c"/>
+    <text x="428" y="597">paver</text>
+    <rect x="478" y="586" width="14" height="14" fill="#4a4a4a"/>
+    <text x="498" y="597">Tuff Block</text>
+    <circle cx="592" cy="593" r="6" fill="none" stroke="#c0392b" stroke-width="1.6"/>
+    <line x1="587.8" y1="588.8" x2="596.2" y2="597.2" stroke="#c0392b" stroke-width="1.6"/>
+    <line x1="596.2" y1="588.8" x2="587.8" y2="597.2" stroke="#c0392b" stroke-width="1.6"/>
+    <text x="606" y="597">drops DOWN</text>
+  </g>
+</svg>

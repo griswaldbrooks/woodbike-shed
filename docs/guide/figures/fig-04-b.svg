@@ -1,0 +1,118 @@
+<svg viewBox="0 0 780 600" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <!-- Fig 4.2 — one gravel pocket, section cut across the front skid at a block.
+       model trace: skid z -9.75..-6.25 (3½"), rim/joists z -6.25..-0.75 (5½"), OSB -0.75..0;
+       pocket ≥24" sq, 8–12" typical depth to firm subsoil; shim limit ½" at block top only.
+       Block and paver heights schematic (not modeled). Scale 4 px/in. -->
+  <rect width="780" height="600" fill="#ffffff"/>
+  <defs>
+    <marker id="dim04b" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#444"/></marker>
+    <marker id="dim04bs" markerWidth="10" markerHeight="8" refX="1" refY="4" orient="auto"><path d="M10,0 L0,4 L10,8 Z" fill="#444"/></marker>
+    <pattern id="soil04b" width="10" height="10" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="#e8e0cd"/>
+      <path d="M0,10 L10,0" stroke="#b8a880" stroke-width="1"/>
+    </pattern>
+    <pattern id="firm04b" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#d9cba8"/>
+      <path d="M0,8 L8,0" stroke="#a08c5c" stroke-width="1.3"/>
+      <path d="M-2,2 L2,-2" stroke="#a08c5c" stroke-width="1.3"/>
+    </pattern>
+    <pattern id="gravel04b" width="14" height="12" patternUnits="userSpaceOnUse">
+      <rect width="14" height="12" fill="#f4f2ea"/>
+      <circle cx="3" cy="3" r="1.8" fill="#a8a294"/>
+      <circle cx="10" cy="8" r="2.2" fill="#b5af9f"/>
+      <circle cx="6" cy="10" r="1.4" fill="#9c9688"/>
+    </pattern>
+  </defs>
+
+  <!-- view badge -->
+  <g>
+    <rect x="16" y="14" width="356" height="106" fill="#faf8f2" stroke="#2b2b2b" stroke-width="2" rx="6"/>
+    <text x="30" y="40" font-size="19" font-weight="bold" fill="#2b2b2b">SECTION B–B</text>
+    <text x="30" y="64" font-size="14" fill="#2b2b2b">cut across the front skid at a block (Fig 4.1)</text>
+    <text x="30" y="84" font-size="14" fill="#2b2b2b">viewed toward the RIGHT end</text>
+    <text x="30" y="106" font-size="14" fill="#2b2b2b">gravity ↓ DOWN</text>
+  </g>
+  <g font-size="13.5" fill="#555">
+    <text x="396" y="40">load path: joist → rim → skid → block</text>
+    <text x="396" y="60">→ paver → gravel → firm soil</text>
+  </g>
+
+  <!-- gravity arrow -->
+  <line x1="712" y1="150" x2="712" y2="248" stroke="#2b2b2b" stroke-width="3"/>
+  <path d="M712,262 L703,244 L721,244 Z" fill="#2b2b2b"/>
+  <text x="712" y="284" text-anchor="middle" font-size="15" font-weight="bold" fill="#2b2b2b">DOWN</text>
+
+  <!-- soil: soft band + firm subsoil, hatched = cut material -->
+  <rect x="60" y="330" width="660" height="40" fill="url(#soil04b)"/>
+  <rect x="60" y="370" width="660" height="90" fill="url(#firm04b)"/>
+  <line x1="60" y1="370" x2="720" y2="370" stroke="#8f7f5e" stroke-width="2"/>
+  <text x="150" y="355" font-size="13" font-style="italic" fill="#8a7c63">soft soil</text>
+  <text x="150" y="420" font-size="13" font-style="italic" fill="#7a6a4c">firm subsoil</text>
+
+  <!-- grade line -->
+  <line x1="60" y1="330" x2="720" y2="330" stroke="#5d7c3f" stroke-width="2.6"/>
+  <text x="66" y="322" font-size="14" font-weight="bold" fill="#5d7c3f">grade</text>
+  <text x="520" y="322" font-size="13" fill="#5d7c3f">grade falls away from the shed</text>
+
+  <!-- pocket: gravel fill + fabric -->
+  <rect x="342" y="330" width="96" height="40" fill="url(#gravel04b)" stroke="#8a8578" stroke-width="2"/>
+  <path d="M342,318 L342,370 L438,370 L438,318" fill="none" stroke="#b06a2c" stroke-width="2" stroke-dasharray="8,4"/>
+  <text x="452" y="360" font-size="13" fill="#444">¾ in angular crushed stone —</text>
+  <text x="452" y="376" font-size="13" fill="#444">3 in lifts, tamp each one</text>
+  <text x="452" y="336" font-size="13" fill="#b06a2c">fabric lapped up the sides</text>
+
+  <!-- paver -->
+  <rect x="356" y="318" width="68" height="12" fill="#c9c9c1" stroke="#77776c" stroke-width="1.8"/>
+
+  <!-- tuff block with slot -->
+  <path d="M356,318 L356,274 L378,274 L378,286 L402,286 L402,274 L424,274 L424,318 Z" fill="#5a5a5a" stroke="#2b2b2b" stroke-width="2"/>
+
+  <!-- string line at block tops -->
+  <line x1="80" y1="274" x2="700" y2="274" stroke="#c0392b" stroke-width="2"/>
+  <rect x="80" y="252" width="330" height="18" fill="#ffffff" fill-opacity="0.85"/>
+  <text x="84" y="266" font-size="14" font-weight="bold" fill="#c0392b">string line — all 8 block tops to this ONE plane</text>
+
+  <!-- future work above the block: dashed -->
+  <g fill="none" stroke="#666" stroke-width="2" stroke-dasharray="7,4">
+    <rect x="383" y="260" width="14" height="14"/>
+    <rect x="383" y="238" width="6" height="22"/>
+    <rect x="390" y="238" width="6" height="22"/>
+    <line x1="372" y1="234" x2="440" y2="234"/>
+  </g>
+  <text x="452" y="246" font-size="13" fill="#666">later: 4×4 skid, then 2×6 rim + floor joists,</text>
+  <text x="452" y="262" font-size="13" fill="#666">then the deck (dashed = not built yet, Stage 2)</text>
+
+  <!-- shim note -->
+  <path d="M470,292 L404,278" stroke="#777" stroke-width="1.2" fill="none"/>
+  <text x="476" y="298" font-size="13" fill="#444">shim here only — and never more than ½ in</text>
+
+  <!-- drop arrows -->
+  <g stroke="#c0392b" stroke-width="2.2">
+    <line x1="346" y1="286" x2="346" y2="310" marker-end="url(#dim04b)"/>
+    <line x1="346" y1="336" x2="346" y2="358" marker-end="url(#dim04b)"/>
+  </g>
+  <text x="336" y="290" text-anchor="end" font-size="13" fill="#c0392b">block drops onto paver</text>
+
+  <!-- depth dimension -->
+  <line x1="316" y1="330" x2="316" y2="370" stroke="#444" stroke-width="1.4" marker-start="url(#dim04bs)" marker-end="url(#dim04b)"/>
+  <line x1="316" y1="330" x2="338" y2="330" stroke="#999" stroke-width="1"/>
+  <line x1="316" y1="370" x2="338" y2="370" stroke="#999" stroke-width="1"/>
+  <text x="306" y="356" text-anchor="end" font-size="13" fill="#444">8–12 in typical — dig to FIRM soil</text>
+
+  <!-- pocket width dimension -->
+  <line x1="342" y1="388" x2="438" y2="388" stroke="#444" stroke-width="1.4" marker-start="url(#dim04bs)" marker-end="url(#dim04b)"/>
+  <line x1="342" y1="372" x2="342" y2="392" stroke="#999" stroke-width="1"/>
+  <line x1="438" y1="372" x2="438" y2="392" stroke="#999" stroke-width="1"/>
+  <rect x="238" y="396" width="304" height="18" fill="#ffffff" fill-opacity="0.85"/>
+  <text x="390" y="410" text-anchor="middle" font-size="13" fill="#444">24 in minimum — wider is better on soft ground</text>
+
+  <!-- grade notes -->
+  <path d="M340,322 L300,310" stroke="#777" stroke-width="1.2" fill="none"/>
+  <text x="150" y="306" font-size="13" fill="#444">keep pocket top at or above finished grade</text>
+  <text x="520" y="440" font-size="13.5" font-weight="bold" fill="#7a6a4c">probe here first to find firm soil</text>
+
+  <!-- bottom notes -->
+  <rect x="60" y="490" width="660" height="66" fill="#fdf6ec" stroke="#e0cba8" stroke-width="1.5" rx="6"/>
+  <text x="76" y="516" font-size="14" fill="#7a5c2e">Dig each pocket to firm soil, not to a fixed depth — the depth varies across the footprint.</text>
+  <text x="76" y="540" font-size="14" fill="#7a5c2e">Set all eight block tops to ONE common plane with the string line — not one level reading per block.</text>
+</svg>

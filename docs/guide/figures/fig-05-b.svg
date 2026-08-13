@@ -1,0 +1,134 @@
+<svg viewBox="0 0 780 560" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <!-- Fig 5.2 — floor build-up, section C-C cut through joist 10 at tape 128¾ in, viewed toward the LEFT end.
+       model trace: OSB z -0.75..0; rims/joists z -6.25..-0.75 (5½"); skids z -9.75..-6.25 (3½");
+       deck top 9¾" above skid bottoms; blocks/pavers under both skid rows at tape 121..131 (block centers tape 126).
+       Scale 6.2 px/in; deck top at y 200; FRONT (street) at left. OSB thickness and block/paver heights schematic. -->
+  <rect width="780" height="560" fill="#ffffff"/>
+  <defs>
+    <marker id="dim05b" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#444"/></marker>
+    <marker id="dim05bs" markerWidth="10" markerHeight="8" refX="1" refY="4" orient="auto"><path d="M10,0 L0,4 L10,8 Z" fill="#444"/></marker>
+    <pattern id="soil05b" width="10" height="10" patternUnits="userSpaceOnUse">
+      <rect width="10" height="10" fill="#e8e0cd"/>
+      <path d="M0,10 L10,0" stroke="#b8a880" stroke-width="1"/>
+    </pattern>
+    <pattern id="firm05b" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#d9cba8"/>
+      <path d="M0,8 L8,0" stroke="#a08c5c" stroke-width="1.3"/>
+    </pattern>
+    <pattern id="greyh05b" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#e3e3e3"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#8a8a8a" stroke-width="1.5"/>
+    </pattern>
+    <pattern id="woodh05b" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="7" height="7" fill="#e8cf9f"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#8B6914" stroke-width="1.5"/>
+    </pattern>
+    <pattern id="gravel05b" width="14" height="12" patternUnits="userSpaceOnUse">
+      <rect width="14" height="12" fill="#f4f2ea"/>
+      <circle cx="3" cy="3" r="1.8" fill="#a8a294"/>
+      <circle cx="10" cy="8" r="2.2" fill="#b5af9f"/>
+      <circle cx="6" cy="10" r="1.4" fill="#9c9688"/>
+    </pattern>
+  </defs>
+
+  <!-- view badge -->
+  <g>
+    <rect x="16" y="14" width="430" height="106" fill="#faf8f2" stroke="#2b2b2b" stroke-width="2" rx="6"/>
+    <text x="30" y="40" font-size="19" font-weight="bold" fill="#2b2b2b">SECTION C–C</text>
+    <text x="30" y="64" font-size="14" fill="#2b2b2b">cut across the deck at joist 10, 128¾ in from the left end (Fig 5.1)</text>
+    <text x="30" y="84" font-size="14" fill="#2b2b2b">viewed toward the LEFT end · FRONT at left</text>
+    <text x="30" y="106" font-size="14" fill="#2b2b2b">gravity ↓ DOWN</text>
+  </g>
+
+  <!-- FRONT / BACK -->
+  <text x="120" y="150" font-size="15" font-weight="bold" fill="#2b2b2b">FRONT — street side</text>
+  <text x="566" y="150" text-anchor="end" font-size="15" font-weight="bold" fill="#2b2b2b">BACK</text>
+
+  <!-- datum line -->
+  <line x1="60" y1="200" x2="728" y2="200" stroke="#c0392b" stroke-width="3"/>
+  <g>
+    <text x="588" y="160" font-size="16" font-weight="bold" fill="#c0392b">DECK TOP = ZERO</text>
+    <text x="588" y="178" font-size="13.5" fill="#c0392b">every height in this guide</text>
+    <text x="588" y="194" font-size="13.5" fill="#c0392b">measures up from here</text>
+  </g>
+
+  <!-- future wall plate, dashed -->
+  <rect x="120" y="190.7" width="21.7" height="9.3" fill="none" stroke="#666" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="156" y="186" font-size="13" fill="#666">front wall bottom plate lands here — Stage 3 (dashed = future)</text>
+
+  <!-- floor stack-up: new work, colour hatch -->
+  <rect x="120" y="200" width="446.4" height="6" fill="url(#woodh05b)" stroke="#8B6914" stroke-width="2"/>
+  <rect x="120" y="206" width="9.3" height="34" fill="url(#woodh05b)" stroke="#8B6914" stroke-width="2"/>
+  <rect x="557.1" y="206" width="9.3" height="34" fill="url(#woodh05b)" stroke="#8B6914" stroke-width="2"/>
+  <rect x="338.5" y="206" width="9.4" height="34" fill="url(#woodh05b)" stroke="#8B6914" stroke-width="2"/>
+
+  <!-- skids: Stage 1, grey hatch -->
+  <rect x="120" y="240" width="21.7" height="21.7" fill="url(#greyh05b)" stroke="#666" stroke-width="2"/>
+  <rect x="544.7" y="240" width="21.7" height="21.7" fill="url(#greyh05b)" stroke="#666" stroke-width="2"/>
+
+  <!-- blocks + pavers: Stage 1, grey -->
+  <path d="M108,261.7 L99,323 L162,323 L153,261.7 Z" fill="url(#greyh05b)" stroke="#666" stroke-width="2"/>
+  <path d="M511,261.7 L502,323 L566,323 L556,261.7 Z" fill="url(#greyh05b)" stroke="#666" stroke-width="2"/>
+  <rect x="78" y="323" width="106" height="6" fill="url(#greyh05b)" stroke="#666" stroke-width="1.6"/>
+  <rect x="481" y="323" width="106" height="6" fill="url(#greyh05b)" stroke="#666" stroke-width="1.6"/>
+
+  <!-- grade -->
+  <line x1="40" y1="329" x2="740" y2="329" stroke="#5d7c3f" stroke-width="2.6"/>
+  <text x="44" y="322" font-size="14" font-weight="bold" fill="#5d7c3f">grade</text>
+
+  <!-- gravel pockets -->
+  <rect x="56.5" y="329" width="148.8" height="62" fill="url(#gravel05b)" stroke="#8a8578" stroke-width="2"/>
+  <rect x="461.3" y="329" width="148.8" height="62" fill="url(#gravel05b)" stroke="#8a8578" stroke-width="2"/>
+  <path d="M56.5,321 L56.5,391 L205.3,391 L205.3,321" fill="none" stroke="#b06a2c" stroke-width="1.8" stroke-dasharray="7,4"/>
+  <path d="M461.3,321 L461.3,391 L610.1,391 L610.1,321" fill="none" stroke="#b06a2c" stroke-width="1.8" stroke-dasharray="7,4"/>
+
+  <!-- soil -->
+  <rect x="40" y="329" width="16.5" height="62" fill="url(#soil05b)"/>
+  <rect x="205.3" y="329" width="256" height="62" fill="url(#soil05b)"/>
+  <rect x="610.1" y="329" width="130" height="62" fill="url(#soil05b)"/>
+  <rect x="40" y="391" width="700" height="76" fill="url(#firm05b)"/>
+  <line x1="40" y1="391" x2="740" y2="391" stroke="#8f7f5e" stroke-width="2"/>
+  <text x="333" y="364" text-anchor="middle" font-size="13" font-style="italic" fill="#8a7c63">soft soil (hatched = cut)</text>
+  <text x="640" y="430" font-size="13" font-style="italic" fill="#7a6a4c">firm subsoil</text>
+
+  <!-- 9¾ dim -->
+  <line x1="88" y1="200" x2="88" y2="261.7" stroke="#444" stroke-width="1.4" marker-start="url(#dim05bs)" marker-end="url(#dim05b)"/>
+  <line x1="88" y1="200" x2="116" y2="200" stroke="#999" stroke-width="1"/>
+  <line x1="88" y1="261.7" x2="116" y2="261.7" stroke="#999" stroke-width="1"/>
+  <g font-size="12.5" fill="#444" text-anchor="end">
+    <text x="82" y="222">9¾ in</text>
+    <text x="82" y="236">deck top to</text>
+    <text x="82" y="250">skid bottom</text>
+  </g>
+
+  <!-- gravity arrow -->
+  <line x1="748" y1="248" x2="748" y2="316" stroke="#2b2b2b" stroke-width="3"/>
+  <path d="M748,330 L739,312 L757,312 Z" fill="#2b2b2b"/>
+  <text x="748" y="352" text-anchor="middle" font-size="15" font-weight="bold" fill="#2b2b2b">DOWN</text>
+
+  <!-- leader labels: right column -->
+  <g font-size="13" fill="#444">
+    <text x="588" y="230">¾ in OSB deck — 4 half-sheets</text>
+    <path d="M584,226 L440,203" stroke="#777" stroke-width="1" fill="none"/>
+    <text x="588" y="254">floor joist · 2×6 · 5 ft 9 in</text>
+    <text x="588" y="270">14 of them between the rims</text>
+    <path d="M584,250 L352,222" stroke="#777" stroke-width="1" fill="none"/>
+    <text x="588" y="296">skid · 4×4 · 16 ft — Stage 1</text>
+    <path d="M584,292 L560,252" stroke="#777" stroke-width="1" fill="none"/>
+  </g>
+  <!-- leader labels: left column -->
+  <g font-size="13" fill="#444">
+    <text x="150" y="224">rim joist · 2×6 · 16 ft 0 in</text>
+    <path d="M146,220 L130,222" stroke="#777" stroke-width="1" fill="none"/>
+    <text x="108" y="290" text-anchor="end">Tuff Block</text>
+    <path d="M112,286 L120,290" stroke="#777" stroke-width="1" fill="none"/>
+  </g>
+  <!-- pocket label -->
+  <text x="230" y="428" font-size="13" fill="#444">gravel pocket · paver · block — all Stage 1 work (grey)</text>
+  <path d="M226,424 L150,362" stroke="#777" stroke-width="1" fill="none"/>
+
+  <!-- bottom notes -->
+  <rect x="40" y="488" width="700" height="58" fill="#fdf6ec" stroke="#e0cba8" stroke-width="1.5" rx="6"/>
+  <text x="56" y="512" font-size="14" fill="#7a5c2e">Stage 1 work (grey) carries Stage 2 work (colour) down to firm soil — and the top of that stack is your zero.</text>
+  <text x="56" y="534" font-size="13" fill="#7a5c2e">Block and paver heights schematic — they are not modeled. Joist shown cut at the section line.</text>
+</svg>
