@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 780" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="8" refX="8.5" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#2b2b2b"/></marker>
+    <marker id="arrd" markerWidth="10" markerHeight="8" refX="8.5" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#555555"/></marker>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#4a4a4a" stroke-width="1" opacity="0.45"/></pattern>
+    <pattern id="hatchgrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#8a8a8a" stroke-width="1" opacity="0.6"/></pattern>
+  </defs>
+
+  <rect width="640" height="780" fill="#ffffff"/>
+  <rect x="10.0" y="10.0" width="520.0" height="83.0" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.5"/>
+  <text x="24.0" y="39.0" font-size="16" text-anchor="start" font-weight="bold" fill="#2b2b2b">ELEVATION</text>
+  <text x="24.0" y="59.0" font-size="13" text-anchor="start" font-weight="normal" fill="#2b2b2b">single leaf hung on its opening, viewed from outside the shed</text>
+  <text x="24.0" y="79.0" font-size="13" text-anchor="start" font-weight="normal" fill="#2b2b2b">&#9660; DOWN &#183; deck top at the bottom</text>
+  <line x1="56.0" y1="681.2" x2="500.0" y2="681.2" stroke="#2b2b2b" stroke-width="2.6"/>
+  <text x="86.5" y="697.2" font-size="13" text-anchor="start" font-weight="bold" fill="#2b2b2b">deck top</text>
+  <rect x="80.0" y="678.0" width="370.5" height="47.1" fill="#e6e6e6" stroke="#808080" stroke-width="1.5"/>
+  <rect x="80.0" y="99.5" width="370.5" height="578.5" fill="#f0f0f0" stroke="#808080" stroke-width="1.5"/>
+  <line x1="80.0" y1="635.8" x2="450.5" y2="635.8" stroke="#808080" stroke-width="1"/>
+  <line x1="80.0" y1="590.2" x2="450.5" y2="590.2" stroke="#808080" stroke-width="1"/>
+  <line x1="80.0" y1="544.8" x2="450.5" y2="544.8" stroke="#808080" stroke-width="1"/>
+  <line x1="80.0" y1="499.2" x2="450.5" y2="499.2" stroke="#808080" stroke-width="1"/>
+  <line x1="80.0" y1="453.8" x2="450.5" y2="453.8" stroke="#808080" stroke-width="1"/>
+  <line x1="80.0" y1="408.2" x2="450.5" y2="408.2" stroke="#808080" stroke-width="1"/>
+  <line x1="80.0" y1="362.8" x2="450.5" y2="362.8" stroke="#808080" stroke-width="1"/>
+  <line x1="80.0" y1="317.2" x2="450.5" y2="317.2" stroke="#808080" stroke-width="1"/>
+  <line x1="80.0" y1="271.8" x2="450.5" y2="271.8" stroke="#808080" stroke-width="1"/>
+  <line x1="80.0" y1="226.2" x2="450.5" y2="226.2" stroke="#808080" stroke-width="1"/>
+  <line x1="80.0" y1="180.8" x2="450.5" y2="180.8" stroke="#808080" stroke-width="1"/>
+  <line x1="80.0" y1="135.2" x2="450.5" y2="135.2" stroke="#808080" stroke-width="1"/>
+  <rect x="112.5" y="99.5" width="305.5" height="35.8" fill="#e6e6e6" stroke="#808080" stroke-width="1.8"/>
+  <rect x="112.5" y="135.2" width="35.8" height="542.8" fill="#e6e6e6" stroke="#808080" stroke-width="1.8"/>
+  <rect x="382.2" y="135.2" width="35.8" height="542.8" fill="#e6e6e6" stroke="#808080" stroke-width="1.8"/>
+  <text x="427.8" y="291.2" font-size="13" text-anchor="start" font-weight="normal" fill="#808080">casing (Stage 11)</text>
+  <rect x="138.5" y="136.9" width="253.5" height="537.9" fill="#d4a76a" stroke="#6b5216" stroke-width="2"/>
+  <line x1="170.2" y1="136.9" x2="170.2" y2="674.8" stroke="#6b5216" stroke-width="1"/>
+  <line x1="201.9" y1="136.9" x2="201.9" y2="674.8" stroke="#6b5216" stroke-width="1"/>
+  <line x1="233.6" y1="136.9" x2="233.6" y2="674.8" stroke="#6b5216" stroke-width="1"/>
+  <line x1="265.2" y1="136.9" x2="265.2" y2="674.8" stroke="#6b5216" stroke-width="1"/>
+  <line x1="296.9" y1="136.9" x2="296.9" y2="674.8" stroke="#6b5216" stroke-width="1"/>
+  <line x1="328.6" y1="136.9" x2="328.6" y2="674.8" stroke="#6b5216" stroke-width="1"/>
+  <line x1="360.3" y1="136.9" x2="360.3" y2="674.8" stroke="#6b5216" stroke-width="1"/>
+  <rect x="138.5" y="136.9" width="22.8" height="537.9" fill="#b08954" stroke="#6b5216" stroke-width="2"/>
+  <rect x="369.2" y="136.9" width="22.8" height="537.9" fill="#b08954" stroke="#6b5216" stroke-width="2"/>
+  <rect x="161.2" y="652.0" width="208.0" height="22.8" fill="#b08954" stroke="#6b5216" stroke-width="2"/>
+  <rect x="161.2" y="136.9" width="208.0" height="22.8" fill="#b08954" stroke="#6b5216" stroke-width="2"/>
+  <rect x="122.2" y="659.4" width="42.2" height="8.0" fill="#2b2b2b" stroke="#2b2b2b" stroke-width="1"/>
+  <rect x="122.2" y="144.2" width="42.2" height="8.0" fill="#2b2b2b" stroke="#2b2b2b" stroke-width="1"/>
+  <text x="265.2" y="388.8" font-size="13" text-anchor="middle" font-weight="normal" fill="#2b2b2b">8 planks &#183; 1&#215;6 KD &#183; ripped 4&#8539;&#8243;</text>
+  <text x="265.2" y="642.2" font-size="13" text-anchor="middle" font-weight="normal" fill="#2b2b2b">frame &#183; 1&#215;4 KD &#183; on the outer face</text>
+  <text x="265.2" y="700.0" font-size="13" text-anchor="middle" font-weight="normal" fill="#2b2b2b">strap hinge &#183; screwed to the casing &#183; 2 per leaf</text>
+  <line x1="177.5" y1="696.0" x2="132.0" y2="663.4" stroke="#555555" stroke-width="1" marker-end="url(#arrd)"/>
+  <line x1="138.5" y1="674.8" x2="138.5" y2="746.0" stroke="#555555" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="392.0" y1="674.8" x2="392.0" y2="746.0" stroke="#555555" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="138.5" y1="742.0" x2="392.0" y2="742.0" stroke="#555555" stroke-width="1.2"/>
+  <line x1="138.5" y1="738.0" x2="138.5" y2="746.0" stroke="#555555" stroke-width="1.2"/>
+  <line x1="392.0" y1="738.0" x2="392.0" y2="746.0" stroke="#555555" stroke-width="1.2"/>
+  <text x="265.2" y="758.0" font-size="13" text-anchor="middle" font-weight="normal" fill="#555555">39&#8243;</text>
+  <line x1="138.5" y1="726.0" x2="148.2" y2="726.0" stroke="#555555" stroke-width="1.2"/>
+  <line x1="138.5" y1="722.0" x2="138.5" y2="730.0" stroke="#555555" stroke-width="1.2"/>
+  <line x1="148.2" y1="722.0" x2="148.2" y2="730.0" stroke="#555555" stroke-width="1.2"/>
+  <text x="143.4" y="722.0" font-size="12" text-anchor="middle" font-weight="normal" fill="#555555">1&#189;&#8243; lap</text>
+  <line x1="392.0" y1="674.8" x2="516.0" y2="674.8" stroke="#555555" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="392.0" y1="136.9" x2="516.0" y2="136.9" stroke="#555555" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="512.0" y1="674.8" x2="512.0" y2="136.9" stroke="#555555" stroke-width="1.2"/>
+  <line x1="508.0" y1="674.8" x2="516.0" y2="674.8" stroke="#555555" stroke-width="1.2"/>
+  <line x1="508.0" y1="136.9" x2="516.0" y2="136.9" stroke="#555555" stroke-width="1.2"/>
+  <text x="520.0" y="410.3" font-size="13" text-anchor="start" font-weight="normal" fill="#555555">82&#190;&#8243;</text>
+  <line x1="392.0" y1="681.2" x2="552.0" y2="681.2" stroke="#555555" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="548.0" y1="681.2" x2="548.0" y2="674.8" stroke="#555555" stroke-width="1.2"/>
+  <line x1="544.0" y1="681.2" x2="552.0" y2="681.2" stroke="#555555" stroke-width="1.2"/>
+  <line x1="544.0" y1="674.8" x2="552.0" y2="674.8" stroke="#555555" stroke-width="1.2"/>
+  <text x="556.0" y="682.5" font-size="12" text-anchor="start" font-weight="normal" fill="#555555">1&#8243;</text>
+  <text x="398.5" y="129.2" font-size="12" text-anchor="start" font-weight="normal" fill="#555555">&#188;&#8243; below the 84&#8243; head</text>
+  <text x="265.2" y="291.2" font-size="13" text-anchor="middle" font-weight="normal" fill="#555555">leaf laps each jamb casing 1&#189;&#8243;</text>
+  <line x1="36.0" y1="560.0" x2="36.0" y2="640.0" stroke="#2b2b2b" stroke-width="2.2" marker-end="url(#arr)"/>
+  <text x="32.0" y="658.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#2b2b2b">DOWN</text>
+</svg>

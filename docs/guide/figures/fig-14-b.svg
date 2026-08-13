@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 580" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="8" refX="8.5" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#2b2b2b"/></marker>
+    <marker id="arrd" markerWidth="10" markerHeight="8" refX="8.5" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#555555"/></marker>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#4a4a4a" stroke-width="1" opacity="0.45"/></pattern>
+    <pattern id="hatchgrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#8a8a8a" stroke-width="1" opacity="0.6"/></pattern>
+  </defs>
+
+  <rect width="820" height="580" fill="#ffffff"/>
+  <rect x="10.0" y="10.0" width="340.0" height="83.0" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.5"/>
+  <text x="24.0" y="39.0" font-size="16" text-anchor="start" font-weight="bold" fill="#2b2b2b">ELEVATION</text>
+  <text x="24.0" y="59.0" font-size="13" text-anchor="start" font-weight="normal" fill="#2b2b2b">front wall, viewed from the street</text>
+  <text x="24.0" y="79.0" font-size="13" text-anchor="start" font-weight="normal" fill="#2b2b2b">&#9660; DOWN &#183; deck top at the bottom</text>
+  <line x1="40.0" y1="514.5" x2="740.0" y2="514.5" stroke="#2b2b2b" stroke-width="2.6"/>
+  <text x="42.0" y="556.0" font-size="13" text-anchor="start" font-weight="bold" fill="#2b2b2b">deck top</text>
+  <rect x="60.0" y="512.8" width="652.8" height="24.7" fill="#e6e6e6" stroke="#808080" stroke-width="1.5"/>
+  <rect x="60.0" y="127.8" width="652.8" height="385.0" fill="#f0f0f0" stroke="#808080" stroke-width="1.5"/>
+  <line x1="60.0" y1="490.7" x2="712.8" y2="490.7" stroke="#808080" stroke-width="1"/>
+  <line x1="60.0" y1="466.9" x2="712.8" y2="466.9" stroke="#808080" stroke-width="1"/>
+  <line x1="60.0" y1="443.1" x2="712.8" y2="443.1" stroke="#808080" stroke-width="1"/>
+  <line x1="60.0" y1="419.3" x2="712.8" y2="419.3" stroke="#808080" stroke-width="1"/>
+  <line x1="60.0" y1="395.5" x2="712.8" y2="395.5" stroke="#808080" stroke-width="1"/>
+  <line x1="60.0" y1="371.7" x2="712.8" y2="371.7" stroke="#808080" stroke-width="1"/>
+  <line x1="60.0" y1="347.9" x2="712.8" y2="347.9" stroke="#808080" stroke-width="1"/>
+  <line x1="60.0" y1="324.1" x2="712.8" y2="324.1" stroke="#808080" stroke-width="1"/>
+  <line x1="60.0" y1="300.3" x2="712.8" y2="300.3" stroke="#808080" stroke-width="1"/>
+  <line x1="60.0" y1="276.5" x2="712.8" y2="276.5" stroke="#808080" stroke-width="1"/>
+  <line x1="60.0" y1="252.7" x2="712.8" y2="252.7" stroke="#808080" stroke-width="1"/>
+  <line x1="60.0" y1="228.9" x2="712.8" y2="228.9" stroke="#808080" stroke-width="1"/>
+  <line x1="60.0" y1="205.1" x2="712.8" y2="205.1" stroke="#808080" stroke-width="1"/>
+  <line x1="60.0" y1="181.3" x2="712.8" y2="181.3" stroke="#808080" stroke-width="1"/>
+  <line x1="60.0" y1="157.5" x2="712.8" y2="157.5" stroke="#808080" stroke-width="1"/>
+  <line x1="60.0" y1="133.7" x2="712.8" y2="133.7" stroke="#808080" stroke-width="1"/>
+  <line x1="60.0" y1="96.3" x2="712.8" y2="96.3" stroke="#808080" stroke-width="2.5"/>
+  <text x="445.9" y="88.3" font-size="13" text-anchor="start" font-weight="normal" fill="#808080">plate top &#183; 10&#8242; 3&#8243; above deck</text>
+  <rect x="60.0" y="96.3" width="18.7" height="416.5" fill="#c0965a" stroke="#6b5216" stroke-width="2"/>
+  <rect x="694.1" y="96.3" width="18.7" height="416.5" fill="#c0965a" stroke="#6b5216" stroke-width="2"/>
+  <rect x="78.7" y="96.3" width="615.4" height="31.4" fill="#c0965a" stroke="#6b5216" stroke-width="2"/>
+  <rect x="105.9" y="228.9" width="18.7" height="283.9" fill="#c0965a" stroke="#6b5216" stroke-width="2"/>
+  <rect x="247.0" y="228.9" width="18.7" height="283.9" fill="#c0965a" stroke="#6b5216" stroke-width="2"/>
+  <rect x="105.9" y="210.2" width="159.8" height="18.7" fill="#c0965a" stroke="#6b5216" stroke-width="2"/>
+  <rect x="389.8" y="228.9" width="18.7" height="283.9" fill="#c0965a" stroke="#6b5216" stroke-width="2"/>
+  <rect x="653.3" y="228.9" width="18.7" height="283.9" fill="#c0965a" stroke="#6b5216" stroke-width="2"/>
+  <rect x="389.8" y="210.2" width="282.2" height="18.7" fill="#c0965a" stroke="#6b5216" stroke-width="2"/>
+  <rect x="119.5" y="229.8" width="132.6" height="281.4" fill="none" stroke="#808080" stroke-width="1.8" stroke-dasharray="6 4"/>
+  <rect x="403.4" y="229.8" width="255.0" height="281.4" fill="none" stroke="#808080" stroke-width="1.8" stroke-dasharray="6 4"/>
+  <text x="530.9" y="361.5" font-size="13" text-anchor="middle" font-weight="normal" fill="#808080">doors &#8212; Stage 12, later</text>
+  <circle cx="68.5" cy="310.5" r="12" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.8"/>
+  <text x="68.5" y="315.5" font-size="14" text-anchor="middle" font-weight="bold" fill="#2b2b2b">1</text>
+  <circle cx="384.7" cy="113.3" r="12" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.8"/>
+  <text x="384.7" y="118.3" font-size="14" text-anchor="middle" font-weight="bold" fill="#2b2b2b">2</text>
+  <circle cx="530.9" cy="220.4" r="12" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.8"/>
+  <text x="530.9" y="225.4" font-size="14" text-anchor="middle" font-weight="bold" fill="#2b2b2b">3</text>
+  <text x="479.9" y="560.0" font-size="13.5" text-anchor="middle" font-weight="bold" fill="#2b2b2b">install order: 1 corner boards &#8594; 2 frieze &#8594; 3 casings &#183; all one proud layer out from the siding</text>
+  <text x="581.9" y="111.6" font-size="13" text-anchor="middle" font-weight="normal" fill="#2b2b2b">frieze &#183; 1&#215;10</text>
+  <text x="185.8" y="378.5" font-size="13" text-anchor="middle" font-weight="normal" fill="#2b2b2b">jamb + head casings &#183; 1&#215;6</text>
+  <text x="80.4" y="174.5" font-size="12" text-anchor="start" font-weight="normal" fill="#2b2b2b">corner boards</text>
+  <line x1="79.4" y1="170.5" x2="71.9" y2="208.5" stroke="#555555" stroke-width="1" marker-end="url(#arrd)"/>
+  <line x1="712.8" y1="514.5" x2="764.0" y2="514.5" stroke="#555555" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="712.8" y1="96.3" x2="764.0" y2="96.3" stroke="#555555" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="760.0" y1="514.5" x2="760.0" y2="96.3" stroke="#555555" stroke-width="1.2"/>
+  <line x1="756.0" y1="514.5" x2="764.0" y2="514.5" stroke="#555555" stroke-width="1.2"/>
+  <line x1="756.0" y1="96.3" x2="764.0" y2="96.3" stroke="#555555" stroke-width="1.2"/>
+  <text x="768.0" y="309.9" font-size="13" text-anchor="start" font-weight="normal" fill="#555555">10&#8242; 3&#8243;</text>
+  <line x1="672.0" y1="228.9" x2="792.0" y2="228.9" stroke="#555555" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="788.0" y1="514.5" x2="788.0" y2="228.9" stroke="#555555" stroke-width="1.2"/>
+  <line x1="784.0" y1="514.5" x2="792.0" y2="514.5" stroke="#555555" stroke-width="1.2"/>
+  <line x1="784.0" y1="228.9" x2="792.0" y2="228.9" stroke="#555555" stroke-width="1.2"/>
+  <text x="796.0" y="376.2" font-size="12" text-anchor="start" font-weight="normal" fill="#555555">84&#8243;</text>
+  <line x1="28.0" y1="420.0" x2="28.0" y2="480.0" stroke="#2b2b2b" stroke-width="2.2" marker-end="url(#arr)"/>
+  <text x="24.0" y="498.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#2b2b2b">DOWN</text>
+</svg>
