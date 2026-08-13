@@ -44,8 +44,9 @@ sides):
 
 (On the right wall the two bottom-plate pieces replace the one 5' 5" plate.)
 
-- The left wall stands on the deck's left edge, the right wall on the right edge, outer face
-  flush with the deck edge each time. The **front end** of each side wall is the street end.
+- Each wall is framed flat along its own deck edge — left wall on the left edge, right wall on
+  the right edge, outer face flush with the edge. Both go up in Stage 6. The **front end** of
+  each side wall is the street end.
 - Same rules as before: 2×4 KD SPF #2, fasteners your own, no sheathing.
 
 ## Steps — the shared build (do it twice: left wall, then right)
@@ -66,7 +67,7 @@ of each stud:
 
 Five studs, 16" on centre, one at each end.
 
-### 2. Stand the five studs
+### 2. Set the five studs
 
 Set the 92⅝" pre-cuts on their marks between the plates, same face line, and fasten both ends.
 
@@ -81,7 +82,8 @@ Align the gang-marked top plate with the studs and fasten it through into every 
 ### 4. Add the double top plate — it overhangs the back end
 
 Lay the 5' 8½" double top plate flush with the **front end** of the wall. It runs 3½" past the
-back end on purpose: that overhang laps over the back wall's corner when the wall stands, tying
+back end on purpose: that overhang laps over the back wall's corner when the wall is raised in
+Stage 6, tying
 the back-left (or back-right) corner together. It also carries the sloped rake plate later, in
 Stage 7.
 
@@ -96,17 +98,17 @@ Instead of one 5' 5" plate, use the two short pieces: the **8½" segment at the 
 the **20½" segment at the back end**. The 36" gap between them is the door opening — it has no
 sill; the threshold is open down to the deck.
 
-### 6. Stand the studs and jacks around the opening
+### 6. Set the studs and jacks around the opening
 
 Stud left edges, from the front end: 0", 5½", 46", 55", 63½". Jack left edges: 7" and 44½" —
-both 6' 10½" jacks stand on their plate segment and carry the head.
+both 6' 10½" jacks bear on their plate segment and carry the head.
 
 ### 7. Set the header and the two cripples
 
 Build the header exactly like the front-wall headers — three 3' 3" boards, two on edge at the
 faces plus one flat cap — and seat it on the two jacks, bottom edge **84" up from the wall's
 bottom edge (a 7' 0" head)**. Mark the two cripples on the top plate at 19" and 32½" from the
-front end and stand the two 5⅛" cripples between the header top and the top plate.
+front end and set the two 5⅛" cripples between the header top and the top plate.
 
 ![Fig 8.2 — Right side wall framing, elevation viewed from inside the shed (front end at the
 right), assembled flat (Stage 5). The same rectangle as the left wall, split bottom plate and

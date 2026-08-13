@@ -35,8 +35,8 @@ the one 120" king stud x 53..54.5 runs z 0..120; opening-A jacks x 14..15.5 and 
 | 3 | front wall headers — opening A | 2×4 | 3' 3" |
 | 6 | front wall cripple studs | 2×4 | 2' 7" |
 
-- Deck is done (Stage 2). This wall stands on the deck's **front edge — the street side** — with
-  its bottom plate outer face flush with the deck edge.
+- Deck is done (Stage 2). This wall is framed flat along the deck's **front edge — the street
+  side** — bottom plate outer face flush with the deck edge. It goes up in Stage 6.
 - All wall lumber is 2×4 KD SPF #2.
 - **Fasteners are not modeled and not on either lumber order** — supply your own framing
   fasteners. No wall sheathing either: the lap siding (Stage 10) is the wall surface, applied
@@ -56,9 +56,9 @@ member; the member is 1½" wide, running to the right of its mark.
 |---:|:---|
 | 0" | left-corner king stud — sits on the plate |
 | 16" | king stud |
-| 17½" | opening A jack stud — **stands on the deck** |
-| 55" | opening A jack stud — **stands on the deck** |
-| 56½" | tall king stud (10' 0") — **stands on the deck** |
+| 17½" | opening A jack stud — **runs to the deck** |
+| 55" | opening A jack stud — **runs to the deck** |
+| 56½" | tall king stud (10' 0") — **runs to the deck** |
 | 64" | king stud |
 | 80" | king stud |
 | 96" | king stud |
@@ -72,17 +72,17 @@ member; the member is 1½" wide, running to the right of its mark.
 
 ### 2. Cut the three deck-notch gaps in the plate
 
-Three studs stand on the deck and run **through** the plate's depth: the two opening-A jacks
+Three studs run to the deck and pass **through** the plate's depth: the two opening-A jacks
 (17½" and 55") and the tall king beside the right jack (56½"). Saw out the 1½" plate segment at
 each of those three marks so the plate butts against the stud's sides there. Leave the rest of
 the plate intact — including the segment across opening A between the two jacks; that threshold
-piece keeps the wall square while you frame it and is sawn out only after the wall stands
+piece keeps the wall square while you frame it and is sawn out only after the wall is raised
 (Stage 6).
 
 <!-- model trace: the three through-plate members overlap the plate 7.9 in³ each in the audit —
 documented modeling quirk, exempt from the interference sweep (see R02 quirks) -->
 
-### 3. Stand the jacks and kings
+### 3. Set the jacks and kings
 
 Set the studs on their marks, all on the same face line of the plate:
 
@@ -113,15 +113,15 @@ the 7' 0" head line.](figures/fig-06-b.svg)
 ### 5. Add the cripples over the headers
 
 Mark the cripple left edges on the **top plate**, same tape readings from the left end: 32" and
-48" over opening A; 112", 128", 144" and 160" over opening B. Stand the six 2' 7" cripples
+48" over opening A; 112", 128", 144" and 160" over opening B. Set the six 2' 7" cripples
 between the header tops and the top-plate marks, and fasten both ends.
 
 ### 6. Nail on the top plate, then the double top plate
 
 Lay the top plate over the stud ends, aligned with the bottom plate, and fasten it through into
-every stud. Then lay the double top plate on top of it, full width, ends flush. This wall stands
-10' 3" when raised. **Do not raise it yet** — all four walls are raised together, in order, in
-Stage 6.
+every stud. Then lay the double top plate on top of it, full width, ends flush. The wall will be
+10' 3" tall once it goes up. **Do not raise it yet** — all four walls are raised together, in
+order, in Stage 6.
 
 ## Before you move on
 

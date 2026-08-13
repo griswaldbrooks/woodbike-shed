@@ -31,7 +31,8 @@ of each wall end); studs z 1.5..94.125 at x −3.5, 11, 27, 43, 59, 75, 91, 107,
 
 - Same stock as the front wall: 2×4 KD SPF #2, fasteners your own (not on either order), no
   sheathing.
-- This wall stands on the deck's **back edge**, outer face flush with the deck edge.
+- This wall is framed flat along the deck's **back edge**, outer face flush with the deck edge;
+  it goes up in Stage 6.
 - The thirteen studs are all the standard 92⅝" pre-cut length — no measuring, one saw setting.
 
 ## Steps
@@ -61,7 +62,7 @@ Mark the left edge of every stud on both plates:
 
 After the first two, the studs land 16" on centre.
 
-### 2. Stand the thirteen studs
+### 2. Set the thirteen studs
 
 Set a 92⅝" pre-cut stud on every mark between the two plates, each one on the same face line,
 and fasten both ends.

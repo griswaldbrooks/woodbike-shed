@@ -31,7 +31,7 @@ top plate z 94.125..95.625; DTP short z 95.625..97.125 spanning tape 3.5..188.5 
   <line x1="680" y1="560" x2="668" y2="574"/><line x1="740" y1="560" x2="728" y2="574"/>
   <line x1="800" y1="560" x2="788" y2="574"/><line x1="860" y1="560" x2="848" y2="574"/>
 </g>
-<text x="64" y="592" font-size="15" fill="#333">deck top (Stage 2) — wall stands on the back edge</text>
+<text x="64" y="592" font-size="15" fill="#333">deck top (Stage 2) — plate line = back edge</text>
 
 <!-- plates -->
 <rect x="98" y="554.75" width="672" height="5.25" fill="#c99a56" stroke="#6b4a1f" stroke-width="2.2"/>
