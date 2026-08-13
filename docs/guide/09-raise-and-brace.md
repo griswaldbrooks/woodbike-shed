@@ -59,9 +59,9 @@ deck's front edge. Past halfway, keep pushing it up to vertical — **do not let
 down with the bottom plate's outer face flush with the deck edge and the wall ends flush with the
 deck's side corners.
 
-![Fig 9.2 — Raising the front wall, elevation viewed from the street (Stage 6). The top edge
-lifts while the bottom plate pivots on the deck edge; two lifters walk it up hand over hand, and
-the dashed outline shows where it lands.](figures/fig-09-b.svg)
+![Fig 9.2 — Raising the front wall, end elevation viewed from the wall's left end (Stage 6).
+The top edge lifts while the bottom plate pivots on the deck edge; two lifters walk it up hand
+over hand, and the dashed outline shows where it lands.](figures/fig-09-b.svg)
 
 > ⚠️ **WARNING** — Never stand under a rising wall, and never hold it overhead with locked arms.
 > Keep your back straight and lift with your legs. If the wall starts to go, lower it under
