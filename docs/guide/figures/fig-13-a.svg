@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="8" refX="8.5" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#2b2b2b"/></marker>
+    <marker id="arrd" markerWidth="10" markerHeight="8" refX="8.5" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#555555"/></marker>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#4a4a4a" stroke-width="1" opacity="0.45"/></pattern>
+    <pattern id="hatchgrey" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#8a8a8a" stroke-width="1" opacity="0.6"/></pattern>
+  </defs>
+
+  <rect width="500" height="700" fill="#ffffff"/>
+  <rect x="10.0" y="10.0" width="478.0" height="83.0" fill="#ffffff" stroke="#2b2b2b" stroke-width="1.5"/>
+  <text x="24.0" y="39.0" font-size="16" text-anchor="start" font-weight="bold" fill="#2b2b2b">SECTION</text>
+  <text x="24.0" y="59.0" font-size="13" text-anchor="start" font-weight="normal" fill="#2b2b2b">vertical cut through the front wall, viewed from the left gable end</text>
+  <text x="24.0" y="79.0" font-size="13" text-anchor="start" font-weight="normal" fill="#2b2b2b">&#9660; DOWN &#183; deck top is the height datum</text>
+  <rect x="106.0" y="115.0" width="161.0" height="225.0" fill="#f0f0f0" stroke="#808080" stroke-width="1.5"/>
+  <rect x="106.0" y="340.0" width="161.0" height="45.0" fill="#e6e6e6" stroke="#808080" stroke-width="1.5"/>
+  <text x="120.0" y="112.0" font-size="13" text-anchor="start" font-weight="normal" fill="#808080">wall framing &#183; 2&#215;4 (built)</text>
+  <line x1="150.0" y1="116.0" x2="150.0" y2="129.0" stroke="#808080" stroke-width="1" marker-end="url(#arrd)"/>
+  <rect x="60.0" y="385.0" width="207.0" height="22.5" fill="#e6e6e6" stroke="#808080" stroke-width="1.5"/>
+  <text x="70.0" y="401.0" font-size="13" text-anchor="start" font-weight="normal" fill="#808080">deck &#183; OSB</text>
+  <line x1="20.0" y1="385.0" x2="267.0" y2="385.0" stroke="#2b2b2b" stroke-width="2.6"/>
+  <text x="22.0" y="428.0" font-size="13" text-anchor="start" font-weight="bold" fill="#2b2b2b">deck top &#8212; guide zero</text>
+  <line x1="90.0" y1="424.0" x2="90.0" y2="388.0" stroke="#555555" stroke-width="1" marker-end="url(#arrd)"/>
+  <rect x="198.0" y="407.5" width="69.0" height="165.0" fill="#e6e6e6" stroke="#808080" stroke-width="1.5"/>
+  <text x="20.0" y="470.0" font-size="13" text-anchor="start" font-weight="normal" fill="#808080">rim joist &#183; 2&#215;6 (built)</text>
+  <line x1="150.0" y1="466.0" x2="232.5" y2="490.0" stroke="#808080" stroke-width="1" marker-end="url(#arrd)"/>
+  <polygon points="267.0,385.0 267.0,160.0 284.2,160.0 284.2,175.0 301.5,175.0 301.5,385.0" fill="#e8d3a8" stroke="#6b5216" stroke-width="2"/>
+  <rect x="301.5" y="370.0" width="34.5" height="217.5" fill="#c0965a" stroke="#6b5216" stroke-width="2"/>
+  <text x="344.0" y="190.0" font-size="14" text-anchor="start" font-weight="normal" fill="#2b2b2b">course 1 &#183; finish siding</text>
+  <line x1="342.0" y1="194.0" x2="124.4" y2="230.0" stroke="#555555" stroke-width="1" marker-end="url(#arrd)"/>
+  <text x="344.0" y="430.0" font-size="14" text-anchor="start" font-weight="normal" fill="#2b2b2b">finish skirt &#183; 1&#215;8</text>
+  <line x1="342.0" y1="434.0" x2="317.6" y2="460.0" stroke="#555555" stroke-width="1" marker-end="url(#arrd)"/>
+  <text x="344.0" y="330.0" font-size="13" text-anchor="start" font-weight="normal" fill="#2b2b2b">first course tucks</text>
+  <text x="344.0" y="347.0" font-size="13" text-anchor="start" font-weight="normal" fill="#2b2b2b">&#189;&#8243; behind the skirt</text>
+  <line x1="342.0" y1="340.0" x2="285.4" y2="377.5" stroke="#555555" stroke-width="1" marker-end="url(#arrd)"/>
+  <text x="344.0" y="545.0" font-size="13" text-anchor="start" font-weight="normal" fill="#2b2b2b">nail the skirt to the</text>
+  <text x="344.0" y="562.0" font-size="13" text-anchor="start" font-weight="normal" fill="#2b2b2b">rim joist band</text>
+  <line x1="342.0" y1="540.0" x2="317.6" y2="510.0" stroke="#555555" stroke-width="1" marker-end="url(#arrd)"/>
+  <line x1="336.0" y1="385.0" x2="350.0" y2="385.0" stroke="#555555" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="336.0" y1="370.0" x2="350.0" y2="370.0" stroke="#555555" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="346.0" y1="385.0" x2="346.0" y2="370.0" stroke="#555555" stroke-width="1.2"/>
+  <line x1="342.0" y1="385.0" x2="350.0" y2="385.0" stroke="#555555" stroke-width="1.2"/>
+  <line x1="342.0" y1="370.0" x2="350.0" y2="370.0" stroke="#555555" stroke-width="1.2"/>
+  <text x="354.0" y="382.0" font-size="13" text-anchor="start" font-weight="normal" fill="#555555">&#189;&#8243;</text>
+  <line x1="344.0" y1="370.0" x2="376.0" y2="370.0" stroke="#555555" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="344.0" y1="587.5" x2="376.0" y2="587.5" stroke="#555555" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="372.0" y1="370.0" x2="372.0" y2="587.5" stroke="#555555" stroke-width="1.2"/>
+  <line x1="368.0" y1="370.0" x2="376.0" y2="370.0" stroke="#555555" stroke-width="1.2"/>
+  <line x1="368.0" y1="587.5" x2="376.0" y2="587.5" stroke="#555555" stroke-width="1.2"/>
+  <text x="380.0" y="483.2" font-size="13" text-anchor="start" font-weight="normal" fill="#555555">7&#188;&#8243;</text>
+  <line x1="244.0" y1="572.5" x2="300.0" y2="572.5" stroke="#555555" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="336.0" y1="587.5" x2="300.0" y2="587.5" stroke="#555555" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="294.0" y1="572.5" x2="294.0" y2="587.5" stroke="#555555" stroke-width="1.2"/>
+  <text x="128.0" y="600.0" font-size="13" text-anchor="start" font-weight="normal" fill="#555555">&#189;&#8243; below rim bottom</text>
+  <line x1="210.0" y1="596.0" x2="288.0" y2="580.0" stroke="#555555" stroke-width="1" marker-end="url(#arrd)"/>
+  <line x1="38.0" y1="450.0" x2="38.0" y2="545.0" stroke="#2b2b2b" stroke-width="2.2" marker-end="url(#arr)"/>
+  <text x="34.0" y="563.0" font-size="13" text-anchor="middle" font-weight="bold" fill="#2b2b2b">DOWN</text>
+</svg>
