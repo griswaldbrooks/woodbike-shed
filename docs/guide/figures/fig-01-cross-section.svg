@@ -7,15 +7,21 @@
   Scale: 5 px per inch, equal both axes (not vertically exaggerated).
   Model anchors (traceability, non-rendering):
     deck top = z 0 (build datum). skid bottoms z -9.75.
-    front wall outer face y -3.5, plate top z 123. back wall outer face
-    y 68.5, plate top z 97.125. rafter top at front tail z 137.687 (peak),
-    at back tail z 97.187. front overhang 24" (tail y -27.5), back 12"
-    (tail y 80.5). Foundation (blocks/gravel) schematic - not modeled.
+    front wall y -3.5..0: studs z 0..120, top plate z 120..121.5, double top
+    plate z 121.5..123 (plate top 10' 3" above deck).
+    back wall y 65..68.5: studs z 0..94.125, top plate z 94.125..95.625,
+    double top plate z 95.625..97.125 (plate top 8' 1-1/8" above deck).
+    Rafter birdsmouths (per cad.roof / Fig 11.2): front level seat 4" at z 123
+    over y -4..0 with 1.5 plumb kick at the inner face y 0; back level seat
+    3.5" at z 97.125 over y 65..68.5 with 1.3125 plumb kick at the outer face
+    y 68.5. Rafter top at front tail z 137.687 (peak), at back tail z 97.187.
+    Front overhang 24" (tail y -27.5), back 12" (tail y 80.5). Foundation
+    (blocks/gravel) schematic - not modeled.
   Drawing transform: X(y) = 70 + 5*(y + 32);  Y(z) = 950 - 5*(z + 20).
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 990"
      font-family="Helvetica, Arial, sans-serif" role="img"
-     aria-label="Cross-section of the whole shed, front tall wall at left, back low wall at right, single-slope roof, on skids and blocks over a gravel ground line.">
+     aria-label="Cross-section of the whole shed: walls capped by double top plates, roof beam notched to sit flat on both plate tops, front tall wall at left, back low wall at right, on skids and blocks over a gravel ground line.">
 
   <defs>
     <!-- diagonal hatch = material cut by the section plane -->
@@ -73,18 +79,42 @@
   <text x="392" y="844" font-size="15" fill="#4a3010" text-anchor="middle">deck top — height zero for the whole guide</text>
 
   <!-- ======================= WALLS (cut by section) ======================= -->
-  <!-- front wall, tall: z 0 .. 123 -->
-  <rect x="212.5" y="235" width="17.5" height="615" fill="#d9a86c" stroke="#4a3010" stroke-width="3"/>
-  <rect x="212.5" y="235" width="17.5" height="615" fill="url(#cut)"/>
-  <!-- back wall, low: z 0 .. 97.125 -->
-  <rect x="555" y="364.4" width="17.5" height="485.6" fill="#d9a86c" stroke="#4a3010" stroke-width="3"/>
-  <rect x="555" y="364.4" width="17.5" height="485.6" fill="url(#cut)"/>
+  <!-- front wall: studs z 0..120, top plate 120..121.5, double top plate 121.5..123 -->
+  <rect x="212.5" y="250" width="17.5" height="600" fill="#d9a86c" stroke="#4a3010" stroke-width="3"/>
+  <rect x="212.5" y="250" width="17.5" height="600" fill="url(#cut)"/>
+  <rect x="212.5" y="242.5" width="17.5" height="7.5" fill="#c99a56" stroke="#4a3010" stroke-width="2"/>
+  <rect x="212.5" y="242.5" width="17.5" height="7.5" fill="url(#cut)"/>
+  <rect x="212.5" y="235" width="17.5" height="7.5" fill="#c99a56" stroke="#4a3010" stroke-width="2"/>
+  <rect x="212.5" y="235" width="17.5" height="7.5" fill="url(#cut)"/>
+  <!-- back wall: studs z 0..94.125, top plate 94.125..95.625, double top plate 95.625..97.125 -->
+  <rect x="555" y="379.375" width="17.5" height="470.625" fill="#d9a86c" stroke="#4a3010" stroke-width="3"/>
+  <rect x="555" y="379.375" width="17.5" height="470.625" fill="url(#cut)"/>
+  <rect x="555" y="371.875" width="17.5" height="7.5" fill="#c99a56" stroke="#4a3010" stroke-width="2"/>
+  <rect x="555" y="371.875" width="17.5" height="7.5" fill="url(#cut)"/>
+  <rect x="555" y="364.375" width="17.5" height="7.5" fill="#c99a56" stroke="#4a3010" stroke-width="2"/>
+  <rect x="555" y="364.375" width="17.5" height="7.5" fill="url(#cut)"/>
 
-  <!-- ======================= ROOF: rafter band + fascia ======================= -->
-  <!-- rafter band: front tail (92.5,161.6 top) to back tail (632.5,364.1 top) -->
-  <polygon points="92.5,161.6 632.5,364.1 632.5,393.4 92.5,190.9"
+  <!-- plate labels, leaders into the open interior -->
+  <g stroke="#000" stroke-width="1.6"><line x1="230" y1="244" x2="252" y2="466"/></g>
+  <text x="256" y="470" font-size="15" fill="#4a3010">top plate and double top plate</text>
+  <text x="256" y="488" font-size="15" fill="#4a3010">cap the wall studs</text>
+  <g stroke="#000" stroke-width="1.6"><line x1="555" y1="368.1" x2="533" y2="376"/></g>
+  <text x="529" y="380" font-size="15" fill="#4a3010" text-anchor="end">double top plate</text>
+  <g stroke="#000" stroke-width="1.6"><line x1="555" y1="375.6" x2="533" y2="394"/></g>
+  <text x="529" y="398" font-size="15" fill="#4a3010" text-anchor="end">top plate</text>
+
+  <!-- ======================= ROOF: birdsmouthed rafter band + fascia ======================= -->
+  <!-- rafter: top edge front tail (92.5,161.6) to back tail (632.5,364.1); bottom edge parallel
+       except the birdsmouths: front level seat z 123 over y -4..0 (X 210..230) with 1.5" plumb
+       kick at y 0; back level seat z 97.125 over y 65..68.5 (X 555..572.5) with 1.3125" kick -->
+  <polygon points="92.5,161.6 632.5,364.1 632.5,393.4 572.5,370.9 572.5,364.4 555,364.4
+                   230,242.5 230,235 210,235 92.5,190.9"
            fill="#c08a4e" stroke="#4a3010" stroke-width="3"/>
-  <polygon points="92.5,161.6 632.5,364.1 632.5,393.4 92.5,190.9" fill="url(#cut)"/>
+  <polygon points="92.5,161.6 632.5,364.1 632.5,393.4 572.5,370.9 572.5,364.4 555,364.4
+                   230,242.5 230,235 210,235 92.5,190.9" fill="url(#cut)"/>
+  <!-- seat bearing highlights -->
+  <line x1="210" y1="235" x2="230" y2="235" stroke="#c0392b" stroke-width="3"/>
+  <line x1="555" y1="364.4" x2="572.5" y2="364.4" stroke="#c0392b" stroke-width="3"/>
   <!-- front fascia cap -->
   <rect x="85" y="161.6" width="7.5" height="27.5" fill="#efe6d6" stroke="#4a3010" stroke-width="2.5"/>
   <!-- back fascia cap -->
@@ -93,6 +123,14 @@
   <!-- roof pitch label along the slope -->
   <text x="330" y="225" font-size="19" font-weight="bold" fill="#4a3010"
         transform="rotate(20.6 330 225)">roof pitch 4.5 : 12</text>
+
+  <!-- birdsmouth explanation -->
+  <g stroke="#555" stroke-width="1.6" fill="none">
+    <line x1="330" y1="344" x2="224" y2="242"/>
+    <line x1="430" y1="368" x2="558" y2="365"/>
+  </g>
+  <text x="392" y="336" font-size="16" fill="#000" text-anchor="middle">the roof beam is notched to sit flat</text>
+  <text x="392" y="356" font-size="16" fill="#000" text-anchor="middle">on each wall plate (red = bearing seat)</text>
 
   <!-- ======================= DIMENSIONS / LABELS ======================= -->
   <!-- left height chain: deck -> peak -->
@@ -112,10 +150,19 @@
   <!-- front plate top tick -->
   <text x="6" y="252" font-size="15" fill="#000">front wall plate top</text>
   <text x="6" y="271" font-size="15" fill="#000">10′ 3″ above deck</text>
-  <!-- back plate top -->
-  <g stroke="#000" stroke-width="1.6"><line x1="572.5" y1="364.4" x2="600" y2="410"/></g>
-  <text x="604" y="404" font-size="15" fill="#000">back wall plate top</text>
-  <text x="604" y="423" font-size="15" fill="#000">8′ 1⅛″ above deck</text>
+
+  <!-- back wall height: proper double-arrow dimension, deck -> back plate top -->
+  <g stroke="#000" stroke-width="1.6" fill="none">
+    <line x1="596" y1="850" x2="596" y2="364.4"/>
+    <line x1="572.5" y1="850" x2="604" y2="850"/>
+    <line x1="572.5" y1="364.4" x2="604" y2="364.4"/>
+  </g>
+  <g fill="#000" stroke="#000" stroke-width="1.6">
+    <path d="M 596 364.4 L 591 375 L 601 375 Z"/>
+    <path d="M 596 850 L 591 839 L 601 839 Z"/>
+  </g>
+  <text x="608" y="607" font-size="18" fill="#000" text-anchor="middle"
+        transform="rotate(-90 608 607)">back wall plate top 8′ 1⅛″ above deck</text>
 
   <!-- overhangs -->
   <g stroke="#000" stroke-width="1.6" fill="none">
