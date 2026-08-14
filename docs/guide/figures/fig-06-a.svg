@@ -105,8 +105,16 @@ heads z 84; header tops z 89; top plate z 120..121.5; DTP z 121.5..123 -->
 <!-- opening labels -->
 <text x="279" y="330" font-size="15" text-anchor="middle" fill="#222">3' 0" clear</text>
 <text x="279" y="349" font-size="15" text-anchor="middle" fill="#222">single door</text>
-<text x="279" y="372" font-size="13.5" text-anchor="middle" fill="#666">no sill — plate piece</text>
-<text x="279" y="389" font-size="13.5" text-anchor="middle" fill="#666">sawn out after raising (Stage 6)</text>
+<g font-size="13.5" text-anchor="middle">
+  <g fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">
+    <text x="279" y="372">no sill — plate piece</text>
+    <text x="279" y="389">sawn out after raising (Stage 6)</text>
+  </g>
+  <g fill="#666">
+    <text x="279" y="372">no sill — plate piece</text>
+    <text x="279" y="389">sawn out after raising (Stage 6)</text>
+  </g>
+</g>
 <text x="634" y="330" font-size="15" text-anchor="middle" fill="#222">6' 0" clear</text>
 <text x="634" y="349" font-size="15" text-anchor="middle" fill="#222">double door</text>
 <text x="634" y="372" font-size="13.5" text-anchor="middle" fill="#666">sill stays</text>
@@ -120,19 +128,27 @@ heads z 84; header tops z 89; top plate z 120..121.5; DTP z 121.5..123 -->
   <line x1="430" y1="300" x2="379" y2="300" stroke="#444" stroke-width="1.4"/>
   <text x="122" y="304" font-size="15">king stud · 2×4 · 9' 10½"</text>
   <line x1="232" y1="522" x2="346" y2="500" stroke="#444" stroke-width="1.4"/>
+  <g fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">
+    <text x="34" y="520" font-size="15">tall king · 2×4 · 10' 0"</text>
+    <text x="34" y="538" font-size="13.5">runs down to the deck</text>
+  </g>
   <text x="34" y="520" font-size="15">tall king · 2×4 · 10' 0"</text>
   <text x="34" y="538" font-size="13.5" fill="#666">runs down to the deck</text>
   <line x1="213" y1="480" x2="188" y2="480" stroke="#444" stroke-width="1.4"/>
+  <text x="34" y="476" font-size="15" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">jack · 2×4 · 7' 0"</text>
   <text x="34" y="476" font-size="15">jack · 2×4 · 7' 0"</text>
   <text x="34" y="494" font-size="13.5" fill="#666">runs to deck</text>
   <line x1="748" y1="518" x2="763" y2="500" stroke="#444" stroke-width="1.4"/>
   <text x="745" y="525" font-size="15" text-anchor="end">jack · 2×4 · 6' 10½"</text>
   <text x="745" y="543" font-size="13.5" fill="#666" text-anchor="end">sits on plate</text>
   <line x1="560" y1="256" x2="560" y2="216" stroke="#444" stroke-width="1.4"/>
+  <text x="566" y="212" font-size="15" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">header · 3 × 2×4 · 6' 3"</text>
   <text x="566" y="212" font-size="15">header · 3 × 2×4 · 6' 3"</text>
   <line x1="290" y1="252" x2="160" y2="222" stroke="#444" stroke-width="1.4"/>
+  <text x="34" y="218" font-size="15" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">header · 3 × 2×4 · 3' 3"</text>
   <text x="34" y="218" font-size="15">header · 3 × 2×4 · 3' 3"</text>
   <line x1="644" y1="180" x2="710" y2="180" stroke="#444" stroke-width="1.4"/>
+  <text x="640" y="184" font-size="15" text-anchor="end" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">cripple · 2×4 · 2' 7"</text>
   <text x="640" y="184" font-size="15" text-anchor="end">cripple · 2×4 · 2' 7"</text>
   <line x1="600" y1="585" x2="600" y2="563" stroke="#444" stroke-width="1.4"/>
   <text x="500" y="592" font-size="15">bottom plate · 2×4 · 16' 0"</text>

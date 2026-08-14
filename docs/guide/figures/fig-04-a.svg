@@ -68,8 +68,14 @@
     <rect x="100" y="200" width="614.4" height="11.2"/>
     <rect x="100" y="419.2" width="614.4" height="11.2"/>
   </g>
-  <text x="430" y="228" font-size="13" fill="#8B6914">front skid line — 4×4 · 16 ft, no splice</text>
-  <text x="430" y="414" font-size="13" fill="#8B6914">back skid line</text>
+  <g font-size="13" fill="#8B6914">
+    <g fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">
+      <text x="430" y="228">front skid line — 4×4 · 16 ft, no splice</text>
+      <text x="430" y="414">back skid line</text>
+    </g>
+    <text x="430" y="228">front skid line — 4×4 · 16 ft, no splice</text>
+    <text x="430" y="414">back skid line</text>
+  </g>
 
   <!-- drop symbols: parts land by gravity -->
   <g stroke="#c0392b" stroke-width="2" fill="none">
@@ -96,18 +102,33 @@
     <line x1="714.4" y1="434" x2="714.4" y2="502"/>
   </g>
   <line x1="100" y1="502" x2="714.4" y2="502" stroke="#444" stroke-width="1.4" marker-start="url(#dim04as)" marker-end="url(#dim04a)"/>
-  <g font-size="13" fill="#444" text-anchor="middle">
-    <text x="109.6" y="496">6 in</text>
-    <text x="215.2" y="522">5 ft</text>
-    <text x="407.2" y="522">5 ft</text>
-    <text x="599.2" y="522">5 ft</text>
-    <text x="704.8" y="496">6 in</text>
-  </g>
-  <g font-size="13" fill="#2b2b2b" text-anchor="middle" font-weight="bold">
-    <text x="132" y="460">6 in</text>
-    <text x="311.2" y="460">5 ft 6 in</text>
-    <text x="503.2" y="460">10 ft 6 in</text>
-    <text x="695.2" y="460">15 ft 6 in</text>
+  <g font-size="13" text-anchor="middle">
+    <g fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">
+      <text x="109.6" y="496">6 in</text>
+      <text x="215.2" y="522">5 ft</text>
+      <text x="407.2" y="522">5 ft</text>
+      <text x="599.2" y="522">5 ft</text>
+      <text x="704.8" y="496">6 in</text>
+    </g>
+    <g fill="#444">
+      <text x="109.6" y="496">6 in</text>
+      <text x="215.2" y="522">5 ft</text>
+      <text x="407.2" y="522">5 ft</text>
+      <text x="599.2" y="522">5 ft</text>
+      <text x="704.8" y="496">6 in</text>
+    </g>
+    <g fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" font-weight="bold">
+      <text x="132" y="460">6 in</text>
+      <text x="311.2" y="460">5 ft 6 in</text>
+      <text x="503.2" y="460">10 ft 6 in</text>
+      <text x="695.2" y="460">15 ft 6 in</text>
+    </g>
+    <g fill="#2b2b2b" font-weight="bold">
+      <text x="132" y="460">6 in</text>
+      <text x="311.2" y="460">5 ft 6 in</text>
+      <text x="503.2" y="460">10 ft 6 in</text>
+      <text x="695.2" y="460">15 ft 6 in</text>
+    </g>
   </g>
   <text x="407" y="545" text-anchor="middle" font-size="13" fill="#555">pocket centers, read on the tape from the LEFT-end corner</text>
 
@@ -119,7 +140,7 @@
 
   <!-- end markers -->
   <text x="70" y="430" font-size="13" fill="#2b2b2b" transform="rotate(-90,70,430)">LEFT END — tape zero</text>
-  <text x="770" y="430" font-size="13" fill="#2b2b2b" transform="rotate(-90,770,430)">RIGHT END</text>
+  <text x="776" y="430" font-size="13" fill="#2b2b2b" transform="rotate(-90,776,430)">RIGHT END</text>
 
   <!-- legend -->
   <g font-size="13" fill="#444">

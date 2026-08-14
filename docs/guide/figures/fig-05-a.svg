@@ -56,7 +56,7 @@
   <text x="714" y="228" text-anchor="end" font-size="13" fill="#8a8a8a">4×4 skids — set in Stage 1 (grey = built)</text>
   <rect x="372" y="401" width="346" height="18" fill="#ffffff" opacity="0.85"/>
   <text x="714" y="414" text-anchor="end" font-size="13" fill="#8B6914">back rim · 2×6 · 16 ft 0 in — flat-side out on the skid</text>
-  <text transform="translate(466,240) rotate(90)" font-size="13" fill="#8B6914">floor joist · 2×6 · 5 ft 9 in</text>
+  <text transform="translate(466,232) rotate(90)" font-size="12" fill="#8B6914">floor joist · 2×6 · 5 ft 9 in</text>
 
   <!-- OSB sheet outlines + seams: future this page, dashed -->
   <g fill="none" stroke="#555" stroke-width="1.8" stroke-dasharray="6,5">
@@ -130,7 +130,7 @@
     <text transform="translate(556.8,514) rotate(90)">144 in</text>
     <text transform="translate(608,552) rotate(90)">160 in</text>
     <text transform="translate(659.2,514) rotate(90)">176 in</text>
-    <text transform="translate(713.4,552) rotate(90)">190½ in</text>
+    <text transform="translate(716,544) rotate(90)">190½ in</text>
   </g>
   <g stroke="#bbb" stroke-width="0.9">
     <line x1="146.4" y1="508" x2="146.4" y2="548"/>

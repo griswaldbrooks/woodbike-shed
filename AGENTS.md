@@ -55,6 +55,10 @@ matter, figure and number rules) are the human-facing `docs/guide/conventions.md
 it joins figure refs wrapped over source lines, and the birdsmouth template
 (Fig 11.3) prints 1:1 on its own zero-margin named page (`figure.truesize`
 in `assets/guide.css`) — keep any new full-size template on that mechanism.
+WeasyPrint's cairosvg ignores `paint-order`, so figure text halos must be a
+white-stroke underlay copy beneath the normal text (two-layer idiom, e.g.
+fig-04-a); the `.halo` class in `fig-11-rafter-section.svg` predates that
+knowledge and prints as white blobs in `build-guide.pdf` — known defect.
 The authoring method behind `docs/guide/` (page template, number rules,
 figure spec incl. the anti-ambiguity test, sourced principles, worked
 example) is the agent skill `.agents/skills/shed-build-guide/SKILL.md` —

@@ -83,8 +83,14 @@ t 7..46, z 84..89; cripples t 19..20.5 and 32.5..34 z 89..94.125; RO t 8.5..44.5
 </g>
 
 <!-- opening label + head line -->
-<text x="454" y="330" font-size="15" text-anchor="middle" fill="#222">3' 0" clear · single door</text>
-<text x="454" y="352" font-size="13.5" text-anchor="middle" fill="#666">no sill — open to the deck</text>
+<g text-anchor="middle">
+  <g fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">
+    <text x="454" y="330" font-size="15">3' 0" clear · single door</text>
+    <text x="454" y="352" font-size="13.5">no sill — open to the deck</text>
+  </g>
+  <text x="454" y="330" font-size="15" fill="#222">3' 0" clear · single door</text>
+  <text x="454" y="352" font-size="13.5" fill="#666">no sill — open to the deck</text>
+</g>
 <line x1="532" y1="264" x2="640" y2="264" stroke="#444" stroke-width="1.2" stroke-dasharray="7 5"/>
 <text x="644" y="260" font-size="14.5" fill="#222">7' 0"</text>
 <text x="644" y="278" font-size="14.5" fill="#222">head</text>

@@ -147,9 +147,18 @@
   <text x="140" y="500" font-size="18" fill="#000" text-anchor="middle"
         transform="rotate(-90 140 500)">peak 11′ 5-11/16″ above deck</text>
 
-  <!-- front plate top tick -->
-  <text x="6" y="252" font-size="15" fill="#000">front wall plate top</text>
-  <text x="6" y="271" font-size="15" fill="#000">10′ 3″ above deck</text>
+  <!-- front wall height: proper double-arrow dimension, deck -> front plate top -->
+  <g stroke="#000" stroke-width="1.6" fill="none">
+    <line x1="190" y1="850" x2="190" y2="235"/>
+    <line x1="181" y1="850" x2="212.5" y2="850"/>
+    <line x1="181" y1="235" x2="212.5" y2="235"/>
+  </g>
+  <g fill="#000" stroke="#000" stroke-width="1.6">
+    <path d="M 190 235 L 185 246 L 195 246 Z"/>
+    <path d="M 190 850 L 185 839 L 195 839 Z"/>
+  </g>
+  <text x="178" y="542.5" font-size="18" fill="#000" text-anchor="middle"
+        transform="rotate(-90 178 542.5)">front wall plate top 10′ 3″ above deck</text>
 
   <!-- back wall height: proper double-arrow dimension, deck -> back plate top -->
   <g stroke="#000" stroke-width="1.6" fill="none">
