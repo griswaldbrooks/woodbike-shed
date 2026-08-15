@@ -1,16 +1,14 @@
 <svg viewBox="0 0 780 620" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
   <!-- Fig 4.1 — foundation layout, plan.
        model trace: footprint x -3.5..188.5, y -3.5..68.5 (192" x 72"); skid lines y -3.5..0 and 65..68.5;
-       block centers x 2.5/62.5/122.5/182.5 on y -1.75 and 66.75 (tape 6" / 5'-6" / 10'-6" / 15'-6" from left end,
-       rows 5' 8½" c/c); mapping X(x)=100+(x+3.5)*3.2, Y(y)=200+(y+3.5)*3.2 -->
+       pedestal centers x 2.5/62.5/122.5/182.5 on y -1.75 and 66.75 (tape 6" / 5'-6" / 10'-6" / 15'-6" from left end,
+       rows 5' 8½" c/c); mapping X(x)=100+(x+3.5)*3.2, Y(y)=200+(y+3.5)*3.2.
+       Pedestal symbol: StrataRise 3560ML-DF, base plate Ø 200 mm (8" = 25.6 px at 3.2 px/in), head schematic.
+       Foundation hardware drawn, not modeled. -->
   <rect width="780" height="620" fill="#ffffff"/>
   <defs>
     <marker id="dim04a" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#444"/></marker>
     <marker id="dim04as" markerWidth="10" markerHeight="8" refX="1" refY="4" orient="auto"><path d="M10,0 L0,4 L10,8 Z" fill="#444"/></marker>
-    <pattern id="pit04a" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-      <rect width="9" height="9" fill="#efe9db"/>
-      <line x1="0" y1="0" x2="0" y2="9" stroke="#b3a888" stroke-width="1.4"/>
-    </pattern>
   </defs>
 
   <!-- view badge -->
@@ -27,8 +25,9 @@
   <rect x="100" y="200" width="614.4" height="230.4" fill="none" stroke="#8a8a8a" stroke-width="2" stroke-dasharray="10,6"/>
   <text x="407" y="330" text-anchor="middle" font-size="13" fill="#8a8a8a">16 ft × 6 ft footprint — the walls will sit on the deck above (dashed = future)</text>
 
+  <clipPath id="pits04a"><rect x="80.8" y="167.2" width="76.8" height="76.8"/><rect x="272.8" y="167.2" width="76.8" height="76.8"/><rect x="464.8" y="167.2" width="76.8" height="76.8"/><rect x="656.8" y="167.2" width="76.8" height="76.8"/><rect x="80.8" y="386.4" width="76.8" height="76.8"/><rect x="272.8" y="386.4" width="76.8" height="76.8"/><rect x="464.8" y="386.4" width="76.8" height="76.8"/><rect x="656.8" y="386.4" width="76.8" height="76.8"/><rect x="112" y="586" width="18" height="14"/></clipPath>
   <!-- gravel pockets, hatched = material removed -->
-  <g fill="url(#pit04a)" stroke="#8a7c55" stroke-width="2">
+  <g fill="#efe9db" stroke="#8a7c55" stroke-width="2">
     <rect x="80.8" y="167.2" width="76.8" height="76.8"/>
     <rect x="272.8" y="167.2" width="76.8" height="76.8"/>
     <rect x="464.8" y="167.2" width="76.8" height="76.8"/>
@@ -38,8 +37,9 @@
     <rect x="464.8" y="386.4" width="76.8" height="76.8"/>
     <rect x="656.8" y="386.4" width="76.8" height="76.8"/>
   </g>
+  <path clip-path="url(#pits04a)" fill="none" stroke="#b3a888" stroke-width="1.4" d="M80.8,167.2 L80.8,167.2M80.8,176.2 L89.8,167.2M80.8,185.2 L98.8,167.2M80.8,194.2 L107.8,167.2M80.8,203.2 L116.8,167.2M80.8,212.2 L125.8,167.2M80.8,221.2 L134.8,167.2M80.8,230.2 L143.8,167.2M80.8,239.2 L152.8,167.2M80.8,248.2 L161.8,167.2M80.8,257.2 L170.8,167.2M80.8,266.2 L179.8,167.2M80.8,275.2 L188.8,167.2M80.8,284.2 L197.8,167.2M80.8,293.2 L206.8,167.2M80.8,302.2 L215.8,167.2M80.8,311.2 L224.8,167.2M80.8,320.2 L233.8,167.2M80.8,329.2 L242.8,167.2M80.8,338.2 L251.8,167.2M80.8,347.2 L260.8,167.2M80.8,356.2 L269.8,167.2M80.8,365.2 L278.8,167.2M80.8,374.2 L287.8,167.2M80.8,383.2 L296.8,167.2M80.8,392.2 L305.8,167.2M80.8,401.2 L314.8,167.2M80.8,410.2 L323.8,167.2M80.8,419.2 L332.8,167.2M80.8,428.2 L341.8,167.2M80.8,437.2 L350.8,167.2M80.8,446.2 L359.8,167.2M80.8,455.2 L368.8,167.2M81.8,463.2 L377.8,167.2M90.8,463.2 L386.8,167.2M99.8,463.2 L395.8,167.2M108.8,463.2 L404.8,167.2M117.8,463.2 L413.8,167.2M126.8,463.2 L422.8,167.2M135.8,463.2 L431.8,167.2M144.8,463.2 L440.8,167.2M153.8,463.2 L449.8,167.2M162.8,463.2 L458.8,167.2M171.8,463.2 L467.8,167.2M180.8,463.2 L476.8,167.2M189.8,463.2 L485.8,167.2M198.8,463.2 L494.8,167.2M207.8,463.2 L503.8,167.2M216.8,463.2 L512.8,167.2M225.8,463.2 L521.8,167.2M234.8,463.2 L530.8,167.2M243.8,463.2 L539.8,167.2M252.8,463.2 L548.8,167.2M261.8,463.2 L557.8,167.2M270.8,463.2 L566.8,167.2M279.8,463.2 L575.8,167.2M288.8,463.2 L584.8,167.2M297.8,463.2 L593.8,167.2M306.8,463.2 L602.8,167.2M315.8,463.2 L611.8,167.2M324.8,463.2 L620.8,167.2M333.8,463.2 L629.8,167.2M342.8,463.2 L638.8,167.2M351.8,463.2 L647.8,167.2M360.8,463.2 L656.8,167.2M369.8,463.2 L665.8,167.2M378.8,463.2 L674.8,167.2M387.8,463.2 L683.8,167.2M396.8,463.2 L692.8,167.2M405.8,463.2 L701.8,167.2M414.8,463.2 L710.8,167.2M423.8,463.2 L719.8,167.2M432.8,463.2 L728.8,167.2M441.8,463.2 L733.6,171.4M450.8,463.2 L733.6,180.4M459.8,463.2 L733.6,189.4M468.8,463.2 L733.6,198.4M477.8,463.2 L733.6,207.4M486.8,463.2 L733.6,216.4M495.8,463.2 L733.6,225.4M504.8,463.2 L733.6,234.4M513.8,463.2 L733.6,243.4M522.8,463.2 L733.6,252.4M531.8,463.2 L733.6,261.4M540.8,463.2 L733.6,270.4M549.8,463.2 L733.6,279.4M558.8,463.2 L733.6,288.4M567.8,463.2 L733.6,297.4M576.8,463.2 L733.6,306.4M585.8,463.2 L733.6,315.4M594.8,463.2 L733.6,324.4M603.8,463.2 L733.6,333.4M612.8,463.2 L733.6,342.4M621.8,463.2 L733.6,351.4M630.8,463.2 L733.6,360.4M639.8,463.2 L733.6,369.4M648.8,463.2 L733.6,378.4M657.8,463.2 L733.6,387.4M666.8,463.2 L733.6,396.4M675.8,463.2 L733.6,405.4M684.8,463.2 L733.6,414.4M693.8,463.2 L733.6,423.4M702.8,463.2 L733.6,432.4M711.8,463.2 L733.6,441.4M720.8,463.2 L733.6,450.4M729.8,463.2 L733.6,459.4M112.0,586.0 L112.0,586.0M112.0,591.0 L117.0,586.0M112.0,596.0 L122.0,586.0M113.0,600.0 L127.0,586.0M118.0,600.0 L130.0,588.0M123.0,600.0 L130.0,593.0M128.0,600.0 L130.0,598.0"/>
 
-  <!-- pavers -->
+  <!-- paver base pads -->
   <g fill="#c9c9c1" stroke="#77776c" stroke-width="1.6">
     <rect x="92" y="178.4" width="54.4" height="54.4"/>
     <rect x="284" y="178.4" width="54.4" height="54.4"/>
@@ -51,16 +51,28 @@
     <rect x="668" y="397.6" width="54.4" height="54.4"/>
   </g>
 
-  <!-- tuff blocks -->
-  <g fill="#4a4a4a" stroke="#2b2b2b" stroke-width="1.6">
-    <rect x="103.2" y="189.6" width="32" height="32" rx="2"/>
-    <rect x="295.2" y="189.6" width="32" height="32" rx="2"/>
-    <rect x="487.2" y="189.6" width="32" height="32" rx="2"/>
-    <rect x="679.2" y="189.6" width="32" height="32" rx="2"/>
-    <rect x="103.2" y="408.8" width="32" height="32" rx="2"/>
-    <rect x="295.2" y="408.8" width="32" height="32" rx="2"/>
-    <rect x="487.2" y="408.8" width="32" height="32" rx="2"/>
-    <rect x="679.2" y="408.8" width="32" height="32" rx="2"/>
+  <!-- pedestals: base plate Ø 8" + head, centered on the eight marks -->
+  <g>
+    <g fill="#4a4a4a" stroke="#2b2b2b" stroke-width="1.6">
+      <circle cx="119.2" cy="205.6" r="12.8"/>
+      <circle cx="311.2" cy="205.6" r="12.8"/>
+      <circle cx="503.2" cy="205.6" r="12.8"/>
+      <circle cx="695.2" cy="205.6" r="12.8"/>
+      <circle cx="119.2" cy="424.8" r="12.8"/>
+      <circle cx="311.2" cy="424.8" r="12.8"/>
+      <circle cx="503.2" cy="424.8" r="12.8"/>
+      <circle cx="695.2" cy="424.8" r="12.8"/>
+    </g>
+    <g fill="#a9a9a9">
+      <circle cx="119.2" cy="205.6" r="4.4"/>
+      <circle cx="311.2" cy="205.6" r="4.4"/>
+      <circle cx="503.2" cy="205.6" r="4.4"/>
+      <circle cx="695.2" cy="205.6" r="4.4"/>
+      <circle cx="119.2" cy="424.8" r="4.4"/>
+      <circle cx="311.2" cy="424.8" r="4.4"/>
+      <circle cx="503.2" cy="424.8" r="4.4"/>
+      <circle cx="695.2" cy="424.8" r="4.4"/>
+    </g>
   </g>
 
   <!-- skid lines: future this page, dashed -->
@@ -82,7 +94,7 @@
     <circle cx="349" cy="205.6" r="7"/><line x1="344" y1="200.6" x2="354" y2="210.6"/><line x1="354" y1="200.6" x2="344" y2="210.6"/>
     <circle cx="349" cy="424.8" r="7"/><line x1="344" y1="419.8" x2="354" y2="429.8"/><line x1="354" y1="419.8" x2="344" y2="429.8"/>
   </g>
-  <text x="362" y="243" font-size="13" fill="#c0392b">each skid drops DOWN onto its four blocks</text>
+  <text x="362" y="252" font-size="13" fill="#c0392b">each skid drops DOWN onto its four pedestals</text>
 
   <!-- cut line B-B, viewed toward the right end -->
   <line x1="119.2" y1="130" x2="119.2" y2="478" stroke="#333" stroke-width="2.6" stroke-dasharray="14,5,3,5"/>
@@ -92,7 +104,7 @@
   <text x="146" y="487" font-size="15" font-weight="bold" fill="#333">B</text>
   <text x="164" y="131" font-size="13" fill="#333">B–B → section of one pocket, Fig 4.2</text>
 
-  <!-- block-spacing dimension chain, tape from the left-end corner -->
+  <!-- pedestal-spacing dimension chain, tape from the left-end corner -->
   <g stroke="#999" stroke-width="1">
     <line x1="100" y1="434" x2="100" y2="502"/>
     <line x1="119.2" y1="466" x2="119.2" y2="502"/>
@@ -130,7 +142,7 @@
       <text x="695.2" y="460">15 ft 6 in</text>
     </g>
   </g>
-  <text x="407" y="545" text-anchor="middle" font-size="13" fill="#555">pocket centers, read on the tape from the LEFT-end corner</text>
+  <text x="407" y="545" text-anchor="middle" font-size="13" fill="#555">pedestal centers, read on the tape from the LEFT-end corner</text>
 
   <!-- skid row spacing -->
   <line x1="735" y1="205.6" x2="735" y2="424.8" stroke="#444" stroke-width="1.4" marker-start="url(#dim04as)" marker-end="url(#dim04a)"/>
@@ -144,16 +156,16 @@
 
   <!-- legend -->
   <g font-size="13" fill="#444">
-    <rect x="130" y="576" width="520" height="34" fill="#fafaf8" stroke="#ddd" rx="5"/>
-    <rect x="142" y="586" width="18" height="14" fill="url(#pit04a)" stroke="#8a7c55" stroke-width="1.4"/>
-    <text x="166" y="597">gravel pocket (hatched = dug out)</text>
-    <rect x="404" y="586" width="18" height="14" fill="#c9c9c1" stroke="#77776c"/>
-    <text x="428" y="597">paver</text>
-    <rect x="478" y="586" width="14" height="14" fill="#4a4a4a"/>
-    <text x="498" y="597">Tuff Block</text>
-    <circle cx="592" cy="593" r="6" fill="none" stroke="#c0392b" stroke-width="1.6"/>
-    <line x1="587.8" y1="588.8" x2="596.2" y2="597.2" stroke="#c0392b" stroke-width="1.6"/>
-    <line x1="596.2" y1="588.8" x2="587.8" y2="597.2" stroke="#c0392b" stroke-width="1.6"/>
-    <text x="606" y="597">drops DOWN</text>
+    <rect x="100" y="576" width="580" height="34" fill="#fafaf8" stroke="#ddd" rx="5"/>
+    <rect x="112" y="586" width="18" height="14" fill="#efe9db" stroke="#8a7c55" stroke-width="1.4"/>
+    <text x="136" y="597">gravel pocket (hatched = dug out)</text>
+    <rect x="362" y="586" width="18" height="14" fill="#c9c9c1" stroke="#77776c"/>
+    <text x="386" y="597">paver pad</text>
+    <circle cx="470" cy="593" r="8" fill="#4a4a4a" stroke="#2b2b2b" stroke-width="1.2"/>
+    <circle cx="470" cy="593" r="2.8" fill="#a9a9a9"/>
+    <text x="484" y="597">pedestal · 3560ML-DF</text>
+    <circle cx="640" cy="593" r="6" fill="none" stroke="#c0392b" stroke-width="1.6"/>
+    <line x1="635.8" y1="588.8" x2="644.2" y2="597.2" stroke="#c0392b" stroke-width="1.6"/>
+    <line x1="644.2" y1="588.8" x2="635.8" y2="597.2" stroke="#c0392b" stroke-width="1.6"/>
   </g>
 </svg>

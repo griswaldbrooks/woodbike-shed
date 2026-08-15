@@ -3,10 +3,10 @@
   Fig 16.2 - Error frame: skid rectangle out of square, diagonals not equal.
   PLAN, horizontal cut at skid-top height, looking DOWN. Scale 3.8 px per
   inch. Error drawn with the front skid line shifted 4" along its length -
-  EXAGGERATED. Blocks (below the cut plane) dashed grey.
+  EXAGGERATED. Pedestal bases (below the cut plane) dashed grey.
   Model anchors (traceability, non-rendering): skid lines y -3.5...0 (front)
-  and y 65...68.5 (back), x -3.5...188.5; block centres 6" in from each skid
-  end at 5' o.c. (x 2.5 / 62.5 / 122.5 / 182.5).
+  and y 65...68.5 (back), x -3.5...188.5; pedestal centres 6" in from each skid
+  end at 5' o.c. (x 2.5 / 62.5 / 122.5 / 182.5). Pedestal base Ø 200 mm (8").
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560"
      font-family="Helvetica, Arial, sans-serif" role="img"
@@ -34,16 +34,16 @@
   <text x="250" y="124" font-size="17" font-weight="bold" fill="#4a3010" text-anchor="middle">FRONT (street)</text>
   <text x="480" y="428" font-size="17" font-weight="bold" fill="#4a3010" text-anchor="middle">BACK</text>
 
-  <!-- blocks, below the cut plane: dashed grey -->
+  <!-- pedestal bases, below the cut plane: dashed grey -->
   <g fill="none" stroke="#888" stroke-width="2" stroke-dasharray="6 4">
-    <rect x="117.8" y="372" width="30" height="30"/>
-    <rect x="345.8" y="372" width="30" height="30"/>
-    <rect x="573.8" y="372" width="30" height="30"/>
-    <rect x="801.8" y="372" width="30" height="30"/>
-    <rect x="133" y="125" width="30" height="30"/>
-    <rect x="361" y="125" width="30" height="30"/>
-    <rect x="589" y="125" width="30" height="30"/>
-    <rect x="817" y="125" width="30" height="30"/>
+    <circle cx="132.8" cy="387" r="15.2"/>
+    <circle cx="360.8" cy="387" r="15.2"/>
+    <circle cx="588.8" cy="387" r="15.2"/>
+    <circle cx="816.8" cy="387" r="15.2"/>
+    <circle cx="148" cy="140" r="15.2"/>
+    <circle cx="376" cy="140" r="15.2"/>
+    <circle cx="604" cy="140" r="15.2"/>
+    <circle cx="832" cy="140" r="15.2"/>
   </g>
 
   <!-- back skid, correct -->
@@ -77,5 +77,5 @@
 
   <text x="110" y="470" font-size="16" fill="#000">skid · 4×4 PT · continuous 16′ (cut material at the cut plane)</text>
   <text x="110" y="494" font-size="16" fill="#000">error exaggerated: the front skid line is drawn 4″ out of place</text>
-  <text x="110" y="518" font-size="16" fill="#000">dashed squares = Tuff Blocks below the cut plane</text>
+  <text x="110" y="518" font-size="16" fill="#000">dashed circles = pedestal bases below the cut plane</text>
 </svg>

@@ -58,4 +58,4 @@ above.
 - [ ] This list was placed as its own order, separate from [the framing order](02-order-framing.md).
 - [ ] Primed rows and KD rows were checked as two groups at pickup.
 - [ ] You have paint and caulk on your own third list — they are on neither order.
-- [ ] Next: [Stage 1 — blocks and skids](04-blocks-and-skids.md).
+- [ ] Next: [Stage 1 — pedestals and skids](04-blocks-and-skids.md).

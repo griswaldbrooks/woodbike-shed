@@ -56,7 +56,7 @@ cuts against the list; a board cut more than ½″ off its length gets recut, no
 two tape diagonals disagree. Ease the long corner over until both readings match within ½″;
 checked at Stage 1, before any wall goes up.](figures/fig-16-floor-diagonals.svg)
 
-<!-- model trace: skid lines y -3.5...0 and y 65...68.5, x -3.5...188.5; block centres 6"
+<!-- model trace: skid lines y -3.5...0 and y 65...68.5, x -3.5...188.5; pedestal centres 6"
 in from each skid end at 5' o.c.; error state drawn with the front skid line shifted 4"
 along its length (exaggerated) -->
 

@@ -79,9 +79,9 @@ high contrast for sunlight.
 in at least two channels: symbol + text, figure + embedded warning.
 
 **P13 — Error-state frames.** Crossed-out frames in the prohibition style at
-the failure points this build actually has: block not under the skid bearing
-point, jack stud on the wrong side of the plate, rafter seated on one plate
-only, siding course started without the skirt.
+the failure points this build actually has: pedestal not under the skid
+bearing point, jack stud on the wrong side of the plate, rafter seated on one
+plate only, siding course started without the skirt.
 
 ## 2. The failure that motivated the spec
 
@@ -122,13 +122,13 @@ front matter shape, then the body:
 ```markdown
 ---
 page: P04
-title: Blocks and skids
+title: Pedestals and skids
 stage: Stage 1 of 12
 prev: 03-order-finish.md
 next: 05-floor.md
 ---
 
-# Stage 1 — Blocks and skids
+# Stage 1 — Pedestals and skids
 
 > **Goal:** what exists when this page is done, in one sentence.
 > **Crew:** 1 person · **Time:** about half a day · **Weather:** dry ground
@@ -192,8 +192,8 @@ Adding a build stage means a new numbered page in this chain with updated
 the stage count reviewed. Walls are framed flat on the deck (Stages 3–5) and
 raised in Stage 6 — keep that sequencing straight in any summary text.
 
-**Tone:** plain, direct, second person. "Set the blocks", not "the blocks
-should be set". Short sentences. No coordinate-speak, no CAD vocabulary, no
+**Tone:** plain, direct, second person. "Set the pedestals", not "the
+pedestals should be set". Short sentences. No coordinate-speak, no CAD vocabulary, no
 marketing. The reader is competent with tools but has not built this shed
 before.
 

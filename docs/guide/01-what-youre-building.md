@@ -12,8 +12,8 @@ next: 02-order-framing.md
 One combined wood shed and bike shed: a 16 ft × 6 ft rectangular box with a single-slope
 (shed) roof, the tall wall at the front (street/door) side, three exterior door openings,
 1×8 lap siding, and board-and-batten doors. The whole shed rides on two continuous
-pressure-treated 4×4 skids bearing on eight Tuff Blocks set in gravel pockets — no concrete
-foundation.
+pressure-treated 4×4 skids bearing on eight adjustable support pedestals (StrataRise
+3560ML-DF) standing on paver base pads in gravel pockets — no concrete foundation.
 
 ![Fig 1.1 — Cross-section through the whole shed, viewed from the right gable end. The tall
 front wall (plate top 10′ 3″ above the deck) falls at 4.5 : 12 to the back wall (plate top

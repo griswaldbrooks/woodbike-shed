@@ -79,7 +79,7 @@ figure per step where a figure is warranted; safety messages at the exact step t
 the hazard, in the warning format from the symbol key; and every page ends with a "Before you
 move on" checklist whose checks name the tool that verifies them.
 
-Tone: plain, direct, second person. "Set the blocks", not "the blocks should be set".
+Tone: plain, direct, second person. "Set the pedestals", not "the pedestals should be set".
 
 ## The PDF for the job site
 

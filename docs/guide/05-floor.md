@@ -104,7 +104,7 @@ the front wall rises 123" above it, the back and side walls 97⅛". Before the w
 "DECK = 0" on the inside of the front rim, and start your tape on the deck whenever a page gives
 you a height.
 
-![Fig 5.2 — Section through the finished floor at 128¾" from the left end (line C–C in Fig 5.1, viewed toward the left end, FRONT at left). Stage 2 complete: gravel, paver, block, and skid carry the rims, the joists, and the deck; the dashed plate shows where the front wall lands next. The deck's top surface is the zero every height in this guide measures up from.](figures/fig-05-b.svg)
+![Fig 5.2 — Section through the finished floor at 128¾" from the left end (line C–C in Fig 5.1, viewed toward the left end, FRONT at left). Stage 2 complete: gravel, paver, pedestal, and skid carry the rims, the joists, and the deck; the dashed plate shows where the front wall lands next. The deck's top surface is the zero every height in this guide measures up from.](figures/fig-05-b.svg)
 
 ## Before you move on
 

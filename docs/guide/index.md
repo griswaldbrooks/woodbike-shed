@@ -8,7 +8,8 @@ next: 01-what-youre-building.md
 
 This guide builds one shed: a 16 ft × 6 ft wood box with a single-slope roof, the tall
 wall at the front, three door openings, lap siding, and board-and-batten doors. It rides
-on two 16 ft skids on eight blocks — no concrete. Twelve stages take you from bare ground
+on two 16 ft skids carried by eight adjustable pedestals on paver base pads — no concrete.
+Twelve stages take you from bare ground
 to hung doors. One page per stage, in build order. Read this page once, then work the
 pages in order.
 
@@ -33,7 +34,7 @@ pages in order.
 
 ## The build, stage by stage
 
-- [Stage 1 — Blocks and skids](04-blocks-and-skids.md): a level pair of skids on eight blocks, square.
+- [Stage 1 — Pedestals and skids](04-blocks-and-skids.md): a level pair of skids on eight adjustable pedestals, square.
 - [Stage 2 — Floor](05-floor.md): rims, joists, deck; the deck top becomes your datum.
 - [Stage 3 — Front wall](06-front-wall.md): the tall wall with both door openings, framed flat on the deck.
 - [Stage 4 — Back wall](07-back-wall.md): framed flat along the back edge, corners left open for the side-wall laps.
@@ -75,7 +76,7 @@ page up a ladder.
 
 - Tape measure (25 ft) and a pencil
 - Speed square and a 4 ft level
-- String line — the blocks are set to one common plane, not levelled one by one
+- String line — the pedestal rings bring both skids to one common plane, not levelled one by one
 - Circular saw; a sharp handsaw or jigsaw for notches
 - Drill/driver and a hammer
 - Shovel and a hand tamper for the gravel pockets

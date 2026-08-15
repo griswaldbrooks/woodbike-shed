@@ -67,6 +67,14 @@ every change to the guide follows it; `.claude/skills` symlinks
 Integrated 2026-08-13 on `fm/woodbike-shed-guide-integration`; the
 integration report (figure verdicts, PDF true-size proof) lives in
 firstmate's `data/woodbike-shed-guide-integration/report.md`.
+Guide foundation revised 2026-08-15 (`fm/guide-foundation-revision`): the
+retired eight-Tuff-Block design became compacted gravel → paver base pad →
+StrataRise 3560ML-DF-30 adjustable pedestals at the same eight points
+(captain confirmed 2026-08-14). Manufacturer spec, load math, and the
+3½″-skid-on-3″-head fit note live in `docs/guide/r02-sources.md`; Stage 1
+page + figs 4.1/4.2 rewritten, figs 1.1/5.2/16.1 and all old-hardware
+mentions swept. fig-04-a's pocket hatch is explicit clipped lines, not a
+`<pattern>` fill.
 
 ## GitHub Pages site (docs/)
 

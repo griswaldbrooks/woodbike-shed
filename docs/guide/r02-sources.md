@@ -39,13 +39,23 @@ the two continuous 16′ 4×4 skids were applied locally only, and the roof was 
 about the unchanged front wall (pitch 24/65 → 24.375/65). Every number in this guide follows
 the local model, not Onshape.
 
-## Foundation drawings
+## Foundation drawings and the pedestal spec
 
 The foundation is drawn, not modeled. The originals are the captain's gravel-pocket set
 (read-only); the plan view used by the Stage 1 page is adapted from them for the 16′
 footprint and the continuous skids (the old drawing's 8-ft sistered splice no longer
-applies), and the pocket section detail is inlined unchanged. Block, paver, and stone
-quantities come from those drawings, not from the model.
+applies). Paver pad and stone quantities come from those drawings, not from the model.
+
+On 2026-08-14 the captain retired the eight-Tuff-Block foundation and confirmed the current
+design: compacted gravel → paver base pad → **StrataRise adjustable support pedestal, part
+number 3560ML-DF-30**, at the same eight support points (two rows of four under the two
+continuous 4×4 skids). Manufacturer spec (stratarise.us, "Multi-Level — for Joists", fetched
+2026-08-15): height adjustment 1⅜″–2⅜″ (35–60 mm), load-tested to 1,760 lb (800 kg) per unit
+at its weakest setting (maximum height, one thread engaged), base plate Ø 8″ (200 mm),
+threaded head with a fixing flange and screw slot for fastening to the beam, head made for
+joists up to 3″ (75 mm) wide; sold as 3560ML-DF-30 (pack of 30) or 3560ML-DF-10 (pack of
+10). Fit note: the PT 4×4 skid measures 3½″, ½″ wider than the head's nominal joist width —
+the skid seats centered, overhanging the head about ¼″ each side.
 
 ## Known intentional quirks
 
@@ -66,7 +76,7 @@ non-rendering HTML comment; stage pages owned by other workers carry their own.
 |---|---|---|
 | fig-01-cross-section | SECTION, constant X at 92.5 (through doubled joist pair), viewed from +X | front wall y −3.5…0, z 0…123; back wall y 65…68.5, z 0…97.125; rafter heel y −4 seat z 123, back seat z 97.125 at y 65…68.5, tails y −27.5 / 80.5; fascia faces y −29 / 82; peak z 137.687; skids z −9.75…−6.25; foundation schematic |
 | fig-16-rafter-seat-gap | SECTION at the back wall seat, viewed from +X | back DTP top z 97.125 at y 65…68.5; plumb kick at y 68.5 to z 95.8125; rafter bottom slope 0.375; error gap 1″ drawn, exaggerated |
-| fig-16-floor-diagonals | PLAN, horizontal cut at skid top, looking down | skid lines y −3.5…0 and y 65…68.5, x −3.5…188.5; block centres x 2.5 / 62.5 / 122.5 / 182.5; error: front skid shifted +4″ in X, exaggerated |
+| fig-16-floor-diagonals | PLAN, horizontal cut at skid top, looking down | skid lines y −3.5…0 and y 65…68.5, x −3.5…188.5; pedestal centres x 2.5 / 62.5 / 122.5 / 182.5; error: front skid shifted +4″ in X, exaggerated |
 | fig-16-rake-courses | ELEVATION, left wall face x −3.5, viewed from −X | siding 7″ exposure from skirt top z 0.5; rake cut line = rafter bottom + 1″ (z 96.8 back → 123.8 front); skirt z −6.75…0.5; error: top course 2″ past rake, exaggerated |
 
 Whole-shed anchors used across pages: footprint x −3.5…188.5 × y −3.5…68.5; front DTP top

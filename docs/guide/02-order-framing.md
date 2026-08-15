@@ -52,11 +52,14 @@ Per the captain's gravel-pocket drawings; eight pockets carry the whole shed.
 
 | ☐ | Item | Qty | Notes |
 |---|---|---|---|
-| ☐ | Tuff Block | 8 | four per skid line |
-| ☐ | concrete paver, 16–18″ | 8 | load spreader under each block |
+| ☐ | StrataRise adjustable pedestal, part no. 3560ML-DF-30 | 8 | four per skid line; sold in packs of 30 — one pack covers all eight |
+| ☐ | concrete paver base pad, 16–18″ | 8 | load spreader under each pedestal |
 | ☐ | ¾″ angular crushed stone | ~1 yd³ | eight 2′ × 2′ pockets, 8–12″ deep, placed in 3″ lifts and tamped |
 | ☐ | landscape fabric | 8 pockets | lines each pocket |
-| ☐ | shims | as needed | never more than ½″ under a skid |
+| ☐ | screws for the pedestal fixing flanges | as needed | not on either order; structural screws that grip PT 4×4 |
+
+No shims on this foundation — each pedestal's adjustment ring does the leveling. Pedestal spec
+and source: [r02-sources.md](r02-sources.md).
 
 The foundation is the one part of this build that is drawn, not modeled — see
 [r02-sources.md](r02-sources.md) for where the drawings came from.

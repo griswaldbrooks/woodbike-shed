@@ -1,8 +1,9 @@
 <svg viewBox="0 0 780 560" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
   <!-- Fig 5.2 — floor build-up, section C-C cut through joist 10 at tape 128¾ in, viewed toward the LEFT end.
        model trace: OSB z -0.75..0; rims/joists z -6.25..-0.75 (5½"); skids z -9.75..-6.25 (3½");
-       deck top 9¾" above skid bottoms; blocks/pavers under both skid rows at tape 121..131 (block centers tape 126).
-       Scale 6.2 px/in; deck top at y 200; FRONT (street) at left. OSB thickness and block/paver heights schematic. -->
+       deck top 9¾" above skid bottoms; pedestals/pavers under both skid rows at tape 121..131 (pedestal centers tape 126).
+       Pedestal: StrataRise 3560ML-DF, real adjustment 1⅜–2⅜ in, base Ø 8 in — drawn schematic, not modeled.
+       Scale 6.2 px/in; deck top at y 200; FRONT (street) at left. OSB thickness and pedestal/paver heights schematic. -->
   <rect width="780" height="560" fill="#ffffff"/>
   <defs>
     <marker id="dim05b" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#444"/></marker>
@@ -66,30 +67,38 @@
   <rect x="120" y="240" width="21.7" height="21.7" fill="url(#greyh05b)" stroke="#666" stroke-width="2"/>
   <rect x="544.7" y="240" width="21.7" height="21.7" fill="url(#greyh05b)" stroke="#666" stroke-width="2"/>
 
-  <!-- blocks + pavers: Stage 1, grey -->
-  <path d="M108,261.7 L99,323 L162,323 L153,261.7 Z" fill="url(#greyh05b)" stroke="#666" stroke-width="2"/>
-  <path d="M511,261.7 L502,323 L566,323 L556,261.7 Z" fill="url(#greyh05b)" stroke="#666" stroke-width="2"/>
-  <rect x="78" y="323" width="106" height="6" fill="url(#greyh05b)" stroke="#666" stroke-width="1.6"/>
-  <rect x="481" y="323" width="106" height="6" fill="url(#greyh05b)" stroke="#666" stroke-width="1.6"/>
+  <!-- pedestals + pavers: Stage 1, grey. Pedestal (StrataRise 3560ML-DF): head under skid,
+       threaded column, Ø 8 in base plate on the paver. Heights schematic. -->
+  <!-- FRONT pedestal -->
+  <rect x="122" y="261.7" width="18" height="4.3" fill="url(#greyh05b)" stroke="#666" stroke-width="1.6"/>
+  <rect x="127" y="266" width="8" height="6" fill="url(#greyh05b)" stroke="#666" stroke-width="1.4"/>
+  <rect x="106" y="272" width="50" height="2.5" fill="url(#greyh05b)" stroke="#666" stroke-width="1.4"/>
+  <!-- BACK pedestal -->
+  <rect x="546.5" y="261.7" width="18" height="4.3" fill="url(#greyh05b)" stroke="#666" stroke-width="1.6"/>
+  <rect x="551.5" y="266" width="8" height="6" fill="url(#greyh05b)" stroke="#666" stroke-width="1.4"/>
+  <rect x="530.5" y="272" width="50" height="2.5" fill="url(#greyh05b)" stroke="#666" stroke-width="1.4"/>
+  <!-- paver base pads -->
+  <rect x="78" y="274.5" width="106" height="8.5" fill="url(#greyh05b)" stroke="#666" stroke-width="1.6"/>
+  <rect x="502" y="274.5" width="106" height="8.5" fill="url(#greyh05b)" stroke="#666" stroke-width="1.6"/>
 
   <!-- grade -->
-  <line x1="40" y1="329" x2="740" y2="329" stroke="#5d7c3f" stroke-width="2.6"/>
-  <text x="44" y="322" font-size="14" font-weight="bold" fill="#5d7c3f">grade</text>
+  <line x1="40" y1="283" x2="740" y2="283" stroke="#5d7c3f" stroke-width="2.6"/>
+  <text x="44" y="277" font-size="14" font-weight="bold" fill="#5d7c3f">grade</text>
 
   <!-- gravel pockets -->
-  <rect x="56.5" y="329" width="148.8" height="62" fill="url(#gravel05b)" stroke="#8a8578" stroke-width="2"/>
-  <rect x="461.3" y="329" width="148.8" height="62" fill="url(#gravel05b)" stroke="#8a8578" stroke-width="2"/>
-  <path d="M56.5,321 L56.5,391 L205.3,391 L205.3,321" fill="none" stroke="#b06a2c" stroke-width="1.8" stroke-dasharray="7,4"/>
-  <path d="M461.3,321 L461.3,391 L610.1,391 L610.1,321" fill="none" stroke="#b06a2c" stroke-width="1.8" stroke-dasharray="7,4"/>
+  <rect x="56.5" y="283" width="148.8" height="62" fill="url(#gravel05b)" stroke="#8a8578" stroke-width="2"/>
+  <rect x="461.3" y="283" width="148.8" height="62" fill="url(#gravel05b)" stroke="#8a8578" stroke-width="2"/>
+  <path d="M56.5,275 L56.5,345 L205.3,345 L205.3,275" fill="none" stroke="#b06a2c" stroke-width="1.8" stroke-dasharray="7,4"/>
+  <path d="M461.3,275 L461.3,345 L610.1,345 L610.1,275" fill="none" stroke="#b06a2c" stroke-width="1.8" stroke-dasharray="7,4"/>
 
   <!-- soil -->
-  <rect x="40" y="329" width="16.5" height="62" fill="url(#soil05b)"/>
-  <rect x="205.3" y="329" width="256" height="62" fill="url(#soil05b)"/>
-  <rect x="610.1" y="329" width="130" height="62" fill="url(#soil05b)"/>
-  <rect x="40" y="391" width="700" height="76" fill="url(#firm05b)"/>
-  <line x1="40" y1="391" x2="740" y2="391" stroke="#8f7f5e" stroke-width="2"/>
-  <text x="333" y="364" text-anchor="middle" font-size="13" font-style="italic" fill="#8a7c63">soft soil (hatched = cut)</text>
-  <text x="640" y="430" font-size="13" font-style="italic" fill="#7a6a4c">firm subsoil</text>
+  <rect x="40" y="283" width="16.5" height="62" fill="url(#soil05b)"/>
+  <rect x="205.3" y="283" width="256" height="62" fill="url(#soil05b)"/>
+  <rect x="610.1" y="283" width="130" height="62" fill="url(#soil05b)"/>
+  <rect x="40" y="345" width="700" height="76" fill="url(#firm05b)"/>
+  <line x1="40" y1="345" x2="740" y2="345" stroke="#8f7f5e" stroke-width="2"/>
+  <text x="333" y="318" text-anchor="middle" font-size="13" font-style="italic" fill="#8a7c63">soft soil (hatched = cut)</text>
+  <text x="640" y="384" font-size="13" font-style="italic" fill="#7a6a4c">firm subsoil</text>
 
   <!-- 9¾ dim -->
   <line x1="88" y1="200" x2="88" y2="261.7" stroke="#444" stroke-width="1.4" marker-start="url(#dim05bs)" marker-end="url(#dim05b)"/>
@@ -102,33 +111,36 @@
   </g>
 
   <!-- gravity arrow -->
-  <line x1="748" y1="248" x2="748" y2="316" stroke="#2b2b2b" stroke-width="3"/>
-  <path d="M748,330 L739,312 L757,312 Z" fill="#2b2b2b"/>
-  <text x="748" y="352" text-anchor="middle" font-size="15" font-weight="bold" fill="#2b2b2b">DOWN</text>
+  <line x1="748" y1="132" x2="748" y2="196" stroke="#2b2b2b" stroke-width="3"/>
+  <path d="M748,210 L739,192 L757,192 Z" fill="#2b2b2b"/>
+  <text x="748" y="228" text-anchor="middle" font-size="15" font-weight="bold" fill="#2b2b2b">DOWN</text>
 
   <!-- leader labels: right column -->
   <g font-size="13" fill="#444">
-    <text x="588" y="230">¾ in OSB deck — 4 half-sheets</text>
+    <text x="588" y="230">¾ in OSB deck</text>
     <path d="M584,226 L440,203" stroke="#777" stroke-width="1" fill="none"/>
     <text x="588" y="254">floor joist · 2×6 · 5 ft 9 in</text>
     <text x="588" y="270">14 of them between the rims</text>
     <path d="M584,250 L352,222" stroke="#777" stroke-width="1" fill="none"/>
     <text x="588" y="296">skid · 4×4 · 16 ft — Stage 1</text>
-    <path d="M584,292 L560,252" stroke="#777" stroke-width="1" fill="none"/>
+    <path d="M584,292 L567,253" stroke="#777" stroke-width="1" fill="none"/>
+    <g>
+      <text x="588" y="322" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">pedestal · StrataRise</text>
+      <text x="588" y="322">pedestal · StrataRise</text>
+    </g>
+    <path d="M584,318 L578,275" stroke="#777" stroke-width="1" fill="none"/>
   </g>
   <!-- leader labels: left column -->
   <g font-size="13" fill="#444">
     <text x="150" y="224">rim joist · 2×6 · 16 ft 0 in</text>
     <path d="M146,220 L130,222" stroke="#777" stroke-width="1" fill="none"/>
-    <text x="108" y="290" text-anchor="end">Tuff Block</text>
-    <path d="M112,286 L120,290" stroke="#777" stroke-width="1" fill="none"/>
   </g>
   <!-- pocket label -->
-  <text x="230" y="428" font-size="13" fill="#444">gravel pocket · paver · block — all Stage 1 work (grey)</text>
-  <path d="M226,424 L150,362" stroke="#777" stroke-width="1" fill="none"/>
+  <text x="230" y="428" font-size="13" fill="#444">gravel pocket · paver · pedestal — all Stage 1 work (grey)</text>
+  <path d="M226,424 L152,322" stroke="#777" stroke-width="1" fill="none"/>
 
   <!-- bottom notes -->
   <rect x="40" y="488" width="700" height="58" fill="#fdf6ec" stroke="#e0cba8" stroke-width="1.5" rx="6"/>
   <text x="56" y="512" font-size="14" fill="#7a5c2e">Stage 1 work (grey) carries Stage 2 work (colour) down to firm soil — and the top of that stack is your zero.</text>
-  <text x="56" y="534" font-size="13" fill="#7a5c2e">Block and paver heights schematic — they are not modeled. Joist shown cut at the section line.</text>
+  <text x="56" y="534" font-size="13" fill="#7a5c2e">Pedestal and paver heights schematic — the real pedestal adjusts 1⅜–2⅜ in; not modeled. Joist shown cut at the section line.</text>
 </svg>
