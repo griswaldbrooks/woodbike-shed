@@ -22,18 +22,17 @@ Tick off the parts before you start (cut-list names, see [R01 cut list](r01-cut-
 
 | Qty | Part · stock | Cut length |
 |---:|:---|:---|
-| 2 | finish skirt · 1×8 PRIMED | 16′ |
-| 2 | finish skirt · 1×8 PRIMED | 6′ |
-| 14 | finish siding back · 1×8 PRIMED | 16′ |
+| 2 | finish skirt · 1×8 PRIMED | 16′ (front and back) |
+| 2 | finish skirt · 1×8 PRIMED | 7′ (side walls) |
+| 13 | finish siding back · 1×8 PRIMED | 16′ |
 | 6 | finish siding front · 1×8 PRIMED | 16′ |
-| 12 | finish siding front · 1×8 PRIMED | 1′ 7″ |
-| 12 | finish siding front · 1×8 PRIMED | 3′ 11½″ |
-| 12 | finish siding front · 1×8 PRIMED | 1′ 5½″ |
-| 14 | finish siding left · 1×8 PRIMED | 6′ |
+| 12 | finish siding front · 1×8 PRIMED | 7′ 8½″ (solid wall east of the barn door) |
+| 12 | finish siding front · 1×8 PRIMED | 3½″ (corner strip west of the barn door) |
+| 2 | finish siding left · 1×8 PRIMED | 7′ (full courses above the door head) |
+| 24 | finish siding left · 1×8 PRIMED | 10″ (piers around the door) |
 | 1 each | finish siding left · 1×8 PRIMED | 5′ 6⅙″, 3′ 10⅙″, 2′ 2⅙″, 6⅙″ (rake boards) |
-| 1 | finish siding right · 1×8 PRIMED | 6′ |
-| 13 | finish siding right · 1×8 PRIMED | 2′ |
-| 13 | finish siding right · 1×8 PRIMED | 1′ |
+| 2 | finish siding right · 1×8 PRIMED | 7′ (full courses above the door head) |
+| 24 | finish siding right · 1×8 PRIMED | 10″ (piers around the door) |
 | 1 each | finish siding right · 1×8 PRIMED | 5′ 6⅙″, 3′ 10⅙″, 2′ 2⅙″, 6⅙″ (rake boards) |
 
 Tools: tape, 4′ level, chalk line, a story pole (a straight 1×2 offcut marked with the course
@@ -59,7 +58,7 @@ board measures from.](figures/fig-13-a.svg)
 
 ### 2. Hang the side skirt boards
 
-Set the two 6′ skirts the same way, one on each end wall, same height as the front and back
+Set the two 7′ skirts the same way, one on each end wall, same height as the front and back
 skirts: top edge ½″ above the deck, square-cut ends at the corners. Check each against the deck
 line with the tape before you nail.
 
@@ -87,34 +86,36 @@ bottom edges land 7″ apart.](figures/fig-13-b.svg)
 
 ### 5. Skin the back wall
 
-Run full 16′ courses up the back wall — 14 courses. No openings: every course is one board. The
+Run full 16′ courses up the back wall — 13 courses. No openings: every course is one board. The
 rafter tails overhang this wall, so the top course is ripped down to tuck under them: its top
-edge lands 95¼″ above the deck, behind where the back frieze will sit. Keep each course's bottom
+edge lands 90¾″ above the deck, behind where the back frieze will sit. Keep each course's bottom
 edge on its 7″ line and nail into the studs.
 
 ### 6. Skin the front wall
 
-The front wall has one opening: the 8 ft barn door at the west corner, headed 84″ above the
-deck; east of it the wall is solid.
+The front wall has one opening: the 8 ft barn door at the west corner — the wheeled roll-out
+for the bikes, snow blower and slabs — headed 84″ above the deck; east of it the wall is solid.
 
 Below the head line, 12 courses break into two piers each: the 3½″ corner strip west of the
-barn door, and the solid wall east of it. Above the head line, 6 full 16′ courses run wall to
-wall. The last of those is ripped so its top edge lands on the plate top, 10′ 3″ above the
-deck, behind where the front frieze will sit.
+barn door, and the solid wall east of it — a 7′ 8½″ board per course. Above the head line,
+6 full 16′ courses run wall to wall. The last of those is ripped so its top edge lands on the
+plate top, 10′ 3″ above the deck, behind where the front frieze will sit.
 
 > ⚠️ **WARNING** — ladder work · the top courses on the 10′ 3″ front wall put you at height ·
 > ladder on firm ground, never reach sideways past the rails
 
 ### 7. Skin the side walls up to the rake
 
-**Left wall:** 14 full 6′ courses. The rake line bites into the back end of the top one — it runs
-the full 6′ but its top edge comes down to meet the rake at the back.
+Both side walls are sided the same way, because both carry the same door: a 64″ double, headed
+84″ above the deck, clear from 6½″ to 70½″ measured back from the front corner. The left one is
+the MAIN entry; the right one serves the brewery.
 
-**Right wall:** this wall carries the third door, headed 84″ above the deck like the front ones.
-Every course below the head breaks into two piers: a 1′ piece in front of the door and a 2′ piece
-behind it — 13 courses of them. Above the head, one full 6′ course.
+Every course below the head breaks into two piers — a 10″ piece in front of the door and a 10″
+piece behind it, 12 courses of them (24 pieces per wall). Above the head, one full 7′ course
+runs wall to wall, and the course above that meets the rake line at the back end — it runs the
+full 7′ but its top back corner is clipped down to the rake.
 
-On both walls, stop where the courses start meeting the rake line; the next step finishes the top.
+Stop where the courses start meeting the rake line; the next step finishes the top.
 
 ### 8. Fit the rake boards on both side walls
 
@@ -124,8 +125,9 @@ each one butts the tongue top of the course below. Set your bevel from a rake bo
 number, and rip each top edge to the line.
 
 Each rake board comes out 20″ shorter than the one below it, measured along the bottom edge —
-that falls out of the roof pitch (24⅜″ of rise over a 65″ run) and the 7½″ board width. Cut them
-to these bottom-edge lengths, longest to shortest, starting from the bottom of the rake run:
+that falls out of the roof pitch (28⅞″ of rise over a 77″ run, the same 4½ in 12) and the 7½″
+board width. Cut them to these bottom-edge lengths, longest to shortest, starting from the
+bottom of the rake run:
 
 | Wall | Bottom-edge length |
 |:---|:---|
@@ -137,16 +139,17 @@ to these bottom-edge lengths, longest to shortest, starting from the bottom of t
 (⅙″ is not on your tape — cut these a hair long and sneak the rake angle; the frieze covers the
 top joints.)
 
-<!-- model trace: rake courses z bottoms 99, 106.5, 114, 121.5; top of the stack 123.813 at the
-front end; side-top line = rafter bottom edge + 1" tuck; lengths are longest (bottom) edges,
-each 20" shorter than the one below (65/24.375 x 7.5) -->
+<!-- model trace: rake courses z bottoms 99, 106.5, 114, 121.5 (the clipped full course below
+them runs z 91.5..99); top of the stack 123.813 at the front end; side-top line = rafter
+bottom edge + 1" tuck; lengths are longest (bottom) edges, each 20" shorter than the one below
+(77/28.875 x 7.5) -->
 
 > ⚠️ **WARNING** — ripping angled boards · the sloped top cut is a rip, not a crosscut · keep the
 > fence on the straight bottom edge, use a push stick, and never freehand the workpiece past the blade
 
-![Fig 13.3 — Left wall from outside, elevation. Stage 10, top of the wall. The 14 full courses
-climb to the rake, then four rake-cut boards step up the roof line, each 20″ shorter than the one
-below.](figures/fig-13-c.svg)
+![Fig 13.3 — Left wall from outside, elevation. Stage 10, top of the wall. Courses 1–12 split
+into 10″ piers around the door opening; courses 13–14 run full width, then four rake-cut boards
+step up the roof line, each 20″ shorter than the one below.](figures/fig-13-c.svg)
 
 ## Before you move on
 

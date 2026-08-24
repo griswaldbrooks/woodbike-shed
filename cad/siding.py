@@ -88,7 +88,7 @@ def _side(L, wall):
     x0 = L["l"] - SIDING_T if wall == "left" else L["r"]
     ztop = L["side_top"]
     yf, yb = L["f"], L["b"]
-    opens = L["right_open"] if wall == "right" else []
+    opens = L[f"{wall}_open"]                # left main / right brewery
     i = 0
     z = Z_START
     while z + BOARD_W < ztop(yb):          # full courses under the rake

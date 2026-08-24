@@ -354,42 +354,6 @@
     "name": "back wall double top plate short"
   },
   {
-    "dx": 92.625,
-    "dy": 3.5,
-    "dz": 1.5,
-    "name": "left side wall studs"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.5,
-    "dz": 1.5,
-    "name": "left side wall studs"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.5,
-    "dz": 1.5,
-    "name": "left side wall studs"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.5,
-    "dz": 1.5,
-    "name": "left side wall studs"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.5,
-    "dz": 1.5,
-    "name": "left side wall studs"
-  },
-  {
-    "dx": 88.125,
-    "dy": 3.5,
-    "dz": 1.5,
-    "name": "left side wall studs"
-  },
-  {
     "dx": 64.72799812734122,
     "dy": 3.5,
     "dz": 1.5,
@@ -406,12 +370,6 @@
     "dy": 3.5,
     "dz": 1.5,
     "name": "left wall double top plate"
-  },
-  {
-    "dx": 77.0,
-    "dy": 3.5,
-    "dz": 1.5,
-    "name": "left side wall bottom plate"
   },
   {
     "dx": 92.625,
@@ -448,48 +406,6 @@
     "dy": 3.5,
     "dz": 1.5,
     "name": "left rake wall top plate"
-  },
-  {
-    "dx": 22.77299929775296,
-    "dy": 3.5,
-    "dz": 1.5,
-    "name": "left rake wall studs"
-  },
-  {
-    "dx": 16.96049929775296,
-    "dy": 3.5,
-    "dz": 1.5,
-    "name": "left rake wall studs"
-  },
-  {
-    "dx": 10.96049929775296,
-    "dy": 3.5,
-    "dz": 1.5,
-    "name": "left rake wall studs"
-  },
-  {
-    "dx": 4.9604992977529605,
-    "dy": 3.5,
-    "dz": 1.5,
-    "name": "left rake wall studs"
-  },
-  {
-    "dx": 92.33549929775296,
-    "dy": 3.5,
-    "dz": 1.5,
-    "name": "left rake wall studs"
-  },
-  {
-    "dx": 91.125,
-    "dy": 3.5,
-    "dz": 1.5,
-    "name": "left rake wall studs"
-  },
-  {
-    "dx": 91.125,
-    "dy": 3.5,
-    "dz": 1.5,
-    "name": "left rake wall studs"
   },
   {
     "dx": 82.23603604868123,
@@ -712,5 +628,125 @@
     "dy": 3.5,
     "dz": 1.5,
     "name": "right wall bottom plate long"
+  },
+  {
+    "dx": 92.625,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left side wall studs"
+  },
+  {
+    "dx": 88.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left side wall studs"
+  },
+  {
+    "dx": 82.5,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left wall jack studs"
+  },
+  {
+    "dx": 82.5,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left wall jack studs"
+  },
+  {
+    "dx": 67.0,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left wall headers"
+  },
+  {
+    "dx": 67.0,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left wall headers"
+  },
+  {
+    "dx": 67.0,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left wall headers"
+  },
+  {
+    "dx": 5.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left wall cripple studs"
+  },
+  {
+    "dx": 5.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left wall cripple studs"
+  },
+  {
+    "dx": 5.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left wall cripple studs"
+  },
+  {
+    "dx": 6.5,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left wall bottom plate short"
+  },
+  {
+    "dx": 6.5,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left wall bottom plate long"
+  },
+  {
+    "dx": 22.77299929775296,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left rake wall studs"
+  },
+  {
+    "dx": 16.96049929775296,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left rake wall studs"
+  },
+  {
+    "dx": 10.96049929775296,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left rake wall studs"
+  },
+  {
+    "dx": 4.9604992977529605,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left rake wall studs"
+  },
+  {
+    "dx": 6.3354992977529605,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left rake wall studs"
+  },
+  {
+    "dx": 5.2104992977529605,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left rake wall studs"
+  },
+  {
+    "dx": 91.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left rake wall studs"
+  },
+  {
+    "dx": 91.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left rake wall studs"
   }
 ]

@@ -5,9 +5,11 @@ Concept envelope, 7 ft outer depth (wall total 7.0 in verified from the audited 
 Doors PROPOSED by this arrangement (clear openings, all outswing, heads 84 in unless noted):
   right wall: 64 in opening at 6.5-70.5 - brewery 64 in rake-wall door
   front wall: 96 in opening at 0.0-96.0 - barn door 8 ft - bikes + blower straight roll
+  left wall: 64 in opening at 6.5-70.5 - main entry 64 in double - closest to garage/access
 Door roles (as parked, every door earns its place):
   right wall 6.5-70.5 in (64 in, head 84): brewery 64 in rake-wall door | parked: brew stand (64 in), kettle 1 (18 in), kettle 2 (18 in), kettle 3 (18 in), pump 1 (10 in), pump 2 (10 in)
   front wall 0.0-96.0 in (96 in, head 84): barn door 8 ft - bikes + blower straight roll | parked: bike 1 (27 in), bike 2 (27 in), snow blower (27 in)
+  left wall 6.5-70.5 in (64 in, head 84): main entry 64 in double - closest to garage/access | parked: cherry slab 1 (22 in), cherry slab 2 (22 in), cherry slab 3 (22 in), cherry slab 4 (22 in), cherry slab 5 (22 in), cherry slab 6 (22 in), snow blower (50 in)
 Fit checks:
   [PASS] slab length fits the interior - slab 120 in vs interior 185 in
   [PASS] stack top clears the back wall comfortably - stack top 63.75 in vs back wall 92.62 in (28.9 in headroom)
@@ -32,8 +34,11 @@ Fit checks:
   [PASS] bike exit: back out, roll straight (no turn) - 27 in bikes in a 96 in door
   [PASS] blower exit: straight reverse-roll out the barn door (Storm 2410 has reverse) - blower 27 in parked 21 in off the back wall
   [PASS] all three kettles inside the side-door span - kettle bodies 8.3-68.7 in vs door 6.5-70.5 in (1.8 in tightest margin - the door is sized to the stand, not bigger)
-  [PASS] pedestrian entry routes through the barn door (walk-in removed) - 96 in barn door vs a 36 in pedestrian minimum; entry lands on the maneuver floor east of the cluster
-  [PASS] pedestrian entry: maneuver floor off the barn door clear (headroom to 48 in) - clear
+  [PASS] pedestrian entry through the left MAIN door (captain 2026-08-24, closest to garage/access) - 64 in double vs a 36 in pedestrian minimum; left wall 6.5-70.5 in
+  [PASS] main-door rake-wall end studs survive the opening (flagged, not engineered) - 6.5 in at the front end, 6.5 in at the back end of the 77 in wall (min 6) - the same flagged 6.5 in rule as the brewery double
+  [PASS] main door outswing: leaves stay exterior, no swing clash with the cluster flank - cluster flank stands 7.75 in off the left wall; every door in the study outswings, so the leaf envelopes never cross the wall plane
+  [PASS] main-door entry landing clear (headroom to 48 in) - clear
+  [PASS] pedestrian path: maneuver floor off the entry clear (headroom to 48 in) - clear
   [PASS] slab carry through the barn door: opening carries slab on edge + carrier - 96 in barn door vs slab 28 in + 18 in carrier
   [PASS] slab corridor depth carries slab width + carrier - aisle 49 in vs slab 28 in + 18 in carrier
   [PASS] slab feed: rack face reachable from the entry (as-designed precedent >= 21 in) - 27.25 in of the 120 in run not parked over, minus the 3.5 in end upright -> 23.75 in; slabs carried on edge through the barn door, fed at the east face of the run

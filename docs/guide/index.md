@@ -7,13 +7,14 @@ next: 01-what-youre-building.md
 # Start here
 
 This guide builds one shed: a 16 ft × 7 ft wood box with a single-slope roof, the tall
-wall at the front, two door openings, lap siding, and board-and-batten doors. It rides
-on two 16 ft skids carried by eight adjustable pedestals on paver base pads — no concrete.
+wall at the front, three door openings, lap siding, and board-and-batten doors. It rides
+on two 16 ft skids bearing directly on a levelled, compacted gravel pad — no concrete, no
+pedestals.
 Twelve stages take you from bare ground
 to hung doors. One page per stage, in build order. Read this page once, then work the
 pages in order.
 
-![Fig 0.1 — The finished wood bike shed. ISO view from the street, right corner toward you: 16 ft × 7 ft, single-slope roof falling to the back, an 8 ft barn door at the front wall's west corner and a 5' 4" brewery double on the right wall. This is what exists when Stage 12 is done — every page in this guide builds toward this one picture.](figures/fig-00-finished-shed.svg)
+![Fig 0.1 — The finished wood bike shed. ISO view from the street, right corner toward you: 16 ft × 7 ft, single-slope roof falling to the back, an 8 ft barn door at the front wall's west corner and a 5' 4" brewery double on the right wall; the left wall (hidden here) carries the matching 5' 4" MAIN-entry double. This is what exists when Stage 12 is done — every page in this guide builds toward this one picture.](figures/fig-00-finished-shed.svg)
 
 ## The datum — read this before any page
 
@@ -34,18 +35,18 @@ pages in order.
 
 ## The build, stage by stage
 
-- [Stage 1 — Pedestals and skids](04-blocks-and-skids.md): a level pair of skids on eight adjustable pedestals, square.
+- [Stage 1 — Gravel pad and skids](04-blocks-and-skids.md): a levelled, compacted gravel pad across the footprint, with both skids bedded directly on it, square.
 - [Stage 2 — Floor](05-floor.md): rims, joists, deck; the deck top becomes your datum.
-- [Stage 3 — Front wall](06-front-wall.md): the tall wall with both door openings, framed flat on the deck.
+- [Stage 3 — Front wall](06-front-wall.md): the tall wall with the barn door opening, framed flat on the deck.
 - [Stage 4 — Back wall](07-back-wall.md): framed flat along the back edge, corners left open for the side-wall laps.
-- [Stage 5 — Side walls](08-side-walls.md): the two rake walls, framed flat; all four walls now lie complete on the deck.
+- [Stage 5 — Side walls](08-side-walls.md): the two rake walls, framed flat, each carrying its 5' 4" double — MAIN entry left, brewery right; all four walls now lie complete on the deck.
 - [Stage 6 — Raise and brace](09-raise-and-brace.md): all four walls plumb, corners tied, braced.
 - [Stage 7 — Rake plates](10-rake-plates.md): the sloped plates and stepped studs carry the roof line.
 - [Stage 8 — Rafters](11-rafters.md): thirteen birdmouthed rafters seated on both plates.
 - [Stage 9 — Fascia and roof edge](12-fascia-and-roof.md): fascia and rake boards; roofing is your own call.
 - [Stage 10 — Skirt and siding](13-skirt-and-siding.md): the skirt sets the finish datum; siding goes on.
 - [Stage 11 — Trim](14-trim.md): corners, frieze, casings, in that order.
-- [Stage 12 — Doors](15-doors.md): four board-and-batten leaves hung on strap hinges.
+- [Stage 12 — Doors](15-doors.md): six board-and-batten leaves in three doubles, hung on strap hinges.
 
 ## When it doesn't fit, and reference
 
@@ -66,8 +67,8 @@ groups are the shape of it.
   three points of contact, and don't work alone overhead.
 - **Cutting.** Birdsmouths, rake cuts and ripped courses mean long saw time. Eye protection
   always; clamp the work; know where the blade exits.
-- **Ground work.** Digging and tamping the gravel pockets is gloves-and-eye-protection work;
-  crush the stone in lifts, and keep the pocket edges from crumbling under your feet.
+- **Ground work.** Digging and tamping the gravel pad is gloves-and-eye-protection work;
+  crush the stone in lifts, and keep the pad edges from crumbling under your feet.
 
 ## Tools
 
@@ -76,10 +77,10 @@ page up a ladder.
 
 - Tape measure (25 ft) and a pencil
 - Speed square and a 4 ft level
-- String line — the pedestal rings bring both skids to one common plane, not levelled one by one
+- String line — the screeded gravel pad, set to two string lines, brings both skids to one common plane, not levelled one by one
 - Circular saw; a sharp handsaw or jigsaw for notches
 - Drill/driver and a hammer
-- Shovel and a hand tamper for the gravel pockets
+- Shovel and a hand tamper for the gravel pad
 - Shims ½" and under
 - Sawhorses and clamps for wall assembly
 - A ladder that reaches past the front plate top

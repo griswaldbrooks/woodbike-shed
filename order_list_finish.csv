@@ -1,14 +1,14 @@
 lumber,treatment,stock_length_ft,qty,notes
 1x10,PRIMED,14,1,finish; Hingham Lumber
 1x10,PRIMED,16,2,finish; Hingham Lumber
-1x4,KD,12,1,finish; Hingham Lumber
-1x4,KD,14,5,finish; Hingham Lumber
-1x6,KD,14,16,finish; Hingham Lumber
-1x6,PRIMED,8,4,finish; Hingham Lumber
+1x4,KD,8,1,finish; Hingham Lumber
+1x4,KD,14,8,finish; Hingham Lumber
+1x6,KD,14,23,finish; Hingham Lumber
+1x6,PRIMED,8,3,finish; Hingham Lumber
 1x6,PRIMED,10,1,finish; Hingham Lumber
 1x6,PRIMED,12,4,finish; Hingham Lumber
-1x6,PRIMED,14,2,finish; Hingham Lumber
-1x8,PRIMED,8,35,finish; Hingham Lumber
-1x8,PRIMED,16,21,finish; Hingham Lumber
-"strap hinge 12"" black",—,ea,8,"finish hardware; 2 per leaf, 4 leaves"
-gate latch + hasp black,—,ea,2,finish hardware; 1 per opening (double: center latch)
+1x6,PRIMED,14,4,finish; Hingham Lumber
+1x8,PRIMED,14,1,finish; Hingham Lumber
+1x8,PRIMED,16,33,finish; Hingham Lumber
+"strap hinge 12"" black",—,ea,12,"finish hardware; 2 per leaf, 6 leaves"
+gate latch + hasp black,—,ea,3,finish hardware; 1 per opening (double: center latch)

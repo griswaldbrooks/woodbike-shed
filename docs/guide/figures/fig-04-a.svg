@@ -1,14 +1,24 @@
-<svg viewBox="0 0 780 620" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
-  <!-- Fig 4.1 — foundation layout, plan.
-       model trace: footprint x -3.5..188.5, y -3.5..68.5 (192" x 72"); skid lines y -3.5..0 and 65..68.5;
-       pedestal centers x 2.5/62.5/122.5/182.5 on y -1.75 and 66.75 (tape 6" / 5'-6" / 10'-6" / 15'-6" from left end,
-       rows 5' 8½" c/c); mapping X(x)=100+(x+3.5)*3.2, Y(y)=200+(y+3.5)*3.2.
-       Pedestal symbol: StrataRise 3560ML-DF, base plate Ø 200 mm (8" = 25.6 px at 3.2 px/in), head schematic.
-       Foundation hardware drawn, not modeled. -->
-  <rect width="780" height="620" fill="#ffffff"/>
+<svg viewBox="0 0 780 680" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
+  <!-- Fig 4.1 — foundation layout, plan: the whole 16' x 7' footprint is one compacted gravel pad.
+       model trace: footprint x -3.5..188.5, y -3.5..80.5 (192" x 84"); skid lines y -3.5..0 and 77..80.5;
+       skid centerlines y -1.75 and 78.75 (80.5" = 6' 8½" c/c); each skid's outside face flush with the
+       footprint edge, centerline 1¾" in from the edge. Foundation stack below the skids (fabric +
+       tamped ¾" gravel) is drawn, not modeled. Piers/pedestals/paver pads DROPPED 2026-08-24 per
+       captain decision (firstmate data/shed-guide-depth-pass/captain-decision-2026-08-24.md).
+       Mapping X(x)=100+(x+3.5)*3.2, Y(y)=200+(y+3.5)*3.2 (3.2 px/in). The 1¾" skid inset is a leader
+       label, not a dimension line — too short for true arrowheads at this scale. -->
+  <rect width="780" height="680" fill="#ffffff"/>
   <defs>
     <marker id="dim04a" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 Z" fill="#444"/></marker>
     <marker id="dim04as" markerWidth="10" markerHeight="8" refX="1" refY="4" orient="auto"><path d="M10,0 L0,4 L10,8 Z" fill="#444"/></marker>
+    <pattern id="pad04a" width="20" height="16" patternUnits="userSpaceOnUse">
+      <rect width="20" height="16" fill="#efe9db"/>
+      <path d="M0,16 L16,0" stroke="#b3a888" stroke-width="1"/>
+      <path d="M-4,4 L4,-4" stroke="#b3a888" stroke-width="1"/>
+      <path d="M12,20 L20,12" stroke="#b3a888" stroke-width="1"/>
+      <circle cx="6" cy="5" r="1.7" fill="#a8a294"/>
+      <circle cx="15" cy="11" r="2" fill="#b5af9f"/>
+    </pattern>
   </defs>
 
   <!-- view badge -->
@@ -21,151 +31,108 @@
 
   <text x="407" y="150" text-anchor="middle" font-size="15" font-weight="bold" fill="#2b2b2b">FRONT — street side (tall wall, doors)</text>
 
-  <!-- footprint outline: future walls, dashed -->
-  <rect x="100" y="200" width="614.4" height="230.4" fill="none" stroke="#8a8a8a" stroke-width="2" stroke-dasharray="10,6"/>
-  <text x="407" y="330" text-anchor="middle" font-size="13" fill="#8a8a8a">16 ft × 6 ft footprint — the walls will sit on the deck above (dashed = future)</text>
-
-  <clipPath id="pits04a"><rect x="80.8" y="167.2" width="76.8" height="76.8"/><rect x="272.8" y="167.2" width="76.8" height="76.8"/><rect x="464.8" y="167.2" width="76.8" height="76.8"/><rect x="656.8" y="167.2" width="76.8" height="76.8"/><rect x="80.8" y="386.4" width="76.8" height="76.8"/><rect x="272.8" y="386.4" width="76.8" height="76.8"/><rect x="464.8" y="386.4" width="76.8" height="76.8"/><rect x="656.8" y="386.4" width="76.8" height="76.8"/><rect x="112" y="586" width="18" height="14"/></clipPath>
-  <!-- gravel pockets, hatched = material removed -->
-  <g fill="#efe9db" stroke="#8a7c55" stroke-width="2">
-    <rect x="80.8" y="167.2" width="76.8" height="76.8"/>
-    <rect x="272.8" y="167.2" width="76.8" height="76.8"/>
-    <rect x="464.8" y="167.2" width="76.8" height="76.8"/>
-    <rect x="656.8" y="167.2" width="76.8" height="76.8"/>
-    <rect x="80.8" y="386.4" width="76.8" height="76.8"/>
-    <rect x="272.8" y="386.4" width="76.8" height="76.8"/>
-    <rect x="464.8" y="386.4" width="76.8" height="76.8"/>
-    <rect x="656.8" y="386.4" width="76.8" height="76.8"/>
-  </g>
-  <path clip-path="url(#pits04a)" fill="none" stroke="#b3a888" stroke-width="1.4" d="M80.8,167.2 L80.8,167.2M80.8,176.2 L89.8,167.2M80.8,185.2 L98.8,167.2M80.8,194.2 L107.8,167.2M80.8,203.2 L116.8,167.2M80.8,212.2 L125.8,167.2M80.8,221.2 L134.8,167.2M80.8,230.2 L143.8,167.2M80.8,239.2 L152.8,167.2M80.8,248.2 L161.8,167.2M80.8,257.2 L170.8,167.2M80.8,266.2 L179.8,167.2M80.8,275.2 L188.8,167.2M80.8,284.2 L197.8,167.2M80.8,293.2 L206.8,167.2M80.8,302.2 L215.8,167.2M80.8,311.2 L224.8,167.2M80.8,320.2 L233.8,167.2M80.8,329.2 L242.8,167.2M80.8,338.2 L251.8,167.2M80.8,347.2 L260.8,167.2M80.8,356.2 L269.8,167.2M80.8,365.2 L278.8,167.2M80.8,374.2 L287.8,167.2M80.8,383.2 L296.8,167.2M80.8,392.2 L305.8,167.2M80.8,401.2 L314.8,167.2M80.8,410.2 L323.8,167.2M80.8,419.2 L332.8,167.2M80.8,428.2 L341.8,167.2M80.8,437.2 L350.8,167.2M80.8,446.2 L359.8,167.2M80.8,455.2 L368.8,167.2M81.8,463.2 L377.8,167.2M90.8,463.2 L386.8,167.2M99.8,463.2 L395.8,167.2M108.8,463.2 L404.8,167.2M117.8,463.2 L413.8,167.2M126.8,463.2 L422.8,167.2M135.8,463.2 L431.8,167.2M144.8,463.2 L440.8,167.2M153.8,463.2 L449.8,167.2M162.8,463.2 L458.8,167.2M171.8,463.2 L467.8,167.2M180.8,463.2 L476.8,167.2M189.8,463.2 L485.8,167.2M198.8,463.2 L494.8,167.2M207.8,463.2 L503.8,167.2M216.8,463.2 L512.8,167.2M225.8,463.2 L521.8,167.2M234.8,463.2 L530.8,167.2M243.8,463.2 L539.8,167.2M252.8,463.2 L548.8,167.2M261.8,463.2 L557.8,167.2M270.8,463.2 L566.8,167.2M279.8,463.2 L575.8,167.2M288.8,463.2 L584.8,167.2M297.8,463.2 L593.8,167.2M306.8,463.2 L602.8,167.2M315.8,463.2 L611.8,167.2M324.8,463.2 L620.8,167.2M333.8,463.2 L629.8,167.2M342.8,463.2 L638.8,167.2M351.8,463.2 L647.8,167.2M360.8,463.2 L656.8,167.2M369.8,463.2 L665.8,167.2M378.8,463.2 L674.8,167.2M387.8,463.2 L683.8,167.2M396.8,463.2 L692.8,167.2M405.8,463.2 L701.8,167.2M414.8,463.2 L710.8,167.2M423.8,463.2 L719.8,167.2M432.8,463.2 L728.8,167.2M441.8,463.2 L733.6,171.4M450.8,463.2 L733.6,180.4M459.8,463.2 L733.6,189.4M468.8,463.2 L733.6,198.4M477.8,463.2 L733.6,207.4M486.8,463.2 L733.6,216.4M495.8,463.2 L733.6,225.4M504.8,463.2 L733.6,234.4M513.8,463.2 L733.6,243.4M522.8,463.2 L733.6,252.4M531.8,463.2 L733.6,261.4M540.8,463.2 L733.6,270.4M549.8,463.2 L733.6,279.4M558.8,463.2 L733.6,288.4M567.8,463.2 L733.6,297.4M576.8,463.2 L733.6,306.4M585.8,463.2 L733.6,315.4M594.8,463.2 L733.6,324.4M603.8,463.2 L733.6,333.4M612.8,463.2 L733.6,342.4M621.8,463.2 L733.6,351.4M630.8,463.2 L733.6,360.4M639.8,463.2 L733.6,369.4M648.8,463.2 L733.6,378.4M657.8,463.2 L733.6,387.4M666.8,463.2 L733.6,396.4M675.8,463.2 L733.6,405.4M684.8,463.2 L733.6,414.4M693.8,463.2 L733.6,423.4M702.8,463.2 L733.6,432.4M711.8,463.2 L733.6,441.4M720.8,463.2 L733.6,450.4M729.8,463.2 L733.6,459.4M112.0,586.0 L112.0,586.0M112.0,591.0 L117.0,586.0M112.0,596.0 L122.0,586.0M113.0,600.0 L127.0,586.0M118.0,600.0 L130.0,588.0M123.0,600.0 L130.0,593.0M128.0,600.0 L130.0,598.0"/>
-
-  <!-- paver base pads -->
-  <g fill="#c9c9c1" stroke="#77776c" stroke-width="1.6">
-    <rect x="92" y="178.4" width="54.4" height="54.4"/>
-    <rect x="284" y="178.4" width="54.4" height="54.4"/>
-    <rect x="476" y="178.4" width="54.4" height="54.4"/>
-    <rect x="668" y="178.4" width="54.4" height="54.4"/>
-    <rect x="92" y="397.6" width="54.4" height="54.4"/>
-    <rect x="284" y="397.6" width="54.4" height="54.4"/>
-    <rect x="476" y="397.6" width="54.4" height="54.4"/>
-    <rect x="668" y="397.6" width="54.4" height="54.4"/>
+  <!-- gravel pad: the whole footprint, hatched = dug to firm soil and refilled with tamped stone -->
+  <rect x="100" y="200" width="614.4" height="268.8" fill="url(#pad04a)" stroke="#8a7c55" stroke-width="2.4"/>
+  <g text-anchor="middle" font-size="14">
+    <g fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">
+      <text x="430" y="330" font-weight="bold" fill="#ffffff" stroke="#ffffff">¾ in ANGULAR crushed stone — tamped in 3 in lifts, screeded FLAT AND LEVEL</text>
+      <text x="430" y="350">the whole 16 ft × 7 ft footprint is one pad — no pockets, no pedestals</text>
+    </g>
+    <text x="430" y="330" font-weight="bold" fill="#8a7c55">¾ in ANGULAR crushed stone — tamped in 3 in lifts, screeded FLAT AND LEVEL</text>
+    <text x="430" y="350" fill="#8a7c55">the whole 16 ft × 7 ft footprint is one pad — no pockets, no pedestals</text>
   </g>
 
-  <!-- pedestals: base plate Ø 8" + head, centered on the eight marks -->
-  <g>
-    <g fill="#4a4a4a" stroke="#2b2b2b" stroke-width="1.6">
-      <circle cx="119.2" cy="205.6" r="12.8"/>
-      <circle cx="311.2" cy="205.6" r="12.8"/>
-      <circle cx="503.2" cy="205.6" r="12.8"/>
-      <circle cx="695.2" cy="205.6" r="12.8"/>
-      <circle cx="119.2" cy="424.8" r="12.8"/>
-      <circle cx="311.2" cy="424.8" r="12.8"/>
-      <circle cx="503.2" cy="424.8" r="12.8"/>
-      <circle cx="695.2" cy="424.8" r="12.8"/>
+  <!-- dashed future-wall footprint, coincident with the pad edge -->
+  <rect x="100" y="200" width="614.4" height="268.8" fill="none" stroke="#8a8a8a" stroke-width="2" stroke-dasharray="10,6"/>
+  <g font-size="13" fill="#8a8a8a">
+    <g fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">
+      <text x="245" y="392">dashed = future wall footprint —</text>
+      <text x="245" y="408">the walls will sit on the deck above</text>
     </g>
-    <g fill="#a9a9a9">
-      <circle cx="119.2" cy="205.6" r="4.4"/>
-      <circle cx="311.2" cy="205.6" r="4.4"/>
-      <circle cx="503.2" cy="205.6" r="4.4"/>
-      <circle cx="695.2" cy="205.6" r="4.4"/>
-      <circle cx="119.2" cy="424.8" r="4.4"/>
-      <circle cx="311.2" cy="424.8" r="4.4"/>
-      <circle cx="503.2" cy="424.8" r="4.4"/>
-      <circle cx="695.2" cy="424.8" r="4.4"/>
-    </g>
+    <text x="245" y="392">dashed = future wall footprint —</text>
+    <text x="245" y="408">the walls will sit on the deck above</text>
   </g>
 
   <!-- skid lines: future this page, dashed -->
   <g fill="none" stroke="#8B6914" stroke-width="2.2" stroke-dasharray="9,5">
     <rect x="100" y="200" width="614.4" height="11.2"/>
-    <rect x="100" y="419.2" width="614.4" height="11.2"/>
+    <rect x="100" y="457.6" width="614.4" height="11.2"/>
   </g>
   <g font-size="13" fill="#8B6914">
     <g fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">
       <text x="430" y="228">front skid line — 4×4 · 16 ft, no splice</text>
-      <text x="430" y="414">back skid line</text>
+      <text x="430" y="452.4">back skid line</text>
     </g>
     <text x="430" y="228">front skid line — 4×4 · 16 ft, no splice</text>
-    <text x="430" y="414">back skid line</text>
+    <text x="430" y="452.4">back skid line</text>
   </g>
 
   <!-- drop symbols: parts land by gravity -->
   <g stroke="#c0392b" stroke-width="2" fill="none">
     <circle cx="349" cy="205.6" r="7"/><line x1="344" y1="200.6" x2="354" y2="210.6"/><line x1="354" y1="200.6" x2="344" y2="210.6"/>
-    <circle cx="349" cy="424.8" r="7"/><line x1="344" y1="419.8" x2="354" y2="429.8"/><line x1="354" y1="419.8" x2="344" y2="429.8"/>
+    <circle cx="349" cy="463.2" r="7"/><line x1="344" y1="458.2" x2="354" y2="468.2"/><line x1="354" y1="458.2" x2="344" y2="468.2"/>
   </g>
-  <text x="362" y="252" font-size="13" fill="#c0392b">each skid drops DOWN onto its four pedestals</text>
+  <text x="500" y="252" text-anchor="middle" font-size="13" fill="#c0392b">each skid beds DOWN on the screeded gravel — nothing fastens it</text>
+
+  <!-- 1¾ in skid inset: leader label (too short for a true dimension at 3.2 px/in) -->
+  <path d="M148,180 L108,203" stroke="#777" stroke-width="1.2" fill="none"/>
+  <g font-size="13" fill="#444">
+    <g fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">
+      <text x="152" y="174">front skid centerline — 1¾ in in from the footprint edge;</text>
+      <text x="152" y="190">the skid's outside face lands flush with the edge (back skid same)</text>
+    </g>
+    <text x="152" y="174">front skid centerline — 1¾ in in from the footprint edge;</text>
+    <text x="152" y="190">the skid's outside face lands flush with the edge (back skid same)</text>
+  </g>
 
   <!-- cut line B-B, viewed toward the right end -->
-  <line x1="119.2" y1="130" x2="119.2" y2="478" stroke="#333" stroke-width="2.6" stroke-dasharray="14,5,3,5"/>
-  <path d="M138,126 L126,120 L126,132 Z" fill="#333"/>
-  <path d="M138,482 L126,476 L126,488 Z" fill="#333"/>
-  <text x="146" y="131" font-size="15" font-weight="bold" fill="#333">B</text>
-  <text x="146" y="487" font-size="15" font-weight="bold" fill="#333">B</text>
-  <text x="164" y="131" font-size="13" fill="#333">B–B → section of one pocket, Fig 4.2</text>
+  <line x1="230" y1="130" x2="230" y2="500" stroke="#333" stroke-width="2.6" stroke-dasharray="14,5,3,5"/>
+  <path d="M248,126 L236,120 L236,132 Z" fill="#333"/>
+  <path d="M248,504 L236,498 L236,510 Z" fill="#333"/>
+  <text x="256" y="131" font-size="15" font-weight="bold" fill="#333">B</text>
+  <text x="256" y="509" font-size="15" font-weight="bold" fill="#333">B</text>
+  <text x="274" y="131" font-size="13" fill="#333">B–B → section across the pad and front skid, Fig 4.2</text>
 
-  <!-- pedestal-spacing dimension chain, tape from the left-end corner -->
+  <!-- overall length, tape from the left-end corner -->
   <g stroke="#999" stroke-width="1">
-    <line x1="100" y1="434" x2="100" y2="502"/>
-    <line x1="119.2" y1="466" x2="119.2" y2="502"/>
-    <line x1="311.2" y1="466" x2="311.2" y2="502"/>
-    <line x1="503.2" y1="466" x2="503.2" y2="502"/>
-    <line x1="695.2" y1="466" x2="695.2" y2="502"/>
-    <line x1="714.4" y1="434" x2="714.4" y2="502"/>
+    <line x1="100" y1="472" x2="100" y2="544"/>
+    <line x1="714.4" y1="472" x2="714.4" y2="544"/>
   </g>
-  <line x1="100" y1="502" x2="714.4" y2="502" stroke="#444" stroke-width="1.4" marker-start="url(#dim04as)" marker-end="url(#dim04a)"/>
+  <line x1="100" y1="540" x2="714.4" y2="540" stroke="#444" stroke-width="1.4" marker-start="url(#dim04as)" marker-end="url(#dim04a)"/>
   <g font-size="13" text-anchor="middle">
-    <g fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">
-      <text x="109.6" y="496">6 in</text>
-      <text x="215.2" y="522">5 ft</text>
-      <text x="407.2" y="522">5 ft</text>
-      <text x="599.2" y="522">5 ft</text>
-      <text x="704.8" y="496">6 in</text>
-    </g>
-    <g fill="#444">
-      <text x="109.6" y="496">6 in</text>
-      <text x="215.2" y="522">5 ft</text>
-      <text x="407.2" y="522">5 ft</text>
-      <text x="599.2" y="522">5 ft</text>
-      <text x="704.8" y="496">6 in</text>
-    </g>
     <g fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" font-weight="bold">
-      <text x="132" y="460">6 in</text>
-      <text x="311.2" y="460">5 ft 6 in</text>
-      <text x="503.2" y="460">10 ft 6 in</text>
-      <text x="695.2" y="460">15 ft 6 in</text>
+      <text x="407" y="532">16 ft — overall length, read on the tape from the LEFT-end corner</text>
     </g>
-    <g fill="#2b2b2b" font-weight="bold">
-      <text x="132" y="460">6 in</text>
-      <text x="311.2" y="460">5 ft 6 in</text>
-      <text x="503.2" y="460">10 ft 6 in</text>
-      <text x="695.2" y="460">15 ft 6 in</text>
-    </g>
+    <text x="407" y="532" font-weight="bold" fill="#2b2b2b">16 ft — overall length, read on the tape from the LEFT-end corner</text>
   </g>
-  <text x="407" y="545" text-anchor="middle" font-size="13" fill="#555">pedestal centers, read on the tape from the LEFT-end corner</text>
+  <text x="407" y="562" text-anchor="middle" font-size="13" fill="#555">pad and footprint are the same rectangle — mark both at once</text>
 
-  <!-- skid row spacing -->
-  <line x1="735" y1="205.6" x2="735" y2="424.8" stroke="#444" stroke-width="1.4" marker-start="url(#dim04as)" marker-end="url(#dim04a)"/>
-  <line x1="716" y1="205.6" x2="742" y2="205.6" stroke="#999" stroke-width="1"/>
-  <line x1="716" y1="424.8" x2="742" y2="424.8" stroke="#999" stroke-width="1"/>
-  <text x="752" y="315" font-size="13" fill="#444" transform="rotate(90,752,315)" text-anchor="middle">skid rows 5 ft 8½ in apart, centre to centre</text>
+  <!-- depth, front edge to back edge -->
+  <g stroke="#999" stroke-width="1">
+    <line x1="76" y1="200" x2="98" y2="200"/>
+    <line x1="76" y1="468.8" x2="98" y2="468.8"/>
+  </g>
+  <line x1="80" y1="200" x2="80" y2="468.8" stroke="#444" stroke-width="1.4" marker-start="url(#dim04as)" marker-end="url(#dim04a)"/>
+  <text x="66" y="334" font-size="13" fill="#444" transform="rotate(-90,66,334)" text-anchor="middle">7 ft — front edge to back edge</text>
+
+  <!-- skid row spacing, centerline to centerline -->
+  <line x1="735" y1="205.6" x2="735" y2="463.2" stroke="#444" stroke-width="1.4" marker-start="url(#dim04as)" marker-end="url(#dim04a)"/>
+  <line x1="700" y1="205.6" x2="742" y2="205.6" stroke="#999" stroke-width="1"/>
+  <line x1="700" y1="463.2" x2="742" y2="463.2" stroke="#999" stroke-width="1"/>
+  <text x="752" y="334" font-size="13" fill="#444" transform="rotate(90,752,334)" text-anchor="middle">skid centerlines 6 ft 8½ in apart, centre to centre</text>
 
   <!-- end markers -->
-  <text x="70" y="430" font-size="13" fill="#2b2b2b" transform="rotate(-90,70,430)">LEFT END — tape zero</text>
+  <text x="34" y="430" font-size="13" fill="#2b2b2b" transform="rotate(-90,34,430)">LEFT END — tape zero</text>
   <text x="776" y="430" font-size="13" fill="#2b2b2b" transform="rotate(-90,776,430)">RIGHT END</text>
 
   <!-- legend -->
   <g font-size="13" fill="#444">
-    <rect x="100" y="576" width="580" height="34" fill="#fafaf8" stroke="#ddd" rx="5"/>
-    <rect x="112" y="586" width="18" height="14" fill="#efe9db" stroke="#8a7c55" stroke-width="1.4"/>
-    <text x="136" y="597">gravel pocket (hatched = dug out)</text>
-    <rect x="362" y="586" width="18" height="14" fill="#c9c9c1" stroke="#77776c"/>
-    <text x="386" y="597">paver pad</text>
-    <circle cx="470" cy="593" r="8" fill="#4a4a4a" stroke="#2b2b2b" stroke-width="1.2"/>
-    <circle cx="470" cy="593" r="2.8" fill="#a9a9a9"/>
-    <text x="484" y="597">pedestal · 3560ML-DF</text>
-    <circle cx="640" cy="593" r="6" fill="none" stroke="#c0392b" stroke-width="1.6"/>
-    <line x1="635.8" y1="588.8" x2="644.2" y2="597.2" stroke="#c0392b" stroke-width="1.6"/>
-    <line x1="644.2" y1="588.8" x2="635.8" y2="597.2" stroke="#c0392b" stroke-width="1.6"/>
+    <rect x="100" y="600" width="580" height="40" fill="#fafaf8" stroke="#ddd" rx="5"/>
+    <rect x="112" y="612" width="18" height="14" fill="url(#pad04a)" stroke="#8a7c55" stroke-width="1.4"/>
+    <text x="136" y="623">compacted gravel pad</text>
+    <line x1="310" y1="619" x2="338" y2="619" stroke="#8a8a8a" stroke-width="2" stroke-dasharray="8,5"/>
+    <text x="344" y="623">future wall footprint</text>
+    <line x1="500" y1="619" x2="528" y2="619" stroke="#8B6914" stroke-width="2.2" stroke-dasharray="9,5"/>
+    <text x="534" y="623">skid row</text>
   </g>
 </svg>

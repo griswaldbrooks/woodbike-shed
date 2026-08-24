@@ -130,8 +130,8 @@ RO t 6.5..70.5 (64 in) -->
   <line x1="300" y1="597" x2="280" y2="560" stroke="#444" stroke-width="1.4"/>
   <text x="150" y="556">bottom plate long · 6½"</text>
   <text x="566" y="580">short · 6½"</text>
-  <line x1="500" y1="440" x2="534" y2="430" stroke="#444" stroke-width="1.4"/>
-  <text x="410" y="418" font-size="13.5" fill="#666" text-anchor="middle">6½" end stud at each end (flagged)</text>
+  <line x1="505" y1="460" x2="547" y2="435" stroke="#444" stroke-width="1.4"/>
+  <text x="410" y="470" font-size="13.5" fill="#666" text-anchor="middle">6½" end stud at each end (flagged)</text>
 </g>
 
 <!-- dimensions -->

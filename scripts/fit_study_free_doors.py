@@ -4,11 +4,14 @@ the 7 ft shed interior first, then propose the doors.
 
 Adapted from the firstmate free-doors study
 (data/shed-jenga-arrange/storage_jenga_free_doors.py, scout report beside
-it). The adaptation adds the captain's adopted 2-door arrangement
-(--arrange winner2, captain 2026-08-23): the winner MINUS the 3 ft walk-in -
-pedestrian entry and slab loading route through the 8 ft barn door; the
-original four arrangements run unchanged. The study's narrative references
-(../shed-jenga-brewery/ etc.) live in the firstmate data tree, not here.
+it). The adaptation adds the captain's adopted arrangement (--arrange
+winner2): the winner MINUS the 3 ft walk-in (captain 2026-08-23), PLUS the
+LEFT rake-wall 64 in double promoted to MAIN pedestrian door (captain
+2026-08-24, closest to the garage/access - mirror of the right brewery
+double). Slab loading routes through the 8 ft barn door; the left main door
+is the everyday entry. The original four arrangements run unchanged. The
+study's narrative references (../shed-jenga-brewery/ etc.) live in the
+firstmate data tree, not here.
 
 Extends the permanent-brewery study (../shed-jenga-brewery/, its
 storage_jenga_brewery.py is the scaffold here). Equipment facts unchanged,
@@ -29,9 +32,15 @@ Arrangements (--arrange):
               wall, doors AS DESIGNED (walk-in 15.5-51.5, double 99-171,
               right 8.5-44.5) - the forced baseline this study beats.
   old-baseline  The pure lifted-rack baseline with as-designed doors.
-  winner2     The ADOPTED 2-door plan (winner minus the walk-in): barn 8 ft
-              + brewery 64 in only; entry and slab feed via the barn door.
-              Run: scripts/fit_summary_winner2.txt carries the record.
+  winner2     The ADOPTED plan (winner minus the walk-in, + the captain's
+              2026-08-24 LEFT main door): barn 8 ft + LEFT rake-wall 64 in
+              MAIN entry (closest to the garage/access) + RIGHT brewery 64
+              in; slab feed via the barn door. NOTE: the filled-storage study
+              leans 4 plywood sheets on this (west/left) wall strip y 1-49;
+              the MAIN door now occupies that strip, so the plywood lean-to
+              RELOCATES (new spot a separate decision — see
+              OUTSTANDING_ISSUES.md "Plywood lean-to relocation"). Run:
+              scripts/fit_summary_winner2.txt carries the record.
   --mirror    Geometric mirror of winner/runner-up (brewery LEFT, rack east)
               - proves the left/right symmetry of Q1.
 
@@ -166,6 +175,7 @@ def envelope(depth_ft: float, verbose: bool = True) -> Env:
               f"{roof_z(y1):.2f} in, front wall top {L['front_top']:.1f} in")
         print(f"  as-designed doors (reference only, now FREE variables): "
               f"front {[(round(a,1), round(b,1)) for a,b,_ in L['front_open']]}, "
+              f"left {[(round(a,1), round(b,1)) for a,b,_ in L['left_open']]}, "
               f"right {[(round(a,1), round(b,1)) for a,b,_ in L['right_open']]}")
     return Env(
         x0=0.0, x1=x1, y0=0.0, y1=y1, wall_t=wall_t, outer_depth=outer_depth,
@@ -549,6 +559,13 @@ def layout(p: P, e: Env, arrange: str, mirror: bool = False,
                  "barn door 8 ft - bikes + blower straight roll")
         if arrange == "winner":
             add_door("front", 112.0, 148.0, "walk-in + slab feed 3 ft")
+        else:
+            # captain 2026-08-24: the LEFT rake-wall double is the MAIN
+            # (primary pedestrian) door - closest to the garage/access.
+            # Exact mirror of the right brewery double: same 6.5-70.5 span
+            # on the 77 in wall, head 84, flagged 6.5 in end studs.
+            add_door("left", 6.5, 70.5,
+                     "main entry 64 in double - closest to garage/access")
     elif arrange == "runner-up":
         add_door("front", 0.0, 96.0,
                  "barn door 8 ft - bikes + blower straight roll")
@@ -640,17 +657,45 @@ def layout(p: P, e: Env, arrange: str, mirror: bool = False,
             face = max(cl_a0 - ar0, ar1 - cl_a1)   # gap beside the walk-in
             face_note = (f"slabs carried on edge through the 3 ft door")
         else:
-            # winner2: the walk-in is REMOVED - pedestrian entry and slab
-            # loading both route through the 8 ft barn door (captain's
-            # accepted consequence, 2026-08-23)
-            checks.append(("pedestrian entry routes through the barn door "
-                           "(walk-in removed)",
-                           barn[1] - barn[0] >= 36,
-                           f"{barn[1] - barn[0]:.0f} in barn door vs a "
-                           f"36 in pedestrian minimum; entry lands on the "
-                           f"maneuver floor east of the cluster"))
-            clear("pedestrian entry: maneuver floor off the barn door "
-                  "clear (headroom to 48 in)",
+            # winner2 + captain 2026-08-24: walk-in REMOVED; the LEFT
+            # rake-wall double is the MAIN pedestrian door (closest to the
+            # garage/access); slab loading stays with the 8 ft barn door.
+            # The checks below are the left-door sanity suite the
+            # winner-render scout validated (firstmate data/
+            # shed-blender-winner/report.md).
+            mw, mlo, mhi = next((w, lo, hi) for w, lo, hi, hz, r in e.doors
+                                if r.startswith("main entry"))
+            checks.append(("pedestrian entry through the left MAIN door "
+                           "(captain 2026-08-24, closest to garage/access)",
+                           mhi - mlo >= 36,
+                           f"{mhi - mlo:.0f} in double vs a 36 in "
+                           f"pedestrian minimum; {mw} wall "
+                           f"{mlo:.1f}-{mhi:.1f} in"))
+            checks.append(("main-door rake-wall end studs survive the "
+                           "opening (flagged, not engineered)",
+                           mlo >= p.min_end_stud
+                           and Y1 - mhi >= p.min_end_stud,
+                           f"{mlo:.1f} in at the front end, "
+                           f"{Y1 - mhi:.1f} in at the back end of the "
+                           f"{Y1:.0f} in wall (min {p.min_end_stud:.0f}) - "
+                           f"the same flagged 6.5 in rule as the brewery "
+                           f"double"))
+            flank = cl_a0 if mw == "left" else X1 - cl_a1
+            checks.append(("main door outswing: leaves stay exterior, no "
+                           "swing clash with the cluster flank",
+                           flank >= p.min_end_stud,
+                           f"cluster flank stands {flank:.2f} in off the "
+                           f"{mw} wall; every door in the study outswings, "
+                           f"so the leaf envelopes never cross the wall "
+                           f"plane"))
+            if mw == "left":
+                clear("main-door entry landing clear (headroom to 48 in)",
+                      0.0, cl_a0, mlo, min(mhi, rack_y0), 0, 48.0)
+            else:
+                clear("main-door entry landing clear (headroom to 48 in)",
+                      cl_a1, X1, mlo, min(mhi, rack_y0), 0, 48.0)
+            clear("pedestrian path: maneuver floor off the entry clear "
+                  "(headroom to 48 in)",
                   cl_a1, ast["x0"], 0, rack_y0, 0, 48.0)
             checks.append(("slab carry through the barn door: opening "
                            "carries slab on edge + carrier",
@@ -971,7 +1016,7 @@ def render_plan(p, e, boxes, info, out):
     W, H = 1700, 1150
     arrange, brew = info["arrange"], info["brewery"]
     tag = {"winner": "PROPOSED (free doors) — ",
-           "winner2": "ADOPTED 2-DOOR PLAN (winner minus walk-in) — ",
+           "winner2": "ADOPTED PLAN (barn + left MAIN + right brewery) — ",
            "runner-up": "RUNNER-UP (free doors) — ",
            "old-front": "AS-DESIGNED DOORS — ",
            "old-baseline": "BASELINE (as-designed doors, no brewery) — "}
@@ -1162,7 +1207,7 @@ def render_plan(p, e, boxes, info, out):
 def render_iso(p, e, boxes, info, out):
     W, H = 1700, 1150
     tag = {"winner": "PROPOSED (free doors) — ",
-           "winner2": "ADOPTED 2-DOOR PLAN (winner minus walk-in) — ",
+           "winner2": "ADOPTED PLAN (barn + left MAIN + right brewery) — ",
            "runner-up": "RUNNER-UP (free doors) — ",
            "old-front": "AS-DESIGNED DOORS — ",
            "old-baseline": "BASELINE — "}[info["arrange"]]
@@ -1274,9 +1319,21 @@ def render_section(p, e, boxes, info, out):
         plate = e.roof_z(cut)
         d.rectangle([Xh(-t), Z(0), Xh(X1 + t), Z(-0.75)],
                     fill=(196, 180, 148), outline=(60, 55, 45), width=2)
-        # left wall stub, right wall with the brewery-door head
-        d.rectangle([Xh(-t), Z(plate), Xh(0), Z(0)], fill=(222, 214, 198),
-                    outline=(60, 55, 45), width=2)
+        # left wall stub (with the main-door head when the cut crosses it),
+        # right wall with the brewery-door head
+        main = next(((lo, hi) for w, lo, hi, hz, r in e.doors
+                     if r.startswith("main entry")), None)
+        if main and main[0] < cut < main[1]:
+            d.rectangle([Xh(-t), Z(plate), Xh(0), Z(p.door_head)],
+                        fill=(222, 214, 198), outline=(60, 55, 45), width=2)
+            d.line([Xh(-t), Z(p.door_head), Xh(0), Z(p.door_head)],
+                   fill=(200, 60, 60), width=3)
+            d.text((Xh(0) + 14, Z(p.door_head) + 10),
+                   f"main door head {fmt_ftin(p.door_head)}", font=fig.fS,
+                   fill=(200, 60, 60))
+        else:
+            d.rectangle([Xh(-t), Z(plate), Xh(0), Z(0)],
+                        fill=(222, 214, 198), outline=(60, 55, 45), width=2)
         in_door = b["door_span"][0] < cut < b["door_span"][1] \
             or b.get("door") and b["door"][0] < cut < b["door"][1]
         if in_door:

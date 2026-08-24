@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 640" role="img">
-<!-- model trace: walls 192x84, deck top = height zero; plate tops front 123, sides 97-1/8, back 92-5/8; fascia tops front 137-11/16, back 92-11/16; doors: front barn double clear 0..96, right double clear 6.5..70.5 -->
+<!-- model trace: walls 192x84, deck top = height zero; plate tops front 123, sides 97-1/8, back 92-5/8; fascia tops front 137-11/16, back 92-11/16; doors: front barn double clear 0..96, LEFT MAIN double clear 6.5..70.5 (far side, hidden), right brewery double clear 6.5..70.5 -->
 <rect width="980" height="640" fill="#ffffff"/>
 <polygon points="65.2,656.0 794.8,656.0 894.8,564.7 729.7,680.3" fill="#ecebe6" stroke="none" stroke-width="0" stroke-linejoin="round"/>
 <line x1="65.2" y1="656.0" x2="794.8" y2="656.0" stroke="#9a958a" stroke-width="2"/>

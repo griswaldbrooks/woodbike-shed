@@ -44,7 +44,7 @@ STOCK_FINISH = {"1x4": [96, 120, 144, 168, 192],
 # no geometry - line items only; quantities derived from the framed
 # openings (the same >48" -> double rule cad/doors.py applies)
 _LAYOUT = finish_layout(load_audit())
-_OPENS = _LAYOUT["front_open"] + _LAYOUT["right_open"]
+_OPENS = _LAYOUT["front_open"] + _LAYOUT["left_open"] + _LAYOUT["right_open"]
 _LEAVES = sum(2 if o1 - o0 > 48 else 1 for o0, o1, _ in _OPENS)
 HARDWARE = [
     (2 * _LEAVES, 'strap hinge 12" black',
@@ -58,16 +58,28 @@ def meta_for(label):
     return next(v for k, v in LABEL_META.items() if label.startswith(k))
 
 
+# wall word -> axis the course runs along; siding pieces shorter than their
+# own 7-1/2" height (the front-wall corner strips) must measure along the
+# wall, not the longest bbox dim (that would report the height).
+_RUN_AXIS = {"front": "X", "back": "X", "left": "Y", "right": "Y"}
+
+
 def finish_rows():
     """(section, lumber, length_in, treatment, label) -> qty, from the built
-    finish parts (length = longest bbox dim)."""
+    finish parts (length = run along the wall for siding, else longest bbox
+    dim)."""
     audit = load_audit()
     agg = defaultdict(int)
     for p in build_finish(audit):
         lumber, treatment = meta_for(p.label)
         b = p.bounding_box()
-        length = max(b.max.X - b.min.X, b.max.Y - b.min.Y,
-                     b.max.Z - b.min.Z) / IN
+        wall = next((w for w in _RUN_AXIS if p.label.endswith(w)), None)
+        if wall:
+            length = (b.max.X - b.min.X if _RUN_AXIS[wall] == "X"
+                      else b.max.Y - b.min.Y) / IN
+        else:
+            length = max(b.max.X - b.min.X, b.max.Y - b.min.Y,
+                         b.max.Z - b.min.Z) / IN
         agg[(section_for(p.label), lumber, round(length, 3), treatment,
              p.label)] += 1
     return agg

@@ -58,12 +58,16 @@ from the exact number, not this table.
 
 | Qty | Part | Lumber | Length |
 |---:|---|---|---:|
-| 5 | left side wall studs | 2×4 KD | 7′ 8⅝″ |
+| 1 | left side wall studs (front corner) | 2×4 KD | 7′ 8⅝″ |
 | 1 | left side wall studs (corner post) | 2×4 KD | 7′ 4⅛″ |
-| 1 | left side wall bottom plate | 2×4 KD | 6′ 5″ |
+| 2 | left wall jack studs | 2×4 KD | 6′ 10½″ |
+| 3 | left wall headers | 2×4 KD | 5′ 7″ |
+| 3 | left wall cripple studs | 2×4 KD | 5⅛″ |
 | 1 | left wall top plate | 2×4 KD | 5′ 4¾″ |
 | 1 | left wall double top plate | 2×4 KD | 5′ ¾″ |
 | 1 | left wall double top plate (corner block) | 2×4 KD | 3½″ |
+| 1 | left wall bottom plate short | 2×4 KD | 6½″ |
+| 1 | left wall bottom plate long | 2×4 KD | 6½″ |
 
 ## Right wall
 
@@ -85,8 +89,9 @@ from the exact number, not this table.
 | Qty | Part | Lumber | Length |
 |---:|---|---|---:|
 | 1 | left rake wall top plate | 2×4 KD | 6′ 10¼″ |
-| 1 | left rake wall studs (mitered, on sill) | 2×4 KD | 7′ 8⅜″ |
 | 2 | left rake wall studs (mitered, on sill) | 2×4 KD | 7′ 7⅛″ |
+| 1 | left rake wall studs (mitered, on header) | 2×4 KD | 6⅜″ |
+| 1 | left rake wall studs (mitered, on header) | 2×4 KD | 5¼″ |
 | 1 | left rake wall studs | 2×4 KD | 1′ 10¾″ |
 | 1 | left rake wall studs | 2×4 KD | 1′ 5″ |
 | 1 | left rake wall studs | 2×4 KD | 11″ |

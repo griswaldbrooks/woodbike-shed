@@ -11,10 +11,10 @@ next: 06-front-wall.md
 > **Goal:** a stiff, square platform — two rims, 14 joists, and four deck sheets — whose top surface is the height zero for every stage that follows.
 > **Crew:** 1 person, 2 helpful for the 16-foot rims · **Time:** about half a day · **Weather:** dry — keep the OSB dry
 
-<!-- model trace: rims x -3.5..188.5, front rim y -3.5..-2, back rim y 67..68.5, z -6.25..-0.75;
-     14 floor joists y -2..67 (69"), x edges -3.5, 11, 27, 43, 59, 75, 91, 92.5, 108.5, 124.5, 140.5, 156.5, 172.5, 187;
-     doubled pair x 91..94; OSB z -0.75..0, sheets x -3.5..44.5 / ..92.5 / ..140.5 / ..188.5 (seams at 48/96/144" tape);
-     deck top = z 0, 9.75" above skid bottoms -->
+<!-- model trace: rims x -3.5..188.5, front rim y -3.5..-2, back rim y 79..80.5, z -6.25..-0.75;
+     14 floor joists y -2..79 (81"), x edges -3.5, 11, 27, 43, 59, 75, 91, 92.5, 108.5, 124.5, 140.5, 156.5, 172.5, 187;
+     doubled pair x 91..94; OSB z -0.75..0, y -3.5..80.5 (84" sheets), sheets x -3.5..44.5 / ..92.5 / ..140.5 / ..188.5
+     (seams at 48/96/144" tape); skids y -3.5..0 and 77..80.5; deck top = z 0, 9.75" above the gravel pad top -->
 
 Left and right are as you stand in the street facing the shed; FRONT is the street side. Tape
 readings on this page are from the **left-end mark** — the left end of the skids and rims you set
@@ -28,10 +28,10 @@ Parts tick-off (from the framing order, [P02](02-order-framing.md)):
 | Qty | Part (cut-list name) | Lumber | Cut length |
 |---|---|---|---|
 | 2 | rim joist | 2×6 PT, ground contact | 16' 0" |
-| 14 | floor joist | 2×6 PT, ground contact | 5' 9" |
-| 4 | sub floor osb | ¾" OSB half-sheet | 72" × 48" |
+| 14 | floor joist | 2×6 PT, ground contact | 6' 9" |
+| 4 | sub floor osb | ¾" OSB 4×8 sheet | 84" × 48" |
 
-The four half-sheets come from ripping two full 4×8 sheets to 72" + 24" — the 24" offcuts are
+The four deck sheets come from ripping four full 4×8 sheets to 84" + 12" — the 12" offcuts are
 spare. Everything on this page is pressure-treated ground-contact stock; wall and roof lumber
 comes later and stays dry.
 
@@ -76,20 +76,20 @@ middle.
 
 ### 3. Set the 14 joists between the rims
 
-Stand each 5' 9" joist on its mark between the rims and nail through each rim into the joist
+Stand each 6' 9" joist on its mark between the rims and nail through each rim into the joist
 ends. Check the doubled pair: joists 7 and 8 stand side by side at 94½" and 96". That doubled pair
 exists for the deck: the middle sheet seam lands on it, so both sheet edges get full bearing, and
 it stiffens the floor at mid-span.
 
 ### 4. Rip the deck sheets
 
-Rip the two full 4×8 sheets to 72" + 24", giving four half-sheets of 72" × 48".
+Rip each of the four full 4×8 sheets to 84" + 12", giving four deck sheets of 84" × 48".
 
 > ⚠️ **WARNING** — circular saw kickback · a sheet that sags into the cut can pinch the blade and kick it back · support both halves of the sheet full-length on sacrificial 2×4s so the cut stays open, and keep the offcut side free to fall.
 
 ### 5. Deck the floor
 
-Lay the four half-sheets across the full 6' depth, end to end from the left end. The three seams
+Lay the four sheets across the full 7' depth, end to end from the left end. The three seams
 between sheets land at **48", 96", and 144"** from the left-end mark. The middle seam splits over
 the doubled pair — one sheet edge bears on each joist of the pair. At the two outer seams one
 sheet edge bears on the joist and the meeting sheet edge lands flush with that joist's edge; if
@@ -100,11 +100,11 @@ and not on the order. Nail the sheets off as you go.
 
 Stand back: the surface you are standing on is the height datum for the entire rest of this guide.
 **Deck top = zero.** Every height on every page that follows is measured up from this surface —
-the front wall rises 123" above it, the back and side walls 97⅛". Before the walls go up, pencil
+the front wall rises 123" above it, the back and side walls 92⅝". Before the walls go up, pencil
 "DECK = 0" on the inside of the front rim, and start your tape on the deck whenever a page gives
 you a height.
 
-![Fig 5.2 — Section through the finished floor at 128¾" from the left end (line C–C in Fig 5.1, viewed toward the left end, FRONT at left). Stage 2 complete: gravel, paver, pedestal, and skid carry the rims, the joists, and the deck; the dashed plate shows where the front wall lands next. The deck's top surface is the zero every height in this guide measures up from.](figures/fig-05-b.svg)
+![Fig 5.2 — Section through the finished floor at 128¾" from the left end (line C–C in Fig 5.1, viewed toward the left end, FRONT at left). Stage 2 complete: the screeded gravel pad and the skids carry the rims, the joists, and the deck; the dashed plate shows where the front wall lands next. The deck's top surface is the zero every height in this guide measures up from.](figures/fig-05-b.svg)
 
 ## Before you move on
 

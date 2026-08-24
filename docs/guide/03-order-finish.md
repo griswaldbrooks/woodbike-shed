@@ -24,20 +24,20 @@ next: 04-blocks-and-skids.md
 |---|---|---|---|---|---|
 | ☐ | 1×10 | PRIMED | 14′ | 1 | frieze, the two 6′ 1″ side pieces |
 | ☐ | 1×10 | PRIMED | 16′ | 2 | frieze, front + back, 15′ 1″ each |
-| ☐ | 1×4 | KD | 12′ | 1 | door rails |
-| ☐ | 1×4 | KD | 14′ | 5 | door stiles + rails |
-| ☐ | 1×6 | KD | 14′ | 16 | door planks (32 × 6′ 10¾″) |
-| ☐ | 1×6 | PRIMED | 8′ | 4 | corner boards / casings |
+| ☐ | 1×4 | KD | 8′ | 1 | door rails (the short 2′ 2⅜″ rails) |
+| ☐ | 1×4 | KD | 14′ | 8 | door stiles (12 × 6′ 10¾″) + rails |
+| ☐ | 1×6 | KD | 14′ | 23 | door planks (46 × 6′ 10¾″, two per board) |
+| ☐ | 1×6 | PRIMED | 8′ | 3 | corner boards / casings |
 | ☐ | 1×6 | PRIMED | 10′ | 1 | barn head casing |
 | ☐ | 1×6 | PRIMED | 12′ | 4 | corner boards / casings |
-| ☐ | 1×6 | PRIMED | 14′ | 2 | corner boards / casings |
-| ☐ | 1×8 | PRIMED | 8′ | 35 | siding, side-wall courses |
-| ☐ | 1×8 | PRIMED | 16′ | 21 | siding + skirt |
-| ☐ | strap hinge 12″ black | — | ea | 8 | 2 per leaf, 4 leaves |
-| ☐ | gate latch + hasp black | — | ea | 2 | 1 per opening; each double latches at center |
+| ☐ | 1×6 | PRIMED | 14′ | 4 | corner boards / casings |
+| ☐ | 1×8 | PRIMED | 14′ | 1 | siding short courses |
+| ☐ | 1×8 | PRIMED | 16′ | 33 | siding + skirt |
+| ☐ | strap hinge 12″ black | — | ea | 12 | 2 per leaf, 6 leaves |
+| ☐ | gate latch + hasp black | — | ea | 3 | 1 per opening; each double latches at center |
 
-What that buys, after packing: 1×10 46 LF, 1×4 82 LF, 1×6 KD 224 LF, 1×6 PRIMED 118 LF,
-1×8 616 LF — **1,086 LF** of finish lumber. Per-board cut assignments live in the FINISH
+What that buys, after packing: 1×10 46 LF, 1×4 120 LF, 1×6 KD 322 LF, 1×6 PRIMED 138 LF,
+1×8 542 LF — **1,168 LF** of finish lumber. Per-board cut assignments live in the FINISH
 sections of `CUT_LIST.md` in the repo.
 
 ## Primed versus kiln-dried — read before substituting
@@ -59,4 +59,4 @@ above.
 - [ ] This list was placed as its own order, separate from [the framing order](02-order-framing.md).
 - [ ] Primed rows and KD rows were checked as two groups at pickup.
 - [ ] You have paint and caulk on your own third list — they are on neither order.
-- [ ] Next: [Stage 1 — pedestals and skids](04-blocks-and-skids.md).
+- [ ] Next: [Stage 1 — gravel pad and skids](04-blocks-and-skids.md).

@@ -8,8 +8,9 @@ next: 16-troubleshooting.md
 
 # Stage 12 — Doors
 
-> **Goal:** four board-and-batten leaves built and hung as two centre doubles — the 8 ft barn
-> door on the front wall and the 5' 4" brewery door on the right wall — closing up the shed.
+> **Goal:** six board-and-batten leaves built and hung as three centre doubles — the 8 ft barn
+> door on the front wall (wheeled roll-out), the 5' 4" MAIN entry double on the left wall, and
+> the 5' 4" brewery double on the right wall — closing up the shed.
 > **Crew:** 1 person, 2 for hanging · **Time:** about one day · **Weather:** dry
 
 ## Before you start
@@ -20,20 +21,23 @@ rides one layer proud again. Door stock is KD 1×6 and 1×4 from the separate fi
 hinges and latches are line items on the same order — fasteners for everything else are not
 modeled and not on either order.
 
-Four leaves over two openings, both centre doubles: the barn pair on the front wall's 96"
-opening, the brewery pair on the right wall's 64" opening. At the barn door's west jamb there
-is no casing — the corner board is the casing, and the west leaf laps onto it.
+Six leaves over three openings, all centre doubles: the barn pair on the front wall's 96"
+opening, and two identical 64" rake-wall pairs — the **left wall pair is the MAIN entry**
+(closest to the garage/access), the **right wall pair serves the brewery**. The two rake-wall
+doors are exact twins: same 64" span, same head, same leaves, hung the same way. At the barn
+door's west jamb there is no casing — the corner board is the casing, and the west leaf laps
+onto it.
 
 Tick off the parts (cut-list names, see [R01 cut list](r01-cut-list.md)):
 
 | Qty | Part · stock | Cut length | Use |
 |---:|:---|:---|:---|
-| 32 | finish door planks · 1×6 KD | 6′ 10¾″ | vertical planks, ripped per leaf below |
-| 8 | finish door rails · 1×4 KD | 6′ 10¾″ | the two full-height outside stiles per leaf — the cut list files stiles and rails under the one name |
+| 46 | finish door planks · 1×6 KD | 6′ 10¾″ | vertical planks, ripped per leaf below |
+| 12 | finish door rails · 1×4 KD | 6′ 10¾″ | the two full-height outside stiles per leaf — the cut list files stiles and rails under the one name |
 | 4 | finish door rails · 1×4 KD | 3′ 6⅜″ | top and bottom rails, each barn leaf |
-| 4 | finish door rails · 1×4 KD | 2′ 2⅜″ | top and bottom rails, each brewery leaf |
-| 8 | strap hinge 12″ black | hardware | 2 per leaf |
-| 2 | gate latch + hasp black | hardware | 1 per opening, at the centre meeting stiles |
+| 8 | finish door rails · 1×4 KD | 2′ 2⅜″ | top and bottom rails, each rake-wall leaf |
+| 12 | strap hinge 12″ black | hardware | 2 per leaf |
+| 3 | gate latch + hasp black | hardware | 1 per opening, at the centre meeting stiles |
 
 Tools: tape, square, circular saw or mitre saw, table saw or ripping guide for the plank rips,
 drill/driver, level, props or a helper.
@@ -46,8 +50,9 @@ Each leaf's planks are ripped from the 1×6s so they fill the leaf width exactly
 
 - **Barn leaves (2):** 9 planks each, ripped equal — about 5½" apiece — so the nine together
   make the 49⅜" leaf width.
-- **Brewery leaves (2):** 7 planks each, ripped equal — about 4¾" apiece — so the seven
-  together make the 33⅜" leaf width.
+- **Rake-wall leaves (4 — two for the left MAIN door, two for the right brewery door):**
+  7 planks each, ripped equal — about 4¾" apiece — so the seven together make the 33⅜" leaf
+  width. All four are identical.
 
 All planks stay 6′ 10¾″ long. Keep the ripped edges straight; they are the face of the door.
 
@@ -66,10 +71,11 @@ above deck top, top 1/4" below the 84" heads; 9 planks x ~5.486 -->
 the shed. Stage 12, first door. Nine planks with the 1×4 frame on the outer face, hinges on
 the rails into the casing, lapping each jamb casing 1½″.](figures/fig-15-a.svg)
 
-### 3. Build the brewery leaves
+### 3. Build the four rake-wall leaves
 
-Build the pair for the 64" opening the same way: each leaf 33⅜" wide with 7 planks, the two
-2′ 2⅜" rails top and bottom, stiles full height on the outer face.
+Build all four 64"-door leaves the same way — two for the left MAIN door and two for the
+right brewery door; they are identical and interchangeable. Each leaf 33⅜" wide with 7 planks,
+the two 2′ 2⅜" rails top and bottom, stiles full height on the outer face.
 
 ### 4. Hang the barn pair
 
@@ -83,11 +89,13 @@ design, and it is why the casing is solid 1×6 over the studs.
 > ⚠️ **WARNING** — pinch and drop hazard · a leaf is awkward one-handed · support it on a prop or
 > to a helper while you fix the hinges, and keep fingers out of the hinge-side gap as it swings
 
-### 5. Hang the brewery pair
+### 5. Hang the two rake-wall pairs
 
-Hang the pair on the 64" opening the same way, one leaf per side, hinged to the outer jamb
-casings. Leave the ¼" meeting gap at the centre and check both bottoms sit 1" above the deck.
-Fit the latch at the centre meeting stile.
+Hang the left MAIN pair and the right brewery pair the same way, one leaf per side of each
+64" opening, hinged to the outer jamb casings. Leave the ¼" meeting gap at the centre and
+check both bottoms sit 1" above the deck. Fit a latch at the centre meeting stile of each.
+The two openings are twins, so what you learned hanging the first pair carries straight over
+to the second.
 
 ### 6. Read the jamb build-up
 
@@ -120,7 +128,7 @@ deck.](figures/fig-15-b.svg)
 12, the jamb build-up. Four ¾" layers step out from the wall face to 3" proud; siding and
 casing stop at the clear opening and the closed leaf laps each casing 1½″.](figures/fig-15-c.svg)
 
-Fit the latches on the two meeting stiles, then walk every leaf: it should swing freely, land
+Fit the latches on the three meeting stiles, then walk every leaf: it should swing freely, land
 on its 1½" laps, and latch without lifting.
 
 ## Before you move on

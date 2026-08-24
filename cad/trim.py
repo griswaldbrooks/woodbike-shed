@@ -117,6 +117,8 @@ def build(audit: Audit):
 
     for o0, o1, hz in L["front_open"]:
         casing_pair("front", o0, o1, hz, l, r)
+    for o0, o1, hz in L["left_open"]:
+        casing_pair("left", o0, o1, hz, f, b)
     for o0, o1, hz in L["right_open"]:
         casing_pair("right", o0, o1, hz, f, b)
     return parts

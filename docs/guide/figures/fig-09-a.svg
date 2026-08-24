@@ -1,8 +1,9 @@
 <svg viewBox="0 0 770 800" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
 <!-- model trace: isometric projection sx=(x-y)*1.732+215, sy=(x+y)*1.0-z*2.0+435 (inches).
-Walls: front y −3.5 z 0..123; back y 68.5 z 0..97.125; left x −3.5, right x 188.5, z 0..97.125;
-deck z 0 x −3.5..188.5 y −3.5..68.5. Cut band B-B at z 96.4 (double top plates). crew symbol =
-two-person symbol per the P00 key -->
+Walls: front y −3.5 z 0..123; back y 80.5 z 0..92.625; left x −3.5, right x 188.5: flat top
+z 97.125 to y 60.73, then the roof line (rake plate, Stage 7) falls to z 92.625 at the back
+corner y 77..80.5; deck z 0 x −3.5..188.5 y −3.5..80.5. Cut band B-B marks the plan of fig 9.4
+at plate level. crew symbol = two-person symbol per the P00 key -->
 <defs>
   <g id="crew" stroke="#111" stroke-width="2.6" fill="none">
     <circle cx="0" cy="-27" r="4.6" fill="#111" stroke="none"/>
@@ -29,18 +30,18 @@ two-person symbol per the P00 key -->
 </g>
 
 <!-- deck (already built = grey) -->
-<polygon points="215.0,428.0 547.5,620.0 422.8,692.0 90.3,500.0" fill="#e6e6e6" stroke="#555" stroke-width="2.5"/>
+<polygon points="215.0,428.0 547.5,620.0 402.1,704.0 69.5,512.0" fill="#e6e6e6" stroke="#555" stroke-width="2.5"/>
 
 <!-- back wall (2) -->
-<polygon points="90.3,500.0 422.8,692.0 422.8,497.8 90.3,305.8" fill="#d9a763" stroke="#6b4a1f" stroke-width="2.5"/>
-<!-- right wall (4) -->
-<polygon points="547.5,620.0 422.8,692.0 422.8,497.8 547.5,425.8" fill="#d9a763" stroke="#6b4a1f" stroke-width="2.5"/>
-<!-- left wall (3), translucent -->
-<polygon points="215.0,428.0 90.3,500.0 90.3,305.8 215.0,233.8" fill="#d9a763" fill-opacity="0.55" stroke="#6b4a1f" stroke-width="2.5"/>
+<polygon points="69.5,512.0 402.1,704.0 402.1,518.75 69.5,326.75" fill="#d9a763" stroke="#6b4a1f" stroke-width="2.5"/>
+<!-- right wall (4), top rakes down to the back corner -->
+<polygon points="547.5,620.0 402.1,704.0 402.1,518.75 408.1,515.25 436.3,490.0 547.5,425.75" fill="#d9a763" stroke="#6b4a1f" stroke-width="2.5"/>
+<!-- left wall (3), translucent, top rakes down to the back corner -->
+<polygon points="215.0,428.0 69.5,512.0 69.5,326.75 75.6,323.25 103.8,298.0 215.0,233.75" fill="#d9a763" fill-opacity="0.55" stroke="#6b4a1f" stroke-width="2.5"/>
 <!-- front wall (1), translucent -->
 <polygon points="215.0,428.0 547.5,620.0 547.5,374.0 215.0,182.0" fill="#d9a763" fill-opacity="0.55" stroke="#6b4a1f" stroke-width="2.5"/>
 
-<!-- plan B-B cut band on the front face (double top plate height) -->
+<!-- plan B-B cut band on the front face (plate level) -->
 <line x1="215" y1="235.2" x2="547.5" y2="427.2" stroke="#2f5a8f" stroke-width="2.5" stroke-dasharray="10 6"/>
 <text x="228" y="216" font-size="14.5" fill="#2f5a8f">PLAN B–B (fig 9.4) cuts the</text>
 <text x="228" y="234" font-size="14.5" fill="#2f5a8f">double top plates</text>
@@ -83,7 +84,7 @@ two-person symbol per the P00 key -->
 </g>
 <g font-size="14.5" fill="#222">
   <text x="124" y="776">16 ft (shed length)</text>
-  <text x="14" y="790">6 ft (depth)</text>
+  <text x="14" y="790">7 ft (depth)</text>
   <text x="80" y="700">up</text>
 </g>
 

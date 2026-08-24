@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- TRUE SIZE: viewBox units are millimetres; print at 100% on A4 or Letter portrait.
-     model trace: pitch 24.375/65 = 0.375 = 20.556 deg; front seat 4.0 in (101.6 mm) level
-     on the front DTP top (123 above deck), plumb kick 1.5 in (38.1 mm) at the front wall
-     inner face, heel 0.5 in outboard of the plate outer face; back seat 3.5 in (88.9 mm)
-     level on the back DTP top (97.125 above deck), plumb kick 1.3125 in (33.34 mm) at the
-     back wall outer face; plate height 1.5 in = 38.1 mm. Check line = 101.6 mm = 4.000 in. -->
+     model trace: pitch 24.375/65 = 0.375 = 20.556 deg (unchanged by the 7 ft depth); front
+     seat 4.0 in (101.6 mm) level on the front DTP top (123 above deck), plumb kick 1.5 in
+     (38.1 mm) at the front wall inner face, heel 0.5 in outboard of the plate outer face;
+     back seat 3.5 in (88.9 mm) level on the back DTP top (92.625 above deck), plumb kick
+     1.3125 in (33.34 mm) at the back wall outer face; plate height 1.5 in = 38.1 mm. Check
+     line = 101.6 mm = 4.000 in. -->
 <svg viewBox="0 0 210 279" width="210mm" height="279mm" xmlns="http://www.w3.org/2000/svg"
      font-family="Arial, Helvetica, sans-serif">
   <defs>
@@ -109,5 +110,5 @@
   <text x="12" y="237" class="n">4. Check the finished notch against this template — no daylight at the seat, kick plumb.</text>
   <text x="12" y="249" class="n">Both notches read the same way on the board: seat level, kick plumb, kick to the right</text>
   <text x="12" y="255" class="n">of the seat. Store this sheet with the pattern rafter.</text>
-  <text x="12" y="270" class="s">Traceability: seat planes at 123″ and 97⅛″ above the deck · pitch 4½ in 12.</text>
+  <text x="12" y="270" class="s">Traceability: seat planes at 123″ and 92⅝″ above the deck · pitch 4½ in 12.</text>
 </svg>

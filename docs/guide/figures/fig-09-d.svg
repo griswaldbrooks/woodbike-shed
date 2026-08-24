@@ -1,8 +1,10 @@
 <svg viewBox="0 0 860 560" xmlns="http://www.w3.org/2000/svg" font-family="Arial, Helvetica, sans-serif">
-<!-- model trace: PLAN through the double top plates z 95.625..97.125 (about 8' above deck).
-Scale 3.3 px/in; px(x)=120+3.3*(x+3.5), py(y)=200+3.3*(y+3.5). Front DTP full x −3.5..188.5;
-back DTP short x 0..185; side DTPs y 0..68.5 lapping 3.5" over the back-wall corners
-(walls below the cut share the same footprints) -->
+<!-- model trace: PLAN at double-top-plate level. Scale 3.3 px/in; px(x)=120+3.3*(x+3.5),
+py(y)=200+3.3*(y+3.5). Front DTP full x −3.5..188.5 z 121.5..123; back DTP short x 0..185,
+y 77..80.5, z 91.125..92.625; side DTPs: flat part y 0..60.73 z 95.625..97.125 + corner block
+y 77..80.5 z 91.125..92.625 lapping 3.5" over the back-wall corners; between flat DTP end and
+corner block the rake plate (Stage 7) carries the wall top down (dashed zone). Walls below the
+cut share the same footprints. -->
 <defs>
   <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
     <rect width="8" height="8" fill="#ecd3a0"/>
@@ -19,8 +21,8 @@ back DTP short x 0..185; side DTPs y 0..68.5 lapping 3.5" over the back-wall cor
 <g>
   <rect x="14" y="12" width="470" height="76" fill="#ffffff" stroke="#222" stroke-width="2.5" rx="6"/>
   <text x="26" y="36" font-size="16" font-weight="bold" fill="#111">PLAN B–B · CUT THROUGH THE DOUBLE TOP PLATES</text>
-  <text x="26" y="57" font-size="14" fill="#111">horizontal cut about 8' above the deck — looking DOWN</text>
-  <text x="26" y="78" font-size="14" fill="#111">cut height marked on fig 9.1 · hatched = cut material</text>
+  <text x="26" y="57" font-size="14" fill="#111">horizontal cut at plate level — looking DOWN</text>
+  <text x="26" y="78" font-size="14" fill="#111">cut band marked on fig 9.1 · hatched = cut material</text>
 </g>
 
 <!-- OUTSIDE / INSIDE markers -->
@@ -29,23 +31,33 @@ back DTP short x 0..185; side DTPs y 0..68.5 lapping 3.5" over the back-wall cor
   <line x1="437" y1="126" x2="437" y2="188" stroke="#444" stroke-width="2"/>
   <path d="M430,184 L437,196 L444,184 z" fill="#444"/>
   <text x="437" y="322" text-anchor="middle" fill="#666">INSIDE (shed)</text>
-  <text x="437" y="500" text-anchor="middle" font-weight="bold">OUTSIDE (back yard)</text>
-  <line x1="437" y1="486" x2="437" y2="448" stroke="#444" stroke-width="2"/>
-  <path d="M430,452 L437,440 L444,452 z" fill="#444"/>
+  <text x="437" y="512" text-anchor="middle" font-weight="bold">OUTSIDE (back yard)</text>
+  <line x1="437" y1="498" x2="437" y2="484" stroke="#444" stroke-width="2"/>
+  <path d="M430,488 L437,476 L444,488 z" fill="#444"/>
 </g>
 
 <!-- cut plates, hatched -->
 <g stroke="#6b4a1f" stroke-width="2.5">
   <rect x="120" y="200" width="633.6" height="11.55" fill="url(#hatch)"/>
-  <rect x="131.55" y="426.05" width="610.5" height="11.55" fill="url(#hatch)"/>
-  <rect x="120" y="211.55" width="11.55" height="226.05" fill="url(#hatch)"/>
-  <rect x="742.05" y="211.55" width="11.55" height="226.05" fill="url(#hatch)"/>
+  <rect x="131.55" y="465.65" width="610.5" height="11.55" fill="url(#hatch)"/>
+  <rect x="120" y="211.55" width="11.55" height="200.41" fill="url(#hatch)"/>
+  <rect x="742.05" y="211.55" width="11.55" height="200.41" fill="url(#hatch)"/>
+  <rect x="120" y="465.65" width="11.55" height="11.55" fill="url(#hatch)"/>
+  <rect x="742.05" y="465.65" width="11.55" height="11.55" fill="url(#hatch)"/>
 </g>
+
+<!-- rake-plate zones between the flat DTP ends and the corner blocks (Stage 7 work) -->
+<g fill="none" stroke="#8c8c8c" stroke-width="1.4" stroke-dasharray="6,4">
+  <rect x="120" y="411.96" width="11.55" height="53.69"/>
+  <rect x="742.05" y="411.96" width="11.55" height="53.69"/>
+</g>
+<text x="141" y="442" font-size="13" fill="#666">rake plate slopes down to the</text>
+<text x="141" y="458" font-size="13" fill="#666">corner block — Stage 7</text>
 
 <!-- corner lap highlights -->
 <g fill="none" stroke="#2f5a8f" stroke-width="3">
-  <rect x="118" y="424" width="15.55" height="15.65"/>
-  <rect x="740.05" y="424" width="15.55" height="15.65"/>
+  <rect x="118" y="463.6" width="15.55" height="15.65"/>
+  <rect x="740.05" y="463.6" width="15.55" height="15.65"/>
 </g>
 
 <!-- labels -->
@@ -53,25 +65,28 @@ back DTP short x 0..185; side DTPs y 0..68.5 lapping 3.5" over the back-wall cor
   <line x1="700" y1="206" x2="680" y2="174" stroke="#444" stroke-width="1.4"/>
   <text x="640" y="152" text-anchor="middle">front wall double top plate · 2×4 · 16' 0" —</text>
   <text x="640" y="170" text-anchor="middle">runs full width, ties both front corners</text>
-  <line x1="300" y1="432" x2="240" y2="470" stroke="#444" stroke-width="1.4"/>
-  <text x="60" y="470">back wall double top plate · 2×4 · 15' 5" — stops 3½" short of each end</text>
-  <line x1="120" y1="320" x2="72" y2="320" stroke="#444" stroke-width="1.4"/>
-  <text x="60" y="320" text-anchor="middle" transform="rotate(-90,60,320)" font-size="14.5">side plate · 5' 8½"</text>
-  <line x1="753.6" y1="320" x2="790" y2="320" stroke="#444" stroke-width="1.4"/>
-  <text x="800" y="320" text-anchor="middle" transform="rotate(-90,800,320)" font-size="14.5">side plate · 5' 8½"</text>
+  <line x1="500" y1="471" x2="552" y2="492" stroke="#444" stroke-width="1.4"/>
+  <text x="560" y="496">back wall double top plate · 2×4 · 15' 5" —</text>
+  <text x="560" y="514">stops 3½" short of each end</text>
+  <line x1="120" y1="312" x2="72" y2="312" stroke="#444" stroke-width="1.4"/>
+  <text x="60" y="312" text-anchor="middle" transform="rotate(-90,60,312)" font-size="14.5">flat side DTP · 5' ¾"</text>
+  <line x1="753.6" y1="312" x2="790" y2="312" stroke="#444" stroke-width="1.4"/>
+  <text x="800" y="312" text-anchor="middle" transform="rotate(-90,800,312)" font-size="14.5">flat side DTP · 5' ¾"</text>
+  <line x1="120" y1="471" x2="104" y2="471" stroke="#444" stroke-width="1.4"/>
+  <text x="96" y="471" text-anchor="middle" transform="rotate(-90,96,471)" font-size="14.5">corner block · 3½"</text>
 </g>
 
 <!-- corner lap callout -->
 <g font-size="15" fill="#2f5a8f">
-  <line x1="133" y1="438" x2="200" y2="522" stroke="#2f5a8f" stroke-width="1.6"/>
-  <text x="206" y="520">corner lap: the side wall's plate runs OVER the back wall,</text>
-  <text x="206" y="539">the back wall's short plate butts in between — nail every lap</text>
+  <line x1="133" y1="478" x2="200" y2="536" stroke="#2f5a8f" stroke-width="1.6"/>
+  <text x="206" y="532">corner lap: the side wall's corner block runs OVER the back wall,</text>
+  <text x="206" y="551">the back wall's short plate butts in between — nail every lap</text>
 </g>
 
 <!-- 3.5" lap dimension at back-left corner -->
 <g stroke="#444" stroke-width="1.4" font-size="14.5" fill="#222">
-  <line x1="120" y1="452" x2="131.55" y2="452" marker-start="url(#dimd)" marker-end="url(#dimd)"/>
-  <line x1="120" y1="444" x2="120" y2="460"/><line x1="131.55" y1="444" x2="131.55" y2="460"/>
-  <text x="140" y="456">3½" lap</text>
+  <line x1="120" y1="492" x2="131.55" y2="492" marker-start="url(#dimd)" marker-end="url(#dimd)"/>
+  <line x1="120" y1="484" x2="120" y2="500"/><line x1="131.55" y1="484" x2="131.55" y2="500"/>
+  <text x="140" y="496">3½" lap</text>
 </g>
 </svg>

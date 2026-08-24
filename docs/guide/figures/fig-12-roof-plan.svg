@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- model trace: roof-level plan; horizontal = x (-15.5..200.5 fascia ends, 12" past side
      walls at -3.5/188.5), vertical = y (front fascia y -29..-27.5 at top, back fascia
-     y 80.5..82 at bottom). Rafters grey (Stage 8, already built); fascia + rake boards
-     colour + hatched (cut at the fascia-top plane, z 137.6865 front / 97.1865 back).
-     Left rake board x -15.5..-14, right 199..200.5, y -27.5..80.5 butting the fascia
-     inner faces. -->
-<svg viewBox="0 0 840 500" width="210mm" xmlns="http://www.w3.org/2000/svg"
+     y 92.5..94 at bottom). Mapping X(x)=70+3.4*(x+15.5), Y(y)=76+3*(y+29). Rafters grey
+     (Stage 8, already built, y -27.5..92.5); fascia + rake boards colour + hatched (cut at
+     the fascia-top plane, z 137.6865 front / 92.6865 back). Left rake board x -15.5..-14,
+     right 199..200.5, y -27.5..92.5 butting the fascia inner faces. -->
+<svg viewBox="0 0 840 540" width="210mm" xmlns="http://www.w3.org/2000/svg"
      font-family="Arial, Helvetica, sans-serif">
   <defs>
     <marker id="dimA" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
@@ -48,49 +48,49 @@
   <text x="560" y="62" class="small halo" text-anchor="middle" font-weight="bold">FRONT — street side (high side of the roof)</text>
 
   <!-- wall footprint below (dashed) + rake walls grey -->
-  <rect x="110.8" y="152.5" width="652.8" height="216" fill="none" stroke="#8c8c8c"
+  <rect x="110.8" y="152.5" width="652.8" height="231" fill="none" stroke="#8c8c8c"
         stroke-width="1.2" stroke-dasharray="8,5"/>
   <g fill="#e9e9e9" stroke="#8c8c8c" stroke-width="1">
-    <rect x="110.8" y="163" width="12" height="195"/>
-    <rect x="751.7" y="163" width="11.9" height="195"/>
+    <rect x="110.8" y="163" width="12" height="221.5"/>
+    <rect x="751.7" y="163" width="11.9" height="221.5"/>
   </g>
-  <text x="117" y="280" class="small halo" transform="rotate(-90 117 280)">rake walls below</text>
+  <text x="117" y="290" class="small halo" transform="rotate(-90 117 290)">rake walls below</text>
 
   <!-- already-built rafters (grey) -->
   <g fill="#e9e9e9" stroke="#8c8c8c" stroke-width="1">
-    <rect x="110.8" y="80.5" width="5.1" height="324"/>
-    <rect x="164.78" y="80.5" width="5.1" height="324"/>
-    <rect x="218.75" y="80.5" width="5.1" height="324"/>
-    <rect x="272.73" y="80.5" width="5.1" height="324"/>
-    <rect x="326.7" y="80.5" width="5.1" height="324"/>
-    <rect x="380.68" y="80.5" width="5.1" height="324"/>
-    <rect x="434.65" y="80.5" width="5.1" height="324"/>
-    <rect x="488.63" y="80.5" width="5.1" height="324"/>
-    <rect x="542.6" y="80.5" width="5.1" height="324"/>
-    <rect x="596.58" y="80.5" width="5.1" height="324"/>
-    <rect x="650.55" y="80.5" width="5.1" height="324"/>
-    <rect x="704.53" y="80.5" width="5.1" height="324"/>
-    <rect x="758.5" y="80.5" width="5.1" height="324"/>
+    <rect x="110.8" y="80.5" width="5.1" height="360"/>
+    <rect x="164.78" y="80.5" width="5.1" height="360"/>
+    <rect x="218.75" y="80.5" width="5.1" height="360"/>
+    <rect x="272.73" y="80.5" width="5.1" height="360"/>
+    <rect x="326.7" y="80.5" width="5.1" height="360"/>
+    <rect x="380.68" y="80.5" width="5.1" height="360"/>
+    <rect x="434.65" y="80.5" width="5.1" height="360"/>
+    <rect x="488.63" y="80.5" width="5.1" height="360"/>
+    <rect x="542.6" y="80.5" width="5.1" height="360"/>
+    <rect x="596.58" y="80.5" width="5.1" height="360"/>
+    <rect x="650.55" y="80.5" width="5.1" height="360"/>
+    <rect x="704.53" y="80.5" width="5.1" height="360"/>
+    <rect x="758.5" y="80.5" width="5.1" height="360"/>
   </g>
 
   <!-- NEW WORK: fascia (colour + hatched cut) -->
   <g stroke="#6b4f16" stroke-width="2">
     <rect x="70" y="76" width="734.4" height="4.5" fill="#d9a441"/>
-    <rect x="70" y="404.5" width="734.4" height="4.5" fill="#d9a441"/>
-    <rect x="70" y="80.5" width="5.1" height="324" fill="#d9a441"/>
-    <rect x="799.3" y="80.5" width="5.1" height="324" fill="#d9a441"/>
+    <rect x="70" y="440.5" width="734.4" height="4.5" fill="#d9a441"/>
+    <rect x="70" y="80.5" width="5.1" height="360" fill="#d9a441"/>
+    <rect x="799.3" y="80.5" width="5.1" height="360" fill="#d9a441"/>
   </g>
   <g fill="url(#h12)" stroke="none">
     <rect x="70" y="76" width="734.4" height="4.5"/>
-    <rect x="70" y="404.5" width="734.4" height="4.5"/>
-    <rect x="70" y="80.5" width="5.1" height="324"/>
-    <rect x="799.3" y="80.5" width="5.1" height="324"/>
+    <rect x="70" y="440.5" width="734.4" height="4.5"/>
+    <rect x="70" y="80.5" width="5.1" height="360"/>
+    <rect x="799.3" y="80.5" width="5.1" height="360"/>
   </g>
 
   <!-- labels -->
   <text x="250" y="106" class="lblb halo">front / back fascia · 2×6 · 18' 0″</text>
   <line x1="270" y1="94" x2="262" y2="81" stroke="#555" stroke-width="1"/>
-  <text x="150" y="250" class="lblb halo">rake board · 2×6 · 9' 7⅜″</text>
+  <text x="150" y="250" class="lblb halo">rake board · 2×6 · 10' 8⅛″</text>
   <text x="150" y="268" class="lbl halo">same slope as the rafters, no birdsmouths,</text>
   <text x="150" y="284" class="lbl halo">ends butt the fascia inner faces</text>
   <line x1="148" y1="262" x2="76" y2="262" stroke="#555" stroke-width="1"/>
@@ -110,19 +110,19 @@
   <line x1="52" y1="152.5" x2="52" y2="80.5" stroke="#555" stroke-width="1"
         marker-start="url(#dimAs)" marker-end="url(#dimA)"/>
   <text x="44" y="114" class="small halo" text-anchor="middle" transform="rotate(-90 44 114)">front overhang 24″</text>
-  <line x1="814" y1="368.5" x2="814" y2="404.5" stroke="#555" stroke-width="1"
+  <line x1="814" y1="404.5" x2="814" y2="440.5" stroke="#555" stroke-width="1"
         marker-start="url(#dimAs)" marker-end="url(#dimA)"/>
-  <text x="824" y="392" class="small halo" transform="rotate(-90 824 392)">back overhang 12″</text>
+  <text x="824" y="428" class="small halo" transform="rotate(-90 824 428)">back overhang 12″</text>
 
   <!-- cut line C-C -->
-  <line x1="300" y1="66" x2="300" y2="420" stroke="#222" stroke-width="1.6"
+  <line x1="300" y1="66" x2="300" y2="456" stroke="#222" stroke-width="1.6"
         stroke-dasharray="14,5,3,5"/>
   <line x1="314" y1="70" x2="288" y2="70" stroke="#222" stroke-width="1.6" marker-end="url(#secA)"/>
   <text x="318" y="74" class="lblb">C</text>
-  <line x1="314" y1="426" x2="288" y2="426" stroke="#222" stroke-width="1.6" marker-end="url(#secA)"/>
-  <text x="318" y="430" class="lblb">C</text>
+  <line x1="314" y1="462" x2="288" y2="462" stroke="#222" stroke-width="1.6" marker-end="url(#secA)"/>
+  <text x="318" y="466" class="lblb">C</text>
 
-  <text x="437" y="424" class="small halo" text-anchor="middle" font-weight="bold">BACK (low side)</text>
-  <text x="70" y="452" class="lbl halo">fascia and rake boards run 12″ past each side wall — the gable overhangs.</text>
-  <text x="70" y="470" class="lbl halo">the roof's working layers come after this stage: roofing is not modeled — see the shopping callout.</text>
+  <text x="437" y="460" class="small halo" text-anchor="middle" font-weight="bold">BACK (low side)</text>
+  <text x="70" y="492" class="lbl halo">fascia and rake boards run 12″ past each side wall — the gable overhangs.</text>
+  <text x="70" y="510" class="lbl halo">the roof's working layers come after this stage: roofing is not modeled — see the shopping callout.</text>
 </svg>

@@ -8,8 +8,8 @@ Headless usage (from the repo root):
     blender --background --python blender/build_scene.py -- --skin
     blender --background --python blender/build_scene.py -- --skin --render
 
-Pipeline: import blender/scene.glb (273 named parts from cad/build.py -
-118 framing + 155 finish, mm units; the finish parts are dropped again,
+Pipeline: import blender/scene.glb (321 named parts from cad/build.py -
+124 framing + 197 finish, mm units; the finish parts are dropped again,
 see main()) -> scale to meters -> one PBR wood material per cut-list name
 group -> ground plane, Nishita sky + sun -> four cameras -> save
 shed_scene.blend.
@@ -297,6 +297,7 @@ def skin_layout(parts):
         "roof_top": roof_top,
         "deck_x": (merged(bb["front fascia"])[0].x, ff.x),
         "front_open": openings("front wall headers", 0),
+        "left_open": openings("left wall headers", 1),
         "right_open": openings("right wall headers", 1),
     }
 
@@ -453,7 +454,8 @@ def build_skin(parts, lo, hi):
     box("frieze-b", l, r, b, b + TRIM_T, back_fz_bot, back_fz_top, trim)
     box("skirt-b", l, r, b, b + TRIM_T, SKIRT_Z[0], SKIRT_Z[1], trim)
 
-    # --- side walls: raked siding tops; right wall carries an opening ---
+    # --- side walls: raked siding tops; both rake walls carry their 64 in
+    #     doubles (left = main entry, right = brewery service) ---
     def rake_siding(tag, x0, x1, opens):
         ys = [f] + [c for o in opens for c in o[:2]] + [b]
         for y0, y1 in zip(ys[::2], ys[1::2]):
@@ -464,10 +466,14 @@ def build_skin(parts, lo, hi):
             prism_x(f"siding-{tag} head {o0:.2f}", x0, x1,
                     [(o0, hz), (o1, hz),
                      (o1, rake_top(o1)), (o0, rake_top(o0))], siding)
-    rake_siding("l", l - SIDING_T, l, [])
+    rake_siding("l", l - SIDING_T, l, L["left_open"])
     rake_siding("r", r, r + SIDING_T, L["right_open"])
     box("skirt-l", l - TRIM_T, l, f, b, SKIRT_Z[0], SKIRT_Z[1], trim)
     box("skirt-r", r, r + TRIM_T, f, b, SKIRT_Z[0], SKIRT_Z[1], trim)
+    for o0, o1, hz in L["left_open"]:
+        box("casing-l j0", l - TRIM_T, l, o0 - CAS_W, o0, SKIRT_Z[0], hz + CAS_W, trim)
+        box("casing-l j1", l - TRIM_T, l, o1, o1 + CAS_W, SKIRT_Z[0], hz + CAS_W, trim)
+        box("casing-l head", l - TRIM_T, l, o0 - CAS_W, o1 + CAS_W, hz, hz + CAS_W, trim)
     for o0, o1, hz in L["right_open"]:
         box("casing-r j0", r, r + TRIM_T, o0 - CAS_W, o0, SKIRT_Z[0], hz + CAS_W, trim)
         box("casing-r j1", r, r + TRIM_T, o1, o1 + CAS_W, SKIRT_Z[0], hz + CAS_W, trim)
@@ -530,6 +536,21 @@ def build_skin(parts, lo, hi):
         box(name + " latch", r + 0.028, r + 0.036, latch - 0.07, latch + 0.07,
             1.02, 1.10, black)
 
+    def left_door(name, y0, y1, hinge, latch):
+        box(name, l - 0.020, l + 0.025, y0, y1, dz0, dz1, door_m)
+        fx0, fx1 = l - 0.028, l - 0.020
+        box(name + " fr-l", fx0, fx1, y0, y0 + W, dz0, dz1, door_m)
+        box(name + " fr-r", fx0, fx1, y1 - W, y1, dz0, dz1, door_m)
+        box(name + " fr-b", fx0, fx1, y0, y1, dz0, dz0 + W, door_m)
+        box(name + " fr-t", fx0, fx1, y0, y1, dz1 - W, dz1, door_m)
+        for hz in (0.30, 1.80):
+            h0, h1 = ((hinge, hinge + 0.38) if hinge < (y0 + y1) / 2
+                      else (hinge - 0.38, hinge))
+            box(name + f" hinge{hz}", l - 0.036, l - 0.028, h0, h1,
+                hz - 0.03, hz + 0.03, black)
+        box(name + " latch", l - 0.036, l - 0.028, latch - 0.07, latch + 0.07,
+            1.02, 1.10, black)
+
     for o0, o1, hz in fo:
         if o1 - o0 > 1.2:                      # double door: two leaves
             mid = (o0 + o1) / 2
@@ -537,6 +558,8 @@ def build_skin(parts, lo, hi):
             front_door("doorB-r", mid, o1 + 0.06, o1, mid)
         else:
             front_door("doorA", o0 - 0.06, o1 + 0.06, o0, o1 - 0.10)
+    for o0, o1, hz in L["left_open"]:
+        left_door("doorL", o0 - 0.06, o1 + 0.06, o0, o1 - 0.10)
     for o0, o1, hz in L["right_open"]:
         right_door("doorR", o0 - 0.06, o1 + 0.06, o0, o1 - 0.10)
 

@@ -36,10 +36,20 @@ the 93" studs; sync it (or not) is a future captain call.
 The sistered skid arrangement is DROPPED: each skid line is now ONE
 continuous 16' (192") 4x4 (two total, full shed length x = -3.5..188.5), on
 the audited composite-skid lines under the front/back wall bearing lines
-(y -3.5..0 and 65..68.5, z -9.75..-6.25). Hingham stocks 16' 4x4; PT
-ground-contact tagging unchanged. **Deliberate divergence from Onshape**,
-whose model keeps the sistered composite skids (4x 96" boards + 2x 48"
-sisters); the local model, cut list and order list carry the redesign.
+(y -3.5..0 and 77..80.5, z -9.75..-6.25, since the 7 ft depth). Hingham
+stocks 16' 4x4; PT ground-contact tagging unchanged. **Deliberate divergence
+from Onshape**, whose model keeps the sistered composite skids (4x 96"
+boards + 2x 48" sisters); the local model, cut list and order list carry the
+redesign.
+
+**Foundation, 2026-08-24 — piers/pedestals DROPPED.** This supersedes the
+StrataRise pedestal revision. The two continuous skids bear DIRECTLY on one
+compacted ¾" crushed-stone gravel pad screeded level across the whole
+16′ × 7′ footprint — no pedestals, no paver base pads, no shims. Model, cut
+list, and the guide's Stage 1 (gravel pad and skids) all carry it; the
+pedestal order lines are removed. The pad footprint/spec is stated on the
+P04 foundation page because the landscaper excavates it before any lumber
+arrives.
 
 ## Treatment & species
 
@@ -49,10 +59,11 @@ Currently tagged:
 - **KD (kiln-dried, framing grade)**: all wall and roof lumber
 - **OSB**: 3/4" structural, subfloor-rated
 
-Species decisions (2026-08-10):
+Species decisions:
 - KD framing: **SPF #2** — decided; recorded in order_list.csv notes.
-- PT ground contact: no captain decision yet (common PNW choices: Hem-fir
-  or SYP with UC4A rating). Confirm with Hingham Lumber before ordering.
+- PT ground contact: **CLOSED — captain 2026-08-24, permanently.** There is no
+  choice: order whatever the yard stocks (ground-contact rated). This question
+  is never to be re-opened.
 
 ## Doors / siding / trim — separate order list — RESOLVED (2026-08-10)
 
@@ -89,25 +100,31 @@ checks.
   reframe — every new jack/king sits on the plate, and `cad.verify`'s
   ALLOWED_OVERLAPS exemption no longer matches anything.)
 
-## Door plan — adopted 2-door plan (captain 2026-08-23; 7 ft depth applied)
+## Door plan — adopted 3-door plan (captain 2026-08-23, left MAIN door added 2026-08-24)
 
-Verdict (durable copy in firstmate data/shed-door-plan-model/
-captain-decision-2026-08-23.md): adopt the free-doors study's WINNER
+Verdict (durable copies in firstmate data/shed-door-plan-model/
+captain-decision-2026-08-23.md and data/shed-guide-depth-pass/
+captain-decision-2026-08-24.md): adopt the free-doors study's WINNER
 (firstmate data/shed-jenga-arrange/report.md) MODIFIED — the 3 ft walk-in
-is REMOVED. Model + audit JSON updated 2026-08-23 by
-`scripts/depth7ft_2door.py`, which also applies the captain's 2026-08-18
-7 ft outer-depth decision (shed-depth-decision-2026-08-18.md) — the 64 in
-door only frames on the 77 in wall, so depth and doors shipped together.
+is REMOVED — and then ADD the LEFT rake-wall 64 in double as the MAIN
+(primary pedestrian) door. Model + audit JSON updated 2026-08-23 by
+`scripts/depth7ft_2door.py` (7 ft depth + barn + right brewery) and
+2026-08-24 by `scripts/left_main_door.py` (the left MAIN door, an exact
+mirror of the right brewery double).
 
-- **Barn door 8 ft (96 in)**, front wall west end, clear 0-96, head 84.
-  The west jamb IS the corner: the header bears on the corner king + a
-  corner jack in the corner block (the built-up header-bearing corner
-  post; flagged not engineered in the study). East of the opening the
-  front wall is solid studs at 16" oc.
+- **Barn door 8 ft (96 in)**, front wall west end, clear 0-96, head 84 —
+  wheeled roll-out (bikes + blower) and slab carry-in on edge. The west
+  jamb IS the corner: the header bears on the corner king + a corner jack
+  in the corner block (the built-up header-bearing corner post; flagged not
+  engineered in the study). East of the opening the front wall is solid
+  studs at 16" oc.
+- **MAIN entry double 64 in**, LEFT rake wall, clear 6.5-70.5, head 84,
+  6.5 in end studs. The shed's everyday pedestrian door — closest to the
+  garage/access. Exact mirror of the right brewery double's framing
+  (jacks, header plies + cap, cripples, mitered header cripples).
 - **Brewery double 64 in**, RIGHT rake wall, clear 6.5-70.5, head 84,
   6.5 in end studs (the study's flagged minimum).
-- **Walk-in / slab-feed door REMOVED**; no left rake-wall door (that is a
-  separate still-open family decision, NOT modeled).
+- **Walk-in / slab-feed door REMOVED.**
 - **7 ft shell**: back wall out to y 77..80.5, plate tops at 92-5/8 (the
   restud slope 24.375/65 is exactly the 7 ft slope 28.875/77). Where the
   roof drops below the flat plate stack, the gable ends follow it: the
@@ -115,29 +132,33 @@ door only frames on the 77 in wall, so depth and doors shipped together.
   the rake plate to the back corner, and side DTP corner blocks carry the
   corner rafters' back seats (all derived in the script's docstring).
 
-**Consequences accepted by the verdict**: pedestrian entry and 10 ft slab
-loading now route through the barn door. Recorded in the fit check:
+**Door roles** (recorded everywhere in the guide): LEFT double = MAIN
+entry; front 8 ft barn = wheeled roll-out + slab carry; RIGHT double =
+brewery service. Recorded in the fit check:
 
 - `scripts/fit_study_free_doors.py --arrange winner2` (the free-doors
-  study adapted for the 2-door variant; the original arrangements still
-  run unchanged) — full record in `scripts/fit_summary_winner2.txt`:
-  every named check PASS, "everything fits with access kept":
-  - pedestrian entry via the barn door (96 in vs the 36 in minimum),
-    landing on the maneuver floor east of the cluster (clear to 48 in);
+  study adapted for the adopted plan; the original arrangements still run
+  unchanged) — full record in `scripts/fit_summary_winner2.txt`: every
+  named check PASS, "everything fits with access kept":
+  - pedestrian entry through the LEFT MAIN door (64 in vs the 36 in
+    minimum), entry landing + maneuver floor clear to 48 in;
   - slabs carried on edge through the barn door (96 in ≥ 28 in slab +
     18 in carrier), aisle 49 in ≥ 46, rack feed face 23.75 in at the east
     end of the run (≥ 21 in as-designed precedent);
   - unchanged from the winner: bikes + blower straight-roll under the run,
     brewery service from outside the 64 in door (6.5 in end studs), hood +
-    duct + panel checks.
+    duct + panel checks;
+  - left-door sanity suite (end studs, outswing leaves stay exterior, entry
+    landing clear) matches the checks the winner-render scout validated
+    (firstmate data/shed-blender-winner/report.md).
 
-**Follow-up, not this task**: guide pages outside the door plan still
-carry 6 ft / as-designed numbers (04-05 floor: joists now 81 in and OSB
-84 in; 07 back wall: 88-1/8 pre-cuts; 09 raise heights; 10-12 rake plates,
-rafters, fascia — incl. the 1:1 fig-11 birdsmouth template; 13-14 siding
-and trim course counts). The door-plan pages (01, 06, 08, 15) and the
-order sheets (02, 03, R01) were updated with this change; the rest need a
-guide-sync pass against the 7 ft model.
+## Plywood lean-to relocation — FOLLOW-UP (2026-08-24)
+
+The plywood lean-to run planned against the LEFT wall must RELOCATE: the
+left wall now carries the MAIN entry double, so the lean-to cannot stay
+where it was. The family has accepted the relocation. Choosing the new
+spot is NOT part of the door/depth task — open it as its own decision when
+the interior arrangement is next revisited.
 
 ## Rake studs
 

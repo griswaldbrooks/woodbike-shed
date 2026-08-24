@@ -15,14 +15,14 @@
     over y -4..0 with 1.5 plumb kick at the inner face y 0; back level seat
     3.5" at z 92.625 over y 77..80.5 with plumb kick at the outer face
     y 80.5. Rafter top at front tail z 137.687 (peak), at back tail z 92.687.
-    Front overhang 24" (tail y -27.5), back 12" (tail y 92.5). Foundation
-    (pedestals/pavers/gravel) schematic - not modeled. Pedestal: StrataRise
-    3560ML-DF, real adjustment 1⅜"–2⅜" (drawn schematic envelope).
+    Front overhang 24" (tail y -27.5), back 12" (tail y 92.5). Foundation:
+    skids bear DIRECTLY on the compacted gravel pad (piers/pedestals dropped,
+    captain 2026-08-24); pad schematic - not modeled.
   Drawing transform: X(y) = 70 + 5*(y + 32);  Y(z) = 950 - 5*(z + 20).
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 990"
      font-family="Helvetica, Arial, sans-serif" role="img"
-     aria-label="Cross-section of the whole shed: walls capped by double top plates, roof beam notched to sit flat on both plate tops, front tall wall at left, back low wall at right, on skids carried by adjustable pedestals on paver pads over a gravel ground line.">
+     aria-label="Cross-section of the whole shed: walls capped by double top plates, roof beam notched to sit flat on both plate tops, front tall wall at left, back low wall at right, on skids bearing directly on a levelled, compacted gravel pad.">
 
   <defs>
     <!-- diagonal hatch = material cut by the section plane -->
@@ -32,6 +32,11 @@
     <pattern id="ground" width="14" height="14" patternUnits="userSpaceOnUse">
       <path d="M 0 14 L 14 0" stroke="#7a5b3a" stroke-width="2" fill="none"/>
       <path d="M -4 10 L 10 -4" stroke="#7a5b3a" stroke-width="1.2" fill="none"/>
+    </pattern>
+    <pattern id="gravel" width="16" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="3" r="1.8" fill="#8a8072"/>
+      <circle cx="12" cy="8" r="1.6" fill="#8a8072"/>
+      <circle cx="7" cy="10" r="1.3" fill="#9a9082"/>
     </pattern>
   </defs>
 
@@ -54,23 +59,13 @@
   <rect x="30" y="930" width="700" height="42" fill="#e8dcc8"/>
   <rect x="30" y="930" width="700" height="42" fill="url(#ground)"/>
   <line x1="30" y1="930" x2="730" y2="930" stroke="#3d2b17" stroke-width="3.5"/>
-  <text x="700" y="958" font-size="17" fill="#3d2b17" text-anchor="end">ground (gravel pockets below pedestals)</text>
+  <text x="700" y="958" font-size="17" fill="#3d2b17" text-anchor="end">ground — gravel pad screeded level under the skids</text>
 
-  <!-- ======================= FOUNDATION: pedestals + skids ======================= -->
-  <!-- Pedestals on paver pads (StrataRise 3560ML-DF; schematic, not modeled).
-       Each stack: head under the skid, column, base plate, paver pad at grade. -->
-  <g fill="#b9b9b9" stroke="#444" stroke-width="2.5">
-    <!-- front pedestal -->
-    <rect x="214.25" y="898.75" width="14" height="4.25"/>
-    <rect x="218" y="903" width="6" height="18"/>
-    <rect x="209" y="921" width="24" height="4"/>
-    <rect x="199" y="925" width="45" height="5"/>
-    <!-- back pedestal -->
-    <rect x="616.75" y="898.75" width="14" height="4.25"/>
-    <rect x="620.5" y="903" width="6" height="18"/>
-    <rect x="611.5" y="921" width="24" height="4"/>
-    <rect x="601.5" y="925" width="45" height="5"/>
-  </g>
+  <!-- ======================= FOUNDATION: gravel pad + skids ======================= -->
+  <!-- Compacted gravel pad under the full footprint (pier-less foundation,
+       captain 2026-08-24; schematic, not modeled). Pad top = skid bottoms. -->
+  <rect x="212.5" y="898.75" width="420" height="31.25" fill="#dcd4c4" stroke="#6c6252" stroke-width="2"/>
+  <rect x="212.5" y="898.75" width="420" height="31.25" fill="url(#gravel)"/>
   <!-- PT 4x4 skids (cut by section) -->
   <rect x="212.5" y="881.25" width="17.5" height="17.5" fill="#9caf88" stroke="#2f4020" stroke-width="2.5"/>
   <rect x="212.5" y="881.25" width="17.5" height="17.5" fill="url(#cut)"/>

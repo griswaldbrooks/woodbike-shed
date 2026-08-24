@@ -263,7 +263,8 @@ def main():
               f"'{p.label}': volume {evol:.1f} != expected "
               f"{p.expected_volume_in3:.1f} in^3 (silent boolean no-op?)")
     L = finish_layout(audit)
-    head_z = min(h for *_o, h in L["front_open"] + L["right_open"])
+    head_z = min(h for *_o, h in L["front_open"] + L["left_open"]
+                 + L["right_open"])
     # envelope: nothing lands outside the shed + its finish layers
     for p in finish:
         b = bbox_in(p)
@@ -297,8 +298,9 @@ def main():
                        ("finish door rails", door_out + TRIM_T)):
         for p in fby.get(label, []):
             b = bbox_in(p)
-            ok = min(abs(b[3] - (L["f"] - off)),
-                     abs(b[0] - (L["r"] + off))) < TIGHT
+            ok = min(abs(b[3] - (L["f"] - off)),      # front leaf back
+                     abs(b[1] - (L["l"] - off)),      # left leaf back
+                     abs(b[0] - (L["r"] + off))) < TIGHT  # right leaf back
             check(ok, f"'{label}': not in its door layer")
             check(b[5] < head_z, f"'{label}': leaf above the header line")
 

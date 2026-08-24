@@ -9,9 +9,9 @@ next: 13-skirt-and-siding.md
 # Stage 9 — Fascia, rake boards and the roofing note
 
 <!-- model trace: fascia 2x6 x 216 (x -15.5..200.5, 12" past each side wall); front fascia
-     y -29..-27.5, z 132.1865..137.6865; back fascia y 80.5..82, z 91.6865..97.1865; tops
-     flush with rafter tail tops (z 137.6865 / 97.1865). Rake boards x -15.5..-14 /
-     199..200.5, y -27.5..80.5, same parallelogram as a rafter minus the seats, ends butt
+     y -29..-27.5, z 132.1865..137.6865; back fascia y 92.5..94, z 87.1865..92.6865; tops
+     flush with rafter tail tops (z 137.6865 / 92.6865). Rake boards x -15.5..-14 /
+     199..200.5, y -27.5..92.5, same parallelogram as a rafter minus the seats, ends butt
      the fascia inner faces. Roofing/sheathing/fasteners: not modeled, on neither order. -->
 
 > **Goal:** every rafter tail is capped: fascia across the front and back, rake boards down
@@ -26,8 +26,8 @@ Parts for this page:
 |---|---|---|---|
 | 1 | front fascia | 2×6 KD | 18' 0" |
 | 1 | back fascia | 2×6 KD | 18' 0" |
-| 1 | left rake board | 2×6 KD | 9' 7⅜" |
-| 1 | right rake board | 2×6 KD | 9' 7⅜" |
+| 1 | left rake board | 2×6 KD | 10' 8⅛" |
+| 1 | right rake board | 2×6 KD | 10' 8⅛" |
 
 The fascia come off true 20' 2×6 stock — order true 20-footers and cut each to 18', not
 two shorter boards scarfed together. The rake boards are the same parallelogram as a rafter
@@ -57,7 +57,7 @@ rafter tail.
 ### 2. Nail up the back fascia
 
 Same board, same rules, low side of the roof: tight against the back rafter tails, top
-edges flush with the tail tops — 97-3/16" above the deck — and 12" past each side wall.
+edges flush with the tail tops — 92-11/16" above the deck — and 12" past each side wall.
 
 ### 3. Fit the rake boards
 
@@ -78,8 +78,8 @@ modeled work.
 > and are not on either lumber order** — deliberately. Nobody has picked your roofing, so
 > nobody can pick its quantities. Source, to your own roofing spec:
 >
-> - roof sheathing (sheet goods) — the roof is two slopes, each about 18' wide and
->   9' 7⅜" up the slope, at 4½ in 12;
+> - roof sheathing (sheet goods) — the roof is one slope about 18' wide and
+>   10' 8⅛" up the slope, at 4½ in 12;
 > - underlayment and its fasteners;
 > - the roofing material itself and its fasteners;
 > - drip edge for the eaves and rakes.

@@ -24,13 +24,13 @@ Tick off the parts (cut-list names, see [R01 cut list](r01-cut-list.md)):
 |---:|:---|:---|:---|
 | 2 | finish corner boards · 1×6 PRIMED | 10′ 3 5⁄16″ | front corners, boards on the side faces |
 | 2 | finish corner boards · 1×6 PRIMED | 10′ 2½″ | front corners, boards on the front face |
-| 2 | finish corner boards · 1×6 PRIMED | 8′ 5⁄16″ | back corners, boards on the side faces |
-| 2 | finish corner boards · 1×6 PRIMED | 7′ 10¾″ | back corners, boards on the back face |
+| 2 | finish corner boards · 1×6 PRIMED | 7′ 7 13⁄16″ | back corners, boards on the side faces |
+| 2 | finish corner boards · 1×6 PRIMED | 7′ 6¼″ | back corners, boards on the back face |
 | 2 | finish frieze · 1×10 PRIMED | 15′ 1″ | front and back eave bands |
-| 2 | finish frieze · 1×10 PRIMED | 5′ 1″ | side eave bands, raked |
-| 3 | finish door casings · 1×6 PRIMED | 6′ 11½″ | jamb casings — barn east jamb + both brewery jambs (the barn's west jamb is the corner board) |
+| 2 | finish frieze · 1×10 PRIMED | 6′ 1″ | side eave bands, raked |
+| 5 | finish door casings · 1×6 PRIMED | 6′ 11½″ | jamb casings — barn east jamb + both jambs of each 64″ side door (the barn's west jamb is the corner board) |
 | 1 | finish door casings · 1×6 PRIMED | 8′ 3½″ | head casing over the 96″ barn opening |
-| 1 | finish door casings · 1×6 PRIMED | 6′ 1″ | head casing over the 64″ brewery opening, scribed to the rake at its back end |
+| 2 | finish door casings · 1×6 PRIMED | 6′ 1″ | head casings over the two 64″ side doors, each scribed to the rake at its back end |
 
 Tools: tape, 4′ level, mitre saw, ladder, nails.
 
@@ -47,10 +47,12 @@ The pairs are not the same length, because the front wall is tall and the back w
 - **Front corners:** the board on the front face runs to the plate top — 10′ 3″ above the deck.
   The board on the side face runs to the rake line — a 5⁄16″ longer cut, 10′ 3 5⁄16″.
 - **Back corners:** the board on the back face runs to the back tuck line under the rafter
-  tails — 7′ 10¾″. The board on the side face runs to the rake line — 8′ 5⁄16″.
+  tails — 7′ 6¼″. The board on the side face runs to the rake line — 7′ 7 13⁄16″.
 
-<!-- model trace: corner boards z 0.5 (skirt top) to 123.0 / 123.8125 (front pair), 95.25 /
-96.8125 (back pair); trim layer = siding outer face + 0.75..1.5 outboard -->
+<!-- model trace: corner boards z 0.5 (skirt top) to 123.0 / 123.8125 (front pair), 90.75 /
+92.3125 (back pair: back-face board to the back tuck line, side-face board to the rake line);
+side frieze runs between the corner boards, raked, 73 long; trim layer = siding outer face +
+0.75..1.5 outboard -->
 
 ![Fig 14.1 — Corner layering, horizontal section at mid-wall height looking down from above.
 Stage 11, first trim down. One corner board lies flat on each wall face, each one proud layer out
@@ -61,7 +63,7 @@ from the siding it backs on.](figures/fig-14-a.svg)
 The frieze is the 1×10 band under the eaves, between the corner boards, and it covers the top
 edges of the siding. Set the front frieze with its **top edge flush with the plate top** — 10′ 3″
 above the deck — and nail it through the siding into the wall framing. Set the back frieze with
-its top edge at the back tuck line, 95¼″ above the deck, tucked under the rafter tails.
+its top edge at the back tuck line, 90¾″ above the deck, tucked under the rafter tails.
 
 Both bands are 15′ 1″ long, cut to land exactly between the corner boards.
 
@@ -73,30 +75,31 @@ frieze second, casings third — each piece one proud layer out from the siding.
 
 ### 3. Hang the side frieze
 
-The two side bands are 5′ 1″ long and **raked**: their top edges follow the roof line between the
+The two side bands are 6′ 1″ long and **raked**: their top edges follow the roof line between the
 corner boards. Set each one with its top edge on the rake line (the underside of the rake boards
 from Stage 7 is your guide), then nail. Check the rake by eye from a distance before you commit —
 a crooked frieze reads crooked from everywhere.
 
 ### 4. Hang the jamb casings
 
-Six jamb casings — two per door opening — all cut at 6′ 11½″. Set each one on the skirt top
-(½″ above the deck) with its **inner edge exactly on the clear opening edge**, and run it up to
-the head line, 84″ above the deck. Plumb it, then nail through the siding into the jack and king
-studs behind.
+Five jamb casings, all cut at 6′ 11½″. Set each one on the skirt top (½″ above the deck) with
+its **inner edge exactly on the clear opening edge**, and run it up to the head line, 84″ above
+the deck. Plumb it, then nail through the siding into the jack and king studs behind.
 
-The two openings are the 96″ barn door at the front wall's west corner and the 64″ brewery
-double on the right wall. The barn door has no west jamb casing — the corner board is its west
-casing, and the west leaf laps onto it. After this step each opening still measures its clear
-width — the casings frame the opening, they don't narrow it.
+The openings are the 96″ barn door at the front wall's west corner (wheeled roll-out) and the
+two identical 64″ doubles on the side walls — the MAIN entry on the left, the brewery service
+door on the right. Each side door takes two jamb casings. The barn door takes one: it has no
+west jamb casing — the corner board is its west casing, and the west leaf laps onto it. After
+this step each opening still measures its clear width — the casings frame the opening, they
+don't narrow it.
 
 ### 5. Hang the head casings
 
 The head casings span over the tops of the jamb casings, seat on them, and cover the siding edge
-at the heads. Cut: 8′ 3½″ over the barn opening, 6′ 1″ over the brewery opening. Set each one
-level, its bottom edge on the 84″ head line, ends overhanging the jamb casings by the casing
-width each side. On the right wall the rake frieze drops below that top line at the back end —
-scribe the casing's top edge to the frieze bottom there. The barn head casing butts the corner
+at the heads. Cut: 8′ 3½″ over the barn opening, 6′ 1″ over each side-door opening. Set each
+one level, its bottom edge on the 84″ head line, ends overhanging the jamb casings by the casing
+width each side. On both side walls the rake frieze drops below that top line at the back end —
+scribe each casing's top edge to the frieze bottom there. The barn head casing butts the corner
 board at its west end. Nail.
 
 ## Before you move on
@@ -105,6 +108,6 @@ board at its west end. Nail.
 - [ ] Front frieze top edge flush with the plate top; back frieze tight under the rafter tails — sighted along the wall
 - [ ] Side frieze top edges straight on the rake line — sighted from a distance
 - [ ] Jamb casings plumb, inner edges exactly on the clear opening edges — 4′ level
-- [ ] Each opening still measures its clear width: 96″, 64″ — tape
+- [ ] Each opening still measures its clear width: 96″ at the barn, 64″ at both side doors — tape
 - [ ] Head casings level and seated tight on the jamb casings — level, then look for daylight
 - [ ] All trim backs on the siding face — no trim sunk into the siding plane, no proud gaps — sight across each face

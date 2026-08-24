@@ -303,6 +303,7 @@ def finish_layout(audit: Audit) -> dict:
         # under the rafter bottom edge at the part's own outer face
         "back_top_at": lambda off: ref.zbot(b + off),
         "front_open": openings("front wall headers", 0),
+        "left_open": openings("left wall headers", 1),
         "right_open": openings("right wall headers", 1),
     }
 

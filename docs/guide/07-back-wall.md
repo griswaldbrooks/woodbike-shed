@@ -8,15 +8,15 @@ next: 08-side-walls.md
 
 # Stage 4 — Back wall
 
-> **Goal:** the back wall — 97⅛" from deck to plate top, no openings — lies assembled flat on
+> **Goal:** the back wall — 92⅝" from deck to plate top, no openings — lies assembled flat on
 > the deck: plates, thirteen identical studs, and the short double top plate that leaves the two
 > back corners open for the side walls to lap.
 > **Crew:** 1 person · **Time:** about two hours · **Weather:** dry deck
 
-<!-- model trace: back wall runs along x −3.5..188.5 at y 65..68.5; bottom plate z 0..1.5;
-top plate z 94.125..95.625; double top plate short x 0..185 z 95.625..97.125 (stops 3.5" short
-of each wall end); studs z 1.5..94.125 at x −3.5, 11, 27, 43, 59, 75, 91, 107, 123, 139, 155,
-171, 187 (16" o.c. centres) -->
+<!-- model trace: back wall runs along x −3.5..188.5 at y 77..80.5; bottom plate z 0..1.5;
+top plate z 89.625..91.125; double top plate short x 0..185 z 91.125..92.625 (stops 3.5" short
+of each wall end); studs z 1.5..89.625 (88.125 pre-cut) at x −3.5, 11, 27, 43, 59, 75, 91, 107,
+123, 139, 155, 171, 187 (16" o.c. centres) -->
 
 ## Before you start
 
@@ -27,13 +27,14 @@ of each wall end); studs z 1.5..94.125 at x −3.5, 11, 27, 43, 59, 75, 91, 107,
 | 1 | back wall bottom plate | 2×4 | 16' 0" |
 | 1 | back wall top plate | 2×4 | 16' 0" |
 | 1 | back wall double top plate short | 2×4 | 15' 5" |
-| 13 | back wall studs | 2×4 | 7' 8⅝" (92⅝" pre-cut) |
+| 13 | back wall studs | 2×4 | 7' 4⅛" (88⅛" pre-cut) |
 
 - Same stock as the front wall: 2×4 KD SPF #2, fasteners your own (not on either order), no
   sheathing.
 - This wall is framed flat along the deck's **back edge**, outer face flush with the deck edge;
   it goes up in Stage 6.
-- The thirteen studs are all the standard 92⅝" pre-cut length — no measuring, one saw setting.
+- The thirteen studs are all the same 88⅛" (7' 4⅛") pre-cut length — no measuring, one saw
+  setting.
 
 ## Steps
 
@@ -64,7 +65,7 @@ After the first two, the studs land 16" on centre.
 
 ### 2. Set the thirteen studs
 
-Set a 92⅝" pre-cut stud on every mark between the two plates, each one on the same face line,
+Set an 88⅛" pre-cut stud on every mark between the two plates, each one on the same face line,
 and fasten both ends.
 
 ![Fig 7.1 — Back wall framing, elevation viewed from behind the shed, assembled flat (Stage 4).
@@ -88,6 +89,6 @@ of interlocking.
 ## Before you move on
 
 - [ ] Diagonals of the flat wall equal within ½" — checked with the tape.
-- [ ] Thirteen studs, each 92⅝" — checked once with the tape; they are identical pre-cuts.
+- [ ] Thirteen studs, each 88⅛" — checked once with the tape; they are identical pre-cuts.
 - [ ] Double top plate is 15' 5" and ends 3½" short of each wall end — checked with the tape.
 - [ ] Every stud and both plates fastened; wall flat and square on the deck, ready for Stage 6.

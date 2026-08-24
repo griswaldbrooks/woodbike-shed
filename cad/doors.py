@@ -1,8 +1,10 @@
 """Finish doors: board-and-batten barn doors over every framed opening.
 
-Two-door plan (captain 2026-08-23): the 96" front barn door and the 64"
-right-wall brewery double - both center doubles (any opening over 48"
-hangs as a pair). Each leaf = vertical 1x6 planks edge-to-edge
+Three-door plan (captain 2026-08-24): the 96" front barn door (wheeled
+roll-out), the 64" LEFT main-entry double and the 64" right brewery double
+- all center doubles (any opening over 48" hangs as a pair). The left
+double mirrors the right (same span/head, outswing leaves exterior to the
+wall plane). Each leaf = vertical 1x6 planks edge-to-edge
 with a 1x4 perimeter frame (stiles + rails) on the outer face; leaves hang
 on the casing face (one layer proud of the trim) where strap hinges would
 bear. Hardware is NOT modeled - strap hinges/latches are line items in
@@ -25,7 +27,7 @@ Z0 = 1.0          # leaf bottom, just above the skirt top
 
 def _leaf(parts, L, wall, a0, a1):
     """One leaf on `wall` spanning a0..a1 on the wall axis."""
-    head = (L["front_open"] if wall == "front" else L["right_open"])
+    head = L[f"{wall}_open"]
     zt = min(h for _, _, h in head) - GAP
     o = TRIM_T + 0.75  # trim outer face offset from the wall plane
     if wall == "front":
@@ -33,6 +35,11 @@ def _leaf(parts, L, wall, a0, a1):
         f_lo, f_hi = p_lo - 0.75, p_lo                      # frame layer
         box_p = lambda l, a, b, z0, z1: box_at(l, a, b, p_lo, p_hi, z0, z1)
         box_f = lambda l, a, b, z0, z1: box_at(l, a, b, f_lo, f_hi, z0, z1)
+    elif wall == "left":                     # mirror of the right wall
+        p_lo, p_hi = L["l"] - o - 0.75, L["l"] - o
+        f_lo, f_hi = p_lo - 0.75, p_lo
+        box_p = lambda l, a, b, z0, z1: box_at(l, p_lo, p_hi, a, b, z0, z1)
+        box_f = lambda l, a, b, z0, z1: box_at(l, f_lo, f_hi, a, b, z0, z1)
     else:
         p_lo, p_hi = L["r"] + o, L["r"] + o + 0.75
         f_lo, f_hi = p_hi, p_hi + 0.75
@@ -56,6 +63,7 @@ def build(audit: Audit):
     L = finish_layout(audit)
     parts = []
     for wall, opens in (("front", L["front_open"]),
+                        ("left", L["left_open"]),
                         ("right", L["right_open"])):
         for o0, o1, _hz in opens:
             if o1 - o0 > 48:                 # center double

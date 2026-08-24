@@ -14,9 +14,11 @@ next: 10-rake-plates.md
 > **Weather:** calm and dry. Do not raise walls in wind.
 
 <!-- model trace: wall outer faces at x −3.5 (left), x 188.5 (right), y −3.5 (front/street),
-y 68.5 (back). Front double top plate z 121.5..123 runs the full 192"; back double top plate
-short x 0..185 z 95.625..97.125; side double top plates y 0..68.5 z 95.625..97.125 lap 3.5"
-over the back-wall corners; side walls occupy the 65" gap y 0..65 between front and back walls -->
+y 80.5 (back). Front double top plate z 121.5..123 runs the full 192"; back double top plate
+short x 0..185 z 91.125..92.625; side double top plates: flat part y 0..60.73 z 95.625..97.125
++ corner block y 77..80.5 z 91.125..92.625 lapping over the back-wall corners (between them the
+rake plate carries the wall top down, Stage 7); side walls occupy the 77" gap y 0..77 between
+front and back walls -->
 
 This is the heaviest and most dangerous part of the build. A raised front wall is 10' 3" tall and
 16' 0" long; once it is off the deck it wants to fall, and it falls fast. Read the whole page
@@ -86,8 +88,8 @@ before letting go.
 
 ### 5. Raise and brace the side walls — left, then right
 
-One wrinkle: with the front and back walls standing, the gap between them is 5' 5", and a side
-wall measures 5' 8½" across its double-plate lap — it cannot lie flat end-to-end between two
+One wrinkle: with the front and back walls standing, the gap between them is 6' 5", and a side
+wall measures 6' 8½" across its back-corner lap — it cannot lie flat end-to-end between two
 standing walls. Lay the side wall diagonally across the open deck with its front end at its
 corner, raise it to vertical in the open with your helper, then walk it over and set its bottom
 plate on the deck's side edge. The 3½" double-plate overhang at the back end lands above the back
@@ -101,14 +103,14 @@ overlaps the back wall, and the back wall's short double plate butts against it 
 each front corner the side wall's double plate end butts into the front wall's corner framing,
 under the front wall's full-width double plate. Nail through every lap and every butt.
 
-![Fig 9.4 — Corner laps, plan cut horizontally through the double top plates about 8' above the
-deck, looking down (Stage 6). Side-wall plates lap over both back corners; the back wall's short
-plate fits between them; the front wall's plate runs the full 16' 0".](figures/fig-09-d.svg)
+![Fig 9.4 — Corner laps, plan cut at double-top-plate level, looking down (Stage 6). Side-wall
+corner blocks lap over both back corners; the back wall's short plate fits between them; the
+front wall's plate runs the full 16' 0".](figures/fig-09-d.svg)
 
 ### 7. Plumb everything and leave the braces
 
 Re-check every wall for plumb and nudge it by shifting the foot of its brace. Check the box at
-plate level: 16' 0" long, 6' 0" deep, diagonals equal within ½". The bracing stays on until the
+plate level: 16' 0" long, 7' 0" deep, diagonals equal within ½". The bracing stays on until the
 siding goes on in Stage 10 — do not remove it for the roof work.
 
 ## Before you move on
@@ -118,6 +120,6 @@ siding goes on in Stage 10 — do not remove it for the roof work.
       holds two.
 - [ ] Corner laps nailed: both back corners (side plate over back wall) and both front corners
       (side plate end into the front wall's corner).
-- [ ] Box measures 16' 0" × 6' 0" at the plate line with diagonals equal within ½" — checked
+- [ ] Box measures 16' 0" × 7' 0" at the plate line with diagonals equal within ½" — checked
       with the tape.
 - [ ] Bottom plates flush with the deck edges all the way around — checked by eye and tape.

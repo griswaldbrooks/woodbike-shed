@@ -56,22 +56,25 @@ cuts against the list; a board cut more than ½″ off its length gets recut, no
 two tape diagonals disagree. Ease the long corner over until both readings match within ½″;
 checked at Stage 1, before any wall goes up.](figures/fig-16-floor-diagonals.svg)
 
-<!-- model trace: skid lines y -3.5...0 and y 65...68.5, x -3.5...188.5; pedestal centres 6"
-in from each skid end at 5' o.c.; error state drawn with the front skid line shifted 4"
-along its length (exaggerated) -->
+<!-- model trace: skid lines y -3.5...0 and y 77...80.5, x -3.5...188.5; the skids bear
+directly on the screeded, compacted gravel pad — no piers, no shims; deck top 9¾" above the
+pad top; error state drawn with the front skid line shifted 4" along its length (exaggerated) -->
 
 ## 3. A wall that will not come plumb
 
 **Symptom.** After raising, the level or plumb bob shows the wall leaning, and pulling the
 braces will not bring it in — or it goes plumb at one end and out at the other.
 
-**Likely cause.** In order of likelihood: the deck edge under the wall is not level, so the
-plate follows the deck instead of the bubble; one crowned or long stud is holding the wall
-off line; a brace is anchored to something that moves; the wall is twisted along its length
-because its two ends are plumb to different marks.
+**Likely cause.** In order of likelihood: the gravel pad under the skid is not level — a soft
+spot or a screed miss — so the deck edge follows the pad instead of the bubble; one crowned
+or long stud is holding the wall off line; a brace is anchored to something that moves; the
+wall is twisted along its length because its two ends are plumb to different marks.
 
-**Fix.** Work from the ground up. Level the deck edge under the wall first and shim the
-plate to follow it — never more than ½″ of shim. Then plumb off the **double top plate**,
+**Fix.** Work from the ground up. The skids bear directly on the screeded, compacted gravel
+pad, and this foundation carries no shims — the gravel is the shim. If a deck edge is off,
+lift that skid line, add or strike compacted gravel under it, re-screed and re-set; the deck
+top sits 9¾″ above the pad top when the skids are bearing everywhere. Then plumb off the
+**double top plate**,
 not the studs, with the braces set at about 45° to solid deck blocking. A wall that is
 plumb at both ends and bowed between has a bad stud: sight it, and recut or sister it.
 Tolerance: no gap over ⅛″ under a 6-ft level laid on the wall face, in both directions,
@@ -101,8 +104,8 @@ check, with a feeler.
 the birdsmouth bears on its inner edge only and the seat gaps off the plate. Every seat
 bears full-width; checked with a feeler at Stage 8.](figures/fig-16-rafter-seat-gap.svg)
 
-<!-- model trace: back DTP top z 97.125 at y 65...68.5; correct seat horizontal at z 97.125
-with plumb kick at y 68.5 down to z 95.8125; error state drawn with the seat tilted 1" open
+<!-- model trace: back DTP top z 92.625 at y 77...80.5; correct seat horizontal at z 92.625
+with plumb kick at y 80.5 down to z 91.3125; error state drawn with the seat tilted 1" open
 at the kick (exaggerated) -->
 
 ## 5. Finish layers not sitting flush
@@ -151,7 +154,7 @@ to it. Courses start at the skirt top on every wall; checked as the courses clim
 Stage 10.](figures/fig-16-rake-courses.svg)
 
 <!-- model trace: left wall face x -3.5; siding 7" exposure from skirt top z 0.5; rake cut
-line = rafter bottom + 1" tuck (z 96.8 at back rising 4.5:12 to z 123.8 at front); skirt
+line = rafter bottom + 1" tuck (z 92.3 at back rising 4.5:12 to z 123.8 at front); skirt
 z -6.75...0.5; error state drawn with the top course 2" past the rake at the back corner
 (exaggerated) -->
 

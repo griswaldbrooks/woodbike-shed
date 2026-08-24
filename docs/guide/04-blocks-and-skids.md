@@ -1,29 +1,37 @@
 ---
 page: P04
-title: Pedestals and skids
+title: Gravel pad and skids
 stage: Stage 1 of 12
 prev: 03-order-finish.md
 next: 05-floor.md
 ---
 
-# Stage 1 — Pedestals and skids
+# Stage 1 — Gravel pad and skids
 
-> **Goal:** eight adjustable pedestals set so both skid tops land on one level plane, with both continuous 16-foot skids seated and fastened on them, square and aligned.
-> **Crew:** 1 person · **Time:** about a day · **Weather:** dry ground
+> **Goal:** one level, compacted gravel pad across the whole footprint, with both continuous 16-foot skids bearing directly on it — square, aligned, and on one plane.
+> **Crew:** 2 people · **Time:** about a day · **Weather:** dry ground
 
-<!-- model trace: footprint x -3.5..188.5 (192"), y -3.5..68.5 (72"); front = street side = low y;
-     skids x -3.5..188.5, front skid y -3.5..0, back skid y 65..68.5, z -9.75..-6.25;
-     skid centerlines y -1.75 and 66.75 (68.5" = 5' 8½" c/c); pedestal centers x 2.5 / 62.5 / 122.5 / 182.5
-     on both rows (tape 6" / 5'-6" / 10'-6" / 15'-6" from the left end). Foundation stack below the skids
-     (gravel, paver pad, pedestal) is drawn, not modeled. Pedestal: StrataRise 3560ML-DF per stratarise.us
-     "Multi-Level - for Joists" (fetched 2026-08-15): height adjustment 35-60 mm (1⅜"–2⅜"), load-tested to
-     1760 lb (800 kg) per unit at the weakest setting (max height, one thread engaged), base plate Ø 200 mm
-     (8"), threaded head with fixing flange + screw slot, head made for joists up to 3" (75 mm) wide;
-     sold as 3560ML-DF-30 (pack of 30) or 3560ML-DF-10 (pack of 10) -->
+<!-- model trace: footprint x -3.5..188.5 (192"), y -3.5..80.5 (84"); front = street side = low y;
+     skids x -3.5..188.5, front skid y -3.5..0, back skid y 77..80.5, z -9.75..-6.25;
+     skid centerlines y -1.75 and 78.75 (80.5" = 6' 8½" c/c); skid-rectangle diagonals
+     sqrt(192² + 84²) = 209.6" = 17' 5⅝". The foundation stack below the skids (landscape
+     fabric + compacted ¾" gravel pad) is drawn, not modeled. Piers/pedestals DROPPED
+     2026-08-24 by captain decision — skids bear direct on the screeded gravel pad; durable
+     decision copy: firstmate data/shed-guide-depth-pass/captain-decision-2026-08-24.md -->
 
 Left and right in this guide are as you stand in the street facing the shed. FRONT is the street
 side — the tall wall with the doors. Your tape zero for this whole stage is the **left-end corner**
 of the footprint.
+
+**The foundation is a gravel pad — read this first.** No piers, no pedestals, no concrete, no
+hardware: the two skids bear directly on a compacted gravel pad, and the building above holds
+them down. The pad IS the foundation, and it is all of the 16 ft × 7 ft footprint:
+
+> **Pad spec** — excavate the full 16′ × 7′ rectangle down to firm subsoil (probe first;
+> depth varies, typically 8–12″ — dig to firm soil, never to a fixed depth). Line it with
+> landscape fabric lapped up the sides. Fill with ¾″ **angular** crushed stone in 3″ lifts,
+> tamping each lift. Screed the top FLAT AND LEVEL. Pad top at or slightly above finished
+> grade, surrounding ground crowned so water falls away. About 3–4 yd³ of stone.
 
 ## Before you start
 
@@ -35,36 +43,23 @@ Parts tick-off (from the framing order, [P02](02-order-framing.md)):
 
 Foundation materials — **not on either lumber order** (see [P02](02-order-framing.md)):
 
-- 8 × StrataRise adjustable support pedestal, part number **3560ML-DF-30** — sold as a pack of
-  30; one pack covers all eight points with spares
-- 8 concrete paver base pads, 16–18" (load spreaders under the pedestals)
-- about 1 yd³ of ¾" **angular** crushed stone
-- landscape fabric
-- screws for the pedestal fixing flanges — not on either order; the flange slot takes a
-  structural screw of your choice
+- about 3–4 yd³ of ¾" **angular** crushed stone (112 ft² of footprint, 8–12" deep)
+- landscape fabric for the whole pad, lapped up the sides
 
-There are **no shims on this foundation** — each pedestal's adjustment ring does the shimming.
+**No shims anywhere on this foundation — the gravel is the shim.** Wood shims rot in the
+ground, and a screeded pad needs none.
 
-The pedestal, from the manufacturer's spec: adjusts **1⅜" to 2⅜"** high; load-tested to
-**1,760 lb each at its weakest setting** (maximum height, one thread engaged) and more below
-that; an **8" round base plate**; and a threaded head with a fixing flange and screw slot for
-fastening to the beam. Two fit notes before you buy anything else: the head is made for joists
-up to 3" wide, and the PT 4×4 skid measures 3½" — the skid overhangs the head about ¼" each
-side, seated centered (check this at the first pedestal, step 7). And the load: eight points
-carry this shed with room — even a 60 lb/ft² spread across the whole deck, more than the floor
-joists themselves want, is only about 1,050 lb per pedestal. The full source is in the
-[appendix](r02-sources.md).
-
-Tools: shovel, probing rod (rebar or similar), tape, string line + line level (or a transit),
-hand tamper, a 2' level, drill/driver for the flange screws, marking paint or stakes.
+Tools: shovel, probing rod (rebar or similar), tape, two string lines + line level (or a
+transit), hand tamper, screed rails — straight boards longer than 7 ft (an 8 ft 2×6 works),
+a 2' level, marking paint or stakes.
 
 The two skids are single 16-foot 4×4s — no splices, no sistered joints. If your yard delivered
 shorter stock, stop and sort the order before digging anything.
 
-**How high the deck will sit.** The deck top lands 9¾" above the skid bottoms (the Stage 2
-floor stack). The pedestal adds 1⅜" to 2⅜" under the skid, so the deck top finishes **11⅛" to
-12⅛" above the paver pads** — about a foot above the surrounding grade. Plan steps and door
-approach for a low deck.
+**How high the deck will sit.** The deck top lands 9¾" above the skid bottoms (skid 3½" +
+2×6 floor joist 5½" + ¾" OSB — the Stage 2 floor stack). With the skids direct on the gravel,
+the deck top finishes **9¾" above the pad top** — a little under 10 inches above grade. Plan
+steps and door approach for a low deck.
 
 ## Steps
 
@@ -74,84 +69,69 @@ approach for a low deck.
 
 ### 2. Mark the footprint and the two skid lines
 
-Mark a 16' × 6' rectangle on the ground with the front edge facing the street, and square the
-corners (3‑4‑5 method, then check that both diagonals are equal). Inside it, mark the two skid
-lines: one under the front wall, one under the back wall. Each skid's centerline runs 1¾" in from
-its shed edge, so the skid's outside face lands flush with the footprint edge. The two centerlines
-are 5' 8½" apart, measured across the shed.
+Mark a 16' × 7' rectangle on the ground with the front edge facing the street, and square the
+corners (3‑4‑5 method, then check that both diagonals are equal — about 17' 5⅝"). Inside it,
+mark the two skid lines: one under the front wall, one under the back wall. Each skid's
+centerline runs 1¾" in from its shed edge, so the skid's outside face lands flush with the
+footprint edge. The two centerlines are 6' 8½" apart, measured across the shed.
 
-Along each skid line, mark the four pocket centers: **6", 5' 6", 10' 6", and 15' 6"** on the tape
-from the left-end corner. That puts them 6" in from each skid end and 5' apart — equal spacing for
-the continuous 16-foot skid.
+![Fig 4.1 — Foundation layout, plan view looking straight down, FRONT (street side) at top. The whole 16 ft × 7 ft footprint is the gravel pad (hatched), the dashed rectangle is the future wall footprint on top of it, and the two skid lines are dashed where the skids will land. Every position is a tape reading from the left-end corner.](figures/fig-04-a.svg)
 
-![Fig 4.1 — Foundation layout, plan view looking straight down, FRONT (street side) at top. Stage 1, before digging: eight gravel pockets in two rows of four, a paver base pad and an adjustable pedestal in each, and the two skid lines dashed where the skids will land. Every position is a tape reading from the left-end corner.](figures/fig-04-a.svg)
+### 3. Excavate the whole pad down to firm soil
 
-### 3. Dig the eight pockets down to firm soil
+Dig out the full 16' × 7' rectangle. Probe first to find how deep firm soil is — depth varies
+across the footprint, typically 8–12". Dig to firm soil, not to a fixed depth. Keep the pad
+top at or slightly above finished grade, and crown the surrounding grade so water falls away
+from the shed.
 
-Dig each pocket at least 24" square, centered on your marks, down to firm subsoil. Probe first to
-find how deep firm soil is — depth varies across the footprint, typically 8–12". Dig to firm soil,
-not to a fixed depth. Keep each pocket top at or above finished grade, and crown the surrounding
-grade so water falls away from the shed. The pedestal stands on a solid, compact surface — a
-tamped gravel pocket is exactly what it wants.
+> ⚠️ **WARNING** — an open excavation · the pad is shallow, but trips and falls are real with string, stakes, and spoil around · keep the spoil pile and walkways clear of the rectangle, and mark the corners where mowing and foot traffic cross.
 
-![Fig 4.2 — One gravel pocket in section, cut across the front skid at a pedestal (line B–B in Fig 4.1, viewed toward the right end). Bottom to top: firm soil, tamped gravel, paver base pad, pedestal, skid — and above, dashed, the floor framing that lands on it later. Dig to firm soil, never to a fixed depth; the pedestal's ring does the leveling — no shims. The pedestal zone is drawn three times vertical height for legibility.](figures/fig-04-b.svg)
+![Fig 4.2 — The gravel pad in section, cut across the front skid (line B–B in Fig 4.1, viewed toward the right end). Bottom to top: firm soil, landscape fabric, tamped ¾-inch gravel, skid bearing directly on the stone — and above, dashed, the floor framing that lands on it later. Dig to firm soil, never to a fixed depth; the screeded gravel does the leveling — no shims. Depths drawn true, with no vertical exaggeration.](figures/fig-04-b.svg)
 
-### 4. Line the pockets and fill with tamped gravel
+### 4. Line the pad with fabric
 
-Line each pocket with landscape fabric, lapped up the sides — it stops the stone migrating into
-soft soil. Fill with ¾" angular crushed stone in 3" lifts, tamping each lift before adding the
-next. Bring the stone up to the pocket top.
+Line the whole excavation with landscape fabric, lapped up the sides — it stops the stone
+migrating into the soil below.
 
-### 5. Set the paver base pads
+### 5. Fill with stone in tamped lifts
 
-Set one concrete paver base pad flat on the tamped gravel in each pocket, centered on the mark.
-The pad spreads each pedestal's load across the whole pocket, and gives the 8" base plate a flat,
-firm seat.
+Fill with ¾" angular crushed stone in 3" lifts, tamping each lift before adding the next.
+Leave the last lift a little proud — the screed strikes it off at the strings.
 
-> ⚠️ **WARNING** — heavy lifting · a 16–18" concrete paver can weigh over 60 lb and pin fingers · lift with your legs, keep hands clear when setting down, get help if the carry is awkward.
+### 6. Set the strings and screed the pad level
 
-### 6. Stand the eight pedestals
+Run two string lines along the skid rows and level them to each other, so the strings define
+one common plane across the whole pad. Strike the gravel off with screed rails riding the
+strings (or on screed boards set to them), and check the screeded top with a straightedge and
+the 2' level. Flat and level now is flat and level under the skids.
 
-Stand a pedestal on each pad, centered on your mark, base plate flat on the paver. Start every
-adjustment ring at mid-height — you want travel left in both directions when you level.
+### 7. Set the skids on the screeded pad
 
-### 7. Set the skids on the pedestal rows
+Lay the front skid on the front skid line, under the front-wall bearing line, and the back
+skid on the back line. Ends flush with the left and right ends of the footprint — the rim
+joists will land flush on those same ends next stage. Align each skid's outside face with the
+footprint edge. The skids simply bed on the screeded stone; they are not fastened to anything
+— the building above holds them.
 
-Lay the front skid on the front row of pedestals, under the front-wall bearing line, and the back
-skid on the back row. Ends flush with the left and right ends of the footprint — the rim joists
-will land flush on those same ends next stage. Align each skid's outside face with the footprint
-edge, and center each skid on its pedestal heads: the head is made for a 3" joist and the skid is
-3½" wide, so the skid overhangs each head about ¼" on both sides. Do not fasten anything yet.
+### 8. Bring both skids to ONE plane
 
-### 8. Bring both skids to ONE plane with the rings
-
-Run string lines along the two skid rows and level the strings to each other, so they define one
-common plane across all eight pedestals. Then turn each pedestal's adjustment ring until its skid
-top meets the string — the pedestal adjusts under the load, no lifting the skid off. Walk the
-rows sighting to the string, ring by ring. If a point runs out of ring travel before it reaches
-the string, add or remove gravel under that pad and re-seat it. **No shims anywhere — the ring is
-the shim.**
+Sight each skid top to its string, and lay a straightedge across from skid to skid. Where a
+spot runs low or high, lift the skid, add or remove gravel beneath it, re-tamp, and re-set.
+**No shims anywhere — the gravel is the shim.**
 
 ### 9. Check the rectangle
 
-Measure diagonally across the four outside corners of the two skids, corner to opposite corner.
-The two diagonals must be equal — each runs about 17' 1". If they differ, shift the skids on
-their pedestal heads until they match. Nothing downstream can be squared if this rectangle is
+Measure diagonally across the four outside corners of the two skids, corner to opposite
+corner. The two diagonals must be equal — each runs about 17' 5⅝". If they differ, shift the
+skids on the gravel until they match. Nothing downstream can be squared if this rectangle is
 not.
-
-### 10. Fasten the skids to the pedestal heads
-
-Drive a screw through the fixing flange slot into each skid at all eight pedestals, per the
-manufacturer's flange — that keeps the skids where you squared them. The screws are not on either
-order; any structural screw that grips pressure-treated 4×4 will do.
 
 ## Before you move on
 
-- [ ] All eight pedestals bearing, no rocking skid — checked by rocking each skid end by hand
-- [ ] Both skid tops on the one string-line plane, with ring travel still left at every point — checked by sighting down each string and trying each ring
-- [ ] Each skid centered on its pedestal heads, overhanging about ¼" each side — checked with a tape
-- [ ] Skid centerlines 5' 8½" apart, measured across the shed — checked with a tape
+- [ ] Pad top screeded flat and level, at or slightly above grade — checked with the strings, a straightedge, and the 2' level
+- [ ] Both skid tops on the one string-line plane, no rocking skid — checked by sighting each string and rocking each skid end by hand; fix by lifting the skid and re-working the gravel
+- [ ] Skid centerlines 6' 8½" apart, measured across the shed — checked with a tape
 - [ ] Each skid's outside face flush with the footprint edge, ends flush left and right — checked with a tape
-- [ ] Diagonals across the skid corners equal within ½", each about 17' 1" — checked with a tape
-- [ ] Fixing-flange screws driven at all eight pedestals — checked by eye and driver
-- [ ] Pocket tops at or above grade, ground crowned away from the shed — checked by eye after wetting the ground
+- [ ] Diagonals across the skid corners equal within ½", each about 17' 5⅝" — checked with a tape
+- [ ] No shims anywhere under the skids — checked by eye
+- [ ] Surrounding ground crowned away from the pad — checked by eye after wetting the ground
