@@ -22,21 +22,22 @@ next: 04-blocks-and-skids.md
 
 | ☐ | Lumber / item | Treatment | Stock length | Qty | Notes |
 |---|---|---|---|---|---|
-| ☐ | 1×10 | PRIMED | 12′ | 1 | frieze, the two 5′ 1″ side pieces |
+| ☐ | 1×10 | PRIMED | 14′ | 1 | frieze, the two 6′ 1″ side pieces |
 | ☐ | 1×10 | PRIMED | 16′ | 2 | frieze, front + back, 15′ 1″ each |
-| ☐ | 1×4 | KD | 8′ | 1 | door rails |
+| ☐ | 1×4 | KD | 12′ | 1 | door rails |
 | ☐ | 1×4 | KD | 14′ | 5 | door stiles + rails |
-| ☐ | 1×6 | KD | 14′ | 15 | door planks (30 × 6′ 10¾″) |
-| ☐ | 1×6 | PRIMED | 8′ | 3 | corner boards / casings |
-| ☐ | 1×6 | PRIMED | 12′ | 6 | corner boards / casings |
-| ☐ | 1×6 | PRIMED | 14′ | 3 | door casings |
-| ☐ | 1×8 | PRIMED | 14′ | 1 | siding, short pieces |
-| ☐ | 1×8 | PRIMED | 16′ | 37 | siding + skirt |
+| ☐ | 1×6 | KD | 14′ | 16 | door planks (32 × 6′ 10¾″) |
+| ☐ | 1×6 | PRIMED | 8′ | 4 | corner boards / casings |
+| ☐ | 1×6 | PRIMED | 10′ | 1 | barn head casing |
+| ☐ | 1×6 | PRIMED | 12′ | 4 | corner boards / casings |
+| ☐ | 1×6 | PRIMED | 14′ | 2 | corner boards / casings |
+| ☐ | 1×8 | PRIMED | 8′ | 35 | siding, side-wall courses |
+| ☐ | 1×8 | PRIMED | 16′ | 21 | siding + skirt |
 | ☐ | strap hinge 12″ black | — | ea | 8 | 2 per leaf, 4 leaves |
-| ☐ | gate latch + hasp black | — | ea | 3 | 1 per opening; the double door latches at center |
+| ☐ | gate latch + hasp black | — | ea | 2 | 1 per opening; each double latches at center |
 
-What that buys, after packing: 1×10 44 LF, 1×4 78 LF, 1×6 KD 210 LF, 1×6 PRIMED 138 LF,
-1×8 606 LF — **1,076 LF** of finish lumber. Per-board cut assignments live in the FINISH
+What that buys, after packing: 1×10 46 LF, 1×4 82 LF, 1×6 KD 224 LF, 1×6 PRIMED 118 LF,
+1×8 616 LF — **1,086 LF** of finish lumber. Per-board cut assignments live in the FINISH
 sections of `CUT_LIST.md` in the repo.
 
 ## Primed versus kiln-dried — read before substituting

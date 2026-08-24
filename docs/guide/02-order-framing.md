@@ -26,23 +26,23 @@ ground-contact species is whatever the yard carries; that choice is not yours.
 |---|---|---|---|---|---|
 | ☐ | 2×4 | KD (SPF #2) | 8′ | 1 | |
 | ☐ | 2×4 | KD (SPF #2) | 16′ | 32 | five 16′-long plates force 16′ stock |
-| ☐ | 2×6 | KD (SPF #2) | 10′ | 15 | one each for the 13 rafters + 2 rake boards |
+| ☐ | 2×6 | KD (SPF #2) | 12′ | 15 | one each for the 13 rafters + 2 rake boards (10′ 8⅛″ apiece) |
 | ☐ | 2×6 | KD (SPF #2) | 20′ | 2 | true 20′ for the two 18′ fascia |
-| ☐ | 2×6 | PT (ground contact) | 12′ | 7 | floor joists, two 5′ 9″ per board |
+| ☐ | 2×6 | PT (ground contact) | 14′ | 7 | floor joists, two 6′ 9″ per board |
 | ☐ | 2×6 | PT (ground contact) | 16′ | 2 | rim joists |
 | ☐ | 4×4 | PT (ground contact) | 16′ | 2 | the two continuous skids |
-| ☐ | OSB ¾″ | — | 4×8 sheet | 2 | subfloor; rip to 6′ + 2′ offcut, four half-sheets used |
+| ☐ | OSB ¾″ | — | 4×8 sheet | 4 | subfloor; rip to 7′ + 1′ offcut, one panel per sheet |
 
 What that buys, after packing (first-fit-decreasing, ⅛″ kerf):
 
 | Group | Bought | Cut | Waste |
 |---|---|---|---|
-| 2×4 KD | 520 LF | 509 LF | 2.1% |
-| 2×6 KD | 190 LF | 180.2 LF | 5.2% |
-| 2×6 PT | 116 LF | 112.5 LF | 3.0% |
+| 2×4 KD | 520 LF | 505.1 LF | 2.9% |
+| 2×6 KD | 220 LF | 196.2 LF | 10.8% |
+| 2×6 PT | 130 LF | 126.5 LF | 2.7% |
 | 4×4 PT | 32 LF | 32 LF | 0% |
 
-Total framing dimensional lumber: **858 LF**. The per-board cut assignments (which part comes
+Total framing dimensional lumber: **902 LF**. The per-board cut assignments (which part comes
 off which stick) live in `CUT_LIST.md` § "Stock-length order list" in the repo; the same
 tables are summarized in [r01-cut-list.md](r01-cut-list.md).
 

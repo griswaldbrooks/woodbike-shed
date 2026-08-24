@@ -18,7 +18,9 @@ Model state history and geometry rationale: `MANUAL_COMPLETION.md` and the
 scout report referenced there. Restore version taken before the 2026-08-07
 rework: `aa73830b88f34f965190a7c6` ("pre-fleet-completion 2026-08-05").
 Since 2026-08-10 the local audit JSON + `cad/` run AHEAD of Onshape: the
-92-5/8" pre-cut restud was applied locally only (see Script pipeline).
+92-5/8" pre-cut restud was applied locally only (see Script pipeline), and
+since 2026-08-23 also the 7 ft depth + captain's 2-door plan (barn 96"
+front west + 64" right rake; walk-in removed) via `scripts/depth7ft_2door.py`.
 
 ## Script pipeline
 
@@ -31,6 +33,13 @@ also writes `order_list_finish.csv` + the CUT_LIST.md FINISH sections via
 `scripts/build_finish_cut_list.py`; framing `order_list.csv` stays clean.
 Run from the repo root (scripts read `scripts/*.json` relatively).
 `scripts/fs_probe.py '<FS code>'` is the eval REPL for model queries.
+One-shot audit-JSON migrations (self-checking, idempotent; docstring is the
+derivation record): `restud_92_5_8.py` (2026-08-10), `depth7ft_2door.py`
+(2026-08-23, 7 ft depth + 2-door plan; the 7 ft gable ends follow the roof
+past the flat plate stack — mitered studs + DTP corner blocks). Interior
+fit study: `scripts/fit_study_free_doors.py` (adapted from firstmate data
+shed-jenga-arrange; `--arrange winner2` = adopted 2-door variant; record in
+`scripts/fit_summary_winner2.txt`).
 `blender/build_scene.py` turns `blender/scene.glb` into `blender/shed_scene.blend`
 plus Cycles renders in `blender/renders/`; `--skin` builds the dressed
 presentation variant (`shed_skin.blend`, `blender/renders/skin/`) — render

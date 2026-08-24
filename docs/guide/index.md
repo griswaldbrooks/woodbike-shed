@@ -6,14 +6,14 @@ next: 01-what-youre-building.md
 
 # Start here
 
-This guide builds one shed: a 16 ft × 6 ft wood box with a single-slope roof, the tall
-wall at the front, three door openings, lap siding, and board-and-batten doors. It rides
+This guide builds one shed: a 16 ft × 7 ft wood box with a single-slope roof, the tall
+wall at the front, two door openings, lap siding, and board-and-batten doors. It rides
 on two 16 ft skids carried by eight adjustable pedestals on paver base pads — no concrete.
 Twelve stages take you from bare ground
 to hung doors. One page per stage, in build order. Read this page once, then work the
 pages in order.
 
-![Fig 0.1 — The finished wood bike shed. ISO view from the street, right corner toward you: 16 ft × 6 ft, single-slope roof falling to the back, three board-and-batten doors. This is what exists when Stage 12 is done — every page in this guide builds toward this one picture.](figures/fig-00-finished-shed.svg)
+![Fig 0.1 — The finished wood bike shed. ISO view from the street, right corner toward you: 16 ft × 7 ft, single-slope roof falling to the back, an 8 ft barn door at the front wall's west corner and a 5' 4" brewery double on the right wall. This is what exists when Stage 12 is done — every page in this guide builds toward this one picture.](figures/fig-00-finished-shed.svg)
 
 ## The datum — read this before any page
 

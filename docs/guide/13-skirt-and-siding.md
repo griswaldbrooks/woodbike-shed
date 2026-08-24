@@ -94,13 +94,13 @@ edge on its 7″ line and nail into the studs.
 
 ### 6. Skin the front wall
 
-The front wall has two openings: a 36″ single door (left of centre) and a 72″ double door, both
-headed 84″ above the deck.
+The front wall has one opening: the 8 ft barn door at the west corner, headed 84″ above the
+deck; east of it the wall is solid.
 
-Below the head line, 12 courses break into three piers each, sized by the openings: 1′ 7″ to the
-left of the 36″ door, 3′ 11½″ between the doors, 1′ 5½″ to the right of the 72″ door. Above the
-head line, 6 full 16′ courses run wall to wall. The last of those is ripped so its top edge lands
-on the plate top, 10′ 3″ above the deck, behind where the front frieze will sit.
+Below the head line, 12 courses break into two piers each: the 3½″ corner strip west of the
+barn door, and the solid wall east of it. Above the head line, 6 full 16′ courses run wall to
+wall. The last of those is ripped so its top edge lands on the plate top, 10′ 3″ above the
+deck, behind where the front frieze will sit.
 
 > ⚠️ **WARNING** — ladder work · the top courses on the 10′ 3″ front wall put you at height ·
 > ladder on firm ground, never reach sideways past the rails

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Fig 1.1 - Whole-shed cross-section, orientation figure.
-  Plane: vertical section cut ACROSS the 6 ft width (constant X), read in the
+  Plane: vertical section cut ACROSS the 7 ft width (constant X), read in the
          model Y-Z plane. Front (street/door, low model Y) drawn at LEFT,
          back (high model Y) at RIGHT, as seen from the right gable end.
   Scale: 5 px per inch, equal both axes (not vertically exaggerated).
@@ -9,13 +9,13 @@
     deck top = z 0 (build datum). skid bottoms z -9.75.
     front wall y -3.5..0: studs z 0..120, top plate z 120..121.5, double top
     plate z 121.5..123 (plate top 10' 3" above deck).
-    back wall y 65..68.5: studs z 0..94.125, top plate z 94.125..95.625,
-    double top plate z 95.625..97.125 (plate top 8' 1-1/8" above deck).
+    back wall y 77..80.5: studs z 0..89.625, top plate z 89.625..91.125,
+    double top plate z 91.125..92.625 (plate top 7' 8-5/8" above deck).
     Rafter birdsmouths (per cad.roof / Fig 11.2): front level seat 4" at z 123
     over y -4..0 with 1.5 plumb kick at the inner face y 0; back level seat
-    3.5" at z 97.125 over y 65..68.5 with 1.3125 plumb kick at the outer face
-    y 68.5. Rafter top at front tail z 137.687 (peak), at back tail z 97.187.
-    Front overhang 24" (tail y -27.5), back 12" (tail y 80.5). Foundation
+    3.5" at z 92.625 over y 77..80.5 with plumb kick at the outer face
+    y 80.5. Rafter top at front tail z 137.687 (peak), at back tail z 92.687.
+    Front overhang 24" (tail y -27.5), back 12" (tail y 92.5). Foundation
     (pedestals/pavers/gravel) schematic - not modeled. Pedestal: StrataRise
     3560ML-DF, real adjustment 1⅜"–2⅜" (drawn schematic envelope).
   Drawing transform: X(y) = 70 + 5*(y + 32);  Y(z) = 950 - 5*(z + 20).
@@ -39,7 +39,7 @@
   <g>
     <rect x="14" y="14" width="330" height="118" fill="#ffffff" stroke="#000" stroke-width="3"/>
     <text x="26" y="42" font-size="24" font-weight="bold" fill="#000">SECTION</text>
-    <text x="26" y="68" font-size="17" fill="#000">cut across the 6 ft width, whole shed</text>
+    <text x="26" y="68" font-size="17" fill="#000">cut across the 7 ft width, whole shed</text>
     <text x="26" y="90" font-size="17" fill="#000">viewed from the right gable end</text>
     <text x="26" y="112" font-size="17" fill="#000">front (street) wall at LEFT</text>
     <!-- gravity anchor inside the badge -->
@@ -66,29 +66,29 @@
     <rect x="209" y="921" width="24" height="4"/>
     <rect x="199" y="925" width="45" height="5"/>
     <!-- back pedestal -->
-    <rect x="556.75" y="898.75" width="14" height="4.25"/>
-    <rect x="560.5" y="903" width="6" height="18"/>
-    <rect x="551.5" y="921" width="24" height="4"/>
-    <rect x="541.5" y="925" width="45" height="5"/>
+    <rect x="616.75" y="898.75" width="14" height="4.25"/>
+    <rect x="620.5" y="903" width="6" height="18"/>
+    <rect x="611.5" y="921" width="24" height="4"/>
+    <rect x="601.5" y="925" width="45" height="5"/>
   </g>
   <!-- PT 4x4 skids (cut by section) -->
   <rect x="212.5" y="881.25" width="17.5" height="17.5" fill="#9caf88" stroke="#2f4020" stroke-width="2.5"/>
   <rect x="212.5" y="881.25" width="17.5" height="17.5" fill="url(#cut)"/>
-  <rect x="555" y="881.25" width="17.5" height="17.5" fill="#9caf88" stroke="#2f4020" stroke-width="2.5"/>
-  <rect x="555" y="881.25" width="17.5" height="17.5" fill="url(#cut)"/>
+  <rect x="615" y="881.25" width="17.5" height="17.5" fill="#9caf88" stroke="#2f4020" stroke-width="2.5"/>
+  <rect x="615" y="881.25" width="17.5" height="17.5" fill="url(#cut)"/>
   <text x="205" y="897" font-size="15" fill="#2f4020" text-anchor="end">4×4 skid (PT)</text>
-  <text x="580" y="897" font-size="15" fill="#2f4020">4×4 skid (PT)</text>
+  <text x="640" y="897" font-size="15" fill="#2f4020">4×4 skid (PT)</text>
 
   <!-- ======================= FLOOR PLATFORM ======================= -->
   <!-- rim + joist band (z -6.25 .. -0.75), OSB deck (z -0.75 .. 0) -->
-  <rect x="212.5" y="853.75" width="360" height="27.5" fill="#c89a5e" stroke="#4a3010" stroke-width="2.5"/>
-  <rect x="212.5" y="853.75" width="360" height="27.5" fill="url(#cut)"/>
+  <rect x="212.5" y="853.75" width="420" height="27.5" fill="#c89a5e" stroke="#4a3010" stroke-width="2.5"/>
+  <rect x="212.5" y="853.75" width="420" height="27.5" fill="url(#cut)"/>
   <!-- front / back rim joist ends -->
   <rect x="212.5" y="853.75" width="7.5" height="27.5" fill="#a97a3e" stroke="#4a3010" stroke-width="2.5"/>
-  <rect x="565" y="853.75" width="7.5" height="27.5" fill="#a97a3e" stroke="#4a3010" stroke-width="2.5"/>
+  <rect x="625" y="853.75" width="7.5" height="27.5" fill="#a97a3e" stroke="#4a3010" stroke-width="2.5"/>
   <!-- OSB deck sheet -->
-  <rect x="212.5" y="850" width="360" height="3.75" fill="#e6c088" stroke="#4a3010" stroke-width="2"/>
-  <text x="392" y="844" font-size="15" fill="#4a3010" text-anchor="middle">deck top — height zero for the whole guide</text>
+  <rect x="212.5" y="850" width="420" height="3.75" fill="#e6c088" stroke="#4a3010" stroke-width="2"/>
+  <text x="422" y="844" font-size="15" fill="#4a3010" text-anchor="middle">deck top — height zero for the whole guide</text>
 
   <!-- ======================= WALLS (cut by section) ======================= -->
   <!-- front wall: studs z 0..120, top plate 120..121.5, double top plate 121.5..123 -->
@@ -98,51 +98,51 @@
   <rect x="212.5" y="242.5" width="17.5" height="7.5" fill="url(#cut)"/>
   <rect x="212.5" y="235" width="17.5" height="7.5" fill="#c99a56" stroke="#4a3010" stroke-width="2"/>
   <rect x="212.5" y="235" width="17.5" height="7.5" fill="url(#cut)"/>
-  <!-- back wall: studs z 0..94.125, top plate 94.125..95.625, double top plate 95.625..97.125 -->
-  <rect x="555" y="379.375" width="17.5" height="470.625" fill="#d9a86c" stroke="#4a3010" stroke-width="3"/>
-  <rect x="555" y="379.375" width="17.5" height="470.625" fill="url(#cut)"/>
-  <rect x="555" y="371.875" width="17.5" height="7.5" fill="#c99a56" stroke="#4a3010" stroke-width="2"/>
-  <rect x="555" y="371.875" width="17.5" height="7.5" fill="url(#cut)"/>
-  <rect x="555" y="364.375" width="17.5" height="7.5" fill="#c99a56" stroke="#4a3010" stroke-width="2"/>
-  <rect x="555" y="364.375" width="17.5" height="7.5" fill="url(#cut)"/>
+  <!-- back wall: studs z 0..89.625, top plate 89.625..91.125, double top plate 91.125..92.625 -->
+  <rect x="615" y="401.875" width="17.5" height="448.125" fill="#d9a86c" stroke="#4a3010" stroke-width="3"/>
+  <rect x="615" y="401.875" width="17.5" height="448.125" fill="url(#cut)"/>
+  <rect x="615" y="394.375" width="17.5" height="7.5" fill="#c99a56" stroke="#4a3010" stroke-width="2"/>
+  <rect x="615" y="394.375" width="17.5" height="7.5" fill="url(#cut)"/>
+  <rect x="615" y="386.875" width="17.5" height="7.5" fill="#c99a56" stroke="#4a3010" stroke-width="2"/>
+  <rect x="615" y="386.875" width="17.5" height="7.5" fill="url(#cut)"/>
 
   <!-- plate labels, leaders into the open interior -->
   <g stroke="#000" stroke-width="1.6"><line x1="230" y1="244" x2="252" y2="466"/></g>
   <text x="256" y="470" font-size="15" fill="#4a3010">top plate and double top plate</text>
   <text x="256" y="488" font-size="15" fill="#4a3010">cap the wall studs</text>
-  <g stroke="#000" stroke-width="1.6"><line x1="555" y1="368.1" x2="533" y2="376"/></g>
-  <text x="529" y="380" font-size="15" fill="#4a3010" text-anchor="end">double top plate</text>
-  <g stroke="#000" stroke-width="1.6"><line x1="555" y1="375.6" x2="533" y2="394"/></g>
-  <text x="529" y="398" font-size="15" fill="#4a3010" text-anchor="end">top plate</text>
+  <g stroke="#000" stroke-width="1.6"><line x1="615" y1="390.6" x2="593" y2="398"/></g>
+  <text x="589" y="402" font-size="15" fill="#4a3010" text-anchor="end">double top plate</text>
+  <g stroke="#000" stroke-width="1.6"><line x1="615" y1="398.1" x2="593" y2="416"/></g>
+  <text x="589" y="420" font-size="15" fill="#4a3010" text-anchor="end">top plate</text>
 
   <!-- ======================= ROOF: birdsmouthed rafter band + fascia ======================= -->
-  <!-- rafter: top edge front tail (92.5,161.6) to back tail (632.5,364.1); bottom edge parallel
+  <!-- rafter: top edge front tail (92.5,161.6) to back tail (692.5,386.6); bottom edge parallel
        except the birdsmouths: front level seat z 123 over y -4..0 (X 210..230) with 1.5" plumb
-       kick at y 0; back level seat z 97.125 over y 65..68.5 (X 555..572.5) with 1.3125" kick -->
-  <polygon points="92.5,161.6 632.5,364.1 632.5,393.4 572.5,370.9 572.5,364.4 555,364.4
+       kick at y 0; back level seat z 92.625 over y 77..80.5 (X 615..632.5) with kick at y 80.5 -->
+  <polygon points="92.5,161.6 692.5,386.6 692.5,415.9 632.5,393.4 632.5,386.9 615,386.9
                    230,242.5 230,235 210,235 92.5,190.9"
            fill="#c08a4e" stroke="#4a3010" stroke-width="3"/>
-  <polygon points="92.5,161.6 632.5,364.1 632.5,393.4 572.5,370.9 572.5,364.4 555,364.4
+  <polygon points="92.5,161.6 692.5,386.6 692.5,415.9 632.5,393.4 632.5,386.9 615,386.9
                    230,242.5 230,235 210,235 92.5,190.9" fill="url(#cut)"/>
   <!-- seat bearing highlights -->
   <line x1="210" y1="235" x2="230" y2="235" stroke="#c0392b" stroke-width="3"/>
-  <line x1="555" y1="364.4" x2="572.5" y2="364.4" stroke="#c0392b" stroke-width="3"/>
+  <line x1="615" y1="386.9" x2="632.5" y2="386.9" stroke="#c0392b" stroke-width="3"/>
   <!-- front fascia cap -->
   <rect x="85" y="161.6" width="7.5" height="27.5" fill="#efe6d6" stroke="#4a3010" stroke-width="2.5"/>
   <!-- back fascia cap -->
-  <rect x="632.5" y="364.1" width="7.5" height="27.5" fill="#efe6d6" stroke="#4a3010" stroke-width="2.5"/>
+  <rect x="692.5" y="386.6" width="7.5" height="27.5" fill="#efe6d6" stroke="#4a3010" stroke-width="2.5"/>
 
   <!-- roof pitch label along the slope -->
-  <text x="330" y="225" font-size="19" font-weight="bold" fill="#4a3010"
-        transform="rotate(20.6 330 225)">roof pitch 4.5 : 12</text>
+  <text x="360" y="240" font-size="19" font-weight="bold" fill="#4a3010"
+        transform="rotate(20.6 360 240)">roof pitch 4.5 : 12</text>
 
   <!-- birdsmouth explanation -->
   <g stroke="#555" stroke-width="1.6" fill="none">
     <line x1="330" y1="344" x2="224" y2="242"/>
-    <line x1="430" y1="368" x2="558" y2="365"/>
+    <line x1="470" y1="368" x2="618" y2="387"/>
   </g>
-  <text x="392" y="336" font-size="16" fill="#000" text-anchor="middle">the roof beam is notched to sit flat</text>
-  <text x="392" y="356" font-size="16" fill="#000" text-anchor="middle">on each wall plate (red = bearing seat)</text>
+  <text x="420" y="330" font-size="16" fill="#000" text-anchor="middle">the roof beam is notched to sit flat</text>
+  <text x="420" y="350" font-size="16" fill="#000" text-anchor="middle">on each wall plate (red = bearing seat)</text>
 
   <!-- ======================= DIMENSIONS / LABELS ======================= -->
   <!-- left height chain: deck -> peak -->
@@ -174,16 +174,16 @@
 
   <!-- back wall height: proper double-arrow dimension, deck -> back plate top -->
   <g stroke="#000" stroke-width="1.6" fill="none">
-    <line x1="596" y1="850" x2="596" y2="364.4"/>
-    <line x1="572.5" y1="850" x2="604" y2="850"/>
-    <line x1="572.5" y1="364.4" x2="604" y2="364.4"/>
+    <line x1="656" y1="850" x2="656" y2="386.9"/>
+    <line x1="632.5" y1="850" x2="664" y2="850"/>
+    <line x1="632.5" y1="386.9" x2="664" y2="386.9"/>
   </g>
   <g fill="#000" stroke="#000" stroke-width="1.6">
-    <path d="M 596 364.4 L 591 375 L 601 375 Z"/>
-    <path d="M 596 850 L 591 839 L 601 839 Z"/>
+    <path d="M 656 386.9 L 651 397 L 661 397 Z"/>
+    <path d="M 656 850 L 651 839 L 661 839 Z"/>
   </g>
-  <text x="608" y="607" font-size="18" fill="#000" text-anchor="middle"
-        transform="rotate(-90 608 607)">back wall plate top 8′ 1⅛″ above deck</text>
+  <text x="668" y="618" font-size="18" fill="#000" text-anchor="middle"
+        transform="rotate(-90 668 618)">back wall plate top 7′ 8⅝″ above deck</text>
 
   <!-- overhangs -->
   <g stroke="#000" stroke-width="1.6" fill="none">
@@ -193,34 +193,34 @@
   </g>
   <text x="152" y="157" font-size="16" fill="#000" text-anchor="middle">24″ overhang</text>
   <g stroke="#000" stroke-width="1.6" fill="none">
-    <line x1="572.5" y1="300" x2="632.5" y2="300"/>
-    <line x1="572.5" y1="294" x2="572.5" y2="338"/>
-    <line x1="632.5" y1="294" x2="632.5" y2="360"/>
+    <line x1="632.5" y1="320" x2="692.5" y2="320"/>
+    <line x1="632.5" y1="314" x2="632.5" y2="358"/>
+    <line x1="692.5" y1="314" x2="692.5" y2="382"/>
   </g>
-  <text x="602" y="288" font-size="16" fill="#000" text-anchor="middle">12″ overhang</text>
+  <text x="662" y="308" font-size="16" fill="#000" text-anchor="middle">12″ overhang</text>
 
-  <!-- width of this section (front face to back face = 6 ft) -->
+  <!-- width of this section (front face to back face = 7 ft) -->
   <g stroke="#000" stroke-width="1.6" fill="none">
-    <line x1="212.5" y1="905" x2="572.5" y2="905"/>
+    <line x1="212.5" y1="905" x2="632.5" y2="905"/>
     <line x1="212.5" y1="898" x2="212.5" y2="855"/>
-    <line x1="572.5" y1="898" x2="572.5" y2="855"/>
+    <line x1="632.5" y1="898" x2="632.5" y2="855"/>
   </g>
-  <text x="392" y="760" font-size="16" fill="#000" text-anchor="middle">this section reads the 6 ft width —</text>
-  <text x="392" y="780" font-size="16" fill="#000" text-anchor="middle">the shed runs 16 ft into the page</text>
+  <text x="422" y="760" font-size="16" fill="#000" text-anchor="middle">this section reads the 7 ft width —</text>
+  <text x="422" y="780" font-size="16" fill="#000" text-anchor="middle">the shed runs 16 ft into the page</text>
 
   <!-- wall captions, leaders into the open interior -->
   <g stroke="#000" stroke-width="1.6"><line x1="230" y1="430" x2="252" y2="430"/></g>
   <text x="256" y="424" font-size="17" font-weight="bold" fill="#4a3010">FRONT wall</text>
   <text x="256" y="444" font-size="15" fill="#4a3010">(street, door side)</text>
-  <g stroke="#000" stroke-width="1.6"><line x1="555" y1="500" x2="533" y2="500"/></g>
-  <text x="529" y="494" font-size="17" font-weight="bold" fill="#4a3010" text-anchor="end">BACK wall</text>
-  <text x="529" y="514" font-size="15" fill="#4a3010" text-anchor="end">(yard side)</text>
+  <g stroke="#000" stroke-width="1.6"><line x1="615" y1="500" x2="593" y2="500"/></g>
+  <text x="589" y="494" font-size="17" font-weight="bold" fill="#4a3010" text-anchor="end">BACK wall</text>
+  <text x="589" y="514" font-size="15" fill="#4a3010" text-anchor="end">(yard side)</text>
 
   <!-- big free-standing gravity arrow -->
   <g stroke="#000" stroke-width="4" fill="#000">
-    <line x1="700" y1="470" x2="700" y2="560"/>
-    <path d="M 700 580 L 686 554 L 714 554 Z"/>
+    <line x1="720" y1="470" x2="720" y2="560"/>
+    <path d="M 720 580 L 706 554 L 734 554 Z"/>
   </g>
-  <text x="700" y="602" font-size="17" font-weight="bold" fill="#000" text-anchor="middle">DOWN</text>
-  <text x="700" y="622" font-size="14" fill="#000" text-anchor="middle">(gravity)</text>
+  <text x="720" y="602" font-size="17" font-weight="bold" fill="#000" text-anchor="middle">DOWN</text>
+  <text x="720" y="622" font-size="14" fill="#000" text-anchor="middle">(gravity)</text>
 </svg>

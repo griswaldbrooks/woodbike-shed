@@ -30,8 +30,8 @@ from the exact number, not this table.
 | Qty | Part | Lumber | Length |
 |---:|---|---|---:|
 | 2 | rim joist | 2×6 PT | 16′ |
-| 14 | floor joist | 2×6 PT | 5′ 9″ |
-| 4 | sub floor osb | OSB ¾″ half sheet | 6′ × 4′ |
+| 14 | floor joist | 2×6 PT | 6′ 9″ |
+| 4 | sub floor osb | OSB ¾″ panel | 7′ × 4′ |
 
 ## Back wall
 
@@ -40,7 +40,7 @@ from the exact number, not this table.
 | 1 | back wall bottom plate | 2×4 KD | 16′ |
 | 1 | back wall top plate | 2×4 KD | 16′ |
 | 1 | back wall double top plate short | 2×4 KD | 15′ 5″ |
-| 13 | back wall studs | 2×4 KD | 7′ 8⅝″ |
+| 13 | back wall studs | 2×4 KD | 7′ 4⅛″ |
 
 ## Front wall
 
@@ -49,41 +49,44 @@ from the exact number, not this table.
 | 1 | front wall bottom plate | 2×4 KD | 16′ |
 | 1 | front wall top plate | 2×4 KD | 16′ |
 | 1 | front wall double top plate | 2×4 KD | 16′ |
-| 1 | front wall king studs | 2×4 KD | 10′ |
 | 8 | front wall king studs | 2×4 KD | 9′ 10½″ |
-| 2 | front wall jack studs | 2×4 KD | 7′ |
 | 2 | front wall jack studs | 2×4 KD | 6′ 10½″ |
-| 3 | front wall headers | 2×4 KD | 6′ 3″ |
-| 3 | front wall headers | 2×4 KD | 3′ 3″ |
-| 6 | front wall cripple studs | 2×4 KD | 2′ 7″ |
+| 3 | front wall headers | 2×4 KD | 8′ 3″ |
+| 5 | front wall cripple studs | 2×4 KD | 2′ 7″ |
 
 ## Left wall
 
 | Qty | Part | Lumber | Length |
 |---:|---|---|---:|
 | 5 | left side wall studs | 2×4 KD | 7′ 8⅝″ |
-| 1 | left wall double top plate | 2×4 KD | 5′ 8½″ |
-| 1 | left side wall bottom plate | 2×4 KD | 5′ 5″ |
-| 1 | left wall top plate | 2×4 KD | 5′ 5″ |
+| 1 | left side wall studs (corner post) | 2×4 KD | 7′ 4⅛″ |
+| 1 | left side wall bottom plate | 2×4 KD | 6′ 5″ |
+| 1 | left wall top plate | 2×4 KD | 5′ 4¾″ |
+| 1 | left wall double top plate | 2×4 KD | 5′ ¾″ |
+| 1 | left wall double top plate (corner block) | 2×4 KD | 3½″ |
 
 ## Right wall
 
 | Qty | Part | Lumber | Length |
 |---:|---|---|---:|
-| 5 | right wall studs | 2×4 KD | 7′ 8⅝″ |
+| 1 | right wall studs (front corner) | 2×4 KD | 7′ 8⅝″ |
+| 1 | right wall studs (corner post) | 2×4 KD | 7′ 4⅛″ |
 | 2 | right wall jack studs | 2×4 KD | 6′ 10½″ |
-| 1 | right wall double top plate | 2×4 KD | 5′ 8½″ |
-| 1 | right wall top plate | 2×4 KD | 5′ 5″ |
-| 3 | right wall headers | 2×4 KD | 3′ 3″ |
-| 1 | right wall bottom plate long | 2×4 KD | 1′ 8½″ |
-| 1 | right wall bottom plate short | 2×4 KD | 8½″ |
-| 2 | right wall cripple studs | 2×4 KD | 5⅛″ |
+| 3 | right wall headers | 2×4 KD | 5′ 7″ |
+| 3 | right wall cripple studs | 2×4 KD | 5⅛″ |
+| 1 | right wall top plate | 2×4 KD | 5′ 4¾″ |
+| 1 | right wall double top plate | 2×4 KD | 5′ ¾″ |
+| 1 | right wall double top plate (corner block) | 2×4 KD | 3½″ |
+| 1 | right wall bottom plate short | 2×4 KD | 6½″ |
+| 1 | right wall bottom plate long | 2×4 KD | 6½″ |
 
 ## Left rake wall
 
 | Qty | Part | Lumber | Length |
 |---:|---|---|---:|
-| 1 | left rake wall top plate | 2×4 KD | 5′ 9⅜″ |
+| 1 | left rake wall top plate | 2×4 KD | 6′ 10¼″ |
+| 1 | left rake wall studs (mitered, on sill) | 2×4 KD | 7′ 8⅜″ |
+| 2 | left rake wall studs (mitered, on sill) | 2×4 KD | 7′ 7⅛″ |
 | 1 | left rake wall studs | 2×4 KD | 1′ 10¾″ |
 | 1 | left rake wall studs | 2×4 KD | 1′ 5″ |
 | 1 | left rake wall studs | 2×4 KD | 11″ |
@@ -93,7 +96,10 @@ from the exact number, not this table.
 
 | Qty | Part | Lumber | Length |
 |---:|---|---|---:|
-| 1 | right rake wall top plate | 2×4 KD | 5′ 9⅜″ |
+| 1 | right rake wall top plate | 2×4 KD | 6′ 10¼″ |
+| 2 | right rake wall studs (mitered, on sill / header) | 2×4 KD | 7′ 7⅛″ |
+| 1 | right rake wall studs (mitered, on header) | 2×4 KD | 6⅜″ |
+| 1 | right rake wall studs (mitered, on header) | 2×4 KD | 5¼″ |
 | 1 | right rake wall studs | 2×4 KD | 1′ 10¾″ |
 | 1 | right rake wall studs | 2×4 KD | 1′ 5″ |
 | 1 | right rake wall studs | 2×4 KD | 11″ |
@@ -105,9 +111,9 @@ from the exact number, not this table.
 |---:|---|---|---:|
 | 1 | back fascia | 2×6 KD | 18′ |
 | 1 | front fascia | 2×6 KD | 18′ |
-| 1 | left rake board | 2×6 KD | 9′ 7⅜″ |
-| 13 | rafter | 2×6 KD | 9′ 7⅜″ |
-| 1 | right rake board | 2×6 KD | 9′ 7⅜″ |
+| 1 | left rake board | 2×6 KD | 10′ 8⅛″ |
+| 13 | rafter | 2×6 KD | 10′ 8⅛″ |
+| 1 | right rake board | 2×6 KD | 10′ 8⅛″ |
 
 ## Finish cuts and stock packing
 

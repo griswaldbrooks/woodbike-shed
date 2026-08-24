@@ -21,10 +21,11 @@ kept for `cad.verify` lineage.
   `c86e75d991126c33e2daa4d0589183db155378b2` ("Finish lumber as real parts: siding/trim/doors
   + separate order list", 2026-08-10). These pages were written 2026-08-13 from a worktree at
   `c961c86` and every overview/order number was re-checked against the model before writing.
-- Verification run, 2026-08-13 (`~/.venvs/woodbike-shed/bin/python -m cad.verify`):
-  `OK: 293 parts (117 framing, 176 finish), 36 framing cut-list names; dims/volumes/placements
+- Verification run, 2026-08-23, after the 7 ft depth + 2-door plan rework
+  (`~/.venvs/woodbike-shed/bin/python -m cad.verify`):
+  `OK: 278 parts (118 framing, 160 finish), 36 framing cut-list names; dims/volumes/placements
   match audit data; seats/kicks/ends flush; finish layers seated; 0 unallowed interference
-  (333 pairs swept).` The harness checks every part's dims, volume and placement against the
+  (342 pairs swept).` The harness checks every part's dims, volume and placement against the
   audit data, gates the rafter birdsmouth seat/kick faces, the rake-stud mitres, tails flush
   with fascia, and the finish layer planes, and runs the full pairwise interference sweep.
 - Viewing the model: `view.py` (OCP CAD Viewer, part tree mirrors the cut list);
