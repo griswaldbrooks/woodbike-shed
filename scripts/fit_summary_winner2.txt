@@ -1,0 +1,43 @@
+Concept envelope, 7 ft outer depth (wall total 7.0 in verified from the audited model):
+  floor area 15'05" x 6'05"  (inside faces of the 2x4 framing)
+  clear height front 10'02" -> back 7'09" (roof underside), deck at 0
+  arrangement: winner2
+Doors PROPOSED by this arrangement (clear openings, all outswing, heads 84 in unless noted):
+  right wall: 64 in opening at 6.5-70.5 - brewery 64 in rake-wall door
+  front wall: 96 in opening at 0.0-96.0 - barn door 8 ft - bikes + blower straight roll
+Door roles (as parked, every door earns its place):
+  right wall 6.5-70.5 in (64 in, head 84): brewery 64 in rake-wall door | parked: brew stand (64 in), kettle 1 (18 in), kettle 2 (18 in), kettle 3 (18 in), pump 1 (10 in), pump 2 (10 in)
+  front wall 0.0-96.0 in (96 in, head 84): barn door 8 ft - bikes + blower straight roll | parked: bike 1 (27 in), bike 2 (27 in), snow blower (27 in)
+Fit checks:
+  [PASS] slab length fits the interior - slab 120 in vs interior 185 in
+  [PASS] stack top clears the back wall comfortably - stack top 63.75 in vs back wall 92.62 in (28.9 in headroom)
+  [PASS] bikes fit nose-in (floor-parked) - bike 70 in vs interior depth 77 in -> 7 in apron
+  [PASS] bikes clear the stack underside (the lift check) - structure 46.5 in over 43 in bikes -> 3.5 in clear (min 3)
+  [PASS] bike bay tucked under the slab run - bay 36.75-92.75 in within rack 0-120 in
+  [PASS] bike bay clears the rack uprights - tightest gap 17.50 in
+  [PASS] blower clears the stack underside (the lift check) - structure 46.5 in over 43 in blower -> 3.5 in clear (min 3)
+  [PASS] blower clears the west upright (rack post inset moved 8 -> 4 in for the cluster, flagged) - 2.00 in gap
+  [PASS] Q2: bikes AND blower hard on one side (west cluster under the run) - cluster 7.75-92.75 in of the 185 in shell
+  [PASS] side-door width carries the kettle row - kettle bodies span 60.4 in of the 64 in stand; door 64 in
+  [PASS] rake-wall end studs survive the opening (flagged, not engineered) - 6.5 in at the front end, 6.5 in at the back end of the 77 in wall (min 6)
+  [PASS] brewer reach from outside (right wall) - kettle centers 13 in past the door plane, rims 55.20 in over the deck (<= 24 in comfortable reach)
+  [PASS] brewery: hood covers every kettle - hood 67 x 24 in over the kettle row
+  [PASS] brewery: hood underside clears the lids (TEB 15 in) - 15 in gap, hood underside 72.45 in
+  [PASS] brewery: hood top stays under the rake plate at the hood's own y - hood top 84.45 in vs plate 94.5 in at the back end of the hood
+  [PASS] rake-wall duct exit clears the door head and stays under the plate - 6 in duct at 84.45-90.45 in vs head 84 in and plate 94.5 in
+  [PASS] kettle spacing on the stand (TEB 'comfortably') - 3.6 in between kettle bodies
+  [PASS] brewery: pumps gravity-fed under the stand - pumps on the floor under the kettle row
+  [PASS] panel on the front wall beside the stand, clear of the kettle row, readable from the brewery door - panel 145-161 in, bottom 50 in, clears the kettle row by 2.2 in; brewer reads it from the door, sidesteps the corner to operate (or mount it exterior - the enclosure is watertight)
+  [PASS] straight roll-out: bikes AND blower fit the barn door with margin - bay 7.75-92.75 in inside door 0-96 in (>= 2 in margin each side); back out 7 in, roll straight
+  [PASS] bike exit: back out, roll straight (no turn) - 27 in bikes in a 96 in door
+  [PASS] blower exit: straight reverse-roll out the barn door (Storm 2410 has reverse) - blower 27 in parked 21 in off the back wall
+  [PASS] all three kettles inside the side-door span - kettle bodies 8.3-68.7 in vs door 6.5-70.5 in (1.8 in tightest margin - the door is sized to the stand, not bigger)
+  [PASS] pedestrian entry routes through the barn door (walk-in removed) - 96 in barn door vs a 36 in pedestrian minimum; entry lands on the maneuver floor east of the cluster
+  [PASS] pedestrian entry: maneuver floor off the barn door clear (headroom to 48 in) - clear
+  [PASS] slab carry through the barn door: opening carries slab on edge + carrier - 96 in barn door vs slab 28 in + 18 in carrier
+  [PASS] slab corridor depth carries slab width + carrier - aisle 49 in vs slab 28 in + 18 in carrier
+  [PASS] slab feed: rack face reachable from the entry (as-designed precedent >= 21 in) - 27.25 in of the 120 in run not parked over, minus the 3.5 in end upright -> 23.75 in; slabs carried on edge through the barn door, fed at the east face of the run
+  [PASS] circulation kept: apron in front of the cluster - clear
+  [PASS] turn/maneuver floor between the cluster and the stand carries a bike length - open floor 66.25 in x 49 in aisle, diagonal 82 in vs bike 70 in
+  [PASS] every item inside the interior - footprints and heights vs walls and roof underside
+RESULT: everything fits with access kept

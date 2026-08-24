@@ -2,7 +2,7 @@
   {
     "dx": 185.0,
     "dy": 120.00000000000001,
-    "dz": 65.00000000000003,
+    "dz": 77.00000000000003,
     "name": "inner volume"
   },
   {
@@ -18,244 +18,112 @@
     "name": "rim joist"
   },
   {
-    "dx": 69.0,
+    "dx": 81.0,
     "dy": 5.499999999999999,
     "dz": 1.500000000000001,
     "name": "floor joist"
   },
   {
-    "dx": 69.0,
+    "dx": 81.0,
     "dy": 5.499999999999999,
     "dz": 1.500000000000001,
     "name": "floor joist"
   },
   {
-    "dx": 69.0,
+    "dx": 81.0,
     "dy": 5.499999999999999,
     "dz": 1.500000000000001,
     "name": "floor joist"
   },
   {
-    "dx": 69.0,
+    "dx": 81.0,
     "dy": 5.499999999999999,
     "dz": 1.500000000000001,
     "name": "floor joist"
   },
   {
-    "dx": 69.0,
+    "dx": 81.0,
     "dy": 5.499999999999999,
     "dz": 1.500000000000001,
     "name": "floor joist"
   },
   {
-    "dx": 69.0,
+    "dx": 81.0,
     "dy": 5.499999999999999,
     "dz": 1.500000000000001,
     "name": "floor joist"
   },
   {
-    "dx": 69.0,
+    "dx": 81.0,
     "dy": 5.499999999999999,
     "dz": 1.500000000000001,
     "name": "floor joist"
   },
   {
-    "dx": 69.0,
+    "dx": 81.0,
     "dy": 5.499999999999999,
     "dz": 1.500000000000001,
     "name": "floor joist"
   },
   {
-    "dx": 69.0,
+    "dx": 81.0,
     "dy": 5.499999999999999,
     "dz": 1.500000000000001,
     "name": "floor joist"
   },
   {
-    "dx": 69.0,
+    "dx": 81.0,
     "dy": 5.499999999999999,
     "dz": 1.500000000000001,
     "name": "floor joist"
   },
   {
-    "dx": 69.0,
+    "dx": 81.0,
     "dy": 5.499999999999999,
     "dz": 1.500000000000001,
     "name": "floor joist"
   },
   {
-    "dx": 69.0,
+    "dx": 81.0,
     "dy": 5.499999999999999,
     "dz": 1.500000000000001,
     "name": "floor joist"
   },
   {
-    "dx": 69.0,
+    "dx": 81.0,
     "dy": 5.499999999999999,
     "dz": 1.5000000000000346,
     "name": "floor joist"
   },
   {
-    "dx": 69.0,
+    "dx": 81.0,
     "dy": 5.499999999999999,
     "dz": 1.500000000000001,
     "name": "floor joist"
   },
   {
-    "dx": 72.0,
+    "dx": 84.0,
     "dy": 48.00000000000002,
     "dz": 0.7499999999999999,
     "name": "sub floor osb"
   },
   {
-    "dx": 72.0,
+    "dx": 84.0,
     "dy": 48.00000000000002,
     "dz": 0.7499999999999999,
     "name": "sub floor osb"
   },
   {
-    "dx": 72.0,
+    "dx": 84.0,
     "dy": 48.000000000000036,
     "dz": 0.7499999999999999,
     "name": "sub floor osb"
   },
   {
-    "dx": 72.0,
+    "dx": 84.0,
     "dy": 47.99999999999997,
     "dz": 0.7499999999999999,
     "name": "sub floor osb"
-  },
-  {
-    "dx": 191.99999999999994,
-    "dy": 3.5000000000000075,
-    "dz": 1.500000000000141,
-    "name": "back wall top plate"
-  },
-  {
-    "dx": 191.99999999999994,
-    "dy": 3.5000000000000075,
-    "dz": 1.500000000000001,
-    "name": "back wall bottom plate"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.500000000000051,
-    "dz": 1.500000000000001,
-    "name": "back wall studs"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.500000000000051,
-    "dz": 1.500000000000001,
-    "name": "back wall studs"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.500000000000051,
-    "dz": 1.500000000000001,
-    "name": "back wall studs"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.500000000000051,
-    "dz": 1.500000000000001,
-    "name": "back wall studs"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.500000000000051,
-    "dz": 1.500000000000001,
-    "name": "back wall studs"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.500000000000051,
-    "dz": 1.500000000000001,
-    "name": "back wall studs"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.500000000000051,
-    "dz": 1.500000000000001,
-    "name": "back wall studs"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.500000000000051,
-    "dz": 1.500000000000001,
-    "name": "back wall studs"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.500000000000051,
-    "dz": 1.500000000000001,
-    "name": "back wall studs"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.500000000000051,
-    "dz": 1.500000000000001,
-    "name": "back wall studs"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.500000000000051,
-    "dz": 1.500000000000001,
-    "name": "back wall studs"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.500000000000051,
-    "dz": 1.500000000000001,
-    "name": "back wall studs"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.500000000000042,
-    "dz": 1.5000000000000004,
-    "name": "back wall studs"
-  },
-  {
-    "dx": 64.99999999999999,
-    "dy": 3.4999999999999996,
-    "dz": 1.500000000000001,
-    "name": "left wall top plate"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.4999999999999996,
-    "dz": 1.5000000000000184,
-    "name": "left side wall studs"
-  },
-  {
-    "dx": 65.00000000000001,
-    "dy": 3.4999999999999996,
-    "dz": 1.500000000000001,
-    "name": "left side wall bottom plate"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.4999999999999996,
-    "dz": 1.5000000000000184,
-    "name": "left side wall studs"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.4999999999999996,
-    "dz": 1.5000000000000184,
-    "name": "left side wall studs"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.4999999999999996,
-    "dz": 1.5000000000000184,
-    "name": "left side wall studs"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.4999999999999996,
-    "dz": 1.500000000000036,
-    "name": "left side wall studs"
   },
   {
     "dx": 192.00000000000006,
@@ -270,403 +138,85 @@
     "name": "front wall bottom plate"
   },
   {
-    "dx": 118.50000000000001,
-    "dy": 3.500000000000042,
-    "dz": 1.5000000000000004,
-    "name": "front wall king studs"
-  },
-  {
-    "dx": 118.50000000000001,
-    "dy": 3.5000000000000457,
-    "dz": 1.500000000000001,
-    "name": "front wall king studs"
-  },
-  {
-    "dx": 118.50000000000001,
-    "dy": 3.500000000000042,
-    "dz": 1.500000000000001,
-    "name": "front wall king studs"
-  },
-  {
-    "dx": 31.000000000000025,
-    "dy": 3.5000000000000107,
-    "dz": 1.500000000000001,
-    "name": "front wall cripple studs"
-  },
-  {
-    "dx": 31.000000000000025,
-    "dy": 3.5000000000000107,
-    "dz": 1.500000000000001,
-    "name": "front wall cripple studs"
-  },
-  {
-    "dx": 118.50000000000001,
-    "dy": 3.500000000000042,
-    "dz": 1.500000000000001,
-    "name": "front wall king studs"
-  },
-  {
-    "dx": 118.50000000000001,
-    "dy": 3.500000000000042,
-    "dz": 1.500000000000001,
-    "name": "front wall king studs"
-  },
-  {
-    "dx": 118.50000000000001,
-    "dy": 3.500000000000042,
-    "dz": 1.500000000000001,
-    "name": "front wall king studs"
-  },
-  {
-    "dx": 31.000000000000096,
-    "dy": 3.5000000000000107,
-    "dz": 1.500000000000001,
-    "name": "front wall cripple studs"
-  },
-  {
-    "dx": 31.000000000000096,
-    "dy": 3.5000000000000107,
-    "dz": 1.500000000000001,
-    "name": "front wall cripple studs"
-  },
-  {
-    "dx": 31.000000000000096,
-    "dy": 3.5000000000000107,
-    "dz": 1.500000000000001,
-    "name": "front wall cripple studs"
-  },
-  {
-    "dx": 31.000000000000096,
-    "dy": 3.5000000000000107,
-    "dz": 1.500000000000001,
-    "name": "front wall cripple studs"
-  },
-  {
-    "dx": 118.50000000000001,
-    "dy": 3.500000000000042,
-    "dz": 1.500000000000001,
-    "name": "front wall king studs"
-  },
-  {
-    "dx": 82.49999999999999,
-    "dy": 3.5000000000000338,
-    "dz": 1.500000000000001,
-    "name": "front wall jack studs"
-  },
-  {
-    "dx": 82.49999999999997,
-    "dy": 3.5000000000000324,
-    "dz": 1.500000000000001,
-    "name": "front wall jack studs"
-  },
-  {
-    "dx": 118.50000000000001,
-    "dy": 3.5000000000000466,
-    "dz": 1.500000000000001,
-    "name": "front wall king studs"
-  },
-  {
-    "dx": 75.0,
-    "dy": 3.500000000000025,
-    "dz": 1.5000000000000002,
-    "name": "front wall headers"
-  },
-  {
-    "dx": 75.0,
-    "dy": 3.500000000000025,
-    "dz": 1.5000000000000004,
-    "name": "front wall headers"
-  },
-  {
-    "dx": 75.0,
-    "dy": 3.4999999999999996,
-    "dz": 1.5000000000000362,
-    "name": "front wall headers"
-  },
-  {
-    "dx": 84.0,
-    "dy": 3.50000000000003,
-    "dz": 1.500000000000001,
-    "name": "front wall jack studs"
-  },
-  {
-    "dx": 83.99999999999999,
-    "dy": 3.50000000000003,
-    "dz": 1.500000000000001,
-    "name": "front wall jack studs"
-  },
-  {
-    "dx": 120.0,
-    "dy": 3.5000000000000435,
-    "dz": 1.500000000000001,
-    "name": "front wall king studs"
-  },
-  {
-    "dx": 39.000000000000014,
-    "dy": 3.49999999999999,
-    "dz": 1.5000000000000004,
-    "name": "front wall headers"
-  },
-  {
-    "dx": 39.000000000000014,
-    "dy": 3.49999999999999,
-    "dz": 1.4999999999999998,
-    "name": "front wall headers"
-  },
-  {
-    "dx": 39.000000000000014,
-    "dy": 3.4999999999999996,
-    "dz": 1.500000000000001,
-    "name": "front wall headers"
-  },
-  {
-    "dx": 64.99999999999999,
-    "dy": 3.500000000000025,
-    "dz": 1.500000000000001,
-    "name": "right wall top plate"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.500000000000025,
-    "dz": 1.500000000000001,
-    "name": "right wall studs"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.500000000000025,
-    "dz": 1.500000000000001,
-    "name": "right wall studs"
-  },
-  {
-    "dx": 82.5,
-    "dy": 3.500000000000025,
-    "dz": 1.5000000000000002,
-    "name": "right wall jack studs"
-  },
-  {
-    "dx": 82.5,
-    "dy": 3.500000000000025,
-    "dz": 1.5000000000000149,
-    "name": "right wall jack studs"
-  },
-  {
-    "dx": 38.999999999999986,
-    "dy": 3.49999999999999,
-    "dz": 1.5000000000000007,
-    "name": "right wall headers"
-  },
-  {
-    "dx": 38.999999999999986,
-    "dy": 3.49999999999999,
-    "dz": 1.5000000000000007,
-    "name": "right wall headers"
-  },
-  {
-    "dx": 38.999999999999986,
-    "dy": 3.500000000000025,
-    "dz": 1.500000000000001,
-    "name": "right wall headers"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.500000000000025,
-    "dz": 1.5000000000000002,
-    "name": "right wall studs"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.500000000000025,
-    "dz": 1.5000000000000193,
-    "name": "right wall studs"
-  },
-  {
-    "dx": 92.625,
-    "dy": 3.500000000000025,
-    "dz": 1.5000000000000193,
-    "name": "right wall studs"
-  },
-  {
-    "dx": 5.125,
-    "dy": 3.5000000000000946,
-    "dz": 1.5000000000000022,
-    "name": "right wall cripple studs"
-  },
-  {
-    "dx": 5.125,
-    "dy": 3.5000000000000946,
-    "dz": 1.5000000000000022,
-    "name": "right wall cripple studs"
-  },
-  {
-    "dx": 8.499999999999979,
-    "dy": 3.500000000000025,
-    "dz": 1.500000000000001,
-    "name": "right wall bottom plate short"
-  },
-  {
-    "dx": 20.50000000000001,
-    "dy": 3.500000000000025,
-    "dz": 1.500000000000001,
-    "name": "right wall bottom plate long"
-  },
-  {
-    "dx": 68.49999999999997,
-    "dy": 3.5000000000000946,
-    "dz": 1.500000000000071,
-    "name": "right wall double top plate"
-  },
-  {
-    "dx": 68.49999999999997,
-    "dy": 3.5000000000000795,
-    "dz": 1.500000000000071,
-    "name": "left wall double top plate"
-  },
-  {
-    "dx": 184.99999999999994,
-    "dy": 3.5000000000000075,
-    "dz": 1.5000000000001061,
-    "name": "back wall double top plate short"
-  },
-  {
     "dx": 192.00000000000006,
     "dy": 3.4999999999999996,
     "dz": 1.500000000000001,
     "name": "front wall double top plate"
   },
   {
-    "dx": 69.42003043070494,
-    "dy": 3.500000000000188,
-    "dz": 1.5000000000000444,
-    "name": "right rake wall top plate"
-  },
-  {
-    "dx": 22.77299929775296,
-    "dy": 3.500000000000131,
-    "dz": 1.5000000000000984,
-    "name": "right rake wall studs"
-  },
-  {
-    "dx": 16.96049929775296,
-    "dy": 3.500000000000061,
-    "dz": 1.5000000000000022,
-    "name": "right rake wall studs"
-  },
-  {
-    "dx": 10.96049929775296,
-    "dy": 3.500000000000061,
-    "dz": 1.5000000000000022,
-    "name": "right rake wall studs"
-  },
-  {
-    "dx": 4.9604992977529605,
-    "dy": 3.500000000000061,
-    "dz": 1.5000000000000022,
-    "name": "right rake wall studs"
-  },
-  {
-    "dx": 22.77299929775296,
-    "dy": 3.5000000000001408,
-    "dz": 1.5000000000000984,
-    "name": "left rake wall studs"
-  },
-  {
-    "dx": 16.96049929775296,
-    "dy": 3.5000000000000706,
-    "dz": 1.5000000000000022,
-    "name": "left rake wall studs"
-  },
-  {
-    "dx": 10.96049929775296,
-    "dy": 3.5000000000000706,
-    "dz": 1.5000000000000022,
-    "name": "left rake wall studs"
-  },
-  {
-    "dx": 4.9604992977529605,
-    "dy": 3.5000000000000706,
-    "dz": 1.5000000000000022,
-    "name": "left rake wall studs"
-  },
-  {
-    "dx": 69.42003043070494,
-    "dy": 3.5000000000000697,
-    "dz": 1.5001461524299404,
-    "name": "left rake wall top plate"
-  },
-  {
-    "dx": 115.34405056178666,
+    "dx": 128.16005617976296,
     "dy": 5.499900151478634,
     "dz": 1.5000000000001275,
     "name": "rafter"
   },
   {
-    "dx": 115.34405056178666,
+    "dx": 128.16005617976296,
     "dy": 5.499900151478634,
     "dz": 1.5000000000001286,
     "name": "rafter"
   },
   {
-    "dx": 115.34405056178666,
+    "dx": 128.16005617976296,
     "dy": 5.499900151478634,
     "dz": 1.5000000000001286,
     "name": "rafter"
   },
   {
-    "dx": 115.34405056178666,
+    "dx": 128.16005617976296,
     "dy": 5.499900151478634,
     "dz": 1.5000000000001286,
     "name": "rafter"
   },
   {
-    "dx": 115.34405056178666,
+    "dx": 128.16005617976296,
     "dy": 5.499900151478642,
     "dz": 1.5000000000001286,
     "name": "rafter"
   },
   {
-    "dx": 115.34405056178666,
+    "dx": 128.16005617976296,
     "dy": 5.499900151478634,
     "dz": 1.5000000000001286,
     "name": "rafter"
   },
   {
-    "dx": 115.34405056178666,
+    "dx": 128.16005617976296,
     "dy": 5.499900151478642,
     "dz": 1.5000000000001286,
     "name": "rafter"
   },
   {
-    "dx": 115.34405056178666,
+    "dx": 128.16005617976296,
     "dy": 5.499900151478634,
     "dz": 1.5000000000001286,
     "name": "rafter"
   },
   {
-    "dx": 115.34405056178666,
+    "dx": 128.16005617976296,
     "dy": 5.499900151478642,
     "dz": 1.5000000000001286,
     "name": "rafter"
   },
   {
-    "dx": 115.34405056178666,
+    "dx": 128.16005617976296,
     "dy": 5.499900151478656,
     "dz": 1.5000000000001286,
     "name": "rafter"
   },
   {
-    "dx": 115.34405056178666,
+    "dx": 128.16005617976296,
     "dy": 5.499900151478642,
     "dz": 1.5000000000001286,
     "name": "rafter"
   },
   {
-    "dx": 115.34405056178666,
+    "dx": 128.16005617976296,
     "dy": 5.499900151478656,
     "dz": 1.5000000000001286,
     "name": "rafter"
   },
   {
-    "dx": 115.34405056178666,
+    "dx": 128.16005617976296,
     "dy": 5.49990015147866,
     "dz": 1.5000000000001286,
     "name": "rafter"
@@ -684,13 +234,13 @@
     "name": "back fascia"
   },
   {
-    "dx": 115.34405056178666,
+    "dx": 128.16005617976296,
     "dy": 5.4999000369212725,
     "dz": 1.5000000000001286,
     "name": "left rake board"
   },
   {
-    "dx": 115.34405056178666,
+    "dx": 128.16005617976296,
     "dy": 5.4999000369212725,
     "dz": 1.5000000000001286,
     "name": "right rake board"
@@ -706,5 +256,461 @@
     "dy": 3.5,
     "dz": 3.5,
     "name": ""
+  },
+  {
+    "dx": 88.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "back wall studs"
+  },
+  {
+    "dx": 88.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "back wall studs"
+  },
+  {
+    "dx": 88.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "back wall studs"
+  },
+  {
+    "dx": 88.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "back wall studs"
+  },
+  {
+    "dx": 88.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "back wall studs"
+  },
+  {
+    "dx": 88.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "back wall studs"
+  },
+  {
+    "dx": 88.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "back wall studs"
+  },
+  {
+    "dx": 88.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "back wall studs"
+  },
+  {
+    "dx": 88.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "back wall studs"
+  },
+  {
+    "dx": 88.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "back wall studs"
+  },
+  {
+    "dx": 88.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "back wall studs"
+  },
+  {
+    "dx": 88.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "back wall studs"
+  },
+  {
+    "dx": 88.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "back wall studs"
+  },
+  {
+    "dx": 192.0,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "back wall bottom plate"
+  },
+  {
+    "dx": 192.0,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "back wall top plate"
+  },
+  {
+    "dx": 185.0,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "back wall double top plate short"
+  },
+  {
+    "dx": 92.625,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left side wall studs"
+  },
+  {
+    "dx": 92.625,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left side wall studs"
+  },
+  {
+    "dx": 92.625,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left side wall studs"
+  },
+  {
+    "dx": 92.625,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left side wall studs"
+  },
+  {
+    "dx": 92.625,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left side wall studs"
+  },
+  {
+    "dx": 88.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left side wall studs"
+  },
+  {
+    "dx": 64.72799812734122,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left wall top plate"
+  },
+  {
+    "dx": 60.72799812734123,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left wall double top plate"
+  },
+  {
+    "dx": 3.5,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left wall double top plate"
+  },
+  {
+    "dx": 77.0,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left side wall bottom plate"
+  },
+  {
+    "dx": 92.625,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right wall studs"
+  },
+  {
+    "dx": 88.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right wall studs"
+  },
+  {
+    "dx": 64.72799812734122,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right wall top plate"
+  },
+  {
+    "dx": 60.72799812734123,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right wall double top plate"
+  },
+  {
+    "dx": 3.5,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right wall double top plate"
+  },
+  {
+    "dx": 82.23603604868123,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left rake wall top plate"
+  },
+  {
+    "dx": 22.77299929775296,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left rake wall studs"
+  },
+  {
+    "dx": 16.96049929775296,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left rake wall studs"
+  },
+  {
+    "dx": 10.96049929775296,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left rake wall studs"
+  },
+  {
+    "dx": 4.9604992977529605,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left rake wall studs"
+  },
+  {
+    "dx": 92.33549929775296,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left rake wall studs"
+  },
+  {
+    "dx": 91.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left rake wall studs"
+  },
+  {
+    "dx": 91.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "left rake wall studs"
+  },
+  {
+    "dx": 82.23603604868123,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right rake wall top plate"
+  },
+  {
+    "dx": 22.77299929775296,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right rake wall studs"
+  },
+  {
+    "dx": 16.96049929775296,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right rake wall studs"
+  },
+  {
+    "dx": 10.96049929775296,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right rake wall studs"
+  },
+  {
+    "dx": 4.9604992977529605,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right rake wall studs"
+  },
+  {
+    "dx": 6.3354992977529605,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right rake wall studs"
+  },
+  {
+    "dx": 5.2104992977529605,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right rake wall studs"
+  },
+  {
+    "dx": 91.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right rake wall studs"
+  },
+  {
+    "dx": 91.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right rake wall studs"
+  },
+  {
+    "dx": 118.5,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "front wall king studs"
+  },
+  {
+    "dx": 118.5,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "front wall king studs"
+  },
+  {
+    "dx": 118.5,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "front wall king studs"
+  },
+  {
+    "dx": 118.5,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "front wall king studs"
+  },
+  {
+    "dx": 118.5,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "front wall king studs"
+  },
+  {
+    "dx": 118.5,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "front wall king studs"
+  },
+  {
+    "dx": 118.5,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "front wall king studs"
+  },
+  {
+    "dx": 118.5,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "front wall king studs"
+  },
+  {
+    "dx": 82.5,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "front wall jack studs"
+  },
+  {
+    "dx": 82.5,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "front wall jack studs"
+  },
+  {
+    "dx": 99.0,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "front wall headers"
+  },
+  {
+    "dx": 99.0,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "front wall headers"
+  },
+  {
+    "dx": 99.0,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "front wall headers"
+  },
+  {
+    "dx": 31.0,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "front wall cripple studs"
+  },
+  {
+    "dx": 31.0,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "front wall cripple studs"
+  },
+  {
+    "dx": 31.0,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "front wall cripple studs"
+  },
+  {
+    "dx": 31.0,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "front wall cripple studs"
+  },
+  {
+    "dx": 31.0,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "front wall cripple studs"
+  },
+  {
+    "dx": 82.5,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right wall jack studs"
+  },
+  {
+    "dx": 82.5,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right wall jack studs"
+  },
+  {
+    "dx": 67.0,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right wall headers"
+  },
+  {
+    "dx": 67.0,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right wall headers"
+  },
+  {
+    "dx": 67.0,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right wall headers"
+  },
+  {
+    "dx": 5.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right wall cripple studs"
+  },
+  {
+    "dx": 5.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right wall cripple studs"
+  },
+  {
+    "dx": 5.125,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right wall cripple studs"
+  },
+  {
+    "dx": 6.5,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right wall bottom plate short"
+  },
+  {
+    "dx": 6.5,
+    "dy": 3.5,
+    "dz": 1.5,
+    "name": "right wall bottom plate long"
   }
 ]

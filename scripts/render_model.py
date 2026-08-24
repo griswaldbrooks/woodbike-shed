@@ -51,8 +51,6 @@ def solids():
         "front fascia": ao.FASCIA_FRONT,
         "back fascia": ao.FASCIA_BACK,
     }
-    stud_profiles = {round(yc, 2): q for yc, q in
-                     zip((0.75, 16.25, 32.25, 48.25), ao.RAKE_STUDS)}
     for r in bboxes:
         name = r["name"]
         bb = r["bbox_m"]
@@ -60,8 +58,8 @@ def solids():
         if name in prof:
             poly = prof[name]
         elif name in ("left rake wall studs", "right rake wall studs"):
-            yc = round((bb["lowY"] + bb["highY"]) / 2 * M, 2)
-            poly = stud_profiles[yc]
+            poly = ao.rake_stud_poly(bb["lowY"] * M, bb["highY"] * M,
+                                     bb["lowZ"] * M)
         else:
             y0, y1 = bb["lowY"] * M, bb["highY"] * M
             z0, z1 = bb["lowZ"] * M, bb["highZ"] * M
@@ -138,7 +136,8 @@ def main():
             continue
         col = COLOR.get(section, (150, 150, 150))
         faces += [(f, col) for f in fs]
-    views = [("iso-front", 35, 18), ("iso-back", 215, 18), ("roof-top", 35, 55)]
+    views = [("iso-front", 35, 18), ("iso-back", 215, 18), ("roof-top", 35, 55),
+             ("side-right", 90, 12)]
     for label, yaw, pitch in views:
         img = render(faces, yaw, pitch)
         img.save(out_dir / f"shed-{label}.png")

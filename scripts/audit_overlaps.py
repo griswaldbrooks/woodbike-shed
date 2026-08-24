@@ -18,34 +18,39 @@ M = 39.3700787
 EPS_A = 1e-4   # in^2 profile-area noise floor
 EPS_V = 0.01   # in^3 report threshold
 
-# Roof re-derived 2026-08-10 for the 92-5/8" pre-cut stud decision
-# (scripts/restud_92_5_8.py): the back/left/right wall plate tops dropped
-# 97.5 -> 97.125 while every front reference stayed. Same construction as
-# the audit data: bearing line = rafter bottom edge = rake plate top edge,
-# seats flat at the plate heights.
-Z_B = 97.125                        # back wall double top plate top
+# Roof re-derived 2026-08-23 for the 7 ft depth + 2-door plan
+# (scripts/depth7ft_2door.py): the back wall moved y 65..68.5 -> 77..80.5
+# and its plate tops dropped to 92.625 (the restud pitch 24.375/65 is
+# exactly the 7 ft pitch 28.875/77, so the slope is unchanged); every front
+# reference stayed. Same construction as the audit data: bearing line =
+# rafter bottom edge = rake plate top edge, seats flat at the plate heights.
+Z_B = 92.625                        # back wall double top plate top
 FRONT_BEAR = 121.5                  # bearing at y=0 (front plate 123 - 1.5)
-SLOPE = (FRONT_BEAR - Z_B) / 65.0   # 24.375/65 (was 24/65)
+SLOPE = (FRONT_BEAR - Z_B) / 77.0   # 28.875/77 = 24.375/65
 SEC = math.hypot(1.0, SLOPE)        # 1/cos
-OFF = 5.5 * SEC                     # rafter AABB top offset (was 5.86283)
-HEEL = -1.5 / SLOPE                 # front seat heel (was -4.0625)
+OFF = 5.5 * SEC                     # rafter AABB top offset
+HEEL = -1.5 / SLOPE                 # front seat heel
+TAIL_F, TAIL_B = -27.5, 92.5        # rafter tails (24"/12" overhangs)
 
 
 def zbot(y):
     return FRONT_BEAR - SLOPE * y
 
 
-RAFTER = [(-27.5, zbot(-27.5)), (HEEL, 123.0), (0.0, 123.0), (0.0, FRONT_BEAR),
-          (65.0, Z_B), (68.5, Z_B), (68.5, zbot(68.5)), (80.5, zbot(80.5)),
-          (80.5, zbot(80.5) + OFF), (-27.5, zbot(-27.5) + OFF)]
-RAKE_BOARD = [(-27.5, zbot(-27.5)), (80.5, zbot(80.5)),
-              (80.5, zbot(80.5) + OFF), (-27.5, zbot(-27.5) + OFF)]
+RAFTER = [(TAIL_F, zbot(TAIL_F)), (HEEL, 123.0), (0.0, 123.0),
+          (0.0, FRONT_BEAR), (77.0, Z_B), (80.5, Z_B),
+          (80.5, zbot(80.5)), (TAIL_B, zbot(TAIL_B)),
+          (TAIL_B, zbot(TAIL_B) + OFF), (TAIL_F, zbot(TAIL_F) + OFF)]
+RAKE_BOARD = [(TAIL_F, zbot(TAIL_F)), (TAIL_B, zbot(TAIL_B)),
+              (TAIL_B, zbot(TAIL_B) + OFF), (TAIL_F, zbot(TAIL_F) + OFF)]
 # Rake plate underside = the rake stud top line: stud top edges are driven
 # 1.5" below the plate top edge, measured perpendicular to it -> vertical
-# gap 1.5*SEC; the line crosses the back plate top at y = (z_us(0)-Z_B)/SLOPE.
+# gap 1.5*SEC; the underside crosses the back plate top at the seat line,
+# and the plate bottom runs flat at Z_B from there to the back wall.
 Z_US0 = FRONT_BEAR - 1.5 * SEC
-RIGHT_RAKE_PLATE = [(65.0, Z_B), (0.0, FRONT_BEAR), (0.0, Z_US0),
-                    ((Z_US0 - Z_B) / SLOPE, Z_B)]
+Y_SEAT = (Z_US0 - Z_B) / SLOPE
+RIGHT_RAKE_PLATE = [(77.0, Z_B), (0.0, FRONT_BEAR), (0.0, Z_US0),
+                    (Y_SEAT, Z_B)]
 LEFT_RAKE_PLATE = RIGHT_RAKE_PLATE
 
 
@@ -53,15 +58,19 @@ def zu(y):
     return Z_US0 - SLOPE * y
 
 
-RAKE_STUDS = []
-for yc in (0.75, 16.25, 32.25, 48.25):
-    y0, y1 = yc - 0.75, yc + 0.75
-    RAKE_STUDS.append([(y0, Z_B), (y1, Z_B), (y1, zu(y1)), (y0, zu(y0))])
+def rake_stud_poly(y0, y1, z_bot):
+    """Rake/gable stud: flat bottom on its bearing (audited bbox lowZ),
+    top mitered to the plate bottom (underside or the flat seat)."""
+    top = lambda y: max(zu(y), Z_B)
+    return [(y0, z_bot), (y1, z_bot), (y1, top(y1)), (y0, top(y0))]
 
-FASCIA_FRONT = [(-29.0, zbot(-27.5) + OFF - 5.5), (-27.5, zbot(-27.5) + OFF - 5.5),
-                (-27.5, zbot(-27.5) + OFF), (-29.0, zbot(-27.5) + OFF)]
-FASCIA_BACK = [(80.5, zbot(80.5) + OFF - 5.5), (82.0, zbot(80.5) + OFF - 5.5),
-               (82.0, zbot(80.5) + OFF), (80.5, zbot(80.5) + OFF)]
+
+FASCIA_FRONT = [(-29.0, zbot(TAIL_F) + OFF - 5.5),
+                (-27.5, zbot(TAIL_F) + OFF - 5.5),
+                (-27.5, zbot(TAIL_F) + OFF), (-29.0, zbot(TAIL_F) + OFF)]
+FASCIA_BACK = [(TAIL_B, zbot(TAIL_B) + OFF - 5.5),
+               (TAIL_B + 1.5, zbot(TAIL_B) + OFF - 5.5),
+               (TAIL_B + 1.5, zbot(TAIL_B) + OFF), (TAIL_B, zbot(TAIL_B) + OFF)]
 
 
 def zspan(poly, y):
@@ -119,7 +128,8 @@ def main():
                       "poly": ([(y0, z0), (y1, z0), (y1, z1), (y0, z1)])})
 
     # exact profiles override the bbox rectangle (keyed by name; rake studs
-    # are four distinct parts sharing four profiles matched by y-position)
+    # are built from their own bbox: bottom on the audited bearing, top
+    # mitered to the plate bottom)
     prof = {
         "rafter": RAFTER,
         "left rake board": RAKE_BOARD,
@@ -129,14 +139,12 @@ def main():
         "front fascia": FASCIA_FRONT,
         "back fascia": FASCIA_BACK,
     }
-    stud_profiles = {round(yc, 2): q for yc, q in
-                     zip((0.75, 16.25, 32.25, 48.25), RAKE_STUDS)}
     for p in parts:
         if p["name"] in prof:
             p["poly"] = prof[p["name"]]
         elif p["name"] in ("left rake wall studs", "right rake wall studs"):
-            yc = round(sum(q[0] for q in p["poly"]) / 4, 2)
-            p["poly"] = stud_profiles[yc]
+            (y0, z0), (y1, _) = p["poly"][0], p["poly"][1]
+            p["poly"] = rake_stud_poly(y0, y1, z0)
 
     hits = []
     n = len(parts)

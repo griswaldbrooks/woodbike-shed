@@ -24,7 +24,7 @@ except ImportError:  # run directly from scripts/
                                 pack_and_rightsize, section_for)
 
 from cad.build import build_finish
-from cad.common import IN, load_audit
+from cad.common import IN, finish_layout, load_audit
 
 # label -> (stock lumber, treatment); product dims live in the cad modules
 LABEL_META = {
@@ -41,10 +41,16 @@ STOCK_FINISH = {"1x4": [96, 120, 144, 168, 192],
                 "1x8": [96, 120, 144, 168, 192],
                 "1x10": [96, 120, 144, 168, 192]}
 
-# no geometry - line items only
+# no geometry - line items only; quantities derived from the framed
+# openings (the same >48" -> double rule cad/doors.py applies)
+_LAYOUT = finish_layout(load_audit())
+_OPENS = _LAYOUT["front_open"] + _LAYOUT["right_open"]
+_LEAVES = sum(2 if o1 - o0 > 48 else 1 for o0, o1, _ in _OPENS)
 HARDWARE = [
-    (8, 'strap hinge 12" black', "2 per leaf, 4 leaves"),
-    (3, "gate latch + hasp black", "1 per opening (double: center latch)"),
+    (2 * _LEAVES, 'strap hinge 12" black',
+     f"2 per leaf, {_LEAVES} leaves"),
+    (len(_OPENS), "gate latch + hasp black",
+     "1 per opening (double: center latch)"),
 ]
 
 

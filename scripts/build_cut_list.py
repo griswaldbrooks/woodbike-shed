@@ -310,14 +310,17 @@ def main():
                 f.write(f"- Board {i} ({sl/12:g}\u2032): {items_desc}  — waste: {remaining:.2f}\u2033\n")
             f.write("\n")
 
-        # OSB summary
+        # OSB summary (panel length comes from the audit data)
+        osb_keys = [key for key in agg if "OSB" in key[1]]
         osb_pieces = sum(qty for key, qty in agg.items() if "OSB" in key[1])
+        osb_len = max((key[2] for key in osb_keys), default=0.0)
+        osb_per_sheet = max(1, int(96 // osb_len)) if osb_pieces else 0
         if osb_pieces:
-            # Each OSB cut is 72"×48" (half sheet). Standard sheet is 96"×48".
-            full_sheets = (osb_pieces + 1) // 2  # pairs of half-sheets => one full sheet
+            full_sheets = -(-osb_pieces // osb_per_sheet)
             f.write(f"### OSB 3/4\" 4×8 sheets\n\n")
-            f.write(f"{osb_pieces} half-sheets (72\"×48\") needed → **order {full_sheets} full 4×8 sheets**, rip to 72\"+24\" offcut.\n\n")
-            f.write(f"(Or cut 2 half-sheets per full sheet with 0\" waste if both offcuts are usable elsewhere.)\n\n")
+            f.write(f"{osb_pieces} panels ({osb_len:g}\"×48\") needed → **order "
+                    f"{full_sheets} full 4×8 sheets**, rip to "
+                    f"{osb_len:g}\"+{96 - osb_len:g}\" offcut.\n\n")
 
         f.write(f"---\n\n**Total dimensional lumber LF purchased: {total_cost_in/12:.1f}**\n")
 
@@ -331,8 +334,10 @@ def main():
                 w.writerow([lumber, treatment, f"{sl/12:g}", n,
                             order_notes(lumber, treatment, sl)])
         if osb_pieces:
-            w.writerow(["OSB 3/4\"", "—", "4x8 sheet", (osb_pieces + 1) // 2,
-                        f"subfloor; rip to 72\"+24\"; {YARD}"])
+            w.writerow(["OSB 3/4\"", "—", "4x8 sheet",
+                        -(-osb_pieces // osb_per_sheet),
+                        f"subfloor; rip to {osb_len:g}\"+{96 - osb_len:g}\"; "
+                        f"{YARD}"])
 
     # finish (siding/trim/doors) rows: separate order list, appended section
     # (needs the cad venv - build_cut_list now runs in .venv like cad.build)

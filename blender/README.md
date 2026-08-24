@@ -1,6 +1,6 @@
 # blender/ — headless render pipeline for the shed
 
-`scene.glb` (293 named parts — 117 framing + 176 finish — from `cad/build.py`,
+`scene.glb` (273 named parts — 118 framing + 155 finish — from `cad/build.py`,
 names = CUT_LIST.md labels with an `NNN ` instance prefix) +
 `build_scene.py`, which turns it into a lit, materialled scene and renders
 it. Nothing hand-placed: cameras, ground and sun derive from the imported

@@ -8,8 +8,8 @@ Headless usage (from the repo root):
     blender --background --python blender/build_scene.py -- --skin
     blender --background --python blender/build_scene.py -- --skin --render
 
-Pipeline: import blender/scene.glb (293 named parts from cad/build.py -
-117 framing + 176 finish, mm units; the finish parts are dropped again,
+Pipeline: import blender/scene.glb (273 named parts from cad/build.py -
+118 framing + 155 finish, mm units; the finish parts are dropped again,
 see main()) -> scale to meters -> one PBR wood material per cut-list name
 group -> ground plane, Nishita sky + sun -> four cameras -> save
 shed_scene.blend.
@@ -26,6 +26,7 @@ survives model geometry changes.
 """
 from math import radians
 from pathlib import Path
+import json
 import sys
 
 import bpy
@@ -582,7 +583,12 @@ def main():
                if o.name.split(" ", 1)[1].startswith("finish")]:
         bpy.data.objects.remove(ob, do_unlink=True)
     parts = [ob for ob in bpy.data.objects if ob.type == "MESH"]
-    assert len(parts) == 117, f"expected 117 parts in scene.glb, got {len(parts)}"
+    expected = len([e for e in json.loads(
+        (Path(__file__).resolve().parent.parent / "scripts" /
+         "oriented_dims.json").read_text())
+        if e["name"] != "inner volume"])
+    assert len(parts) == expected, \
+        f"expected {expected} parts in scene.glb, got {len(parts)}"
     # glTF import assumes Y-up and hands our Z-up data over rolled onto its
     # side; bake the undo rotation + mm->m scale straight into mesh data
     # (object transforms in --background mode proved unreliable)

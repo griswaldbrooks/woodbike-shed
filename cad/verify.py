@@ -224,27 +224,30 @@ def main():
                   f"'{lbl}': back end {pb[3]:.4f} != fascia inner face "
                   f"{fasc_bb[2]:.4f}")
 
-    # rake studs mitered onto the rake plate underside
+    # rake studs mitered onto the rake plate bottom face (the sloped
+    # underside out front, or the flat seat face over the back bearing)
     for side in ("left", "right"):
         plate = by_label[f"{side} rake wall top plate"][0]
-        under = next(((pt, n) for pt, n, _ in face_planes(plate)
-                      if n[2] < -0.5 and abs(n[0]) < 1e-6), None)
-        check(under is not None, f"'{side} rake wall top plate': no underside")
-        if not under:
+        unders = [(pt, n) for pt, n, _ in face_planes(plate)
+                  if n[2] < -0.5 and abs(n[0]) < 1e-6]
+        check(bool(unders), f"'{side} rake wall top plate': no underside")
+        if not unders:
             continue
-        upt, un = under
         for s in by_label[f"{side} rake wall studs"]:
             stop = next(((pt, n) for pt, n, _ in face_planes(s)
                          if n[2] > 0.5 and abs(n[0]) < 1e-6), None)
             check(stop is not None, f"'{side} rake wall studs': no mitre face")
             if stop:
                 spt, sn = stop
-                coplanar = abs((spt[0] - upt[0]) * un[0] +
-                               (spt[1] - upt[1]) * un[1] +
-                               (spt[2] - upt[2]) * un[2]) < 0.01
-                check(coplanar and abs(sn[1] / sn[2] - un[1] / un[2]) < 1e-3,
+                seated = any(
+                    abs((spt[0] - upt[0]) * un[0] +
+                        (spt[1] - upt[1]) * un[1] +
+                        (spt[2] - upt[2]) * un[2]) < 0.01 and
+                    abs(sn[1] / sn[2] - un[1] / un[2]) < 1e-3
+                    for upt, un in unders)
+                check(seated,
                       f"'{side} rake wall studs' y{spt[1]:.2f}: top face not "
-                      f"on plate underside (gap/offset)")
+                      f"on the plate bottom (gap/offset)")
 
     # --- 3b. finish layers: volumes + layer planes ------------------------------
     # Every finish part carries .expected_volume_in3 (profile area x length

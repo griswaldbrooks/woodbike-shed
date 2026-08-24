@@ -1,8 +1,8 @@
 """Finish doors: board-and-batten barn doors over every framed opening.
 
-Front wall: single leaf over the 36" opening + center double over the 72";
-right wall: single over its 36" opening (matches the captain's reference
-photo and the skin renders). Each leaf = vertical 1x6 planks edge-to-edge
+Two-door plan (captain 2026-08-23): the 96" front barn door and the 64"
+right-wall brewery double - both center doubles (any opening over 48"
+hangs as a pair). Each leaf = vertical 1x6 planks edge-to-edge
 with a 1x4 perimeter frame (stiles + rails) on the outer face; leaves hang
 on the casing face (one layer proud of the trim) where strap hinges would
 bear. Hardware is NOT modeled - strap hinges/latches are line items in
@@ -55,13 +55,13 @@ def _leaf(parts, L, wall, a0, a1):
 def build(audit: Audit):
     L = finish_layout(audit)
     parts = []
-    for o0, o1, _hz in L["front_open"]:
-        if o1 - o0 > 48:                     # center double
-            mid = (o0 + o1) / 2
-            _leaf(parts, L, "front", o0 - OVERLAP, mid - GAP / 2)
-            _leaf(parts, L, "front", mid + GAP / 2, o1 + OVERLAP)
-        else:
-            _leaf(parts, L, "front", o0 - OVERLAP, o1 + OVERLAP)
-    for o0, o1, _hz in L["right_open"]:
-        _leaf(parts, L, "right", o0 - OVERLAP, o1 + OVERLAP)
+    for wall, opens in (("front", L["front_open"]),
+                        ("right", L["right_open"])):
+        for o0, o1, _hz in opens:
+            if o1 - o0 > 48:                 # center double
+                mid = (o0 + o1) / 2
+                _leaf(parts, L, wall, o0 - OVERLAP, mid - GAP / 2)
+                _leaf(parts, L, wall, mid + GAP / 2, o1 + OVERLAP)
+            else:
+                _leaf(parts, L, wall, o0 - OVERLAP, o1 + OVERLAP)
     return parts

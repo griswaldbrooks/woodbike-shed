@@ -9,15 +9,16 @@ parametrically from the plate solids (cad.common.roof_ref):
   edge; flat seat on the back/side double top plate top where the underside
   meets it (the audited RIGHT_RAKE_PLATE construction, incl. the nose trims
   recorded in MANUAL_COMPLETION.md "Rake-plate noses").
-- Studs: bottom on their side-wall double top plate top, top edge mitered
-  to the plate underside (the constraint_pilot DISTANCE constraint), width
-  from the audited AABB.
+- Studs: bottom on whatever bears them (the audited AABB lowZ: the side
+  double top plate top, the sill, or a header top), top edge mitered to
+  the plate underside (the constraint_pilot DISTANCE constraint), width
+  from the audited AABB. Since the 7 ft depth the gable end follows the
+  roof past the flat wall's plate stack, so the group mixes the classic
+  DTP-top studs with mitered studs standing on the sill/header.
 """
 from cad.common import M_PER_IN, Audit, prism_yz, roof_ref
 
 STUD_GROUPS = ("left rake wall studs", "right rake wall studs")
-SIDE_PLATE_FOR = {"left rake wall studs": "left wall double top plate",
-                  "right rake wall studs": "right wall double top plate"}
 
 
 def plate_profile(ref) -> list:
@@ -34,11 +35,15 @@ def plate_profile(ref) -> list:
 
 
 def stud_profile(ref, z_bot: float, y0: float, y1: float) -> list:
-    """Rake stud YZ profile (inches): flat bottom on the side double top
-    plate top, top edge mitered to the rake plate underside."""
+    """Rake stud YZ profile (inches): flat bottom on its bearing, top edge
+    mitered to the rake plate bottom - the underside out front, the flat
+    seat at the back bearing height past the seat line."""
+    def top(y):
+        return max(ref.zu(y), ref.back_seat_z)
+
     return [
         (y0, z_bot), (y1, z_bot),
-        (y1, ref.zu(y1)), (y0, ref.zu(y0)),
+        (y1, top(y1)), (y0, top(y0)),
     ]
 
 
@@ -46,10 +51,9 @@ def build(audit: Audit):
     ref = roof_ref(audit)
     parts = []
     for group in STUD_GROUPS:
-        z_bot = audit.specs[SIDE_PLATE_FOR[group]][0].aabb["highZ"] / M_PER_IN
         for spec in audit.group(group):
             b = spec.aabb
-            p = prism_yz(stud_profile(ref, z_bot,
+            p = prism_yz(stud_profile(ref, b["lowZ"] / M_PER_IN,
                                       b["lowY"] / M_PER_IN,
                                       b["highY"] / M_PER_IN),
                          b["lowX"] / M_PER_IN, b["highX"] / M_PER_IN)

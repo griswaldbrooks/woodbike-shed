@@ -81,12 +81,63 @@ checks.
 
 ## Known intentional overlaps (left as modeled)
 
-- Opening-A jacks (84") and one king stud (120") run from z=0 through the
-  front bottom plate (7.9 in³ each) — the captain's modeling quirk noted in
-  the scout report, not corrected.
 - The `inner volume` reference envelope pre-dates the roof; the rafters
   pass through its upper zone. Reference body only — excluded from the cut
   list, no action.
+- (2026-08-23: the as-designed opening-A jacks and tall king that ran
+  from z=0 through the front bottom plate were retired by the door-plan
+  reframe — every new jack/king sits on the plate, and `cad.verify`'s
+  ALLOWED_OVERLAPS exemption no longer matches anything.)
+
+## Door plan — adopted 2-door plan (captain 2026-08-23; 7 ft depth applied)
+
+Verdict (durable copy in firstmate data/shed-door-plan-model/
+captain-decision-2026-08-23.md): adopt the free-doors study's WINNER
+(firstmate data/shed-jenga-arrange/report.md) MODIFIED — the 3 ft walk-in
+is REMOVED. Model + audit JSON updated 2026-08-23 by
+`scripts/depth7ft_2door.py`, which also applies the captain's 2026-08-18
+7 ft outer-depth decision (shed-depth-decision-2026-08-18.md) — the 64 in
+door only frames on the 77 in wall, so depth and doors shipped together.
+
+- **Barn door 8 ft (96 in)**, front wall west end, clear 0-96, head 84.
+  The west jamb IS the corner: the header bears on the corner king + a
+  corner jack in the corner block (the built-up header-bearing corner
+  post; flagged not engineered in the study). East of the opening the
+  front wall is solid studs at 16" oc.
+- **Brewery double 64 in**, RIGHT rake wall, clear 6.5-70.5, head 84,
+  6.5 in end studs (the study's flagged minimum).
+- **Walk-in / slab-feed door REMOVED**; no left rake-wall door (that is a
+  separate still-open family decision, NOT modeled).
+- **7 ft shell**: back wall out to y 77..80.5, plate tops at 92-5/8 (the
+  restud slope 24.375/65 is exactly the 7 ft slope 28.875/77). Where the
+  roof drops below the flat plate stack, the gable ends follow it: the
+  flat DTP runs to y 60.73 and the top plate to 64.73, mitered studs carry
+  the rake plate to the back corner, and side DTP corner blocks carry the
+  corner rafters' back seats (all derived in the script's docstring).
+
+**Consequences accepted by the verdict**: pedestrian entry and 10 ft slab
+loading now route through the barn door. Recorded in the fit check:
+
+- `scripts/fit_study_free_doors.py --arrange winner2` (the free-doors
+  study adapted for the 2-door variant; the original arrangements still
+  run unchanged) — full record in `scripts/fit_summary_winner2.txt`:
+  every named check PASS, "everything fits with access kept":
+  - pedestrian entry via the barn door (96 in vs the 36 in minimum),
+    landing on the maneuver floor east of the cluster (clear to 48 in);
+  - slabs carried on edge through the barn door (96 in ≥ 28 in slab +
+    18 in carrier), aisle 49 in ≥ 46, rack feed face 23.75 in at the east
+    end of the run (≥ 21 in as-designed precedent);
+  - unchanged from the winner: bikes + blower straight-roll under the run,
+    brewery service from outside the 64 in door (6.5 in end studs), hood +
+    duct + panel checks.
+
+**Follow-up, not this task**: guide pages outside the door plan still
+carry 6 ft / as-designed numbers (04-05 floor: joists now 81 in and OSB
+84 in; 07 back wall: 88-1/8 pre-cuts; 09 raise heights; 10-12 rake plates,
+rafters, fascia — incl. the 1:1 fig-11 birdsmouth template; 13-14 siding
+and trim course counts). The door-plan pages (01, 06, 08, 15) and the
+order sheets (02, 03, R01) were updated with this change; the rest need a
+guide-sync pass against the 7 ft model.
 
 ## Rake studs
 

@@ -80,20 +80,43 @@ def build(audit: Audit):
         parts.append(p)
 
     # --- door casings: jamb + jamb + head-over-jambs per opening ---------
+    # Corner-adjacent openings (the barn door at the west corner, the 64"
+    # double on its 6.5" end studs) have no room for a full jamb casing
+    # beside the corner board: the casing clamps to the corner board's
+    # inner edge and degenerates to nothing when the corner board already
+    # covers the jamb.
+    def casing_pair(wall, o0, o1, hz, start, end):
+        lo, hi = _layer(L, wall)
+        a0 = max(o0 - CAS_W, start + CAS_W)
+        a1 = min(o1 + CAS_W, end - CAS_W)
+        def box(c0, c1, z0, z1):
+            if wall in ("front", "back"):
+                parts.append(box_at("finish door casings", c0, c1, lo, hi,
+                                    z0, z1))
+            else:
+                parts.append(box_at("finish door casings", lo, hi, c0, c1,
+                                    z0, z1))
+        if a0 < o0:
+            box(a0, o0, zc0, hz)
+        if a1 > o1:
+            box(o1, a1, zc0, hz)
+        if wall in ("left", "right") and L["side_top"](a1) - FRIEZE_H \
+                < hz + CAS_W:
+            # the rake drops below the head casing's top: scribe the casing
+            # to the frieze bottom (its top edge follows the rake line)
+            from cad.common import prism_yz
+            yb = (L["ref"].front_bear_z - (hz + CAS_W + FRIEZE_H - 1.0)) \
+                / L["ref"].slope
+            p = prism_yz([(a0, hz), (a1, hz),
+                          (a1, L["side_top"](a1) - FRIEZE_H),
+                          (yb, hz + CAS_W), (a0, hz + CAS_W)], lo, hi)
+            p.label = "finish door casings"
+            parts.append(p)
+        else:
+            box(a0, a1, hz, hz + CAS_W)
+
     for o0, o1, hz in L["front_open"]:
-        lo, hi = _layer(L, "front")
-        parts.append(box_at("finish door casings", o0 - CAS_W, o0, lo, hi,
-                            zc0, hz))
-        parts.append(box_at("finish door casings", o1, o1 + CAS_W, lo, hi,
-                            zc0, hz))
-        parts.append(box_at("finish door casings", o0 - CAS_W, o1 + CAS_W,
-                            lo, hi, hz, hz + CAS_W))
+        casing_pair("front", o0, o1, hz, l, r)
     for o0, o1, hz in L["right_open"]:
-        lo, hi = _layer(L, "right")
-        parts.append(box_at("finish door casings", lo, hi, o0 - CAS_W, o0,
-                            zc0, hz))
-        parts.append(box_at("finish door casings", lo, hi, o1, o1 + CAS_W,
-                            zc0, hz))
-        parts.append(box_at("finish door casings", lo, hi, o0 - CAS_W,
-                            o1 + CAS_W, hz, hz + CAS_W))
+        casing_pair("right", o0, o1, hz, f, b)
     return parts
