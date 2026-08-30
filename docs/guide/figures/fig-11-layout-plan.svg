@@ -27,7 +27,6 @@
     </pattern>
     <style>
       text { fill:#222; }
-      .halo { paint-order: stroke; stroke:#ffffff; stroke-width:4; stroke-linejoin:round; }
       .lbl { font-size:13px; }
       .lblb { font-size:13px; font-weight:bold; }
       .small { font-size:12px; }
@@ -41,8 +40,10 @@
   <text x="24" y="64" class="small">cut line B–B: the section is shown in Fig 11.2</text>
 
   <!-- orientation -->
-  <text x="440" y="84" class="lblb halo" text-anchor="middle">FRONT — street side (high side of the roof)</text>
-  <text x="440" y="422" class="lblb halo" text-anchor="middle">BACK (low side)</text>
+  <text x="440" y="84"  class="lblb" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" text-anchor="middle">FRONT — street side (high side of the roof)</text>
+  <text x="440" y="84"  class="lblb" text-anchor="middle">FRONT — street side (high side of the roof)</text>
+  <text x="440" y="422"  class="lblb" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" text-anchor="middle">BACK (low side)</text>
+  <text x="440" y="422"  class="lblb" text-anchor="middle">BACK (low side)</text>
 
   <!-- wall footprint below the cut (dashed) -->
   <rect x="110.8" y="177" width="652.8" height="215.6" fill="none" stroke="#8c8c8c"
@@ -69,17 +70,22 @@
     <rect x="110.8" y="347.05" width="12" height="45.55"/>
     <rect x="751.7" y="347.05" width="11.9" height="45.55"/>
   </g>
-  <text x="117" y="300" class="small halo" transform="rotate(-90 117 300)">flat side DTP · 5' ¾"</text>
-  <text x="117" y="390" class="small halo" transform="rotate(-90 117 390)">rake plate ↓</text>
-  <text x="141" y="372" class="small halo">corner block</text>
+  <text x="117" y="300"  class="small" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" transform="rotate(-90 117 300)">flat side DTP · 5' ¾"</text>
+  <text x="117" y="300"  class="small" transform="rotate(-90 117 300)">flat side DTP · 5' ¾"</text>
+  <text x="117" y="390"  class="small" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" transform="rotate(-90 117 390)">rake plate ↓</text>
+  <text x="117" y="390"  class="small" transform="rotate(-90 117 390)">rake plate ↓</text>
+  <text x="141" y="372"  class="small" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">corner block</text>
+  <text x="141" y="372"  class="small">corner block</text>
 
   <!-- future fascia (dashed, Stage 9) -->
   <g fill="none" stroke="#8c8c8c" stroke-width="1.2" stroke-dasharray="8,5">
     <rect x="70" y="95.6" width="734.4" height="4.2"/>
     <rect x="70" y="436" width="734.4" height="4.2"/>
   </g>
-  <text x="74" y="93" class="small halo">front fascia — Stage 9 (future work, dashed)</text>
-  <text x="74" y="456" class="small halo">back fascia — Stage 9 (future work, dashed)</text>
+  <text x="74" y="93"  class="small" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">front fascia — Stage 9 (future work, dashed)</text>
+  <text x="74" y="93"  class="small">front fascia — Stage 9 (future work, dashed)</text>
+  <text x="74" y="456"  class="small" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">back fascia — Stage 9 (future work, dashed)</text>
+  <text x="74" y="456"  class="small">back fascia — Stage 9 (future work, dashed)</text>
 
   <!-- NEW WORK: 13 rafters on their marks -->
   <g fill="#d9a441" stroke="#6b4f16" stroke-width="1.2">
@@ -101,17 +107,23 @@
   <!-- spacing dimension -->
   <line x1="113.35" y1="192" x2="167.33" y2="192" stroke="#555" stroke-width="1"
         marker-start="url(#dimAs)" marker-end="url(#dimA)"/>
-  <text x="140" y="210" class="lbl halo" text-anchor="middle">15⅞″ o.c.</text>
-  <text x="212" y="130" class="lbl halo">first rafter over the left rake wall —</text>
-  <text x="212" y="146" class="lbl halo">its centre is ¾″ from the plate's left end</text>
+  <text x="140" y="210"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" text-anchor="middle">15⅞″ o.c.</text>
+  <text x="140" y="210"  class="lbl" text-anchor="middle">15⅞″ o.c.</text>
+  <text x="212" y="130"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">first rafter over the left rake wall —</text>
+  <text x="212" y="130"  class="lbl">first rafter over the left rake wall —</text>
+  <text x="212" y="146"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">its centre is ¾″ from the plate's left end</text>
+  <text x="212" y="146"  class="lbl">its centre is ¾″ from the plate's left end</text>
   <line x1="210" y1="134" x2="116" y2="108" stroke="#555" stroke-width="1"/>
 
   <!-- member label + attachment arrow -->
-  <text x="270" y="270" class="lblb halo">13 × rafter · 2×6 · 10' 8⅛″</text>
-  <text x="270" y="288" class="lbl halo">centres marked on BOTH plates</text>
+  <text x="270" y="270"  class="lblb" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">13 × rafter · 2×6 · 10' 8⅛″</text>
+  <text x="270" y="270"  class="lblb">13 × rafter · 2×6 · 10' 8⅛″</text>
+  <text x="270" y="288"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">centres marked on BOTH plates</text>
+  <text x="270" y="288"  class="lbl">centres marked on BOTH plates</text>
   <line x1="380" y1="258" x2="384" y2="182" stroke="#1a6fb0" stroke-width="1.8"
         marker-end="url(#attA)"/>
-  <text x="396" y="240" class="small halo" fill="#1a6fb0">each rafter seats on both plates</text>
+  <text x="396" y="240"  class="small" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">each rafter seats on both plates</text>
+  <text x="396" y="240"  class="small" fill="#1a6fb0">each rafter seats on both plates</text>
 
   <!-- cut line B-B -->
   <line x1="491.15" y1="76" x2="491.15" y2="446" stroke="#222" stroke-width="1.6"
@@ -122,7 +134,10 @@
   <text x="509" y="456" class="lblb">B</text>
 
   <!-- layout marks text -->
-  <text x="70" y="476" class="lbl halo">mark rafter centres on BOTH plates, measured from the left end of the front double top plate:</text>
-  <text x="70" y="494" class="lbl halo">¾″, 16⅝″, 32½″, 48⅜″ and so on — every 15⅞″ out to 191¼″. The back plate starts 3½″ inboard — subtract 3½″ from each reading.</text>
-  <text x="70" y="512" class="small halo">first and last rafters sit over the rake walls; their back seats land on the side walls' double-top-plate corner blocks.</text>
+  <text x="70" y="476"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">mark rafter centres on BOTH plates, measured from the left end of the front double top plate:</text>
+  <text x="70" y="476"  class="lbl">mark rafter centres on BOTH plates, measured from the left end of the front double top plate:</text>
+  <text x="70" y="494"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">¾″, 16⅝″, 32½″, 48⅜″ and so on — every 15⅞″ out to 191¼″. The back plate starts 3½″ inboard — subtract 3½″ from each reading.</text>
+  <text x="70" y="494"  class="lbl">¾″, 16⅝″, 32½″, 48⅜″ and so on — every 15⅞″ out to 191¼″. The back plate starts 3½″ inboard — subtract 3½″ from each reading.</text>
+  <text x="70" y="512"  class="small" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">first and last rafters sit over the rake walls; their back seats land on the side walls' double-top-plate corner blocks.</text>
+  <text x="70" y="512"  class="small">first and last rafters sit over the rake walls; their back seats land on the side walls' double-top-plate corner blocks.</text>
 </svg>

@@ -25,7 +25,6 @@
     </pattern>
     <style>
       text { fill:#222; }
-      .halo { paint-order: stroke; stroke:#ffffff; stroke-width:4; stroke-linejoin:round; }
       .lbl { font-size:13px; }
       .lblb { font-size:13px; font-weight:bold; }
       .small { font-size:12px; }
@@ -41,11 +40,14 @@
   <!-- deck line + datum + gravity -->
   <rect x="40" y="436" width="760" height="9" fill="#c9b98f" stroke="#8a744a" stroke-width="1.2"/>
   <line x1="40" y1="436" x2="800" y2="436" stroke="#5c4d2c" stroke-width="2"/>
-  <text x="330" y="460" class="lbl halo">deck top — the guide's height datum</text>
+  <text x="330" y="460"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">deck top — the guide's height datum</text>
+  <text x="330" y="460"  class="lbl">deck top — the guide's height datum</text>
   <line x1="795" y1="452" x2="795" y2="478" stroke="#222" stroke-width="2" marker-end="url(#grvA)"/>
   <text x="776" y="487" class="small">DOWN</text>
-  <text x="110" y="487" class="small halo">◀ FRONT — street side (high)</text>
-  <text x="590" y="487" class="small halo">BACK (low) ▶</text>
+  <text x="110" y="487"  class="small" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">◀ FRONT — street side (high)</text>
+  <text x="110" y="487"  class="small">◀ FRONT — street side (high)</text>
+  <text x="590" y="487"  class="small" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">BACK (low) ▶</text>
+  <text x="590" y="487"  class="small">BACK (low) ▶</text>
 
   <!-- already-built walls (grey) -->
   <g fill="#e9e9e9" stroke="#8c8c8c" stroke-width="1.2">
@@ -56,8 +58,10 @@
     <rect x="195.9" y="85.45" width="19.0" height="4.28"/>
     <rect x="631.8" y="172.0" width="18.9" height="4.28"/>
   </g>
-  <text x="205" y="330" class="small halo" transform="rotate(-90 205 330)">front wall — plate top 123″ above deck</text>
-  <text x="626" y="360" class="small halo" transform="rotate(-90 626 360)">back wall — plate top 92⅝″ above deck</text>
+  <text x="205" y="330"  class="small" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" transform="rotate(-90 205 330)">front wall — plate top 123″ above deck</text>
+  <text x="205" y="330"  class="small" transform="rotate(-90 205 330)">front wall — plate top 123″ above deck</text>
+  <text x="626" y="360"  class="small" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" transform="rotate(-90 626 360)">back wall — plate top 92⅝″ above deck</text>
+  <text x="626" y="360"  class="small" transform="rotate(-90 626 360)">back wall — plate top 92⅝″ above deck</text>
 
   <!-- the rafter, cut by the section plane (hatched) -->
   <polygon points="66,60.33 193.2,85.45 214.9,85.45 214.9,89.73 631.8,172.0 650.7,172.0
@@ -66,29 +70,41 @@
   <polygon points="66,60.33 193.2,85.45 214.9,85.45 214.9,89.73 631.8,172.0 650.7,172.0
                    650.7,175.76 715.7,188.6 715.7,171.84 66,43.6"
            fill="url(#h11)" stroke="none"/>
-  <text x="250" y="140" class="lbl halo">rafter · 2×6 · 10' 8⅛″ (hatched — cut by the section plane)</text>
+  <text x="250" y="140"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">rafter · 2×6 · 10' 8⅛″ (hatched — cut by the section plane)</text>
+  <text x="250" y="140"  class="lbl">rafter · 2×6 · 10' 8⅛″ (hatched — cut by the section plane)</text>
   <line x1="300" y1="130" x2="330" y2="104" stroke="#555" stroke-width="1"/>
-  <text x="330" y="88" class="lbl halo" transform="rotate(11.2 330 88)">roof pitch 4½ in 12 (20.6°)</text>
+  <text x="330" y="88"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" transform="rotate(11.2 330 88)">roof pitch 4½ in 12 (20.6°)</text>
+  <text x="330" y="88"  class="lbl" transform="rotate(11.2 330 88)">roof pitch 4½ in 12 (20.6°)</text>
 
   <!-- seat highlights -->
   <line x1="193.2" y1="85.45" x2="214.9" y2="85.45" stroke="#c0392b" stroke-width="3"/>
   <line x1="631.8" y1="172.0" x2="650.7" y2="172.0" stroke="#c0392b" stroke-width="3"/>
 
   <!-- front birdsmouth labels -->
-  <text x="24" y="150" class="lblb halo">front birdsmouth</text>
-  <text x="24" y="168" class="lbl halo">level seat 4″ long on the front</text>
-  <text x="24" y="184" class="lbl halo">plate top — 123″ above deck</text>
-  <text x="24" y="200" class="lbl halo">plumb kick 1½″ at the wall's inner face</text>
+  <text x="24" y="150"  class="lblb" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">front birdsmouth</text>
+  <text x="24" y="150"  class="lblb">front birdsmouth</text>
+  <text x="24" y="168"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">level seat 4″ long on the front</text>
+  <text x="24" y="168"  class="lbl">level seat 4″ long on the front</text>
+  <text x="24" y="184"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">plate top — 123″ above deck</text>
+  <text x="24" y="184"  class="lbl">plate top — 123″ above deck</text>
+  <text x="24" y="200"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">plumb kick 1½″ at the wall's inner face</text>
+  <text x="24" y="200"  class="lbl">plumb kick 1½″ at the wall's inner face</text>
   <line x1="150" y1="142" x2="198" y2="87" stroke="#555" stroke-width="1"/>
-  <text x="232" y="118" class="lbl halo">heel — 4″ outboard of the wall face</text>
+  <text x="232" y="118"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">heel — 4″ outboard of the wall face</text>
+  <text x="232" y="118"  class="lbl">heel — 4″ outboard of the wall face</text>
   <line x1="230" y1="114" x2="195" y2="86" stroke="#555" stroke-width="1"/>
 
   <!-- back birdsmouth labels -->
-  <text x="660" y="248" class="lblb halo">back birdsmouth</text>
-  <text x="660" y="266" class="lbl halo">level seat 3½″ long on the</text>
-  <text x="660" y="282" class="lbl halo">back plate top — 92⅝″</text>
-  <text x="660" y="298" class="lbl halo">above deck · plumb kick</text>
-  <text x="660" y="314" class="lbl halo">1-5/16″ at the outer face</text>
+  <text x="660" y="248"  class="lblb" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">back birdsmouth</text>
+  <text x="660" y="248"  class="lblb">back birdsmouth</text>
+  <text x="660" y="266"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">level seat 3½″ long on the</text>
+  <text x="660" y="266"  class="lbl">level seat 3½″ long on the</text>
+  <text x="660" y="282"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">back plate top — 92⅝″</text>
+  <text x="660" y="282"  class="lbl">back plate top — 92⅝″</text>
+  <text x="660" y="298"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">above deck · plumb kick</text>
+  <text x="660" y="298"  class="lbl">above deck · plumb kick</text>
+  <text x="660" y="314"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">1-5/16″ at the outer face</text>
+  <text x="660" y="314"  class="lbl">1-5/16″ at the outer face</text>
   <line x1="655" y1="240" x2="645" y2="178" stroke="#555" stroke-width="1"/>
 
   <!-- overhang dimensions -->
@@ -96,24 +112,32 @@
         marker-start="url(#dimAs)" marker-end="url(#dimA)"/>
   <line x1="66" y1="46" x2="66" y2="64" stroke="#555" stroke-width="1"/>
   <line x1="195.9" y1="46" x2="195.9" y2="82" stroke="#555" stroke-width="1"/>
-  <text x="130" y="42" class="lbl halo" text-anchor="middle">24″ overhang</text>
+  <text x="130" y="42"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" text-anchor="middle">24″ overhang</text>
+  <text x="130" y="42"  class="lbl" text-anchor="middle">24″ overhang</text>
   <line x1="650.7" y1="208" x2="715.7" y2="208" stroke="#555" stroke-width="1"
         marker-start="url(#dimAs)" marker-end="url(#dimA)"/>
   <line x1="650.7" y1="180" x2="650.7" y2="214" stroke="#555" stroke-width="1"/>
   <line x1="715.7" y1="192" x2="715.7" y2="214" stroke="#555" stroke-width="1"/>
-  <text x="683" y="228" class="lbl halo" text-anchor="middle">12″ overhang</text>
+  <text x="683" y="228"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" text-anchor="middle">12″ overhang</text>
+  <text x="683" y="228"  class="lbl" text-anchor="middle">12″ overhang</text>
 
   <!-- tail tops -->
-  <text x="68" y="30" class="lbl halo">tail top 137-11/16″ above deck</text>
-  <text x="68" y="16" class="small halo">flush with the fascia top — checked at Stage 9</text>
+  <text x="68" y="30"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">tail top 137-11/16″ above deck</text>
+  <text x="68" y="30"  class="lbl">tail top 137-11/16″ above deck</text>
+  <text x="68" y="16"  class="small" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">flush with the fascia top — checked at Stage 9</text>
+  <text x="68" y="16"  class="small">flush with the fascia top — checked at Stage 9</text>
   <line x1="86" y1="34" x2="70" y2="46" stroke="#555" stroke-width="1"/>
-  <text x="700" y="130" class="lbl halo">tail top 92-11/16″</text>
-  <text x="700" y="146" class="small halo">above deck</text>
+  <text x="700" y="130"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">tail top 92-11/16″</text>
+  <text x="700" y="130"  class="lbl">tail top 92-11/16″</text>
+  <text x="700" y="146"  class="small" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">above deck</text>
+  <text x="700" y="146"  class="small">above deck</text>
   <line x1="712" y1="150" x2="716" y2="168" stroke="#555" stroke-width="1"/>
 
   <!-- attachment -->
-  <text x="290" y="360" class="lblb halo" fill="#1a6fb0">seat every rafter on BOTH plates —</text>
-  <text x="290" y="378" class="lbl halo" fill="#1a6fb0">toe-nail or screw through the plate into the rafter</text>
+  <text x="290" y="360"  class="lblb" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">seat every rafter on BOTH plates —</text>
+  <text x="290" y="360"  class="lblb" fill="#1a6fb0">seat every rafter on BOTH plates —</text>
+  <text x="290" y="378"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">toe-nail or screw through the plate into the rafter</text>
+  <text x="290" y="378"  class="lbl" fill="#1a6fb0">toe-nail or screw through the plate into the rafter</text>
   <line x1="310" y1="348" x2="206" y2="90" stroke="#1a6fb0" stroke-width="1.8" marker-end="url(#attA)"/>
   <line x1="520" y1="348" x2="638" y2="178" stroke="#1a6fb0" stroke-width="1.8" marker-end="url(#attA)"/>
 </svg>

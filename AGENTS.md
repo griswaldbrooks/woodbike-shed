@@ -20,7 +20,10 @@ rework: `aa73830b88f34f965190a7c6` ("pre-fleet-completion 2026-08-05").
 Since 2026-08-10 the local audit JSON + `cad/` run AHEAD of Onshape: the
 92-5/8" pre-cut restud was applied locally only (see Script pipeline), and
 since 2026-08-23 also the 7 ft depth + captain's 2-door plan (barn 96"
-front west + 64" right rake; walk-in removed) via `scripts/depth7ft_2door.py`.
+front west + 64" right rake; walk-in removed) via `scripts/depth7ft_2door.py`,
+and since 2026-08-24 the LEFT rake-wall 64 in MAIN-entry double (mirror of
+the right brewery double, `scripts/left_main_door.py`) plus the pier-less
+foundation (pedestals dropped; skids bear directly on the gravel pad).
 
 ## Script pipeline
 
@@ -38,8 +41,8 @@ derivation record): `restud_92_5_8.py` (2026-08-10), `depth7ft_2door.py`
 (2026-08-23, 7 ft depth + 2-door plan; the 7 ft gable ends follow the roof
 past the flat plate stack — mitered studs + DTP corner blocks). Interior
 fit study: `scripts/fit_study_free_doors.py` (adapted from firstmate data
-shed-jenga-arrange; `--arrange winner2` = adopted 2-door variant; record in
-`scripts/fit_summary_winner2.txt`).
+shed-jenga-arrange; `--arrange winner2` = adopted 3-door variant (barn +
+right brewery + LEFT MAIN entry); record in `scripts/fit_summary_winner2.txt`).
 `blender/build_scene.py` turns `blender/scene.glb` into `blender/shed_scene.blend`
 plus Cycles renders in `blender/renders/`; `--skin` builds the dressed
 presentation variant (`shed_skin.blend`, `blender/renders/skin/`) — render
@@ -66,8 +69,9 @@ it joins figure refs wrapped over source lines, and the birdsmouth template
 in `assets/guide.css`) — keep any new full-size template on that mechanism.
 WeasyPrint's cairosvg ignores `paint-order`, so figure text halos must be a
 white-stroke underlay copy beneath the normal text (two-layer idiom, e.g.
-fig-04-a); the `.halo` class in `fig-11-rafter-section.svg` predates that
-knowledge and prints as white blobs in `build-guide.pdf` — known defect.
+fig-04-a); a `.halo` class prints as white blobs in `build-guide.pdf`. The
+figures revised on 2026-08-24 were converted to the idiom on 2026-08-30;
+only `fig-12-eave-section.svg` still carries `.halo` — known defect.
 The authoring method behind `docs/guide/` (page template, number rules,
 figure spec incl. the anti-ambiguity test, sourced principles, worked
 example) is the agent skill `.agents/skills/shed-build-guide/SKILL.md` —
@@ -83,7 +87,10 @@ StrataRise 3560ML-DF-30 adjustable pedestals at the same eight points
 3½″-skid-on-3″-head fit note live in `docs/guide/r02-sources.md`; Stage 1
 page + figs 4.1/4.2 rewritten, figs 1.1/5.2/16.1 and all old-hardware
 mentions swept. fig-04-a's pocket hatch is explicit clipped lines, not a
-`<pattern>` fill.
+`<pattern>` fill. Superseded 2026-08-24 (build-final pass): pedestals/piers
+DROPPED — the two 16 ft skids bear directly on the screeded gravel pad;
+Stage 1 page + figs 4.1/4.2 rewritten again, pedestal order lines removed
+(record in `OUTSTANDING_ISSUES.md`).
 
 ## GitHub Pages site (docs/)
 

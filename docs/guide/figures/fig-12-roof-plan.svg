@@ -25,7 +25,6 @@
     </pattern>
     <style>
       text { fill:#222; }
-      .halo { paint-order: stroke; stroke:#ffffff; stroke-width:4; stroke-linejoin:round; }
       .lbl { font-size:13px; }
       .lblb { font-size:13px; font-weight:bold; }
       .small { font-size:12px; }
@@ -44,8 +43,10 @@
         marker-start="url(#dimAs)" marker-end="url(#dimA)"/>
   <line x1="70" y1="38" x2="70" y2="50" stroke="#555" stroke-width="1"/>
   <line x1="804.4" y1="38" x2="804.4" y2="50" stroke="#555" stroke-width="1"/>
-  <text x="587" y="36" class="lbl halo" text-anchor="middle">18' 0″ fascia to fascia — one true 20′ 2×6 each, cut to 18′</text>
-  <text x="560" y="62" class="small halo" text-anchor="middle" font-weight="bold">FRONT — street side (high side of the roof)</text>
+  <text x="587" y="36"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" text-anchor="middle">18' 0″ fascia to fascia — one true 20′ 2×6 each, cut to 18′</text>
+  <text x="587" y="36"  class="lbl" text-anchor="middle">18' 0″ fascia to fascia — one true 20′ 2×6 each, cut to 18′</text>
+  <text x="560" y="62"  class="small" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" text-anchor="middle" font-weight="bold">FRONT — street side (high side of the roof)</text>
+  <text x="560" y="62"  class="small" text-anchor="middle" font-weight="bold">FRONT — street side (high side of the roof)</text>
 
   <!-- wall footprint below (dashed) + rake walls grey -->
   <rect x="110.8" y="152.5" width="652.8" height="231" fill="none" stroke="#8c8c8c"
@@ -54,7 +55,8 @@
     <rect x="110.8" y="163" width="12" height="221.5"/>
     <rect x="751.7" y="163" width="11.9" height="221.5"/>
   </g>
-  <text x="117" y="290" class="small halo" transform="rotate(-90 117 290)">rake walls below</text>
+  <text x="117" y="290"  class="small" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" transform="rotate(-90 117 290)">rake walls below</text>
+  <text x="117" y="290"  class="small" transform="rotate(-90 117 290)">rake walls below</text>
 
   <!-- already-built rafters (grey) -->
   <g fill="#e9e9e9" stroke="#8c8c8c" stroke-width="1">
@@ -88,31 +90,40 @@
   </g>
 
   <!-- labels -->
-  <text x="250" y="106" class="lblb halo">front / back fascia · 2×6 · 18' 0″</text>
+  <text x="250" y="106"  class="lblb" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">front / back fascia · 2×6 · 18' 0″</text>
+  <text x="250" y="106"  class="lblb">front / back fascia · 2×6 · 18' 0″</text>
   <line x1="270" y1="94" x2="262" y2="81" stroke="#555" stroke-width="1"/>
-  <text x="150" y="250" class="lblb halo">rake board · 2×6 · 10' 8⅛″</text>
-  <text x="150" y="268" class="lbl halo">same slope as the rafters, no birdsmouths,</text>
-  <text x="150" y="284" class="lbl halo">ends butt the fascia inner faces</text>
+  <text x="150" y="250"  class="lblb" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">rake board · 2×6 · 10' 8⅛″</text>
+  <text x="150" y="250"  class="lblb">rake board · 2×6 · 10' 8⅛″</text>
+  <text x="150" y="268"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">same slope as the rafters, no birdsmouths,</text>
+  <text x="150" y="268"  class="lbl">same slope as the rafters, no birdsmouths,</text>
+  <text x="150" y="284"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">ends butt the fascia inner faces</text>
+  <text x="150" y="284"  class="lbl">ends butt the fascia inner faces</text>
   <line x1="148" y1="262" x2="76" y2="262" stroke="#555" stroke-width="1"/>
 
   <!-- attachment arrows -->
   <line x1="520" y1="112" x2="491" y2="83" stroke="#1a6fb0" stroke-width="1.8"
         marker-end="url(#attA)"/>
-  <text x="530" y="118" class="lbl halo" fill="#1a6fb0">fasten the fascia to every rafter tail</text>
+  <text x="530" y="118"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">fasten the fascia to every rafter tail</text>
+  <text x="530" y="118"  class="lbl" fill="#1a6fb0">fasten the fascia to every rafter tail</text>
   <line x1="148" y1="320" x2="78" y2="320" stroke="#1a6fb0" stroke-width="1.8"
         marker-end="url(#attA)"/>
-  <text x="150" y="324" class="lbl halo" fill="#1a6fb0">fasten each rake board end through the fascia</text>
+  <text x="150" y="324"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">fasten each rake board end through the fascia</text>
+  <text x="150" y="324"  class="lbl" fill="#1a6fb0">fasten each rake board end through the fascia</text>
 
   <!-- gable + overhang dimensions -->
   <line x1="70" y1="96" x2="110.8" y2="96" stroke="#555" stroke-width="1"
         marker-start="url(#dimAs)" marker-end="url(#dimA)"/>
-  <text x="90" y="114" class="small halo" text-anchor="middle">12″</text>
+  <text x="90" y="114"  class="small" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" text-anchor="middle">12″</text>
+  <text x="90" y="114"  class="small" text-anchor="middle">12″</text>
   <line x1="52" y1="152.5" x2="52" y2="80.5" stroke="#555" stroke-width="1"
         marker-start="url(#dimAs)" marker-end="url(#dimA)"/>
-  <text x="44" y="114" class="small halo" text-anchor="middle" transform="rotate(-90 44 114)">front overhang 24″</text>
+  <text x="44" y="114"  class="small" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" text-anchor="middle" transform="rotate(-90 44 114)">front overhang 24″</text>
+  <text x="44" y="114"  class="small" text-anchor="middle" transform="rotate(-90 44 114)">front overhang 24″</text>
   <line x1="814" y1="404.5" x2="814" y2="440.5" stroke="#555" stroke-width="1"
         marker-start="url(#dimAs)" marker-end="url(#dimA)"/>
-  <text x="824" y="428" class="small halo" transform="rotate(-90 824 428)">back overhang 12″</text>
+  <text x="824" y="428"  class="small" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" transform="rotate(-90 824 428)">back overhang 12″</text>
+  <text x="824" y="428"  class="small" transform="rotate(-90 824 428)">back overhang 12″</text>
 
   <!-- cut line C-C -->
   <line x1="300" y1="66" x2="300" y2="456" stroke="#222" stroke-width="1.6"
@@ -122,7 +133,10 @@
   <line x1="314" y1="462" x2="288" y2="462" stroke="#222" stroke-width="1.6" marker-end="url(#secA)"/>
   <text x="318" y="466" class="lblb">C</text>
 
-  <text x="437" y="460" class="small halo" text-anchor="middle" font-weight="bold">BACK (low side)</text>
-  <text x="70" y="492" class="lbl halo">fascia and rake boards run 12″ past each side wall — the gable overhangs.</text>
-  <text x="70" y="510" class="lbl halo">the roof's working layers come after this stage: roofing is not modeled — see the shopping callout.</text>
+  <text x="437" y="460"  class="small" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" text-anchor="middle" font-weight="bold">BACK (low side)</text>
+  <text x="437" y="460"  class="small" text-anchor="middle" font-weight="bold">BACK (low side)</text>
+  <text x="70" y="492"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">fascia and rake boards run 12″ past each side wall — the gable overhangs.</text>
+  <text x="70" y="492"  class="lbl">fascia and rake boards run 12″ past each side wall — the gable overhangs.</text>
+  <text x="70" y="510"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">the roof's working layers come after this stage: roofing is not modeled — see the shopping callout.</text>
+  <text x="70" y="510"  class="lbl">the roof's working layers come after this stage: roofing is not modeled — see the shopping callout.</text>
 </svg>
