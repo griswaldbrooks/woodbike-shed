@@ -5,9 +5,11 @@ prep lumber-yard RFQs.
 
 ## Build guide
 
-The self-contained HTML build guide is at
-[`docs/build-guide.html`](docs/build-guide.html). GitHub shows HTML as
-source, so download the file and open it in a browser to read it.
+The current build guide is the multi-page guide in
+[`docs/guide/`](docs/guide/index.md) (PDF via `docs/guide/build-pdf.sh`).
+[`docs/build-guide.html`](docs/build-guide.html) is the archived v1 single
+page (6 ft shell, old door plan, old roof overhang) — kept as a record, not
+build reading.
 
 ## Model as code
 

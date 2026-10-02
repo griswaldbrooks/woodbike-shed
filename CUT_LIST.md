@@ -116,9 +116,9 @@ The Onshape model still carries the pre-decision geometry. Actual dimensions.
 |---:|:---|:---:|---:|:---|
 | 1 | 2x6 | KD | 18′ 0″ (216″) | back fascia |
 | 1 | 2x6 | KD | 18′ 0″ (216″) | front fascia |
-| 1 | 2x6 | KD | 10′ 8.16″ (128.16″) | left rake board |
-| 13 | 2x6 | KD | 10′ 8.16″ (128.16″) | rafter |
-| 1 | 2x6 | KD | 10′ 8.16″ (128.16″) | right rake board |
+| 1 | 2x6 | KD | 9′ 7.344″ (115.344″) | left rake board |
+| 13 | 2x6 | KD | 9′ 7.344″ (115.344″) | rafter |
+| 1 | 2x6 | KD | 9′ 7.344″ (115.344″) | right rake board |
 
 ## Stock-length order list
 
@@ -159,25 +159,25 @@ First-fit-decreasing bin packing, one pass per (lumber, treatment). For each gro
 - Board 31 (16′): 60.728″ left wall double top plate (Left wall); 60.728″ right wall double top plate (Right wall); 31″ front wall cripple studs (Front wall); 31″ front wall cripple studs (Front wall)  — waste: 8.17″
 - Board 32 (8′): 31″ front wall cripple studs (Front wall); 31″ front wall cripple studs (Front wall); 31″ front wall cripple studs (Front wall)  — waste: 2.75″
 
-### 2x6 KD — order **15 × 12′, 2 × 20′** (220.0 LF purchased, 196.2 LF cuts, 10.8% waste)
+### 2x6 KD — order **15 × 10′, 2 × 20′** (190.0 LF purchased, 180.2 LF cuts, 5.2% waste)
 
 - Board 1 (20′): 216″ front fascia (Roof) — TOO LONG FOR 96"  — waste: 24.00″
 - Board 2 (20′): 216″ back fascia (Roof) — TOO LONG FOR 96"  — waste: 24.00″
-- Board 3 (12′): 128.16″ rafter (Roof) — TOO LONG FOR 96"  — waste: 15.84″
-- Board 4 (12′): 128.16″ rafter (Roof) — TOO LONG FOR 96"  — waste: 15.84″
-- Board 5 (12′): 128.16″ rafter (Roof) — TOO LONG FOR 96"  — waste: 15.84″
-- Board 6 (12′): 128.16″ rafter (Roof) — TOO LONG FOR 96"  — waste: 15.84″
-- Board 7 (12′): 128.16″ rafter (Roof) — TOO LONG FOR 96"  — waste: 15.84″
-- Board 8 (12′): 128.16″ rafter (Roof) — TOO LONG FOR 96"  — waste: 15.84″
-- Board 9 (12′): 128.16″ rafter (Roof) — TOO LONG FOR 96"  — waste: 15.84″
-- Board 10 (12′): 128.16″ rafter (Roof) — TOO LONG FOR 96"  — waste: 15.84″
-- Board 11 (12′): 128.16″ rafter (Roof) — TOO LONG FOR 96"  — waste: 15.84″
-- Board 12 (12′): 128.16″ rafter (Roof) — TOO LONG FOR 96"  — waste: 15.84″
-- Board 13 (12′): 128.16″ rafter (Roof) — TOO LONG FOR 96"  — waste: 15.84″
-- Board 14 (12′): 128.16″ rafter (Roof) — TOO LONG FOR 96"  — waste: 15.84″
-- Board 15 (12′): 128.16″ rafter (Roof) — TOO LONG FOR 96"  — waste: 15.84″
-- Board 16 (12′): 128.16″ left rake board (Roof) — TOO LONG FOR 96"  — waste: 15.84″
-- Board 17 (12′): 128.16″ right rake board (Roof) — TOO LONG FOR 96"  — waste: 15.84″
+- Board 3 (10′): 115.344″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.66″
+- Board 4 (10′): 115.344″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.66″
+- Board 5 (10′): 115.344″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.66″
+- Board 6 (10′): 115.344″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.66″
+- Board 7 (10′): 115.344″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.66″
+- Board 8 (10′): 115.344″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.66″
+- Board 9 (10′): 115.344″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.66″
+- Board 10 (10′): 115.344″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.66″
+- Board 11 (10′): 115.344″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.66″
+- Board 12 (10′): 115.344″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.66″
+- Board 13 (10′): 115.344″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.66″
+- Board 14 (10′): 115.344″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.66″
+- Board 15 (10′): 115.344″ rafter (Roof) — TOO LONG FOR 96"  — waste: 4.66″
+- Board 16 (10′): 115.344″ left rake board (Roof) — TOO LONG FOR 96"  — waste: 4.66″
+- Board 17 (10′): 115.344″ right rake board (Roof) — TOO LONG FOR 96"  — waste: 4.66″
 
 ### 2x6 PT — order **7 × 14′, 2 × 16′** (130.0 LF purchased, 126.5 LF cuts, 2.7% waste)
 
@@ -202,7 +202,7 @@ First-fit-decreasing bin packing, one pass per (lumber, treatment). For each gro
 
 ---
 
-**Total dimensional lumber LF purchased: 886.0**
+**Total dimensional lumber LF purchased: 856.0**
 ---
 
 # FINISH — SEPARATE ORDER LIST (order_list_finish.csv)

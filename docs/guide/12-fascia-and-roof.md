@@ -9,9 +9,9 @@ next: 13-skirt-and-siding.md
 # Stage 9 — Fascia, rake boards and the roofing note
 
 <!-- model trace: fascia 2x6 x 216 (x -15.5..200.5, 12" past each side wall); front fascia
-     y -29..-27.5, z 132.1865..137.6865; back fascia y 92.5..94, z 87.1865..92.6865; tops
-     flush with rafter tail tops (z 137.6865 / 92.6865). Rake boards x -15.5..-14 /
-     199..200.5, y -27.5..92.5, same parallelogram as a rafter minus the seats, ends butt
+     y -17..-15.5, z 127.6865..133.1865; back fascia y 92.5..94, z 87.1865..92.6865; tops
+     flush with rafter tail tops (z 133.1865 / 92.6865). Rake boards x -15.5..-14 /
+     199..200.5, y -15.5..92.5, same parallelogram as a rafter minus the seats, ends butt
      the fascia inner faces. Roofing/sheathing/fasteners: not modeled, on neither order. -->
 
 > **Goal:** every rafter tail is capped: fascia across the front and back, rake boards down
@@ -26,8 +26,8 @@ Parts for this page:
 |---|---|---|---|
 | 1 | front fascia | 2×6 KD | 18' 0" |
 | 1 | back fascia | 2×6 KD | 18' 0" |
-| 1 | left rake board | 2×6 KD | 10' 8⅛" |
-| 1 | right rake board | 2×6 KD | 10' 8⅛" |
+| 1 | left rake board | 2×6 KD | 9' 7⅜" |
+| 1 | right rake board | 2×6 KD | 9' 7⅜" |
 
 The fascia come off true 20' 2×6 stock — order true 20-footers and cut each to 18', not
 two shorter boards scarfed together. The rake boards are the same parallelogram as a rafter
@@ -44,7 +44,7 @@ Already built: all thirteen rafters seated, plumbed, and fastened ([Stage 8](11-
 ### 1. Nail up the front fascia
 
 Two people, two ladders. Offer the 18' front fascia up against the front rafter tails,
-tight to the plumb end cuts, its top edge flush with the rafter tail tops — 137-11/16"
+tight to the plumb end cuts, its top edge flush with the rafter tail tops — 133-3/16"
 above the deck. Centre it so it stands **12" past each side wall**, then fasten it to every
 rafter tail.
 
@@ -79,7 +79,8 @@ modeled work.
 > nobody can pick its quantities. Source, to your own roofing spec:
 >
 > - roof sheathing (sheet goods) — the roof is one slope about 18' wide and
->   10' 8⅛" up the slope, at 4½ in 12;
+>   9' 7⅜" up the slope, at 4½ in 12 (the finished roof plan, fascia face to fascia face,
+>   is 18' × 9' 3");
 > - underlayment and its fasteners;
 > - the roofing material itself and its fasteners;
 > - drip edge for the eaves and rakes.

@@ -22,19 +22,19 @@ height zero for the whole guide.](figures/fig-01-cross-section.svg)
 
 <!-- model trace: section plane constant X at x 92.5 (through the doubled floor-joist pair);
 front wall y -3.5...0, z 0...123; back wall y 77...80.5, z 0...92.625; rafter profile: heel
-y -4 seat z 123, back seat z 92.625 y 77...80.5, tails y -27.5 / 92.5; fascia faces y -29 /
-94; peak z 137.687; skids z -9.75...-6.25; foundation drawn schematic (not modeled) -->
+y -4 seat z 123, back seat z 92.625 y 77...80.5, tails y -15.5 / 92.5; fascia faces y -17 /
+94; peak z 133.187; skids z -9.75...-6.25; foundation drawn schematic (not modeled) -->
 
 ## The shape in numbers
 
 | What | Value |
 |---|---|
 | Framed footprint, wall outer faces | 16′ × 7′ |
-| Roof plan, fascia face to fascia face | 18′ × 10′ 3″ |
-| Roof overhangs | 24″ at the front, 12″ at the back, 12″ past each side wall |
+| Roof plan, fascia face to fascia face | 18′ × 9′ 3″ |
+| Roof overhangs | 12″ on all four sides — front, back and past each side wall |
 | Wall height above the deck | front 10′ 3″; back and both sides 7′ 8⅝″ at the flat plate, then the gable follows the roof |
 | Roof pitch | 4.5 : 12, high side at the front |
-| Peak, front fascia top | 11′ 5-11/16″ above the deck |
+| Peak, front fascia top | 11′ 1-3/16″ above the deck |
 | Door openings, rough framed | front wall: one 8′ × 7′ barn at the west corner; left wall: one 5′ 4″ × 7′ double (MAIN entry); right wall: one 5′ 4″ × 7′ brewery double |
 | Deck height | deck top sits about 9¾″ above the skid bottoms |
 | Modeled parts | 321: 124 framing in 40 cut-list groups, 197 finish |

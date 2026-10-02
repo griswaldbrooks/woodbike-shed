@@ -14,8 +14,8 @@
     Rafter birdsmouths (per cad.roof / Fig 11.2): front level seat 4" at z 123
     over y -4..0 with 1.5 plumb kick at the inner face y 0; back level seat
     3.5" at z 92.625 over y 77..80.5 with plumb kick at the outer face
-    y 80.5. Rafter top at front tail z 137.687 (peak), at back tail z 92.687.
-    Front overhang 24" (tail y -27.5), back 12" (tail y 92.5). Foundation:
+    y 80.5. Rafter top at front tail z 133.187 (peak), at back tail z 92.687.
+    Front overhang 12" (tail y -15.5), back 12" (tail y 92.5). Foundation:
     skids bear DIRECTLY on the compacted gravel pad (piers/pedestals dropped,
     captain 2026-08-24); pad schematic - not modeled.
   Drawing transform: X(y) = 70 + 5*(y + 32);  Y(z) = 950 - 5*(z + 20).
@@ -111,19 +111,19 @@
   <text x="589" y="420" font-size="15" fill="#4a3010" text-anchor="end">top plate</text>
 
   <!-- ======================= ROOF: birdsmouthed rafter band + fascia ======================= -->
-  <!-- rafter: top edge front tail (92.5,161.6) to back tail (692.5,386.6); bottom edge parallel
+  <!-- rafter: top edge front tail (152.5,184.1) to back tail (692.5,386.6); bottom edge parallel
        except the birdsmouths: front level seat z 123 over y -4..0 (X 210..230) with 1.5" plumb
        kick at y 0; back level seat z 92.625 over y 77..80.5 (X 615..632.5) with kick at y 80.5 -->
-  <polygon points="92.5,161.6 692.5,386.6 692.5,415.9 632.5,393.4 632.5,386.9 615,386.9
-                   230,242.5 230,235 210,235 92.5,190.9"
+  <polygon points="152.5,184.1 692.5,386.6 692.5,415.9 632.5,393.4 632.5,386.9 615,386.9
+                   230,242.5 230,235 210,235 152.5,213.4"
            fill="#c08a4e" stroke="#4a3010" stroke-width="3"/>
-  <polygon points="92.5,161.6 692.5,386.6 692.5,415.9 632.5,393.4 632.5,386.9 615,386.9
-                   230,242.5 230,235 210,235 92.5,190.9" fill="url(#cut)"/>
+  <polygon points="152.5,184.1 692.5,386.6 692.5,415.9 632.5,393.4 632.5,386.9 615,386.9
+                   230,242.5 230,235 210,235 152.5,213.4" fill="url(#cut)"/>
   <!-- seat bearing highlights -->
   <line x1="210" y1="235" x2="230" y2="235" stroke="#c0392b" stroke-width="3"/>
   <line x1="615" y1="386.9" x2="632.5" y2="386.9" stroke="#c0392b" stroke-width="3"/>
   <!-- front fascia cap -->
-  <rect x="85" y="161.6" width="7.5" height="27.5" fill="#efe6d6" stroke="#4a3010" stroke-width="2.5"/>
+  <rect x="145" y="184.1" width="7.5" height="27.5" fill="#efe6d6" stroke="#4a3010" stroke-width="2.5"/>
   <!-- back fascia cap -->
   <rect x="692.5" y="386.6" width="7.5" height="27.5" fill="#efe6d6" stroke="#4a3010" stroke-width="2.5"/>
 
@@ -142,17 +142,16 @@
   <!-- ======================= DIMENSIONS / LABELS ======================= -->
   <!-- left height chain: deck -> peak -->
   <g stroke="#000" stroke-width="1.6" fill="none">
-    <line x1="150" y1="850" x2="150" y2="161.6"/>
-    <line x1="142" y1="850" x2="212" y2="850"/>
-    <line x1="142" y1="161.6" x2="92" y2="161.6"/>
-    <line x1="142" y1="235" x2="212" y2="235"/>
+    <line x1="120" y1="850" x2="120" y2="184.1"/>
+    <line x1="112" y1="850" x2="212.5" y2="850"/>
+    <line x1="112" y1="184.1" x2="145" y2="184.1"/>
   </g>
   <g fill="#000" stroke="#000" stroke-width="1.6">
-    <path d="M 150 161.6 L 145 172 L 155 172 Z"/>
-    <path d="M 150 850 L 145 839 L 155 839 Z"/>
+    <path d="M 120 184.1 L 115 195 L 125 195 Z"/>
+    <path d="M 120 850 L 115 839 L 125 839 Z"/>
   </g>
-  <text x="140" y="500" font-size="18" fill="#000" text-anchor="middle"
-        transform="rotate(-90 140 500)">peak 11′ 5-11/16″ above deck</text>
+  <text x="108" y="517" font-size="18" fill="#000" text-anchor="middle"
+        transform="rotate(-90 108 517)">peak 11′ 1-3/16″ above deck</text>
 
   <!-- front wall height: proper double-arrow dimension, deck -> front plate top -->
   <g stroke="#000" stroke-width="1.6" fill="none">
@@ -182,15 +181,23 @@
 
   <!-- overhangs -->
   <g stroke="#000" stroke-width="1.6" fill="none">
-    <line x1="92.5" y1="140" x2="212.5" y2="140"/>
-    <line x1="92.5" y1="134" x2="92.5" y2="158"/>
-    <line x1="212.5" y1="134" x2="212.5" y2="204"/>
+    <line x1="152.5" y1="164" x2="212.5" y2="164"/>
+    <line x1="152.5" y1="157" x2="152.5" y2="180"/>
+    <line x1="212.5" y1="157" x2="212.5" y2="203"/>
   </g>
-  <text x="152" y="157" font-size="16" fill="#000" text-anchor="middle">24″ overhang</text>
+  <g fill="#000" stroke="#000" stroke-width="1.6">
+    <path d="M 152.5 164 L 163 159 L 163 169 Z"/>
+    <path d="M 212.5 164 L 202 159 L 202 169 Z"/>
+  </g>
+  <text x="182.5" y="153" font-size="16" fill="#000" text-anchor="middle">12″ overhang</text>
   <g stroke="#000" stroke-width="1.6" fill="none">
     <line x1="632.5" y1="320" x2="692.5" y2="320"/>
     <line x1="632.5" y1="314" x2="632.5" y2="358"/>
     <line x1="692.5" y1="314" x2="692.5" y2="382"/>
+  </g>
+  <g fill="#000" stroke="#000" stroke-width="1.6">
+    <path d="M 632.5 320 L 643 315 L 643 325 Z"/>
+    <path d="M 692.5 320 L 682 315 L 682 325 Z"/>
   </g>
   <text x="662" y="308" font-size="16" fill="#000" text-anchor="middle">12″ overhang</text>
 

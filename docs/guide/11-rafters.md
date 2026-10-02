@@ -9,18 +9,18 @@ next: 12-fascia-and-roof.md
 # Stage 8 — Rafters
 
 <!-- model trace: 13 rafters 2x6, lowX -3.5 .. 187 at 15.875 spacing (centers -2.75 .. 187.75);
-     length 128.16; pitch 0.375 (4.5:12, 20.556 deg); front seat z 123 over y -4..0 (heel -4,
+     length 115.344; pitch 0.375 (4.5:12, 20.556 deg); front seat z 123 over y -4..0 (heel -4,
      kick 1.5 at front wall inner face y 0); back seat z 92.625 over y 77..80.5 (kick 1.3125 at
-     back wall outer face y 80.5); tails y -27.5 / 92.5 (24"/12" past the wall faces); tail tops
-     z 137.6865 / 92.6865. Pattern marks along the top edge, front end back: front seat/kick
-     corner 29.37 (heel 25.098), back seat start +82.236, back tail +16.554 (sums 128.16). End
+     back wall outer face y 80.5); tails y -15.5 / 92.5 (12"/12" past the wall faces); tail tops
+     z 133.1865 / 92.6865. Pattern marks along the top edge, front end back: front seat/kick
+     corner 16.554 (heel 12.282), back seat start +82.236, back tail +16.554 (sums 115.344). End
      rafters' back seats land on the side-wall DTP corner blocks (they run over the back wall
      to y 80.5). -->
 
 > **Goal:** thirteen 2×6 rafters seated in their birdsmouths on both double top plates,
 > defining the roof plane.
 > **Crew:** 2 people for the raising (1 alone can cut) · **Time:** a full day ·
-> **Weather:** dry and calm — the 10' 8⅛" boards catch the wind
+> **Weather:** dry and calm — the 9' 7⅜" boards catch the wind
 
 This is the page where expensive stock gets ruined or saved. Every rafter is identical, so
 you cut **one pattern rafter first, prove it fits both plates, and only then mark the other
@@ -35,7 +35,7 @@ Parts for this page:
 
 | Qty | Part | Lumber | Cut length |
 |---|---|---|---|
-| 13 | rafter | 2×6 KD | 10' 8⅛" |
+| 13 | rafter | 2×6 KD | 9' 7⅜" |
 
 Buy or cut your stock with a little to spare: fourteen blanks is not greed if the lumber
 yard lets you pick through the pile. Choose the straightest board for the pattern.
@@ -69,12 +69,12 @@ Take the straightest 2×6 and mark its top edge — the edge that will face the 
 board the same way as the wall studs if it has one. Cut one end square; that plumb end is
 the **front tail**. Working along the top edge from that end, make three marks:
 
-1. **29⅜"** — the front wall's inner face: the inboard end of the front seat, where its
+1. **16-9/16"** — the front wall's inner face: the inboard end of the front seat, where its
    plumb kick begins. The seat itself runs 4" back toward the board end from this mark — the
-   heel, the seat's outboard end, lands at **25⅛"**.
-2. another **82¼"** (111⅝" from the end) — the back wall's inner face, where the back
+   heel, the seat's outboard end, lands at **12-5/16"**.
+2. another **82¼"** (98-13/16" from the end) — the back wall's inner face, where the back
    birdsmouth's seat starts.
-3. another **16½"** — that is the back end. The three segments add up to exactly 10' 8⅛",
+3. another **16-9/16"** — that is the back end. The three segments add up to exactly 9' 7⅜",
    so the last one should land on the board's end; if it does not, find the mistake before
    cutting anything.
 
@@ -94,7 +94,7 @@ line — if you overcut past the corner, the rafter rocks on its seat and that b
 a cripple for the shed wall, not a rafter. The finished notch is a clean two-sided corner;
 check it against the template.
 
-![Fig 11.2 — Section through one birdsmouthed rafter, viewed from the left gable end, Stage 8. The level front seat lands on the front plate top and the level back seat on the back plate top; plumb kicks stand at the wall faces and plumb tails give the 24" front and 12" back overhangs.](figures/fig-11-rafter-section.svg)
+![Fig 11.2 — Section through one birdsmouthed rafter, viewed from the left gable end, Stage 8. The level front seat lands on the front plate top and the level back seat on the back plate top; plumb kicks stand at the wall faces and plumb tails give the 12" front and 12" back overhangs.](figures/fig-11-rafter-section.svg)
 
 ### 3. Test the pattern on the wall — both plates
 
@@ -107,7 +107,7 @@ seat in back. Check every one of these before cutting another board:
 - The back kick stands tight against the back wall's outer face, seat covering the full
   plate width.
 - The top edge touches the rake plate's bearing line at the gable end.
-- The plumb tails hang 24" past the front wall face and 12" past the back wall face.
+- The plumb tails hang 12" past the front wall face and 12" past the back wall face.
 
 ![Fig 11.3 — Birdsmouth template at full size, printed at 100%. The front notch (4" seat, 1½" kick) and the back notch (3½" seat, 1-5/16" kick), both at the roof pitch of 4½ in 12 — the same angle as the rake plate's top edge. Measure the 4" check line before trusting any mark it made.](figures/fig-11-birdsmouth-template.svg)
 
@@ -122,7 +122,7 @@ Clamp the pattern to each new board, top edges together, and trace around the ta
 notches. Cut to the lines, kerf on the waste side. As you go, stack the finished rafters and
 sight down their top edges — a twisted blank shows up now, while it is still cheap.
 
-Check each rafter's overall length against the pattern (10' 8⅛") and keep any board that
+Check each rafter's overall length against the pattern (9' 7⅜") and keep any board that
 misses by more than an eighth for a different job.
 
 ### 5. Stand the rafters
@@ -133,7 +133,7 @@ screw through each plate into the rafter. Sight along the top edges of those two
 should read as one straight, even slope. Stand the remaining rafters on their marks in any
 order, seating each one in both plates and fastening each one the same way.
 
-> ⚠️ **WARNING** — Working from ladders with 10' 8″ boards overhead · falls and dropped
+> ⚠️ **WARNING** — Working from ladders with 9' 7″ boards overhead · falls and dropped
 > lumber · keep both ladders solid and level, lift the boards up between two people, and
 > never work a rafter into place while standing under it.
 
@@ -148,6 +148,6 @@ them holds the row in line.
 - [ ] Spacing holds at 15⅞" on centre along both plates — checked with a tape.
 - [ ] All thirteen top edges read as one plane — checked by sighting down them and with a
       straight board laid across.
-- [ ] Front tails stand 24" past the front wall face, back tails 12" past the back wall
+- [ ] Front tails stand 12" past the front wall face, back tails 12" past the back wall
       face — checked with a tape.
 - [ ] Rafter faces stand plumb — checked with a 4' level.

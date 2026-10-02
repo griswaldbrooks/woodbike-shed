@@ -22,7 +22,8 @@ EPS_V = 0.01   # in^3 report threshold
 # (scripts/depth7ft_2door.py): the back wall moved y 65..68.5 -> 77..80.5
 # and its plate tops dropped to 92.625 (the restud pitch 24.375/65 is
 # exactly the 7 ft pitch 28.875/77, so the slope is unchanged); every front
-# reference stayed. Same construction as the audit data: bearing line =
+# reference stayed (until 2026-10-02: front tail moved to the 12" overhang,
+# scripts/front_overhang_12.py). Same construction as the audit data: bearing line =
 # rafter bottom edge = rake plate top edge, seats flat at the plate heights.
 Z_B = 92.625                        # back wall double top plate top
 FRONT_BEAR = 121.5                  # bearing at y=0 (front plate 123 - 1.5)
@@ -30,7 +31,7 @@ SLOPE = (FRONT_BEAR - Z_B) / 77.0   # 28.875/77 = 24.375/65
 SEC = math.hypot(1.0, SLOPE)        # 1/cos
 OFF = 5.5 * SEC                     # rafter AABB top offset
 HEEL = -1.5 / SLOPE                 # front seat heel
-TAIL_F, TAIL_B = -27.5, 92.5        # rafter tails (24"/12" overhangs)
+TAIL_F, TAIL_B = -15.5, 92.5        # rafter tails (12" overhangs)
 
 
 def zbot(y):
@@ -65,9 +66,9 @@ def rake_stud_poly(y0, y1, z_bot):
     return [(y0, z_bot), (y1, z_bot), (y1, top(y1)), (y0, top(y0))]
 
 
-FASCIA_FRONT = [(-29.0, zbot(TAIL_F) + OFF - 5.5),
-                (-27.5, zbot(TAIL_F) + OFF - 5.5),
-                (-27.5, zbot(TAIL_F) + OFF), (-29.0, zbot(TAIL_F) + OFF)]
+FASCIA_FRONT = [(TAIL_F - 1.5, zbot(TAIL_F) + OFF - 5.5),
+                (TAIL_F, zbot(TAIL_F) + OFF - 5.5),
+                (TAIL_F, zbot(TAIL_F) + OFF), (TAIL_F - 1.5, zbot(TAIL_F) + OFF)]
 FASCIA_BACK = [(TAIL_B, zbot(TAIL_B) + OFF - 5.5),
                (TAIL_B + 1.5, zbot(TAIL_B) + OFF - 5.5),
                (TAIL_B + 1.5, zbot(TAIL_B) + OFF), (TAIL_B, zbot(TAIL_B) + OFF)]

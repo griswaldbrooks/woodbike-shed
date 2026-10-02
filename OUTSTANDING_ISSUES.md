@@ -6,6 +6,31 @@ rafters and roof trim finished, all parts named). 2026-08-10: captain's
 ordering decisions applied locally (this branch); the Onshape model still
 carries the pre-decision geometry (zero API calls).
 
+## Front roof overhang 24" -> 12" — APPLIED (2026-10-02), one open question
+
+Captain 2026-10-02: shorten the roof's leading edge rather than move the
+building — 12" overhang on all four sides — so the roof edge clears the
+town's 10 ft distance from the house (firstmate
+`data/shed-site-plan-7ft/report.md`, option C: position A failed by 7-1/2"
+at the fascia face with the 24" tail; the 12" tail passes by about 4-1/2",
+before drip edge). Applied locally by `scripts/front_overhang_12.py` (its
+docstring is the derivation record): front rafter tail y -27.5 -> -15.5,
+rafters and rake boards 128.16" -> 115.344" (9' 7-3/8"; 10 ft stock now,
+was 12 ft, 4-5/8" of trim allowance per board), front fascia top / peak
+137.687 -> 133.187 (11' 1-3/16" above the deck), roof plan 18' x 9' 3".
+Walls, pitch, seats, back and side overhangs unchanged.
+
+- **OPEN — weather cover over the front barn door.** The front eave is now
+  12" out and about 4 ft above the 84" door head, so it no longer shelters
+  the 8 ft outswing barn leaves or their head casing from wind-driven rain
+  (24" barely did). No head flashing / drip cap is modeled or on either
+  order for any of the three doors. Captain's call: add a drip cap
+  (Z-flashing) over the door head casings to the builder-scope list, or
+  accept as is.
+- Note: the 12" is the rafter tail; the fascia face stands 13-1/2" off the
+  front wall (same convention as the back), and drip edge / roofing add
+  roughly another inch — tape the house distance from the finished edge.
+
 ## Stock availability — RESOLVED (2026-08-10, Hingham Lumber)
 
 - **16' 2x4 stock**: Hingham Lumber stocks it — KEEP. The optimizer selects

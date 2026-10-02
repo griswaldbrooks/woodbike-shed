@@ -76,7 +76,7 @@ non-rendering HTML comment; stage pages owned by other workers carry their own.
 
 | Figure | View | Model anchors |
 |---|---|---|
-| fig-01-cross-section | SECTION, constant X at 92.5 (through doubled joist pair), viewed from +X | front wall y −3.5…0, z 0…123; back wall y 77…80.5, z 0…92.625; rafter heel y −4 seat z 123, back seat z 92.625 at y 77…80.5, tails y −27.5 / 92.5; fascia faces y −29 / 94; peak z 137.687; skids z −9.75…−6.25; gravel pad schematic (pier-less) |
+| fig-01-cross-section | SECTION, constant X at 92.5 (through doubled joist pair), viewed from +X | front wall y −3.5…0, z 0…123; back wall y 77…80.5, z 0…92.625; rafter heel y −4 seat z 123, back seat z 92.625 at y 77…80.5, tails y −15.5 / 92.5; fascia faces y −17 / 94; peak z 133.187; skids z −9.75…−6.25; gravel pad schematic (pier-less) |
 | fig-16-rafter-seat-gap | SECTION at the back wall seat, viewed from +X | back DTP top z 92.625 at y 77…80.5; plumb kick at y 80.5 to z 91.3125; rafter bottom slope 0.375; error gap 1″ drawn, exaggerated |
 | fig-16-floor-diagonals | PLAN, horizontal cut at skid top, looking down | skid lines y −3.5…0 and y 77…80.5, x −3.5…188.5; error: front skid shifted +4″ in X, exaggerated |
 | fig-16-rake-courses | ELEVATION, left wall face x −3.5, viewed from −X | siding 7″ exposure from skirt top z 0.5; rake cut line = rafter bottom + 1″ (z 96.8 back → 123.8 front); skirt z −6.75…0.5; error: top course 2″ past rake, exaggerated |

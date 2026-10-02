@@ -23,7 +23,9 @@ since 2026-08-23 also the 7 ft depth + captain's 2-door plan (barn 96"
 front west + 64" right rake; walk-in removed) via `scripts/depth7ft_2door.py`,
 and since 2026-08-24 the LEFT rake-wall 64 in MAIN-entry double (mirror of
 the right brewery double, `scripts/left_main_door.py`) plus the pier-less
-foundation (pedestals dropped; skids bear directly on the gravel pad).
+foundation (pedestals dropped; skids bear directly on the gravel pad), and
+since 2026-10-02 the 12 in front roof overhang (12 in on all four sides,
+`scripts/front_overhang_12.py`; the Onshape model still has the 24 in tail).
 
 ## Script pipeline
 
@@ -69,9 +71,13 @@ it joins figure refs wrapped over source lines, and the birdsmouth template
 in `assets/guide.css`) — keep any new full-size template on that mechanism.
 WeasyPrint's cairosvg ignores `paint-order`, so figure text halos must be a
 white-stroke underlay copy beneath the normal text (two-layer idiom, e.g.
-fig-04-a); a `.halo` class prints as white blobs in `build-guide.pdf`. The
-figures revised on 2026-08-24 were converted to the idiom on 2026-08-30;
-only `fig-12-eave-section.svg` still carries `.halo` — known defect.
+fig-04-a); a `.halo` class prints as white blobs in `build-guide.pdf` — no
+figure carries one since 2026-10-02. The figures are hand-authored SVG (no
+generator): each header comment records its model-to-pixel mapping, so a
+geometry change means recomputing points from the model through that
+mapping. `cad.build` rewrites every STEP file's timestamp — revert the
+timestamp-only files (`git diff --numstat -- step`, 1/1 lines) before
+committing.
 The authoring method behind `docs/guide/` (page template, number rules,
 figure spec incl. the anti-ambiguity test, sourced principles, worked
 example) is the agent skill `.agents/skills/shed-build-guide/SKILL.md` —

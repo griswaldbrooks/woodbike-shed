@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 640" role="img">
-<!-- model trace: walls 192x84, deck top = height zero; plate tops front 123, sides 97-1/8, back 92-5/8; fascia tops front 137-11/16, back 92-11/16; doors: front barn double clear 0..96, LEFT MAIN double clear 6.5..70.5 (far side, hidden), right brewery double clear 6.5..70.5 -->
+<!-- model trace: walls 192x84, deck top = height zero; plate tops front 123, sides 97-1/8, back 92-5/8; fascia tops front 133-3/16, back 92-11/16; doors: front barn double clear 0..96, LEFT MAIN double clear 6.5..70.5 (far side, hidden), right brewery double clear 6.5..70.5 -->
 <rect width="980" height="640" fill="#ffffff"/>
 <polygon points="65.2,656.0 794.8,656.0 894.8,564.7 729.7,680.3" fill="#ecebe6" stroke="none" stroke-width="0" stroke-linejoin="round"/>
 <line x1="65.2" y1="656.0" x2="794.8" y2="656.0" stroke="#9a958a" stroke-width="2"/>
@@ -89,10 +89,10 @@
 <polygon points="150.0,484.2 167.6,484.2 167.6,171.2 150.0,171.2" fill="#f4f1ea" stroke="#8a8378" stroke-width="1.2" stroke-linejoin="round"/>
 <polygon points="746.8,484.2 764.4,484.2 764.4,171.2 746.8,171.2" fill="#f4f1ea" stroke="#8a8378" stroke-width="1.2" stroke-linejoin="round"/>
 <polygon points="150.0,171.2 764.4,171.2 764.4,141.8 150.0,141.8" fill="#000000" stroke="none" stroke-width="0" stroke-linejoin="round" fill-opacity="0.16"/>
-<polygon points="73.2,138.2 802.8,138.2 802.8,108.8 73.2,108.8" fill="#000000" stroke="none" stroke-width="0" stroke-linejoin="round" fill-opacity="0.14"/>
+<polygon points="89.6,141.1 802.8,141.1 802.8,111.7 89.6,111.7" fill="#000000" stroke="none" stroke-width="0" stroke-linejoin="round" fill-opacity="0.14"/>
 <polygon points="802.8,266.4 894.8,177.5 894.8,195.1 802.8,284.0" fill="#d2b084" stroke="#3a3a3a" stroke-width="2" stroke-linejoin="round"/>
-<polygon points="78.2,142.8 769.4,142.8 802.8,266.4 111.6,266.4" fill="#62676e" stroke="#3a3a3a" stroke-width="2.2" stroke-linejoin="round"/>
-<polygon points="78.2,142.8 769.4,142.8 769.4,160.4 78.2,160.4" fill="#d2b084" stroke="#3a3a3a" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="94.6,145.7 785.8,145.7 802.8,266.4 111.6,266.4" fill="#62676e" stroke="#3a3a3a" stroke-width="2.2" stroke-linejoin="round"/>
+<polygon points="94.6,145.7 785.8,145.7 785.8,163.3 94.6,163.3" fill="#d2b084" stroke="#3a3a3a" stroke-width="2" stroke-linejoin="round"/>
 <rect x="16" y="14" width="620" height="112" rx="8" fill="#ffffff" stroke="#3a3a3a" stroke-width="3"/>
 <text x="34.0" y="54.0" font-size="28" font-weight="bold" text-anchor="start" font-family="Helvetica, Arial, sans-serif" fill="#1a1a1a">ISO</text>
 <text x="100.0" y="54.0" font-size="24" font-weight="bold" text-anchor="start" font-family="Helvetica, Arial, sans-serif" fill="#1a1a1a">finished shed</text>

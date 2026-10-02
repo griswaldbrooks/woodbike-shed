@@ -116,9 +116,9 @@ from the exact number, not this table.
 |---:|---|---|---:|
 | 1 | back fascia | 2×6 KD | 18′ |
 | 1 | front fascia | 2×6 KD | 18′ |
-| 1 | left rake board | 2×6 KD | 10′ 8⅛″ |
-| 13 | rafter | 2×6 KD | 10′ 8⅛″ |
-| 1 | right rake board | 2×6 KD | 10′ 8⅛″ |
+| 1 | left rake board | 2×6 KD | 9′ 7⅜″ |
+| 13 | rafter | 2×6 KD | 9′ 7⅜″ |
+| 1 | right rake board | 2×6 KD | 9′ 7⅜″ |
 
 ## Finish cuts and stock packing
 

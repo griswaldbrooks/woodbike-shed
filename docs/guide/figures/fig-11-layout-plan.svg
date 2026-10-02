@@ -2,7 +2,7 @@
 <!-- model trace: plan at plate level; horizontal = x (-15.5..200.5, fascia-to-fascia),
      vertical = y (front -3.5..0 wall band at top, back 77..80.5 at bottom). Mapping
      X(x)=110.8+3.4*(x+3.5), Y(y)=167.2+2.8*(y+3.5). Rafter centres x -2.75..187.75 at
-     15.875; rafters run y -27.5..92.5; first/last over the rake walls; back DTP short
+     15.875; rafters run y -15.5..92.5; first/last over the rake walls; back DTP short
      x 0..185 y 77..80.5; side DTPs: flat part y 0..60.73 + corner block y 77..80.5 catching
      the end rafters' back seats; rake plate zones y 60.73..77 dashed (Stage 7). Colour =
      new layout marks/rafters; hatched = plate material at the cut; dashed = future
@@ -40,8 +40,8 @@
   <text x="24" y="64" class="small">cut line B–B: the section is shown in Fig 11.2</text>
 
   <!-- orientation -->
-  <text x="440" y="84"  class="lblb" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" text-anchor="middle">FRONT — street side (high side of the roof)</text>
-  <text x="440" y="84"  class="lblb" text-anchor="middle">FRONT — street side (high side of the roof)</text>
+  <text x="440" y="104"  class="lblb" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" text-anchor="middle">FRONT — street side (high side of the roof)</text>
+  <text x="440" y="104"  class="lblb" text-anchor="middle">FRONT — street side (high side of the roof)</text>
   <text x="440" y="422"  class="lblb" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" text-anchor="middle">BACK (low side)</text>
   <text x="440" y="422"  class="lblb" text-anchor="middle">BACK (low side)</text>
 
@@ -79,29 +79,29 @@
 
   <!-- future fascia (dashed, Stage 9) -->
   <g fill="none" stroke="#8c8c8c" stroke-width="1.2" stroke-dasharray="8,5">
-    <rect x="70" y="95.6" width="734.4" height="4.2"/>
+    <rect x="70" y="129.4" width="734.4" height="4.2"/>
     <rect x="70" y="436" width="734.4" height="4.2"/>
   </g>
-  <text x="74" y="93"  class="small" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">front fascia — Stage 9 (future work, dashed)</text>
-  <text x="74" y="93"  class="small">front fascia — Stage 9 (future work, dashed)</text>
+  <text x="74" y="124"  class="small" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">front fascia — Stage 9 (future work, dashed)</text>
+  <text x="74" y="124"  class="small">front fascia — Stage 9 (future work, dashed)</text>
   <text x="74" y="456"  class="small" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">back fascia — Stage 9 (future work, dashed)</text>
   <text x="74" y="456"  class="small">back fascia — Stage 9 (future work, dashed)</text>
 
   <!-- NEW WORK: 13 rafters on their marks -->
   <g fill="#d9a441" stroke="#6b4f16" stroke-width="1.2">
-    <rect x="110.8" y="100" width="5.1" height="336"/>
-    <rect x="164.78" y="100" width="5.1" height="336"/>
-    <rect x="218.75" y="100" width="5.1" height="336"/>
-    <rect x="272.73" y="100" width="5.1" height="336"/>
-    <rect x="326.7" y="100" width="5.1" height="336"/>
-    <rect x="380.68" y="100" width="5.1" height="336"/>
-    <rect x="434.65" y="100" width="5.1" height="336"/>
-    <rect x="488.63" y="100" width="5.1" height="336"/>
-    <rect x="542.6" y="100" width="5.1" height="336"/>
-    <rect x="596.58" y="100" width="5.1" height="336"/>
-    <rect x="650.55" y="100" width="5.1" height="336"/>
-    <rect x="704.53" y="100" width="5.1" height="336"/>
-    <rect x="758.5" y="100" width="5.1" height="336"/>
+    <rect x="110.8" y="133.6" width="5.1" height="302.4"/>
+    <rect x="164.78" y="133.6" width="5.1" height="302.4"/>
+    <rect x="218.75" y="133.6" width="5.1" height="302.4"/>
+    <rect x="272.73" y="133.6" width="5.1" height="302.4"/>
+    <rect x="326.7" y="133.6" width="5.1" height="302.4"/>
+    <rect x="380.68" y="133.6" width="5.1" height="302.4"/>
+    <rect x="434.65" y="133.6" width="5.1" height="302.4"/>
+    <rect x="488.63" y="133.6" width="5.1" height="302.4"/>
+    <rect x="542.6" y="133.6" width="5.1" height="302.4"/>
+    <rect x="596.58" y="133.6" width="5.1" height="302.4"/>
+    <rect x="650.55" y="133.6" width="5.1" height="302.4"/>
+    <rect x="704.53" y="133.6" width="5.1" height="302.4"/>
+    <rect x="758.5" y="133.6" width="5.1" height="302.4"/>
   </g>
 
   <!-- spacing dimension -->
@@ -109,15 +109,15 @@
         marker-start="url(#dimAs)" marker-end="url(#dimA)"/>
   <text x="140" y="210"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" text-anchor="middle">15⅞″ o.c.</text>
   <text x="140" y="210"  class="lbl" text-anchor="middle">15⅞″ o.c.</text>
-  <text x="212" y="130"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">first rafter over the left rake wall —</text>
-  <text x="212" y="130"  class="lbl">first rafter over the left rake wall —</text>
-  <text x="212" y="146"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">its centre is ¾″ from the plate's left end</text>
-  <text x="212" y="146"  class="lbl">its centre is ¾″ from the plate's left end</text>
-  <line x1="210" y1="134" x2="116" y2="108" stroke="#555" stroke-width="1"/>
+  <text x="130" y="322"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">first rafter over the left rake wall —</text>
+  <text x="130" y="322"  class="lbl">first rafter over the left rake wall —</text>
+  <text x="130" y="338"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">its centre is ¾″ from the plate's left end</text>
+  <text x="130" y="338"  class="lbl">its centre is ¾″ from the plate's left end</text>
+  <line x1="128" y1="318" x2="117" y2="308" stroke="#555" stroke-width="1"/>
 
   <!-- member label + attachment arrow -->
-  <text x="270" y="270"  class="lblb" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">13 × rafter · 2×6 · 10' 8⅛″</text>
-  <text x="270" y="270"  class="lblb">13 × rafter · 2×6 · 10' 8⅛″</text>
+  <text x="270" y="270"  class="lblb" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">13 × rafter · 2×6 · 9' 7⅜″</text>
+  <text x="270" y="270"  class="lblb">13 × rafter · 2×6 · 9' 7⅜″</text>
   <text x="270" y="288"  class="lbl" fill="#ffffff" stroke="#ffffff" stroke-width="4" stroke-linejoin="round">centres marked on BOTH plates</text>
   <text x="270" y="288"  class="lbl">centres marked on BOTH plates</text>
   <line x1="380" y1="258" x2="384" y2="182" stroke="#1a6fb0" stroke-width="1.8"
